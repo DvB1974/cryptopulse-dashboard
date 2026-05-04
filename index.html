@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Denis · CryptoPulse</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#09090b;--s1:#0f0f11;--s2:#141416;
+      --b1:#1c1c1e;--b2:#27272a;
+      --tx:#f4f4f5;--mu:#71717a;--dm:#3f3f46;
+      --grn:#22c55e;--red:#ef4444;--amb:#f59e0b;
+      --btc:#f7931a;--eth:#627eea;--ccd:#00b050;
+      --acc:#3b82f6;
+    }
+    html,body{height:100%;overflow:hidden;font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var(--tx);font-size:14px}
+    #app{height:100%;display:flex;flex-direction:column;overflow:hidden}
+
+    /* ── HEADER ── */
+    header{flex-shrink:0;background:var(--bg);border-bottom:0.5px solid var(--b1);z-index:100}
+    .hdr-inner{display:flex;align-items:center;padding:0 16px;height:46px;gap:10px}
+    .logo{display:flex;align-items:center;gap:8px;flex-shrink:0}
+    .logo-mark{width:26px;height:26px;border-radius:7px;background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.25);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:var(--acc);flex-shrink:0}
+    .logo-text{display:flex;flex-direction:column;line-height:1}
+    .logo-name{font-size:10px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--mu)}
+    .logo-sub{font-size:15px;font-weight:700;letter-spacing:-.02em;color:var(--tx)}
+    .hdr-div{width:0.5px;height:20px;background:var(--b1);flex-shrink:0}
+    .hdr-pills{display:flex;align-items:center;gap:5px;flex:1;overflow:hidden}
+    .hdr-pill{display:flex;align-items:center;gap:4px;background:var(--s1);border:0.5px solid var(--b1);border-radius:6px;padding:3px 9px;font-size:10px;font-weight:500;color:var(--dm);white-space:nowrap;flex-shrink:0}
+    .hdr-pill .pv{font-weight:700;color:var(--mu);font-family:'JetBrains Mono',monospace;font-size:10px}
+    .hdr-pill .pv.pos{color:var(--grn)}
+    .hdr-pill .pv.neg{color:var(--red)}
+    .hdr-right{display:flex;align-items:center;gap:8px;flex-shrink:0}
+    .hdr-time{font-size:11px;color:var(--dm);font-family:'JetBrains Mono',monospace}
+    .live-pill{display:flex;align-items:center;gap:4px;background:rgba(34,197,94,.07);border:0.5px solid rgba(34,197,94,.2);border-radius:20px;padding:3px 8px;font-size:9px;font-weight:700;letter-spacing:.8px;color:var(--grn)}
+    .live-dot{width:5px;height:5px;border-radius:50%;background:var(--grn);animation:blink 2s ease-in-out infinite}
+    @keyframes blink{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(1.3)}}
+
+    /* ── MODE SELECTOR ── */
+    .mode-sel{display:flex;align-items:center;background:var(--s2);border:0.5px solid var(--b1);border-radius:7px;padding:2px;gap:2px;flex-shrink:0}
+    .mode-btn{padding:2px 9px;height:24px;font-size:10.5px;font-weight:600;color:var(--dm);background:none;border:none;border-radius:5px;cursor:pointer;white-space:nowrap;transition:color .15s,background .15s;font-family:'Inter',sans-serif}
+    .mode-btn:hover{color:var(--tx)}
+    .mode-btn.active{background:var(--acc);color:#fff}
+    .mode-btn.active[data-mode="hourly"]{background:var(--amb);color:#000}
+    .mode-btn.active[data-mode="manual"]{background:var(--b2);color:var(--tx)}
+    #manual-refresh-btn{display:none;align-items:center;gap:5px;padding:3px 11px;height:28px;font-size:10.5px;font-weight:700;color:var(--tx);background:rgba(59,130,246,.12);border:0.5px solid rgba(59,130,246,.3);border-radius:7px;cursor:pointer;white-space:nowrap;transition:background .15s,transform .1s;font-family:'Inter',sans-serif}
+    #manual-refresh-btn:hover{background:rgba(59,130,246,.22);transform:scale(1.02)}
+    #manual-refresh-btn:active{transform:scale(.97)}
+
+    /* ── COIN PANELS ── */
+    .coins-row{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:0.5px solid var(--b1);flex-shrink:0}
+    .coin-panel{padding:14px 15px 12px;border-right:0.5px solid var(--b1);position:relative;overflow:hidden}
+    .coin-panel:last-child{border-right:none}
+    .coin-panel::before{content:'';position:absolute;top:0;left:0;right:0;height:2px}
+    .coin-panel.btc-panel::before{background:linear-gradient(90deg,rgba(247,147,26,.9),rgba(247,147,26,.15))}
+    .coin-panel.eth-panel::before{background:linear-gradient(90deg,rgba(98,126,234,.9),rgba(98,126,234,.15))}
+    .coin-panel.ccd-panel::before{background:linear-gradient(90deg,rgba(0,176,80,.9),rgba(0,176,80,.15))}
+    .cp-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px}
+    .cp-id{display:flex;align-items:center;gap:7px}
+    .cp-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;margin-top:3px}
+    .cp-dot.btc{background:var(--btc)}
+    .cp-dot.eth{background:var(--eth)}
+    .cp-dot.ccd{background:var(--ccd)}
+    .cp-ticker{font-size:13px;font-weight:700;letter-spacing:.04em;color:var(--tx)}
+    .cp-name{font-size:10px;color:var(--dm);margin-top:1px}
+    .cp-rank{font-size:9px;font-weight:600;color:var(--dm);background:var(--s1);border:0.5px solid var(--b1);border-radius:4px;padding:2px 5px;font-family:'JetBrains Mono',monospace}
+    .cp-price{font-size:22px;font-weight:700;letter-spacing:-.03em;color:var(--tx);font-family:'JetBrains Mono',monospace;line-height:1;margin-bottom:4px}
+    .chg{display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:600;font-family:'JetBrains Mono',monospace;padding:2px 6px;border-radius:4px;margin-bottom:9px}
+    .chg.pos{color:var(--grn);background:rgba(34,197,94,.1)}
+    .chg.neg{color:var(--red);background:rgba(239,68,68,.1)}
+    .cp-spark{height:28px;margin-bottom:9px}
+    .cp-spark canvas{width:100%!important;height:100%!important}
+    .rng-labels{display:flex;justify-content:space-between;font-size:9px;color:var(--dm);font-family:'JetBrains Mono',monospace;margin-bottom:3px}
+    .rng-mid-lbl{font-size:9px;color:var(--b2)}
+    .rng-bar{height:2.5px;background:var(--b1);border-radius:2px;position:relative;margin-bottom:11px}
+    .rng-fill{position:absolute;top:0;left:0;height:2.5px;border-radius:2px;transition:width .5s}
+    .rng-pip{position:absolute;top:-4px;width:9px;height:9px;border-radius:50%;border:1.5px solid var(--bg);transform:translateX(-50%);transition:left .5s}
+    .stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+    .stat-block{background:var(--s1);border:0.5px solid var(--b1);border-radius:5px;padding:6px 8px}
+    .stat-block .sl{font-size:8.5px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--dm);display:block;margin-bottom:2px}
+    .stat-block .sv{font-size:11px;font-weight:600;color:var(--mu);font-family:'JetBrains Mono',monospace;display:block}
+    .stat-block .sv.pos{color:var(--grn)}
+    .stat-block .sv.neg{color:var(--red)}
+    .pos{color:var(--grn)}.neg{color:var(--red)}
+
+    /* ── NEWS AREA ── */
+    .news-area{display:flex;flex-direction:column;flex:1;overflow:hidden;min-height:0}
+    .tab-bar{flex-shrink:0;display:flex;align-items:stretch;border-bottom:0.5px solid var(--b1);background:var(--s1);padding:0 8px;gap:2px;overflow-x:auto;scrollbar-width:none}
+    .tab-bar::-webkit-scrollbar{display:none}
+    .tab{padding:0 13px;height:40px;font-size:11.5px;font-weight:600;color:var(--dm);background:none;border:none;border-bottom:2px solid transparent;cursor:pointer;white-space:nowrap;display:flex;align-items:center;gap:5px;transition:color .15s,border-color .15s;font-family:'Inter',sans-serif}
+    .tab:hover{color:var(--tx)}
+    .tab.active{color:var(--tx);border-bottom-color:var(--acc)}
+    .tab-badge{display:inline-flex;align-items:center;justify-content:center;min-width:16px;height:15px;padding:0 4px;border-radius:8px;font-size:9.5px;font-weight:700;background:rgba(59,130,246,.12);color:#60a5fa}
+    .tab-badge.brk{background:rgba(239,68,68,.15);color:var(--red);animation:brk-pulse 2s ease-in-out infinite}
+    @keyframes brk-pulse{0%,100%{opacity:1}50%{opacity:.5}}
+    .tab-content{flex:1;position:relative;overflow:hidden;min-height:0}
+    .tab-pane{position:absolute;inset:0;overflow-y:auto;display:none;padding:12px 16px 16px;scrollbar-width:thin;scrollbar-color:var(--b2) transparent}
+    .tab-pane::-webkit-scrollbar{width:4px}
+    .tab-pane::-webkit-scrollbar-track{background:transparent}
+    .tab-pane::-webkit-scrollbar-thumb{background:var(--b2);border-radius:2px}
+    .tab-pane.active{display:block}
+    .pane-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;padding-bottom:8px;border-bottom:0.5px solid var(--b1)}
+    .pane-hdr-left{display:flex;align-items:center;gap:8px}
+    .pane-dot{width:6px;height:6px;border-radius:50%;background:var(--acc);flex-shrink:0}
+    .pane-title{font-size:12px;font-weight:700}
+    .pane-sub{font-size:10px;color:var(--dm)}
+    .pane-count{font-size:10px;color:var(--dm);font-family:'JetBrains Mono',monospace;flex-shrink:0}
+    .brk-pane-hdr{background:rgba(239,68,68,.05);border:0.5px solid rgba(239,68,68,.2);border-radius:10px;padding:10px 14px;margin-bottom:10px;display:flex;align-items:center;justify-content:space-between}
+    .brk-pane-left{display:flex;align-items:center;gap:10px}
+    .brk-dot-wrap{position:relative;width:9px;height:9px;flex-shrink:0}
+    .brk-dot-wrap::before{content:'';position:absolute;inset:0;border-radius:50%;background:var(--red);opacity:.3;animation:brk-ring 1.8s ease-out infinite}
+    .brk-dot-wrap::after{content:'';position:absolute;inset:2px;border-radius:50%;background:var(--red)}
+    @keyframes brk-ring{0%{transform:scale(1);opacity:.4}100%{transform:scale(2.5);opacity:0}}
+    .brk-lbl{font-size:11px;font-weight:800;color:var(--red)}
+    .brk-sublbl{font-size:10px;color:rgba(239,68,68,.5)}
+    .brk-badge{background:rgba(239,68,68,.1);border:0.5px solid rgba(239,68,68,.25);border-radius:20px;padding:2px 7px;font-size:10px;font-weight:700;color:var(--red)}
+    .bank-pane-hdr{display:flex;align-items:center;gap:8px;padding:8px 12px;background:var(--s1);border:0.5px solid var(--b1);border-radius:8px;margin-bottom:10px}
+    .bank-flag{font-size:13px;line-height:1;flex-shrink:0}
+    .bank-pane-label{font-size:11px;font-weight:700}
+    .bank-pane-sources{font-size:9px;color:var(--dm);margin-top:1px}
+    .bank-period{background:rgba(59,130,246,.08);border:0.5px solid rgba(59,130,246,.18);border-radius:20px;padding:2px 7px;font-size:9.5px;font-weight:700;color:#60a5fa;white-space:nowrap;flex-shrink:0;margin-left:auto}
+    .bank-pane-count{font-size:10px;color:var(--dm);font-family:'JetBrains Mono',monospace;flex-shrink:0}
+
+    /* ── NEWS CARDS ── */
+    .news-feed{display:flex;flex-direction:column;gap:6px}
+    .news-card{background:var(--s1);border:0.5px solid var(--b1);border-radius:10px;padding:11px 13px;display:grid;grid-template-columns:28px 1fr;gap:0 10px;align-items:start;text-decoration:none;color:inherit;transition:border-color .2s,background .2s,transform .15s}
+    .news-card:hover{border-color:var(--b2);background:var(--s2);transform:translateX(2px)}
+    .news-card.is-breaking{border-color:rgba(239,68,68,.15);border-left:2px solid var(--red)}
+    .news-card.is-breaking:hover{border-color:rgba(239,68,68,.3)}
+    .news-num{font-size:15px;font-weight:800;font-family:'JetBrains Mono',monospace;color:var(--b2);line-height:1.1;padding-top:2px}
+    .is-breaking .news-num{color:rgba(239,68,68,.3)}
+    .news-body{min-width:0}
+    .news-source-row{display:flex;align-items:center;gap:5px;flex-wrap:wrap;margin-bottom:6px}
+    .qb{font-size:8.5px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;padding:2px 5px;border-radius:3px;white-space:nowrap;cursor:help}
+    .qb-trusted  {background:rgba(34,197,94,.1);color:var(--grn);border:0.5px solid rgba(34,197,94,.2)}
+    .qb-authority{background:rgba(59,130,246,.1);color:#60a5fa;border:0.5px solid rgba(59,130,246,.2)}
+    .qb-official {background:rgba(139,92,246,.08);color:#a78bfa;border:0.5px solid rgba(139,92,246,.2)}
+    .qb-branch   {background:rgba(245,158,11,.08);color:#fbbf24;border:0.5px solid rgba(245,158,11,.2)}
+    .qb-semi     {background:rgba(245,158,11,.08);color:var(--amb);border:0.5px solid rgba(245,158,11,.2)}
+    .qb-community{background:rgba(255,69,0,.08);color:#ff6b35;border:0.5px solid rgba(255,69,0,.15)}
+    .qb-unknown  {background:rgba(113,113,122,.08);color:var(--mu);border:0.5px solid rgba(113,113,122,.15)}
+    .news-src{font-size:10px;font-weight:600;color:var(--mu)}
+    .news-dot{color:var(--b2);font-size:9px}
+    .news-age{font-size:10px;color:var(--dm)}
+    .news-score{font-size:10px;color:var(--dm);font-family:'JetBrains Mono',monospace}
+    .news-sub{font-size:10px;color:#ff6b35;font-weight:700}
+    .news-title{font-size:13px;font-weight:600;line-height:1.45;margin-bottom:5px;color:var(--tx);letter-spacing:-.1px}
+    .news-title.translating{color:var(--dm);font-style:italic;font-weight:400}
+    .news-summ{font-size:11px;color:var(--mu);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+    .news-summ.translating{opacity:.35;font-style:italic}
+    .nl-tag{font-size:7px;font-weight:700;letter-spacing:.5px;color:var(--dm);vertical-align:middle;margin-left:4px;opacity:.7}
+    .bank-card{background:var(--s1);border:0.5px solid var(--b1);border-radius:10px;padding:10px 12px;display:grid;grid-template-columns:28px 1fr;gap:0 10px;align-items:start;text-decoration:none;color:inherit;transition:border-color .2s,background .2s,transform .15s}
+    .bank-card:hover{border-color:var(--b2);background:var(--s2);transform:translateX(2px)}
+    .bank-card.nl-card{border-left:2px solid rgba(255,165,0,.35)}
+    .bank-card.int-card{border-left:2px solid rgba(59,130,246,.35)}
+    .bank-num{font-size:14px;font-weight:800;font-family:'JetBrains Mono',monospace;color:var(--b2);line-height:1.1;padding-top:2px}
+    .nl-card .bank-num{color:rgba(255,165,0,.25)}
+    .int-card .bank-num{color:rgba(59,130,246,.2)}
+    .bank-body{min-width:0}
+    .bank-source-row{display:flex;align-items:center;gap:5px;flex-wrap:wrap;margin-bottom:6px}
+    .bank-country{font-size:8.5px;font-weight:700;letter-spacing:.7px;padding:2px 4px;border-radius:3px;text-transform:uppercase}
+    .country-nl {background:rgba(255,140,0,.1);color:#ffa500;border:0.5px solid rgba(255,140,0,.2)}
+    .country-eu {background:rgba(0,80,200,.1);color:#4d9ff5;border:0.5px solid rgba(0,80,200,.2)}
+    .country-us {background:rgba(220,50,50,.08);color:#f87171;border:0.5px solid rgba(220,50,50,.15)}
+    .country-int{background:rgba(113,113,122,.08);color:var(--mu);border:0.5px solid rgba(113,113,122,.15)}
+    .bank-title-text{font-size:13px;font-weight:600;line-height:1.45;margin-bottom:5px;color:var(--tx);letter-spacing:-.1px}
+    .bank-title-text.translating{color:var(--dm);font-style:italic;font-weight:400}
+    .bank-summ{font-size:11px;color:var(--mu);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+    .bank-summ.translating{opacity:.35;font-style:italic}
+    .bank-empty{padding:18px;text-align:center;font-size:11px;color:var(--dm);background:var(--s1);border:0.5px dashed var(--b1);border-radius:8px}
+    .reddit-note{font-size:10px;color:var(--dm);margin-bottom:9px;padding:7px 11px;background:rgba(255,69,0,.03);border:0.5px solid rgba(255,69,0,.1);border-radius:7px}
+    .empty-state{padding:20px;text-align:center;font-size:11px;color:var(--dm);background:var(--s1);border:0.5px dashed var(--b1);border-radius:8px}
+    .sk{background:linear-gradient(90deg,var(--s1) 25%,var(--s2) 50%,var(--s1) 75%);background-size:200% 100%;border-radius:3px;animation:shim 1.4s ease-in-out infinite}
+    @keyframes shim{0%{background-position:200% 0}100%{background-position:-200% 0}}
+
+    /* ── FOOTER ── */
+    footer{flex-shrink:0;border-top:0.5px solid var(--b1);padding:5px 16px;font-size:9.5px;color:var(--dm);display:flex;align-items:center;justify-content:space-between;gap:8px;background:var(--bg)}
+    .footer-timers{display:flex;align-items:center;gap:12px;white-space:nowrap;flex-shrink:0}
+    .ft{display:flex;align-items:center;gap:3px}
+    .ft-lbl{color:var(--dm)}
+    .ft-val{font-family:'JetBrains Mono',monospace;color:var(--mu)}
+
+    /* ── SETTINGS ── */
+    .settings-btn{background:none;border:0.5px solid var(--b1);border-radius:6px;width:28px;height:28px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--dm);font-size:14px;transition:color .15s,border-color .15s;flex-shrink:0}
+    .settings-btn:hover{color:var(--tx);border-color:var(--b2)}
+    .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:1000;display:flex;align-items:center;justify-content:center}
+    .modal-overlay.hidden{display:none}
+    .modal{background:var(--s2);border:0.5px solid var(--b2);border-radius:14px;padding:28px 28px 24px;width:440px;max-width:92vw}
+    .modal-title{font-size:16px;font-weight:700;color:var(--tx);margin-bottom:6px;display:flex;align-items:center;gap:8px}
+    .modal-sub{font-size:11.5px;color:var(--mu);margin-bottom:20px;line-height:1.6}
+    .modal-sub a{color:var(--acc);text-decoration:none}
+    .modal-label{font-size:10.5px;font-weight:600;color:var(--dm);letter-spacing:.04em;text-transform:uppercase;margin-bottom:5px;display:block}
+    .modal-row{display:flex;gap:8px;margin-bottom:14px}
+    .modal-input{flex:1;background:var(--bg);border:0.5px solid var(--b2);border-radius:8px;padding:9px 13px;color:var(--tx);font-size:12px;font-family:'JetBrains Mono',monospace;outline:none;transition:border-color .15s}
+    .modal-input:focus{border-color:var(--acc)}
+    .modal-input::placeholder{color:var(--dm)}
+    .modal-btn-save{background:var(--acc);color:#fff;border:none;border-radius:8px;padding:9px 18px;font-size:12px;font-weight:700;cursor:pointer;transition:opacity .15s}
+    .modal-btn-save:hover{opacity:.85}
+    .modal-btn-cancel{background:var(--b2);color:var(--mu);border:none;border-radius:8px;padding:9px 16px;font-size:12px;font-weight:600;cursor:pointer;margin-left:auto}
+    .modal-btn-cancel:hover{color:var(--tx)}
+    .modal-status{font-size:11px;color:var(--grn);min-height:16px;margin-top:4px}
+    .modal-status.err{color:var(--red)}
+    .modal-sep{border:none;border-top:0.5px solid var(--b1);margin:18px 0}
+    .modal-clear-row{display:flex;align-items:center;justify-content:space-between;gap:8px}
+    .modal-clear-lbl{font-size:11px;color:var(--mu)}
+    .modal-btn-clear{background:none;border:0.5px solid var(--b1);border-radius:6px;padding:5px 12px;font-size:11px;color:var(--dm);cursor:pointer}
+    .modal-btn-clear:hover{color:var(--red);border-color:var(--red)}
+  </style>
+</head>
+<body>
+<div id="app">
+
+<header>
+  <div class="hdr-inner">
+    <div class="logo">
+      <div class="logo-mark">&#8383;</div>
+      <div class="logo-text"><span class="logo-name">Denis</span><span class="logo-sub">CryptoPulse</span></div>
+    </div>
+    <div class="hdr-div"></div>
+    <div class="hdr-pills">
+      <div class="hdr-pill">Mcap&nbsp;<span class="pv" id="g-mcap">&#8212;</span>&nbsp;<span class="pv" id="g-mcap-chg">&#8212;</span></div>
+      <div class="hdr-pill">Volume&nbsp;<span class="pv" id="g-vol">&#8212;</span></div>
+      <div class="hdr-pill">BTC Dom&nbsp;<span class="pv" id="g-dom">&#8212;</span></div>
+      <div class="hdr-pill">Angst &amp; Hebzucht&nbsp;<span class="pv" id="g-fg">&#8212;</span></div>
+    </div>
+    <div class="hdr-right">
+      <span class="hdr-time" id="hdr-time">&#8212;</span>
+      <div class="mode-sel">
+        <button class="mode-btn active" data-mode="auto"   onclick="setRefreshMode('auto')"   title="Auto: koersen 1min, nieuws 10min">&#9889; Auto</button>
+        <button class="mode-btn"        data-mode="hourly" onclick="setRefreshMode('hourly')" title="Uurlijks: alles 1x per uur">&#9719; 1u</button>
+        <button class="mode-btn"        data-mode="manual" onclick="setRefreshMode('manual')" title="Handmatig: alleen bij klikken">&#9646;&#9646; Hand</button>
+      </div>
+      <button id="manual-refresh-btn" onclick="manualRefresh()">&#8635; Vernieuwen</button>
+      <button class="settings-btn" onclick="openSettings()" title="Instellingen · Claude API sleutel">&#9881;</button>
+      <div class="live-pill"><div class="live-dot"></div>LIVE</div>
+    </div>
+  </div>
+</header>
+
+<!-- ═══ COIN PANELS ═══ -->
+<div class="coins-row">
+
+  <div class="coin-panel btc-panel">
+    <div class="cp-top">
+      <div class="cp-id"><span class="cp-dot btc"></span><div><div class="cp-ticker">BTC</div><div class="cp-name">Bitcoin / USD</div></div></div>
+      <span class="cp-rank" id="btc-rank">#&#8212;</span>
+    </div>
+    <div class="cp-price" id="btc-price">$&#8212;</div>
+    <div class="chg" id="btc-chg">&#8212;</div>
+    <div class="cp-spark"><canvas id="btc-spark"></canvas></div>
+    <div class="rng-labels"><span id="btc-lo">&#8212;</span><span class="rng-mid-lbl">24u bereik</span><span id="btc-hi">&#8212;</span></div>
+    <div class="rng-bar"><div class="rng-fill" id="btc-rng-fill"></div><div class="rng-pip" id="btc-rng-pip"></div></div>
+    <div class="stat-grid">
+      <div class="stat-block"><span class="sl">Marktcap</span><span class="sv" id="btc-mcap">&#8212;</span></div>
+      <div class="stat-block"><span class="sl">Volume 24u</span><span class="sv" id="btc-vol">&#8212;</span></div>
+      <div class="stat-block"><span class="sl">7d wijziging</span><span class="sv" id="btc-7d">&#8212;</span></div>
+      <div class="stat-block"><span class="sl">7d hoog</span><span class="sv" id="btc-7dhi">&#8212;</span></div>
+      <div class="stat-block"><span class="sl">7d laag</span><span class="sv" id="btc-7dlo">&#8212;</span></div>
+      <div class="stat-block"><span class="sl">Circulatie</span><span class="sv" id="btc-circ">&#8212;</span></div>
+    </div>
+  </div>
+
+  <div class="coin-panel eth-panel">
+    <div class="cp-top">
+      <div class="cp-id"><span class="cp-dot eth"></span><div><div class="cp-ticker">ETH</div><div class="cp-name">Ethereum / USD</div></div></div>
+      <span class="cp-rank" id="eth-rank">#&#8212;</span>
+    </div>
+    <div class="cp-price" id="eth-price">$&#8212;</div>
+    <div class="chg" id="eth-chg">&#8212;</div>
+    <div class="cp-spark"><canvas id="eth-spark"></canvas></div>
+    <div class="rng-labels"><span id="eth-lo">&#8212;</span><span class="rng-mid-lbl">24u bereik</span><span id="eth-hi">&#8212;</span></div>
+    <div class="rng-bar"><div class="rng-fill" id="eth-rng-fill"></div><div class="rng-pip" id="eth-rng-pip"></div></div>
+    <div class="stat-grid">
+      <div class="stat-block"><span class="sl">Marktcap</span><span class="sv" id="eth-mcap">&#8212;</span></div>
+      <div class="stat-block"><span class="sl">Volume 24u</span><span class="sv" id="eth-vol">&#8212;</span></div>
+      <div class="stat-block"><span class="sl">7d wijziging</span><span class="sv" id="eth-7d">&#8212;</span></div>
+      <div class="stat-block"><span class="sl">7d hoog</span><span class="sv" id="eth-7dhi">&#8212;</span></div>
+      <div class="stat-block"><span class="sl">7d laag</span><span class="sv" id="eth-7dlo">&#8212;</span></div>
+      <div class="stat-block"><span class="sl">Circulatie</span><span class="sv" id="eth-circ">&#8212;</span></div>
+    </div>
+  </div>
+
+  <div class="coin-panel ccd-panel">
+    <div class="cp-top">
+      <div class="cp-id"><span class="cp-dot ccd"></span><div><div class="cp-ticker">CCD</div><div class="cp-name">Concordium / USD</div></div></div>
+      <span class="cp-rank" id="ccd-rank">#&#8212;</span>
+    </div>
+    <div class="cp-price" id="ccd-price">$&#8212;</div>
+    <div class="chg" id="ccd-chg">&#8212;</div>
+    <div class="cp-spark"><canvas id="ccd-spark"></canvas></div>
+    <div class="rng-labels"><span id="ccd-lo">&#8212;</span><span class="rng-mid-lbl">24u bereik</span><span id="ccd-hi">&#8212;</span></div>
+    <div class="rng-bar"><div class="rng-fill" id="ccd-rng-fill"></div><div class="rng-pip" id="ccd-rng-pip"></div></div>
+    <div class="stat-grid">
+      <div class="stat-block"><span class="sl">Marktcap</span><span class="sv" id="ccd-mcap">&#8212;</span></div>
+      <div class="stat-block"><span class="sl">Volume 24u</span><span class="sv" id="ccd-vol">&#8212;</span></div>
+      <div class="stat-block"><span class="sl">7d wijziging</span><span class="sv" id="ccd-7d">&#8212;</span></div>
+      <div class="stat-block"><span class="sl">7d hoog</span><span class="sv" id="ccd-7dhi">&#8212;</span></div>
+      <div class="stat-block"><span class="sl">7d laag</span><span class="sv" id="ccd-7dlo">&#8212;</span></div>
+      <div class="stat-block"><span class="sl">Aanbod</span><span class="sv" id="ccd-circ">&#8212;</span></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══ NEWS AREA ═══ -->
+<div class="news-area">
+  <div class="tab-bar">
+    <button class="tab active" data-tab="news24"  onclick="switchTab('news24')">24u Nieuws <span class="tab-badge" id="tc-news24"></span></button>
+    <button class="tab" data-tab="breaking" onclick="switchTab('breaking')">&#9889; Breaking <span class="tab-badge brk" id="tc-breaking" style="display:none"></span></button>
+    <button class="tab" data-tab="banknl"   onclick="switchTab('banknl')">&#127475;&#127473; NL Banken <span class="tab-badge" id="tc-banknl"></span></button>
+    <button class="tab" data-tab="bankint"  onclick="switchTab('bankint')">&#127758; Internationaal <span class="tab-badge" id="tc-bankint"></span></button>
+    <button class="tab" data-tab="reddit"   onclick="switchTab('reddit')">Reddit <span class="tab-badge" id="tc-reddit"></span></button>
+  </div>
+  <div class="tab-content">
+
+    <div class="tab-pane active" id="pane-news24">
+      <div class="pane-hdr">
+        <div class="pane-hdr-left"><div class="pane-dot"></div><span class="pane-title">Belangrijkste nieuws</span><span class="pane-sub">Afgelopen 24 uur &middot; 11 bronnen &middot; automatisch vertaald</span></div>
+        <span class="pane-count" id="news-count"></span>
+      </div>
+      <div class="news-feed" id="news-grid">
+        <div class="news-card" style="pointer-events:none"><div class="news-num sk" style="width:22px;height:18px"></div><div class="news-body"><div class="sk" style="height:9px;width:44%;margin-bottom:8px"></div><div class="sk" style="height:13px;width:88%;margin-bottom:5px"></div><div class="sk" style="height:13px;width:66%;margin-bottom:7px"></div><div class="sk" style="height:10px;width:54%"></div></div></div>
+        <div class="news-card" style="pointer-events:none"><div class="news-num sk" style="width:22px;height:18px"></div><div class="news-body"><div class="sk" style="height:9px;width:38%;margin-bottom:8px"></div><div class="sk" style="height:13px;width:80%;margin-bottom:5px"></div><div class="sk" style="height:13px;width:58%;margin-bottom:7px"></div><div class="sk" style="height:10px;width:47%"></div></div></div>
+        <div class="news-card" style="pointer-events:none"><div class="news-num sk" style="width:22px;height:18px"></div><div class="news-body"><div class="sk" style="height:9px;width:46%;margin-bottom:8px"></div><div class="sk" style="height:13px;width:84%;margin-bottom:5px"></div><div class="sk" style="height:13px;width:70%;margin-bottom:7px"></div><div class="sk" style="height:10px;width:51%"></div></div></div>
+      </div>
+    </div>
+
+    <div class="tab-pane" id="pane-breaking">
+      <div class="brk-pane-hdr" id="breaking-section">
+        <div class="brk-pane-left"><div class="brk-dot-wrap"></div><div><div class="brk-lbl">Breaking News</div><div class="brk-sublbl">Laatste berichten &mdash; afgelopen 3 uur &middot; automatisch vertaald</div></div></div>
+        <div class="brk-badge" id="brk-count"></div>
+      </div>
+      <div class="news-feed" id="brk-grid"><div class="empty-state">Geen breaking nieuws in de afgelopen 3 uur.</div></div>
+    </div>
+
+    <div class="tab-pane" id="pane-banknl">
+      <div class="bank-pane-hdr">
+        <span class="bank-flag">&#127475;&#127473;</span>
+        <div><div class="bank-pane-label">Nederlandse banken &amp; financi&#235;le instellingen</div><div class="bank-pane-sources">DNB &middot; AFM &middot; NVB &middot; ABN AMRO &middot; ING &middot; Rabobank &middot; Van Lanschot &middot; Triodos &middot; Robeco &middot; RTL Z &middot; BNR</div></div>
+        <span class="bank-period">40 dagen</span>
+        <span class="bank-pane-count" id="bank-nl-count"></span>
+      </div>
+      <div class="news-feed" id="bank-nl-grid">
+        <div class="bank-card nl-card" style="pointer-events:none"><div class="bank-num sk" style="width:20px;height:16px"></div><div class="bank-body"><div class="sk" style="height:9px;width:40%;margin-bottom:8px"></div><div class="sk" style="height:13px;width:84%;margin-bottom:5px"></div><div class="sk" style="height:13px;width:62%;margin-bottom:7px"></div><div class="sk" style="height:9px;width:48%"></div></div></div>
+        <div class="bank-card nl-card" style="pointer-events:none"><div class="bank-num sk" style="width:20px;height:16px"></div><div class="bank-body"><div class="sk" style="height:9px;width:35%;margin-bottom:8px"></div><div class="sk" style="height:13px;width:76%;margin-bottom:5px"></div><div class="sk" style="height:13px;width:55%;margin-bottom:7px"></div><div class="sk" style="height:9px;width:43%"></div></div></div>
+      </div>
+    </div>
+
+    <div class="tab-pane" id="pane-bankint">
+      <div class="bank-pane-hdr">
+        <span class="bank-flag">&#127758;</span>
+        <div><div class="bank-pane-label">Internationale banken &amp; instellingen</div><div class="bank-pane-sources">ECB &middot; Bloomberg &middot; Reuters &middot; IMF &middot; BIS &middot; Fed &middot; Financial Times</div></div>
+        <span class="bank-period">40 dagen</span>
+        <span class="bank-pane-count" id="bank-int-count"></span>
+      </div>
+      <div class="news-feed" id="bank-int-grid">
+        <div class="bank-card int-card" style="pointer-events:none"><div class="bank-num sk" style="width:20px;height:16px"></div><div class="bank-body"><div class="sk" style="height:9px;width:42%;margin-bottom:8px"></div><div class="sk" style="height:13px;width:87%;margin-bottom:5px"></div><div class="sk" style="height:13px;width:64%;margin-bottom:7px"></div><div class="sk" style="height:9px;width:49%"></div></div></div>
+        <div class="bank-card int-card" style="pointer-events:none"><div class="bank-num sk" style="width:20px;height:16px"></div><div class="bank-body"><div class="sk" style="height:9px;width:37%;margin-bottom:8px"></div><div class="sk" style="height:13px;width:79%;margin-bottom:5px"></div><div class="sk" style="height:13px;width:57%;margin-bottom:7px"></div><div class="sk" style="height:9px;width:41%"></div></div></div>
+      </div>
+    </div>
+
+    <div class="tab-pane" id="pane-reddit">
+      <div class="pane-hdr">
+        <div class="pane-hdr-left"><div class="pane-dot" style="background:#ff4500"></div><span class="pane-title">Reddit &middot; Crypto Community</span><span class="pane-sub">r/CryptoCurrency &amp; r/Bitcoin &middot; populariteit</span></div>
+        <span class="pane-count" id="reddit-count"></span>
+      </div>
+      <p class="reddit-note">Gebruikerscontent &mdash; niet redactioneel getoetst. Verifieer via onafhankelijke bronnen voor je handelt op basis van deze berichten.</p>
+      <div class="news-feed" id="reddit-grid">
+        <div class="news-card" style="pointer-events:none"><div class="news-num sk" style="width:22px;height:18px"></div><div class="news-body"><div class="sk" style="height:9px;width:40%;margin-bottom:8px"></div><div class="sk" style="height:13px;width:78%;margin-bottom:5px"></div><div class="sk" style="height:10px;width:36%"></div></div></div>
+        <div class="news-card" style="pointer-events:none"><div class="news-num sk" style="width:22px;height:18px"></div><div class="news-body"><div class="sk" style="height:9px;width:34%;margin-bottom:8px"></div><div class="sk" style="height:13px;width:72%;margin-bottom:5px"></div><div class="sk" style="height:10px;width:30%"></div></div></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <span>Koersen: CoinGecko &middot; Nieuws: CoinTelegraph, CoinDesk, The Block, Decrypt, Bitcoin Magazine, CryptoSlate &middot; NL Banken: DNB, AFM, Bitcoin Magazine NL, CoinTelegraph NL, IEX, NOS, BNR &middot; Vertaling: Claude AI (Haiku)</span>
+  <div class="footer-timers">
+    <div class="ft"><span class="ft-lbl">Koersen:</span>&nbsp;<span class="ft-val" id="cd">60</span></div>
+    <div class="ft"><span class="ft-lbl">Nieuws:</span>&nbsp;<span class="ft-val" id="news-cd">600</span></div>
+  </div>
+</footer>
+
+</div>
+
+<!-- ═══ SETTINGS MODAL ═══ -->
+<div class="modal-overlay hidden" id="settings-overlay" onclick="if(event.target===this)closeSettings()">
+  <div class="modal">
+    <div class="modal-title">&#9881; Instellingen</div>
+    <div class="modal-sub">
+      Verbeter de vertaalkwaliteit met Claude AI (Haiku model).<br>
+      Maak een API-sleutel aan op <a href="https://platform.anthropic.com/api-keys" target="_blank" rel="noopener">platform.anthropic.com/api-keys</a>.
+    </div>
+    <label class="modal-label">Claude API-sleutel</label>
+    <div class="modal-row">
+      <input class="modal-input" id="settings-key-input" type="password" placeholder="sk-ant-api03-..." autocomplete="off" spellcheck="false">
+      <button class="modal-btn-save" onclick="saveSettings()">Opslaan</button>
+    </div>
+    <div class="modal-status" id="settings-status"></div>
+    <hr class="modal-sep">
+    <div class="modal-clear-row">
+      <span class="modal-clear-lbl">Vertaalcache wissen zodat koppen opnieuw worden gegenereerd</span>
+      <button class="modal-btn-clear" onclick="clearTxCache()">Cache wissen</button>
+    </div>
+    <hr class="modal-sep">
+    <div style="display:flex;justify-content:flex-end">
+      <button class="modal-btn-cancel" onclick="closeSettings()">Sluiten</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+// ════════ TAB SWITCHING ════════
+let activeTab='news24';
+let newsFirstLoad=true;
+const pendingTx={};
+function queueTx(tabId,items,fn){
+  if(activeTab===tabId){items.forEach(it=>fn(it));}
+  else{pendingTx[tabId]=(pendingTx[tabId]||[]).concat(items.map(it=>({it,fn})));}
+}
+function switchTab(tab){
+  document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active',t.dataset.tab===tab));
+  document.querySelectorAll('.tab-pane').forEach(p=>p.classList.toggle('active',p.id==='pane-'+tab));
+  activeTab=tab;
+  if(pendingTx[tab]){pendingTx[tab].forEach(({it,fn})=>fn(it));delete pendingTx[tab];}
+}
+
+// ════════ CACHE ════════
+function cacheSet(key,data){try{localStorage.setItem('cp_'+key,JSON.stringify({data,ts:Date.now()}))}catch{}}
+function cacheGet(key,ttl){
+  try{
+    const raw=localStorage.getItem('cp_'+key);if(!raw)return null;
+    const {data,ts}=JSON.parse(raw);
+    if(Date.now()-ts>ttl)return null;
+    return data;
+  }catch{return null}
+}
+// Safari-safe date parser: rss2json returns "YYYY-MM-DD HH:MM:SS" (space, not T) which Safari rejects
+function parseDate(s){
+  if(!s)return NaN;
+  // Replace space with T to make ISO 8601 for Safari; append Z if no timezone info
+  const iso=String(s).trim().replace(/^(\d{4}-\d{2}-\d{2}) (\d{2}:\d{2}:\d{2})$/,'$1T$2Z');
+  const d=new Date(iso);
+  if(!isNaN(d.getTime()))return d.getTime();
+  return new Date(s).getTime(); // fallback: try original format
+}
+
+// ════════ SOURCE REGISTRY ════════
+const SOURCES={
+  'CoinDesk':         {cls:'qb-trusted',   label:'&#10003; Betrouwbaar',tip:'Gevestigd onafhankelijk crypto nieuwsmedium'},
+  'CoinTelegraph':    {cls:'qb-trusted',   label:'&#10003; Betrouwbaar',tip:'Gevestigd onafhankelijk crypto nieuwsmedium'},
+  'The Block':        {cls:'qb-trusted',   label:'&#10003; Betrouwbaar',tip:'Diepgravende onderzoeksjournalistiek crypto/blockchain'},
+  'Decrypt':          {cls:'qb-trusted',   label:'&#10003; Betrouwbaar',tip:'Onafhankelijk crypto- en Web3-mediaplatform'},
+  'Bitcoin Magazine': {cls:'qb-trusted',   label:'&#10003; Betrouwbaar',tip:'Oudste Bitcoin-publicatie, gefocust op Bitcoin'},
+  'Coinbase':         {cls:'qb-official',  label:'&#127970; Officieel', tip:'Officieel Coinbase-blog — bedrijfscontent, niet onafhankelijk'},
+  'Binance':          {cls:'qb-official',  label:'&#127970; Officieel', tip:'Officieel Binance-blog — bedrijfscontent, niet onafhankelijk'},
+  'CoinMarketCap':    {cls:'qb-official',  label:'&#127970; Officieel', tip:'CoinMarketCap-blog — eigendom van Binance, bedrijfscontent'},
+  'CryptoSlate':      {cls:'qb-semi',      label:'~ Redelijk',          tip:'Crypto nieuwssite, let op gesponsorde content'},
+  'NewsBTC':          {cls:'qb-semi',      label:'~ Redelijk',          tip:'Crypto blog, soms prijsspeculatief van toon'},
+  'AMBCrypto':        {cls:'qb-semi',      label:'~ Redelijk',          tip:'Crypto nieuwssite met redactioneel beleid'},
+  'Reddit':           {cls:'qb-community', label:'&#128101; Gemeenschap',tip:'Gebruikerscontent — niet redactioneel getoetst, verifieer zelf'},
+  'DNB':              {cls:'qb-authority', label:'&#9878; Autoriteit',  tip:'De Nederlandsche Bank — centrale bank van Nederland'},
+  'AFM':              {cls:'qb-authority', label:'&#9878; Autoriteit',  tip:'Autoriteit Financiële Markten — officieel financieel toezicht NL'},
+  'ECB':              {cls:'qb-authority', label:'&#9878; Autoriteit',  tip:'Europese Centrale Bank — officieel EU monetair beleid'},
+  'IMF':              {cls:'qb-authority', label:'&#9878; Autoriteit',  tip:'Internationaal Monetair Fonds'},
+  'BIS':              {cls:'qb-authority', label:'&#9878; Autoriteit',  tip:'Bank voor Internationale Betalingen'},
+  'Federal Reserve':  {cls:'qb-authority', label:'&#9878; Autoriteit',  tip:'Amerikaanse centrale bank'},
+  'Bloomberg':        {cls:'qb-trusted',   label:'&#10003; Betrouwbaar',tip:'Bloomberg — toonaangevend financieel nieuws- en databureau'},
+  'Reuters':          {cls:'qb-trusted',   label:'&#10003; Betrouwbaar',tip:'Reuters — internationaal persbureau, hoge redactionele standaard'},
+  'Financial Times':  {cls:'qb-trusted',   label:'&#10003; Betrouwbaar',tip:'Financial Times — gezaghebbend financieel dagblad'},
+  'NVB':              {cls:'qb-branch',    label:'~ Branche',           tip:'Nederlandse Vereniging van Banken — standpunten van de bankensector'},
+  'banken.nl':        {cls:'qb-branch',    label:'~ Branche',           tip:'banken.nl — informatiesite van NVB, sectorperspectief'},
+  'ABN AMRO':         {cls:'qb-official',  label:'&#127970; Officieel', tip:'ABN AMRO nieuwspagina of NL media over ABN AMRO'},
+  'ING':              {cls:'qb-official',  label:'&#127970; Officieel', tip:'ING nieuwspagina of NL media over ING'},
+  'Rabobank':         {cls:'qb-official',  label:'&#127970; Officieel', tip:'Rabobank nieuwspagina of NL media over Rabobank'},
+  'Van Lanschot Kempen':{cls:'qb-official',label:'&#127970; Officieel', tip:'Van Lanschot Kempen — private bank & vermogensbeheer'},
+  'Triodos':          {cls:'qb-official',  label:'&#127970; Officieel', tip:'Triodos Bank — duurzame bank, officieel nieuws'},
+  'Robeco':           {cls:'qb-official',  label:'&#127970; Officieel', tip:'Robeco — vermogensbeheer, marktinzichten'},
+  'Overige NL Banken':{cls:'qb-semi',      label:'~ NL Banken',         tip:'Nieuws over Nederlandse banken via Google Nieuws'},
+  'Vermogensbeheer NL':{cls:'qb-semi',     label:'~ Vermogen',          tip:'Nieuws over NL vermogensbeheerders via Google Nieuws'},
+  'RTL Z':            {cls:'qb-trusted',   label:'&#10003; Betrouwbaar',tip:'RTL Z — onafhankelijk financieel nieuws Nederland'},
+  'RTL Nieuws':       {cls:'qb-trusted',   label:'&#10003; Betrouwbaar',tip:'RTL Nieuws — onafhankelijk commercieel nieuws Nederland'},
+  'Nu.nl Economie':   {cls:'qb-semi',      label:'~ Redelijk',          tip:'Nu.nl economie sectie — breed bereik, korte berichtgeving'},
+  'NU.nl':            {cls:'qb-semi',      label:'~ Redelijk',          tip:'NU.nl — populaire nieuwssite, breed bereik'},
+  'NOS':              {cls:'qb-authority', label:'&#9878; Betrouwbaar', tip:'NOS — publieke omroep, redactioneel onafhankelijk'},
+  'BNR Nieuwsradio':  {cls:'qb-trusted',   label:'&#10003; Betrouwbaar',tip:'BNR Nieuwsradio — zakelijk nieuws en analyses'},
+  'Telegraaf Financieel':{cls:'qb-semi',   label:'~ Redelijk',          tip:'De Telegraaf financieel — breed publiek, check feiten'},
+  'Telegraaf':        {cls:'qb-semi',      label:'~ Redelijk',          tip:'De Telegraaf — breed publiek dagblad, check feiten'},
+  'IEX':              {cls:'qb-trusted',   label:'&#10003; Betrouwbaar',tip:'IEX.nl — onafhankelijke Nederlandse beleggingsnieuwssite'},
+  'Bitcoin Magazine NL':{cls:'qb-trusted',label:'&#10003; Betrouwbaar',tip:'Bitcoin Magazine NL — Nederlandstalig Bitcoin-tijdschrift'},
+  'CoinTelegraph NL': {cls:'qb-trusted',  label:'&#10003; Betrouwbaar',tip:'CoinTelegraph NL — Nederlandstalige editie van gevestigd crypto-medium'},
+  'CoinJournal NL':   {cls:'qb-trusted',  label:'&#10003; Betrouwbaar',tip:'CoinJournal NL — Nederlandstalig crypto-nieuwsplatform'},
+  'Financieel Dagblad':{cls:'qb-trusted',  label:'&#10003; Betrouwbaar',tip:'Financieel Dagblad — gezaghebbend NL financieel dagblad'},
+  'ING Groep':        {cls:'qb-official',  label:'&#127970; Officieel', tip:'ING Groep persberichten'},
+  'CryptoNews':       {cls:'qb-semi',      label:'~ Redelijk',          tip:'CryptoNews.com — internationaal cryptonieuws'},
+  'Google Nieuws NL': {cls:'qb-semi',      label:'~ Aggregator',        tip:'Google Nieuws NL — aggregeert FD, NRC, Nu.nl, RTL Z e.a.'},
+  'Google News':      {cls:'qb-semi',      label:'~ Aggregator',        tip:'Google News aggregeert meerdere bronnen — klik voor origineel artikel'},
+  '__default__':      {cls:'qb-unknown',   label:'? Onbekend',          tip:'Bron niet herkend — verifieer via andere bronnen'},
+};
+function srcInfo(name){
+  for(const k of Object.keys(SOURCES)){
+    if(k!=='__default__'&&name&&name.toLowerCase().includes(k.toLowerCase()))return SOURCES[k];
+  }
+  return SOURCES['__default__'];
+}
+
+// ════════ FORMATTERS ════════
+const f={
+  price(n){if(n==null)return'—';if(n>=1000)return'$'+n.toLocaleString('en-US',{maximumFractionDigits:0});if(n>=1)return'$'+n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:4});return'$'+n.toLocaleString('en-US',{minimumFractionDigits:4,maximumFractionDigits:8})},
+  cap(n){if(!n)return'—';if(n>=1e12)return'$'+(n/1e12).toFixed(2)+'T';if(n>=1e9)return'$'+(n/1e9).toFixed(2)+'B';if(n>=1e6)return'$'+(n/1e6).toFixed(2)+'M';return'$'+n.toLocaleString()},
+  pct(n,abs){if(n==null)return'—';const v=abs?Math.abs(n):n;return(n>=0?'+':'')+v.toFixed(2)+'%'},
+  supply(n){if(!n)return'—';if(n>=1e9)return(n/1e9).toFixed(2)+'B';if(n>=1e6)return(n/1e6).toFixed(2)+'M';if(n>=1000)return(n/1000).toFixed(1)+'K';return n.toLocaleString('en-US',{maximumFractionDigits:0})},
+  num(n){return n?n.toLocaleString('en-US'):'—'},
+  score(n){if(!n)return'';return n>=1000?(n/1000).toFixed(1)+'k':String(n)},
+};
+function set(id,html){const e=document.getElementById(id);if(e)e.innerHTML=html}
+function setChg(id,pct){
+  const e=document.getElementById(id);if(!e)return;
+  const p=pct>=0;
+  e.className='chg '+(p?'pos':'neg');
+  e.innerHTML='<span style="font-size:12px">'+(p?'▲':'▼')+'</span>'+f.pct(Math.abs(pct),true);
+}
+function timeAgo(d){
+  const ms=(d instanceof Date)?d.getTime():(typeof d==='number'?d:Date.now());
+  const s=Math.floor((Date.now()-ms)/1000);
+  if(s<60)return'zojuist';
+  const m=Math.floor(s/60);if(m<60)return m+'m geleden';
+  const h=Math.floor(m/60);if(h<24)return h+'u geleden';
+  return Math.floor(h/24)+'d geleden';
+}
+function stripHtml(h){return h.replace(/<[^>]+>/g,'').replace(/&nbsp;/g,' ').replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').replace(/&#39;/g,"'").replace(/\s+/g,' ').trim()}
+function cleanTitle(t){if(!t)return'';return t.replace(/^(BREAKING|ALERT|URGENT|UPDATE|EXCLUSIVE|WATCH|READ|REPORT):\s*/i,'').replace(/!{2,}/g,'!').replace(/\?{2,}/g,'?').replace(/\b([A-Z]{4,})\b/g,w=>w.charAt(0)+w.slice(1).toLowerCase()).trim()}
+function makeSmartHeadline(title,summary){
+  if(summary&&summary.length>50){
+    const m=summary.match(/^([^.!?]{20,170}[.!?])/);
+    if(m)return m[1].trim();
+    if(summary.length>30)return summary.slice(0,140).trim();
+  }
+  return cleanTitle(title);
+}
+
+// ════════ SETTINGS ════════
+function getClaudeKey(){try{return localStorage.getItem('cp_claude_key')||'';}catch{return '';}}
+function setClaudeKey(k){try{localStorage.setItem('cp_claude_key',k);}catch{}}
+function openSettings(){
+  const overlay=document.getElementById('settings-overlay');
+  const input=document.getElementById('settings-key-input');
+  if(input)input.value=getClaudeKey();
+  const st=document.getElementById('settings-status');if(st)st.textContent='';
+  overlay.classList.remove('hidden');
+  setTimeout(()=>input&&input.focus(),80);
+}
+function closeSettings(){document.getElementById('settings-overlay').classList.add('hidden');}
+async function saveSettings(){
+  const input=document.getElementById('settings-key-input');
+  const st=document.getElementById('settings-status');
+  const key=(input?.value||'').trim();
+  if(!key){st.className='modal-status err';st.textContent='Voer een geldige API-sleutel in.';return;}
+  st.className='modal-status';st.textContent='Sleutel controleren...';
+  // Quick test call
+  try{
+    const r=await fetchWithTimeout('https://api.anthropic.com/v1/messages',10000,{
+      method:'POST',
+      headers:{'Content-Type':'application/json','x-api-key':key,'anthropic-version':'2023-06-01'},
+      body:JSON.stringify({model:'claude-haiku-4-5-20251001',max_tokens:10,messages:[{role:'user',content:'Hi'}]})
+    });
+    const d=await r.json();
+    if(d.error){st.className='modal-status err';st.textContent='Fout: '+d.error.message;return;}
+    setClaudeKey(key);
+    st.className='modal-status';st.textContent='✓ Sleutel opgeslagen! Vertaling via Claude AI actief.';
+    setTimeout(closeSettings,1800);
+  }catch(e){st.className='modal-status err';st.textContent='Verbindingsfout. Controleer je internetverbinding.';}
+}
+function clearTxCache(){
+  _txMap={};
+  try{
+    // Wis vertaalcache + alle nieuws/bank caches zodat alles opnieuw wordt opgehaald
+    ['cp_tx','cp_bank_nl','cp_bank_int','cp_cc_news','cp_brk'].forEach(k=>localStorage.removeItem(k));
+    // Wis ook alle rss_ caches
+    Object.keys(localStorage).filter(k=>k.startsWith('cp_rss_')||k.startsWith('cp_bank')||k==='cp_tx').forEach(k=>localStorage.removeItem(k));
+  }catch{}
+  const st=document.getElementById('settings-status');
+  if(st){st.className='modal-status';st.textContent='✓ Cache gewist. Pagina wordt herladen...';}
+  setTimeout(()=>location.reload(),1200);
+}
+
+// ════════ TRANSLATION QUEUE ════════
+let _txMap=null;
+function getTxMap(){
+  if(_txMap)return _txMap;
+  try{_txMap=JSON.parse(localStorage.getItem('cp_tx'))||{};}catch{_txMap={};}
+  return _txMap;
+}
+function saveTxMap(){
+  try{
+    const m=getTxMap(),ks=Object.keys(m);
+    if(ks.length>600){const t={};ks.slice(-600).forEach(k=>{t[k]=m[k];});_txMap=t;}
+    localStorage.setItem('cp_tx',JSON.stringify(_txMap));
+  }catch{}
+}
+const txQ=[];let txBusy=false;
+async function tx(text){
+  if(!text||text.length<4)return text;
+  const k=text.slice(0,480);
+  const cached=getTxMap()[k];
+  if(cached)return cached;
+  return new Promise(res=>{txQ.push({text,res,k});if(!txBusy)runTx();});
+}
+async function runTx(){
+  txBusy=true;
+  while(txQ.length){
+    const{text,res,k}=txQ.shift();
+    const hit=getTxMap()[k];if(hit){res(hit);continue;}
+    const apiKey=getClaudeKey();
+    if(apiKey){
+      try{
+        const r=await fetchWithTimeout('https://api.anthropic.com/v1/messages',12000,{
+          method:'POST',
+          headers:{'Content-Type':'application/json','x-api-key':apiKey,'anthropic-version':'2023-06-01'},
+          body:JSON.stringify({
+            model:'claude-haiku-4-5-20251001',
+            max_tokens:80,
+            messages:[{role:'user',content:'Je bent een Nederlandse financieel-economisch journalist. Gegeven deze Engelse krantenkop of tekst over crypto/finance, schrijf een beknopte, journalistieke Nederlandse krantenkop van maximaal 12 woorden. Geef alleen de krantenkop terug, zonder aanhalingstekens, zonder extra uitleg.\n\nOrigineel: '+text}]
+          })
+        });
+        const d=await r.json();
+        if(d.content?.[0]?.text){
+          let t=d.content[0].text.trim().replace(/^["'„]|["'"]$/g,'').trim();
+          if(t.length>4){getTxMap()[k]=t;saveTxMap();res(t);continue;}
+        }
+      }catch{}
+    }
+    // Fallback: MyMemory (als er geen Claude-sleutel is of de aanroep mislukt)
+    try{
+      const url='https://api.mymemory.translated.net/get?q='+encodeURIComponent(k)+'&langpair=en|nl';
+      const r=await fetchWithTimeout(url,5000);
+      const d=await r.json();
+      if(d.responseStatus===200&&d.responseData?.translatedText){
+        let t=d.responseData.translatedText;
+        if(t.includes('QUERY LENGTH EXCEEDED')||t.includes('PLEASE SELECT'))t=text;
+        getTxMap()[k]=t;saveTxMap();res(t);
+      }else res(text);
+    }catch{res(text);}
+    await new Promise(r=>setTimeout(r,120));
+  }
+  txBusy=false;
+}
+
+// ════════ SPARKLINES ════════
+const charts={};
+function spark(id,data,pos){
+  const el=document.getElementById(id);if(!el||!data?.length)return;
+  const col=pos?'#22c55e':'#ef4444';
+  if(charts[id])charts[id].destroy();
+  charts[id]=new Chart(el,{type:'line',data:{labels:data.map((_,i)=>i),datasets:[{data,borderColor:col,borderWidth:1.5,pointRadius:0,fill:true,tension:.4,backgroundColor(ctx){const g=ctx.chart.ctx.createLinearGradient(0,0,0,28);g.addColorStop(0,pos?'rgba(34,197,94,.18)':'rgba(239,68,68,.18)');g.addColorStop(1,'rgba(0,0,0,0)');return g}}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{enabled:false}},scales:{x:{display:false},y:{display:false}},animation:{duration:400}}});
+}
+
+// ════════ GLOBAL MARKET ════════
+async function loadGlobal(){
+  try{
+    const {data:g}=await(await fetch('https://api.coingecko.com/api/v3/global')).json();
+    set('g-mcap',f.cap(g.total_market_cap.usd));
+    const chg=g.market_cap_change_percentage_24h_usd;
+    const el=document.getElementById('g-mcap-chg');
+    if(el){el.className='pv '+(chg>=0?'pos':'neg');el.textContent=f.pct(chg)+'(24u)';}
+    set('g-vol',f.cap(g.total_volume.usd));
+    set('g-dom',g.market_cap_percentage.btc.toFixed(1)+'%');
+  }catch(e){console.warn('global',e)}
+  // Fear & Greed Index (alternative.me)
+  try{
+    const fg=await(await fetchWithTimeout('https://api.alternative.me/fng/?limit=1',5000)).json();
+    if(fg.data?.[0]){
+      const v=parseInt(fg.data[0].value);
+      const el=document.getElementById('g-fg');
+      if(el){
+        el.className='pv '+(v>=60?'pos':v<=40?'neg':'');
+        el.textContent=v+' · '+fg.data[0].value_classification;
+      }
+    }
+  }catch{}
+}
+
+// ════════ COIN PRICES ════════
+async function loadCoins(){
+  try{
+    const url='https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin,ethereum,concordium&order=market_cap_desc&per_page=10&page=1&sparkline=true&price_change_percentage=24h,7d';
+    const coins=await(await fetch(url)).json();
+    coins.forEach(c=>{
+      const p=c.id==='bitcoin'?'btc':c.id==='ethereum'?'eth':c.id==='concordium'?'ccd':null;
+      if(!p)return;
+      set(p+'-rank','#'+(c.market_cap_rank||'—'));
+      set(p+'-price',f.price(c.current_price));
+      setChg(p+'-chg',c.price_change_percentage_24h);
+      set(p+'-mcap',f.cap(c.market_cap));
+      set(p+'-vol',f.cap(c.total_volume));
+      set(p+'-hi',f.price(c.high_24h));
+      set(p+'-lo',f.price(c.low_24h));
+      // 24h range bar
+      if(c.high_24h>c.low_24h){
+        const pct=Math.min(98,Math.max(2,Math.round((c.current_price-c.low_24h)/(c.high_24h-c.low_24h)*100)));
+        const isUp=c.price_change_percentage_24h>=0;
+        const col=isUp?'#22c55e':'#ef4444';
+        const fill=document.getElementById(p+'-rng-fill');
+        const pip=document.getElementById(p+'-rng-pip');
+        if(fill){fill.style.width=pct+'%';fill.style.background=col;}
+        if(pip){pip.style.left=pct+'%';pip.style.background=col;}
+      }
+      // 7d change
+      const p7d=c.price_change_percentage_7d_in_currency;
+      const el7d=document.getElementById(p+'-7d');
+      if(el7d&&p7d!=null){el7d.className='sv '+(p7d>=0?'pos':'neg');el7d.textContent=f.pct(p7d);}
+      // 7d hi/lo from sparkline
+      if(c.sparkline_in_7d?.price?.length){
+        const prices=c.sparkline_in_7d.price;
+        set(p+'-7dhi',f.price(Math.max(...prices)));
+        set(p+'-7dlo',f.price(Math.min(...prices)));
+        spark(p+'-spark',prices.slice(-48),c.price_change_percentage_24h>=0);
+      }
+      // Circulating supply
+      set(p+'-circ',f.supply(c.circulating_supply)+' '+c.symbol.toUpperCase());
+    });
+  }catch(e){console.warn('coins',e)}
+}
+
+// ════════ FETCH WITH TIMEOUT ════════
+function fetchWithTimeout(url,ms=6000,opts={}){
+  const ctrl=new AbortController();
+  const id=setTimeout(()=>ctrl.abort(),ms);
+  return fetch(url,{...opts,signal:ctrl.signal}).finally(()=>clearTimeout(id));
+}
+
+// ════════ RSS XML PARSER ════════
+// cutMs: optionele tijdsgrens in ms (default: afgelopen 24u). Bank feeds geven hun eigen cutoff mee.
+function parseRSSXML(xmlStr,sourceName,cutMs=null){
+  try{
+    const doc=new DOMParser().parseFromString(xmlStr,'text/xml');
+    const cut=cutMs!=null?cutMs:Date.now()-24*3600*1000;
+    return[...doc.querySelectorAll('item')].map(item=>{
+      const pubDate=item.querySelector('pubDate')?.textContent?.trim()||'';
+      const date=new Date(pubDate).getTime();
+      const title=item.querySelector('title')?.textContent?.trim()||'';
+      let link=item.querySelector('link')?.textContent?.trim()||'';
+      if(!link){const g=item.querySelector('guid');if(g&&g.getAttribute('isPermaLink')!=='false')link=g.textContent?.trim()||'#';}
+      const desc=item.querySelector('description')?.textContent||'';
+      return{title:cleanTitle(title),summary:stripHtml(desc).slice(0,240),link:link||'#',date,source:sourceName};
+    }).filter(it=>!isNaN(it.date)&&it.date>cut);
+  }catch(e){return[]}
+}
+
+// ════════ RSS FETCH (4 methoden) ════════
+async function fetchRSS(rssUrl,sourceName){
+  const ck='rss_'+sourceName.replace(/\s/g,'_');
+  const cached=cacheGet(ck,5*60*1000);
+  if(cached!==null)return cached;
+  let items=[];
+  if(!items.length){try{const r=await fetchWithTimeout(rssUrl,5000);if(r.ok)items=parseRSSXML(await r.text(),sourceName);}catch(e){}}
+  if(!items.length){try{const r=await fetchWithTimeout('https://corsproxy.io/?'+encodeURIComponent(rssUrl),6000);if(r.ok)items=parseRSSXML(await r.text(),sourceName);}catch(e){}}
+  if(!items.length){try{const r=await fetchWithTimeout('https://api.allorigins.win/get?url='+encodeURIComponent(rssUrl),7000);if(r.ok){const d=await r.json();if(d.contents)items=parseRSSXML(d.contents,sourceName);}}catch(e){}}
+  if(!items.length){try{
+    const api='https://api.rss2json.com/v1/api.json?rss_url='+encodeURIComponent(rssUrl);
+    const j=await(await fetchWithTimeout(api,7000)).json();
+    if(j.status==='ok'&&j.items){
+      const now=Date.now(),cut=now-24*3600*1000;
+      items=j.items.filter(it=>parseDate(it.pubDate)>cut).map((it,i)=>({
+        id:sourceName+'-'+i,title:cleanTitle(it.title||''),summary:stripHtml(it.description||it.content||'').slice(0,240),
+        link:it.link,date:parseDate(it.pubDate),source:sourceName,
+      }));
+    }
+  }catch(e){}}
+  if(items.length)cacheSet(ck,items);
+  return items;
+}
+
+// ════════ NEWS CARD BUILDER ════════
+let newsIdCtr=0;
+function buildNewsCard(item,idx,isBreaking){
+  const si=srcInfo(item.source);
+  const id=++newsIdCtr;
+  item._domId=id;
+  return '<a class="news-card'+(isBreaking?' is-breaking':'')+'" href="'+item.link+'" target="_blank" rel="noopener noreferrer">'
+    +'<div class="news-num">'+String(idx+1).padStart(2,'0')+'</div>'
+    +'<div class="news-body">'
+    +'<div class="news-source-row"><span class="qb '+si.cls+'" title="'+si.tip+'">'+si.label+'</span><span class="news-src">'+item.source+'</span><span class="news-dot">·</span><span class="news-age">'+timeAgo(item.date)+'</span></div>'
+    +'<div class="news-title translating" id="nt-'+id+'">Vertalen...</div>'
+    +(item.summary?'<div class="news-summ translating" id="ns-'+id+'">Vertalen...</div>':'')
+    +'</div></a>';
+}
+async function translateCard(item){
+  const te=document.getElementById('nt-'+item._domId);
+  const se=document.getElementById('ns-'+item._domId);
+  if(te){
+    const headlineText=makeSmartHeadline(item.title,item.summary);
+    const t=await tx(headlineText);
+    te.textContent=t;te.classList.remove('translating');
+    const tag=document.createElement('span');tag.className='nl-tag';tag.textContent='NL';te.appendChild(tag);
+  }
+  if(se&&item.summary){
+    let summaryText=item.summary;
+    if(item.summary.length>50){const m=item.summary.match(/^[^.!?]{20,170}[.!?]\s*/);if(m)summaryText=item.summary.slice(m[0].length).trim();}
+    if(summaryText.length>20){const s=await tx(summaryText.slice(0,220));se.textContent=s;se.classList.remove('translating');}
+    else{se.style.display='none';}
+  }
+}
+
+// ════════ NEWS LOADING (CryptoPanic → CryptoCompare → RSS) ════════
+const NEWS_FEEDS=[
+  {url:'https://cointelegraph.com/rss',name:'CoinTelegraph'},
+  {url:'https://www.coindesk.com/arc/outboundfeeds/rss/',name:'CoinDesk'},
+  {url:'https://www.theblock.co/rss.xml',name:'The Block'},
+  {url:'https://decrypt.co/feed',name:'Decrypt'},
+  {url:'https://bitcoinmagazine.com/.rss/full/',name:'Bitcoin Magazine'},
+  {url:'https://cryptoslate.com/feed/',name:'CryptoSlate'},
+];
+async function loadNews(){
+  const NEWS_TTL=5*60*1000;
+  const cached=cacheGet('cc_news',NEWS_TTL);
+  let items=cached!==null?cached:[];
+  if(!items.length){
+    try{
+      const r=await fetchWithTimeout('https://cryptopanic.com/api/v1/posts/?auth_token=&public=true&filter=hot',8000);
+      if(r.ok){
+        const d=await r.json();
+        if(d.results?.length){
+          items=d.results.slice(0,25).map(p=>({
+            title:cleanTitle(p.title||''),
+            summary:p.body||'',
+            link:p.url||p.source?.url||'#',
+            date:new Date(p.published_at||p.created_at).getTime(),
+            source:p.source?.title||'CryptoPanic',
+          }));
+        }
+      }
+    }catch{}
+  }
+  if(!items.length){
+    try{
+      const r=await fetchWithTimeout('https://min-api.cryptocompare.com/data/v2/news/?lang=EN&sortOrder=popular',8000);
+      if(r.ok){
+        const d=await r.json();
+        if(d.Data?.length){
+          const now=Date.now(),cut=now-24*3600*1000;
+          items=d.Data.filter(a=>a.published_on*1000>cut).slice(0,20).map(a=>({
+            title:cleanTitle(a.title||''),summary:stripHtml(a.body||'').slice(0,240),
+            link:a.url,date:a.published_on*1000,source:a.source_info?.name||a.source||'CryptoCompare',
+          }));
+        }
+      }
+    }catch{}
+  }
+  if(!items.length){
+    const results=await Promise.allSettled(NEWS_FEEDS.slice(0,6).map(s=>fetchRSS(s.url,s.name)));
+    items=results.flatMap(r=>r.status==='fulfilled'?r.value:[]);
+  }
+  if(items.length)cacheSet('cc_news',items);
+  items.sort((a,b)=>b.date-a.date);
+  const now=Date.now(),brkCut=now-3*3600*1000,h24Cut=now-24*3600*1000;
+  const dedup=(arr)=>{const s=new Set();return arr.filter(it=>{const k=it.title.slice(0,40).toLowerCase();if(s.has(k))return false;s.add(k);return true;});};
+  const allItems=dedup(items);
+  const breaking=allItems.filter(it=>it.date>brkCut);
+  const news=allItems.filter(it=>it.date<=brkCut&&it.date>h24Cut);
+  const brkBadge=document.getElementById('tc-breaking');
+  if(brkBadge){if(breaking.length>0){brkBadge.textContent=breaking.length;brkBadge.style.display='inline-flex';}else{brkBadge.textContent='';brkBadge.style.display='none';}}
+  set('brk-count',breaking.length>0?breaking.length+' berichten':'');
+  if(breaking.length>0){
+    document.getElementById('brk-grid').innerHTML=breaking.map((it,i)=>buildNewsCard(it,i,true)).join('');
+    if(newsFirstLoad)switchTab('breaking');
+    queueTx('breaking',breaking,translateCard);
+  }else{document.getElementById('brk-grid').innerHTML='<div class="empty-state">Geen breaking nieuws in de afgelopen 3 uur.</div>';}
+  const top24=news.length?news.slice(0,15):allItems.slice(0,15);
+  const n24badge=document.getElementById('tc-news24');if(n24badge)n24badge.textContent=top24.length||'';
+  set('news-count',top24.length+' berichten');
+  if(top24.length){
+    document.getElementById('news-grid').innerHTML=top24.map((it,i)=>buildNewsCard(it,i,false)).join('');
+    queueTx('news24',top24,translateCard);
+  }else{document.getElementById('news-grid').innerHTML='<div class="empty-state">Nieuws tijdelijk niet beschikbaar.<br><span style="font-size:10px;color:var(--dm)">Open de browser console voor details.</span></div>';}
+  newsFirstLoad=false;
+}
+
+// ════════ REDDIT ════════
+function buildRedditCard(item,idx){
+  const si=srcInfo('Reddit');const id=++newsIdCtr;item._domId=id;
+  return '<a class="news-card" href="'+item.link+'" target="_blank" rel="noopener noreferrer">'
+    +'<div class="news-num">'+String(idx+1).padStart(2,'0')+'</div>'
+    +'<div class="news-body">'
+    +'<div class="news-source-row"><span class="qb '+si.cls+'" title="'+si.tip+'">'+si.label+'</span><span class="news-sub">r/'+item.subreddit+'</span><span class="news-dot">·</span><span class="news-score">↑'+f.score(item.score)+'</span><span class="news-dot">·</span><span class="news-age">'+item.comments+' reacties</span><span class="news-dot">·</span><span class="news-age">'+timeAgo(item.date)+'</span></div>'
+    +'<div class="news-title translating" id="nt-'+id+'">Vertalen...</div>'
+    +(item.summary?'<div class="news-summ translating" id="ns-'+id+'">Vertalen...</div>':'')
+    +'</div></a>';
+}
+async function fetchReddit(sub){
+  try{
+    const url='https://www.reddit.com/r/'+sub+'/hot.json?limit=12&t=day';
+    const j=await(await fetch(url,{headers:{'Accept':'application/json'}})).json();
+    const now=Date.now(),cut=now-24*3600*1000;
+    return j.data.children.map(c=>c.data)
+      .filter(p=>!p.stickied&&p.created_utc*1000>cut&&p.score>10)
+      .map(p=>({title:cleanTitle(p.title),summary:'',link:'https://reddit.com'+p.permalink,date:p.created_utc*1000,score:p.score,comments:p.num_comments,subreddit:p.subreddit,source:'Reddit'}));
+  }catch{return[];}
+}
+async function loadReddit(){
+  const [cc,bt]=await Promise.all([fetchReddit('CryptoCurrency'),fetchReddit('Bitcoin')]);
+  const all=[...cc,...bt].sort((a,b)=>b.score-a.score).slice(0,8);
+  const badge=document.getElementById('tc-reddit');if(badge)badge.textContent=all.length||'';
+  set('reddit-count',all.length+' posts');
+  if(!all.length){document.getElementById('reddit-grid').innerHTML='<div class="empty-state">Reddit niet bereikbaar — mogelijk geblokkeerd door netwerkinstellingen.</div>';return;}
+  document.getElementById('reddit-grid').innerHTML=all.map((it,i)=>buildRedditCard(it,i)).join('');
+  queueTx('reddit',all,translateCard);
+}
+
+// ════════ BANK NEWS ════════
+const CRYPTO_KW=['bitcoin','crypto','blockchain','digital asset','cbdc','stablecoin','ethereum','defi','nft','web3','virtual currency','digital currency','tokenisation','tokenization','distributed ledger','cryptocurrency','digital euro','mica','markets in crypto','virtual asset','bitcoin etf','crypto regulation','crypto investment','digital wallet','satoshi','cryptomunt','cryptovaluta','digitale euro','digitaal geld','digitale valuta','tokenisatie','cryptobelegging','bitcoin belegging','belegging bitcoin','crypto belegging','digitale activa','cryptoregulering','cryptowetgeving','virtueel geld','gedistribueerd kasboek','bitcoin investering','crypto investering','digitale munt','virtuele valuta','bitcoin fonds','crypto fonds','digitale portemonnee','blockchain technologie'];
+function isCryptoRelated(title,desc){const t=(title+' '+(desc||'')).toLowerCase();return CRYPTO_KW.some(k=>t.includes(k))}
+function isBankInstitutionArticle(title,desc){const t=(title+' '+(desc||'')).toLowerCase();const bankTerms=['dnb','de nederlandsche bank','afm','autoriteit financiële','nvb','abn amro','rabobank','ing bank','triodos','van lanschot','robeco','nationale bank','ecb','europese centrale bank','federal reserve','imf','bis ','bank for international','world bank'];return bankTerms.some(k=>t.includes(k))}
+function countryClass(c){if(c==='NL')return'country-nl';if(c==='EU')return'country-eu';if(c==='US')return'country-us';return'country-int'}
+function countryLabel(c){if(c==='NL')return'NL';if(c==='EU')return'EU';if(c==='US')return'US';return'INT'}
+const GN_NL=q=>'https://news.google.com/rss/search?q='+encodeURIComponent(q)+'&hl=nl&gl=NL&ceid=NL:nl';
+const GN_EN=q=>'https://news.google.com/rss/search?q='+encodeURIComponent(q)+'&hl=en-US&gl=US&ceid=US:en';
+const BANK_NL_FEEDS=[
+  // Officiële toezichthouders — skip:true: alles van deze autoriteiten is relevant
+  {url:'https://www.dnb.nl/rss/nieuws.xml',name:'DNB',country:'NL',skip:true},
+  {url:'https://www.afm.nl/nl-nl/nieuws/rss',name:'AFM',country:'NL',skip:true},
+  {url:'https://www.nvb.nl/rss',name:'NVB',country:'NL',skip:true},
+  // Nederlandstalige crypto-media — skip:true: altijd crypto-relevant
+  {url:'https://bitcoinmagazine.nl/feed/',name:'Bitcoin Magazine NL',country:'NL',skip:true},
+  {url:'https://nl.cointelegraph.com/rss',name:'CoinTelegraph NL',country:'NL',skip:true},
+  // Financieel nieuws NL — gefilterd op crypto-keywords
+  {url:'https://iex.nl/rss/nieuws.xml',name:'IEX',country:'NL'},
+  {url:'https://feeds.nos.nl/nosnieuwseconomie',name:'NOS',country:'NL'},
+  {url:'https://www.nu.nl/rss/economie',name:'NU.nl',country:'NL'},
+  {url:'https://www.bnr.nl/rss/financieel-economisch',name:'BNR Nieuwsradio',country:'NL'},
+  {url:'https://www.telegraaf.nl/rss/',name:'Telegraaf',country:'NL'},
+  {url:'https://cryptonews.com/news/feed/',name:'CryptoNews',country:'NL',skip:true},
+];
+const BANK_INT_FEEDS=[
+  // Centrale banken & toezichthouders — altijd relevant, skip:true
+  {url:'https://www.ecb.europa.eu/rss/press.rss',name:'ECB',country:'EU',skip:true},
+  {url:'https://www.bis.org/rss/speeches.rss',name:'BIS',country:'INT',skip:true},
+  {url:'https://www.imf.org/en/News/rss',name:'IMF',country:'INT',skip:true},
+  {url:'https://feeds.bloomberg.com/markets/news.rss',name:'Bloomberg',country:'US'},
+  {url:'https://feeds.reuters.com/reuters/businessNews',name:'Reuters',country:'INT'},
+  {url:'https://www.ft.com/markets?format=rss',name:'Financial Times',country:'INT'},
+  {url:GN_EN('bitcoin OR crypto central bank regulation'),name:'Google News',country:'INT',skip:true},
+  {url:GN_EN('ECB OR Fed OR BIS bitcoin crypto digital euro'),name:'Google News',country:'INT',skip:true},
+  {url:GN_EN('bank bitcoin investment OR regulation OR CBDC 2024 2025'),name:'Google News',country:'INT',skip:true},
+];
+async function fetchBankRSS({url,name,country,skip=false}){
+  const now=Date.now(),cut=now-90*24*3600*1000; // 90 dagen venster
+  // Use same proven 4-method fetch chain as fetchRSS, but with 90-day cutoff
+  let items=[];
+  if(!items.length){try{const r=await fetchWithTimeout(url,5000);if(r.ok)items=parseRSSXML(await r.text(),name,cut);}catch(e){}}
+  if(!items.length){try{const r=await fetchWithTimeout('https://corsproxy.io/?'+encodeURIComponent(url),6000);if(r.ok)items=parseRSSXML(await r.text(),name,cut);}catch(e){}}
+  if(!items.length){try{const r=await fetchWithTimeout('https://api.allorigins.win/get?url='+encodeURIComponent(url),7000);if(r.ok){const d=await r.json();if(d.contents)items=parseRSSXML(d.contents,name,cut);}}catch(e){}}
+  if(!items.length){try{
+    const api='https://api.rss2json.com/v1/api.json?rss_url='+encodeURIComponent(url);
+    const j=await(await fetchWithTimeout(api,8000)).json();
+    if(j.status==='ok'&&j.items?.length){
+      items=j.items.map(it=>({
+        title:cleanTitle(it.title||''),
+        summary:stripHtml(it.description||it.content||'').slice(0,240),
+        link:it.link||it.guid||'#',
+        date:parseDate(it.pubDate),
+      }));
+    }
+  }catch(e){}}
+  // Apply filtering: date check + optional crypto keyword filter
+  return items.filter(it=>{
+    if(isNaN(it.date)||it.date<cut)return false;
+    if(skip)return true;
+    return isCryptoRelated(it.title,it.summary||'');
+  }).map(it=>({...it,source:name,country}));
+}
+let bankIdCtr=0;
+function buildBankCard(item,idx){
+  const si=srcInfo(item.source);const id=++bankIdCtr;item._bankDomId=id;
+  const cc=countryClass(item.country);const cl=countryLabel(item.country);
+  return '<a class="bank-card '+(item.country==='NL'?'nl-card':'int-card')+'" href="'+item.link+'" target="_blank" rel="noopener noreferrer">'
+    +'<div class="bank-num">'+String(idx+1).padStart(2,'0')+'</div>'
+    +'<div class="bank-body">'
+    +'<div class="bank-source-row"><span class="qb '+si.cls+'" title="'+si.tip+'">'+si.label+'</span><span class="bank-country '+cc+'">'+cl+'</span><span class="news-src">'+item.source+'</span><span class="news-dot">·</span><span class="news-age">'+timeAgo(item.date)+'</span></div>'
+    +'<div class="bank-title-text translating" id="bt-'+id+'">Vertalen...</div>'
+    +(item.summary?'<div class="bank-summ translating" id="bs-'+id+'">Vertalen...</div>':'')
+    +'</div></a>';
+}
+async function translateBankCard(item){
+  const te=document.getElementById('bt-'+item._bankDomId);const se=document.getElementById('bs-'+item._bankDomId);
+  if(te){
+    const headlineText=makeSmartHeadline(item.title,item.summary);
+    const t=await tx(headlineText);te.textContent=t;te.classList.remove('translating');
+    const tag=document.createElement('span');tag.className='nl-tag';tag.textContent='NL';te.appendChild(tag);
+  }
+  if(se&&item.summary){
+    let summaryText=item.summary;
+    if(item.summary.length>50){const m=item.summary.match(/^[^.!?]{20,170}[.!?]\s*/);if(m)summaryText=item.summary.slice(m[0].length).trim();}
+    if(summaryText.length>20){const s=await tx(summaryText.slice(0,220));se.textContent=s;se.classList.remove('translating');}
+    else{se.style.display='none';}
+  }
+}
+function dedupBank(arr){
+  arr.sort((a,b)=>b.date-a.date);const seen=new Set();
+  return arr.filter(it=>{const k=it.title.slice(0,45).toLowerCase();if(seen.has(k))return false;seen.add(k);return true;});
+}
+function renderBankItems(nlItems,intItems){
+  const nlBadge=document.getElementById('tc-banknl');if(nlBadge)nlBadge.textContent=nlItems.length||'';
+  set('bank-nl-count',nlItems.length?nlItems.length+' berichten':'');
+  const nlGrid=document.getElementById('bank-nl-grid');
+  if(nlItems.length){nlGrid.innerHTML=nlItems.map((it,i)=>buildBankCard(it,i)).join('');queueTx('banknl',nlItems,translateBankCard);}
+  else{nlGrid.innerHTML='<div class="bank-empty">Geen crypto-gerelateerd nieuws gevonden van Nederlandse banken &amp; instellingen in de afgelopen 40 dagen.<br><span style="font-size:10px;margin-top:4px;display:block">Probeer later opnieuw — sommige feeds zijn mogelijk tijdelijk niet beschikbaar.</span></div>';}
+  const intBadge=document.getElementById('tc-bankint');if(intBadge)intBadge.textContent=intItems.length||'';
+  set('bank-int-count',intItems.length?intItems.length+' berichten':'');
+  const intGrid=document.getElementById('bank-int-grid');
+  if(intItems.length){intGrid.innerHTML=intItems.map((it,i)=>buildBankCard(it,i)).join('');queueTx('bankint',intItems,translateBankCard);}
+  else{intGrid.innerHTML='<div class="bank-empty">Geen crypto-gerelateerd nieuws gevonden van internationale banken &amp; instellingen in de afgelopen 40 dagen.</div>';}
+}
+async function loadBankNews(){
+  const BANK_TTL=10*60*1000;
+  const cachedNL=cacheGet('bank_nl',BANK_TTL);
+  const cachedINT=cacheGet('bank_int',BANK_TTL);
+  // Only use cache if it actually has items (empty array is truthy in JS but useless)
+  if(cachedNL?.length&&cachedINT?.length){renderBankItems(cachedNL,cachedINT);return;}
+  const [nlResults,intResults]=await Promise.all([
+    Promise.all(BANK_NL_FEEDS.map(s=>fetchBankRSS(s))),
+    Promise.all(BANK_INT_FEEDS.map(s=>fetchBankRSS(s))),
+  ]);
+  const nlItems=dedupBank(nlResults.flat()).slice(0,15);
+  const intItems=dedupBank(intResults.flat()).slice(0,15);
+  cacheSet('bank_nl',nlItems);cacheSet('bank_int',intItems);
+  renderBankItems(nlItems,intItems);
+}
+
+// ════════ TIMERS ════════
+let refreshMode='auto';
+let priceInterval=null,newsInterval=null,cdInterval=null,clockInterval=null;
+let priceCd=60,newsCd=600;
+
+function fmtCd(s){
+  if(s>=3600){const h=Math.floor(s/3600),m=Math.floor((s%3600)/60);return h+'u '+String(m).padStart(2,'0')+'m';}
+  const m=Math.floor(s/60),sec=s%60;
+  return m>0?m+'m '+String(sec).padStart(2,'0')+'s':sec+'s';
+}
+function clearTimers(){
+  [priceInterval,newsInterval,cdInterval,clockInterval].forEach(id=>{if(id)clearInterval(id);});
+  priceInterval=newsInterval=cdInterval=clockInterval=null;
+}
+function setRefreshMode(mode){
+  refreshMode=mode;
+  try{localStorage.setItem('cp_refresh_mode',mode);}catch{}
+  document.querySelectorAll('.mode-btn').forEach(b=>b.classList.toggle('active',b.dataset.mode===mode));
+  const mb=document.getElementById('manual-refresh-btn');
+  if(mb)mb.style.display=mode==='manual'?'flex':'none';
+  clearTimers();
+  clockInterval=setInterval(()=>set('hdr-time',new Date().toLocaleTimeString('nl-NL',{hour:'2-digit',minute:'2-digit',second:'2-digit'})),1000);
+  if(mode==='manual'){
+    const cdEl=document.getElementById('cd');if(cdEl)cdEl.textContent='—';
+    const ncdEl=document.getElementById('news-cd');if(ncdEl)ncdEl.textContent='—';
+    return;
+  }
+  const priceSec=mode==='hourly'?3600:60;
+  const newsSec=mode==='hourly'?3600:600;
+  priceCd=priceSec;newsCd=newsSec;
+  cdInterval=setInterval(()=>{
+    priceCd=Math.max(0,priceCd-1);newsCd=Math.max(0,newsCd-1);
+    const cdEl=document.getElementById('cd');if(cdEl)cdEl.textContent=fmtCd(priceCd);
+    const ncdEl=document.getElementById('news-cd');if(ncdEl)ncdEl.textContent=fmtCd(newsCd);
+  },1000);
+  priceInterval=setInterval(()=>{
+    priceCd=priceSec;
+    set('hdr-time',new Date().toLocaleTimeString('nl-NL',{hour:'2-digit',minute:'2-digit',second:'2-digit'}));
+    loadGlobal();loadCoins();
+  },priceSec*1000);
+  newsInterval=setInterval(()=>{
+    newsCd=newsSec;
+    loadNews();loadReddit();loadBankNews();
+  },newsSec*1000);
+}
+function manualRefresh(){
+  const btn=document.getElementById('manual-refresh-btn');
+  if(btn){btn.disabled=true;btn.innerHTML='&#8635; Laden...';}
+  Promise.allSettled([loadGlobal(),loadCoins(),loadNews(),loadReddit(),loadBankNews()]).then(()=>{
+    if(btn){btn.disabled=false;btn.innerHTML='&#8635; Vernieuwen';}
+  });
+}
+
+// ════════ INIT ════════
+(async function init(){
+  // Pre-seed Claude API key if not already stored
+  // Claude API-sleutel invoeren via het tandwiel-menu (⚙) rechtsboven
+  set('hdr-time',new Date().toLocaleTimeString('nl-NL',{hour:'2-digit',minute:'2-digit',second:'2-digit'}));
+  try{
+    Object.keys(localStorage).filter(k=>k.startsWith('cp_')).forEach(k=>{
+      try{const v=JSON.parse(localStorage.getItem(k));if(Array.isArray(v.data)&&v.data.length===0)localStorage.removeItem(k);}catch{}
+    });
+  }catch{}
+  const savedMode=localStorage.getItem('cp_refresh_mode')||'auto';
+  setRefreshMode(savedMode);
+  await Promise.allSettled([loadGlobal(),loadCoins(),loadNews(),loadReddit(),loadBankNews()]);
+})();
+</script>
+</body>
+</html>
