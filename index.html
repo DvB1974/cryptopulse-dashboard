@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Denis · CryptoPulse</title>
+  <title>Denis Capital · CryptoPulse</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
@@ -217,7 +217,7 @@
   <div class="hdr-inner">
     <div class="logo">
       <div class="logo-mark">&#8383;</div>
-      <div class="logo-text"><span class="logo-name">Denis</span><span class="logo-sub">CryptoPulse</span></div>
+      <div class="logo-text"><span class="logo-name">Denis Capital</span><span class="logo-sub">CryptoPulse</span></div>
     </div>
     <div class="hdr-div"></div>
     <div class="hdr-pills">
@@ -1088,7 +1088,7 @@ function manualRefresh(){
 // ════════ INIT ════════
 (async function init(){
   // Pre-seed Claude API key if not already stored
-  // Claude API-sleutel invoeren via het tandwiel-menu (⚙) rechtsboven
+  // Claude API-sleutel wordt lokaal in de browser opgeslagen via ⚙ Instellingen.
   set('hdr-time',new Date().toLocaleTimeString('nl-NL',{hour:'2-digit',minute:'2-digit',second:'2-digit'}));
   try{
     Object.keys(localStorage).filter(k=>k.startsWith('cp_')).forEach(k=>{
