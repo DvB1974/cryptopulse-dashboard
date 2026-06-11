@@ -1,0 +1,16 @@
+{
+  "schema": "denis-capital.signals.v1",
+  "source": "CryptoPulse",
+  "generated_at": "2026-06-11T00:00:00+02:00",
+  "signals": [
+    {
+      "id": "market-pulse-ready",
+      "title": "Market pulse available",
+      "summary": "Crypto market movements can be promoted to Chief of Staff triggers and risk reviews.",
+      "type": "market",
+      "impact": "medium",
+      "confidence": 70,
+      "url": "https://dvb1974.github.io/cryptopulse-dashboard/"
+    }
+  ]
+}
