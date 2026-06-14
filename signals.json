@@ -1,15 +1,41 @@
 {
   "schema": "denis-capital.signals.v1",
   "source": "CryptoPulse",
-  "generated_at": "2026-06-11T00:00:00+02:00",
+  "generated_at": "2026-06-14T19:35:39.548608+00:00",
   "signals": [
     {
-      "id": "market-pulse-ready",
-      "title": "Market pulse available",
-      "summary": "Crypto market movements can be promoted to Chief of Staff triggers and risk reviews.",
+      "id": "cryptopulse-market-watch",
+      "title": "CryptoPulse market watch",
+      "summary": "Dashboard volgt bitcoin, ethereum, concordium; prijs-, 24u-, 7d- en range-data sturen Chief triggers.",
       "type": "market",
+      "impact": "high",
+      "confidence": 82,
+      "tone": "neutral",
+      "url": "https://dvb1974.github.io/cryptopulse-dashboard/",
+      "assets": [
+        "bitcoin",
+        "ethereum",
+        "concordium"
+      ]
+    },
+    {
+      "id": "cryptopulse-news-watch",
+      "title": "CryptoPulse news watch",
+      "summary": "23 crypto- en banknieuwsbronnen voeden marktcontext en regulatory watch.",
+      "type": "news",
       "impact": "medium",
-      "confidence": 70,
+      "confidence": 74,
+      "tone": "neutral",
+      "url": "https://dvb1974.github.io/cryptopulse-dashboard/"
+    },
+    {
+      "id": "cryptopulse-regulatory-watch",
+      "title": "Banking and regulation watch",
+      "summary": "CryptoPulse monitort DNB, AFM, ECB, BIS, banken en internationale nieuwsbronnen op crypto-adoptie en regelgeving.",
+      "type": "regulation",
+      "impact": "medium",
+      "confidence": 72,
+      "tone": "opportunity",
       "url": "https://dvb1974.github.io/cryptopulse-dashboard/"
     }
   ]
