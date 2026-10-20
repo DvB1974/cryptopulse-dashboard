@@ -208,6 +208,143 @@
     .modal-clear-lbl{font-size:11px;color:var(--mu)}
     .modal-btn-clear{background:none;border:0.5px solid var(--b1);border-radius:6px;padding:5px 12px;font-size:11px;color:var(--dm);cursor:pointer}
     .modal-btn-clear:hover{color:var(--red);border-color:var(--red)}
+
+    /* ══════ GAUNTLET LOOP OVERRIDES — leesbaarheid, hiërarchie, mobiel ══════ */
+    :root{--mu:#a1a1aa;--dm:#71717a;--b1:#232327;--b2:#2e2e33}
+    /* Header / marktbalk */
+    .hdr-inner{height:56px;padding:0 20px;gap:14px}
+    .logo-mark{width:30px;height:30px;font-size:15px}
+    .logo-sub{font-size:16px}
+    .hdr-pills{gap:8px}
+    .hdr-pill{flex-direction:column;align-items:flex-start;gap:1px;padding:5px 10px;border-radius:8px;background:var(--s1);border-color:var(--b1)}
+    .hdr-pill .pl{font-size:10px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--dm)}
+    .hdr-pill .pv{font-size:13px;color:var(--tx);font-weight:600}
+    .hdr-pill .pv.pchg{font-size:11px;align-self:center}
+    .hdr-pill:first-child{display:grid;grid-template-columns:auto auto;column-gap:8px}
+    .hdr-pill:first-child .pl{grid-column:1/3}
+    .hdr-time{font-size:12px;color:var(--mu)}
+    .mode-btn{font-size:11.5px;height:26px;color:var(--mu)}
+    /* Coinkaarten */
+    .coin-panel{padding:18px 20px 16px}
+    .cp-top{margin-bottom:12px}
+    .cp-ticker{font-size:15px}
+    .cp-name{font-size:12px;color:var(--mu)}
+    .cp-dot{width:8px;height:8px;margin-top:5px}
+    .cp-rank{font-size:11px;color:var(--mu);padding:2px 6px}
+    .cp-price{font-size:32px;margin-bottom:8px;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+    .chg{font-size:13px;padding:3px 8px;border-radius:6px;gap:5px;margin-bottom:12px}
+    .chg-arrow{font-size:10px}
+    .chg-period{font-size:11px;font-weight:500;opacity:.7;margin-left:4px}
+    .cp-spark{height:48px;margin-bottom:12px}
+    .rng-labels{font-size:11px;color:var(--mu);margin-bottom:5px}
+    .rng-mid-lbl{font-size:11px;color:var(--dm)}
+    .rng-bar{height:4px;margin-bottom:14px}
+    .rng-fill{height:4px}
+    .rng-pip{top:-4px;width:12px;height:12px}
+    .stat-grid{gap:6px}
+    .stat-block.wide{grid-column:1/3;display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+    .stat-block.wide .sl{margin:0}
+    .stat-block .sv .muted{color:var(--dm);font-weight:500}
+    .stat-block{padding:8px 10px;border-radius:8px}
+    .stat-block .sl{font-size:10px;color:var(--dm);margin-bottom:3px}
+    .stat-block .sv{font-size:13px;color:var(--tx);font-variant-numeric:tabular-nums}
+    footer{font-size:11px;padding:7px 20px}
+    html,body{height:auto;overflow:auto}
+    #app{height:auto;min-height:100vh;overflow:visible}
+    .news-area{flex:none;height:640px}
+    header{position:sticky;top:0}
+    /* Marktcontext */
+    .ctx-row{display:grid;grid-template-columns:1.25fr 1fr 1fr;border-bottom:0.5px solid var(--b1)}
+    .ctx-panel{padding:16px 20px;border-right:0.5px solid var(--b1);min-width:0}
+    .ctx-panel:last-child{border-right:none}
+    .ctx-hdr{display:flex;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:10px}
+    .ctx-title{font-size:13px;font-weight:700;color:var(--tx)}
+    .ctx-src{font-size:10.5px;color:var(--dm);white-space:nowrap}
+    .ctx-foot{font-size:10.5px;color:var(--dm);margin-top:10px}
+    .why-head{font-size:15px;font-weight:700;margin-bottom:10px;line-height:1.35}
+    .why-head .tone{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px;margin-right:6px;vertical-align:2px}
+    .tone.neg{background:rgba(239,68,68,.12);color:var(--red)}.tone.pos{background:rgba(34,197,94,.12);color:var(--grn)}.tone.neu{background:rgba(161,161,170,.12);color:var(--mu)}
+    .why-list{list-style:none;display:flex;flex-direction:column;gap:7px}
+    .why-list li{display:grid;grid-template-columns:14px 1fr;gap:6px;font-size:12px;line-height:1.45;color:var(--mu)}
+    .why-list li b{color:var(--tx);font-weight:600}
+    .why-list .dot{width:8px;height:8px;border-radius:50%;margin-top:5px}
+    .dot.neg{background:var(--red)}.dot.pos{background:var(--grn)}.dot.neu{background:var(--dm)}
+    .why-list .src{color:var(--dm);font-size:10.5px}
+    .breadth{margin-top:12px;padding-top:10px;border-top:0.5px solid var(--b1);font-size:11.5px;color:var(--mu);display:grid;grid-template-columns:1fr 1fr;gap:3px 14px;line-height:1.5}
+    .breadth .bl:nth-of-type(3),.breadth .bl:nth-of-type(4){margin-top:8px}
+    .breadth .bl{color:var(--dm);font-size:10px;text-transform:uppercase;letter-spacing:.05em;font-weight:600;grid-column:span 1}
+    .breadth .mv{font-family:'JetBrains Mono',monospace;font-size:11.5px}
+    table.kv{width:100%;border-collapse:collapse;font-size:12px}
+    table.kv th{font-size:10px;color:var(--dm);text-align:right;font-weight:600;letter-spacing:.05em;padding:0 0 6px}
+    table.kv td{padding:6px 0;border-top:0.5px solid var(--b1);color:var(--mu)}
+    table.kv td+td{text-align:right;color:var(--tx);font-family:'JetBrains Mono',monospace;font-size:12px;white-space:nowrap;padding-left:10px;width:30%}
+    table.kv td .sub{display:block;color:var(--dm);font-size:10.5px;font-family:Inter,sans-serif;white-space:normal}
+    .etf{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:10px}
+    .etf-box{background:var(--s1);border:0.5px solid var(--b1);border-radius:8px;padding:8px 10px}
+    .etf-box .el{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--dm)}
+    .etf-box .ev{font-size:15px;font-weight:700;font-family:'JetBrains Mono',monospace;margin-top:2px}
+    .etf-box .es{font-size:10.5px;color:var(--dm);margin-top:2px}
+    .etf-bars{display:flex;gap:3px;height:34px;margin-top:8px;position:relative;border-top:0;background:linear-gradient(var(--b2),var(--b2)) 0 50%/100% 1px no-repeat}
+    .etf-bars .eb{flex:1;position:relative;height:100%}
+    .etf-bars .eb i{position:absolute;left:0;right:0;border-radius:1px}
+    dl.liq{display:grid;grid-template-columns:1fr auto;font-size:12px}
+    dl.liq dt,dl.liq dd{padding:6px 0;border-top:0.5px solid var(--b1)}
+    dl.liq dt{color:var(--mu)}
+    dl.liq dd{text-align:right;color:var(--tx);font-family:'JetBrains Mono',monospace;white-space:nowrap;padding-left:10px}
+    dl.liq dd .sub{display:block;font-size:10.5px;color:var(--dm)}
+    .xchk{display:inline-flex;margin-left:8px;font-size:11px;color:var(--dm);vertical-align:top;margin-top:4px}
+    .xchk.ok{color:var(--mu)}.xchk.warn{color:var(--amb)}
+    .ntag{font-size:9.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:2px 6px;border-radius:3px;background:rgba(245,158,11,.1);color:var(--amb);border:0.5px solid rgba(245,158,11,.25)}
+    .stale{color:var(--amb)!important}
+    .inst-news{margin-top:12px;padding-top:10px;border-top:0.5px solid var(--b1)}
+    .in-h{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--dm);margin-bottom:6px}
+    .in-i{display:block;font-size:12px;line-height:1.4;color:var(--tx);text-decoration:none;padding:5px 0}
+    .in-i:hover{color:#93c5fd}
+    .in-m{display:block;font-size:10.5px;color:var(--dm);margin-top:1px}
+    .mob-strip{display:none}
+    .mob-src{font-size:11px;color:var(--mu);padding:8px 16px;border-bottom:0.5px solid var(--b1)}
+    .pl-src{font-style:normal;text-transform:none;letter-spacing:0;color:var(--dm);opacity:.8;margin-left:4px;font-weight:500}
+    .hdr-srcwrap{display:flex;flex-direction:column;align-items:flex-end;line-height:1.35}
+    .hdr-src{font-size:11px;color:var(--mu);white-space:nowrap}
+    .hdr-fn{font-size:10px;color:var(--dm);white-space:nowrap}
+    .hdr-right .hdr-time{display:none}
+    .cp-spark{position:relative}
+    .cp-spark{height:auto}.spark-box{position:relative;height:44px}
+    .spark-lbl{display:block;text-align:right;font-size:10px;color:var(--dm);letter-spacing:.02em;margin-bottom:2px}
+    /* Mobiel */
+    @media (max-width:760px){
+      html,body{height:auto;overflow:auto}
+      #app{height:auto;min-height:100%;overflow:visible}
+      .hdr-inner{flex-wrap:wrap;height:auto;padding:10px 16px;row-gap:10px}
+      .hdr-div,.hdr-time,.live-pill,.mode-sel,.hdr-srcwrap{display:none}
+      .hdr-inner{flex-wrap:wrap}
+      .mob-src{display:block!important}
+      .mob-strip{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:0.5px solid var(--b1)}
+      .ms-item{display:flex;flex-direction:column;gap:2px;padding:10px 12px;text-decoration:none;color:inherit;border-right:0.5px solid var(--b1);min-width:0}
+      .ms-item:last-child{border-right:none}
+      .ms-t{font-size:11px;font-weight:700;color:var(--mu);letter-spacing:.04em}
+      .ms-p{font-size:14px;font-weight:700;font-family:'JetBrains Mono',monospace;color:var(--tx);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+      .ms-c{font-size:12px;font-weight:600;font-family:'JetBrains Mono',monospace}
+      .hdr-right{margin-left:auto}
+      .hdr-pills{order:3;flex:0 0 100%;display:grid;grid-template-columns:1fr 1fr;gap:6px;overflow:visible}
+      .hdr-pill{width:100%}
+      .hdr-pills .hdr-pill:last-child:nth-child(odd){grid-column:1/3}
+      .coins-row{grid-template-columns:1fr}
+      .ctx-row{grid-template-columns:1fr;order:4}
+      header{order:0}.mob-strip{order:1}.mob-src{order:2}.coins-row{order:5}.news-area{order:6}footer{order:7}
+      .ctx-panel{border-right:none;border-bottom:0.5px solid var(--b1);padding:16px}
+      table.kv td+td{white-space:normal}
+      #app{overflow-x:hidden}
+      .news-area{height:auto}
+      .coin-panel{border-right:none;border-bottom:0.5px solid var(--b1)}
+      .news-area{overflow:visible}
+      .tab-content{overflow:visible;min-height:60vh}
+      .tab-pane{position:static}
+      footer{flex-direction:column;align-items:flex-start}
+      footer{font-size:12px}
+      footer>span:first-child{font-size:12px;color:var(--mu)}
+      .tab-bar{-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent)}
+    }
   </style>
 </head>
 <body>
@@ -221,12 +358,14 @@
     </div>
     <div class="hdr-div"></div>
     <div class="hdr-pills">
-      <div class="hdr-pill">Mcap&nbsp;<span class="pv" id="g-mcap">&#8212;</span>&nbsp;<span class="pv" id="g-mcap-chg">&#8212;</span></div>
-      <div class="hdr-pill">Volume&nbsp;<span class="pv" id="g-vol">&#8212;</span></div>
-      <div class="hdr-pill">BTC Dom&nbsp;<span class="pv" id="g-dom">&#8212;</span></div>
-      <div class="hdr-pill">Angst &amp; Hebzucht&nbsp;<span class="pv" id="g-fg">&#8212;</span></div>
+      <div class="hdr-pill"><span class="pl">Totale marktcap</span><span class="pv" id="g-mcap">&#8212;</span><span class="pv pchg" id="g-mcap-chg">&#8212;</span></div>
+      <div class="hdr-pill"><span class="pl">BTC-dom.</span><span class="pv" id="g-dom">&#8212;</span></div>
+      <div class="hdr-pill"><span class="pl">ETH-dom.</span><span class="pv" id="g-ethdom">&#8212;</span></div>
+      <div class="hdr-pill" title="24u-handelsvolume van de top 250, exclusief stablecoins (stablecoin-volume is vooral handelspaar-omzet)"><span class="pl">Volume 24u&#178;</span><span class="pv" id="g-vol">&#8212;</span></div>
+      <div class="hdr-pill" title="Crypto Fear &amp; Greed Index van alternative.me (dagwaarde). Let op: CoinGecko gebruikt een eigen index met andere uitkomsten."><span class="pl">Angst &amp; Hebzucht&#185;</span><span class="pv" id="g-fg">&#8212;</span></div>
     </div>
     <div class="hdr-right">
+      <span class="hdr-srcwrap"><span class="hdr-src" id="hdr-src" title="Koersen via CoinGecko, sentiment via alternative.me">Bron: CoinGecko &middot; laden&hellip;</span><span class="hdr-fn" id="hdr-fn">&#185; alternative.me &middot; &#178; excl. stablecoins</span></span>
       <span class="hdr-time" id="hdr-time">&#8212;</span>
       <div class="mode-sel">
         <button class="mode-btn active" data-mode="auto"   onclick="setRefreshMode('auto')"   title="Auto: koersen 1min, nieuws 10min">&#9889; Auto</button>
@@ -235,75 +374,115 @@
       </div>
       <button id="manual-refresh-btn" onclick="manualRefresh()">&#8635; Vernieuwen</button>
       <button class="settings-btn" onclick="openSettings()" title="Instellingen · Claude API sleutel">&#9881;</button>
-      <div class="live-pill"><div class="live-dot"></div>LIVE</div>
+      
     </div>
   </div>
 </header>
 
 <!-- ═══ COIN PANELS ═══ -->
+<div class="mob-strip" id="mob-strip"></div>
+<div class="mob-src" id="mob-src" style="display:none">Bron: CoinGecko</div>
 <div class="coins-row">
 
-  <div class="coin-panel btc-panel">
+  <div class="coin-panel btc-panel" id="btc-card">
     <div class="cp-top">
       <div class="cp-id"><span class="cp-dot btc"></span><div><div class="cp-ticker">BTC</div><div class="cp-name">Bitcoin / USD</div></div></div>
       <span class="cp-rank" id="btc-rank">#&#8212;</span>
     </div>
     <div class="cp-price" id="btc-price">$&#8212;</div>
-    <div class="chg" id="btc-chg">&#8212;</div>
-    <div class="cp-spark"><canvas id="btc-spark"></canvas></div>
+    <div class="chg" id="btc-chg">&#8212;</div><span class="xchk" id="btc-xchk"></span>
+    <div class="cp-spark"><span class="spark-lbl">Koersverloop 24u</span><div class="spark-box"><canvas id="btc-spark"></canvas></div></div>
     <div class="rng-labels"><span id="btc-lo">&#8212;</span><span class="rng-mid-lbl">24u bereik</span><span id="btc-hi">&#8212;</span></div>
     <div class="rng-bar"><div class="rng-fill" id="btc-rng-fill"></div><div class="rng-pip" id="btc-rng-pip"></div></div>
     <div class="stat-grid">
       <div class="stat-block"><span class="sl">Marktcap</span><span class="sv" id="btc-mcap">&#8212;</span></div>
+      <div class="stat-block" title="Fully diluted valuation: koers × maximaal/totaal aanbod"><span class="sl">FDV</span><span class="sv" id="btc-fdv">&#8212;</span></div>
       <div class="stat-block"><span class="sl">Volume 24u</span><span class="sv" id="btc-vol">&#8212;</span></div>
-      <div class="stat-block"><span class="sl">7d wijziging</span><span class="sv" id="btc-7d">&#8212;</span></div>
-      <div class="stat-block"><span class="sl">7d hoog</span><span class="sv" id="btc-7dhi">&#8212;</span></div>
-      <div class="stat-block"><span class="sl">7d laag</span><span class="sv" id="btc-7dlo">&#8212;</span></div>
       <div class="stat-block"><span class="sl">Circulatie</span><span class="sv" id="btc-circ">&#8212;</span></div>
+      <div class="stat-block wide"><span class="sl">Rendement 7d &middot; 30d &middot; 1j</span><span class="sv" id="btc-ret"><span id="btc-7d">&#8212;</span></span></div>
+      <div class="stat-block wide"><span class="sl">All-time high</span><span class="sv" id="btc-ath">&#8212;</span></div>
+      <div class="stat-block wide"><span class="sl">7d bereik</span><span class="sv"><span id="btc-7dlo">&#8212;</span> &ndash; <span id="btc-7dhi">&#8212;</span></span></div>
+      <div class="stat-block wide" id="btc-tsy-wrap" title="Beursgenoteerde bedrijven met BTC op de balans (CoinGecko public treasury). Exclusief ETF’s en overheden."><span class="sl">Bedrijfstreasuries</span><span class="sv" id="btc-tsy">&#8212;</span></div>
     </div>
   </div>
 
-  <div class="coin-panel eth-panel">
+  <div class="coin-panel eth-panel" id="eth-card">
     <div class="cp-top">
       <div class="cp-id"><span class="cp-dot eth"></span><div><div class="cp-ticker">ETH</div><div class="cp-name">Ethereum / USD</div></div></div>
       <span class="cp-rank" id="eth-rank">#&#8212;</span>
     </div>
     <div class="cp-price" id="eth-price">$&#8212;</div>
-    <div class="chg" id="eth-chg">&#8212;</div>
-    <div class="cp-spark"><canvas id="eth-spark"></canvas></div>
+    <div class="chg" id="eth-chg">&#8212;</div><span class="xchk" id="eth-xchk"></span>
+    <div class="cp-spark"><span class="spark-lbl">Koersverloop 24u</span><div class="spark-box"><canvas id="eth-spark"></canvas></div></div>
     <div class="rng-labels"><span id="eth-lo">&#8212;</span><span class="rng-mid-lbl">24u bereik</span><span id="eth-hi">&#8212;</span></div>
     <div class="rng-bar"><div class="rng-fill" id="eth-rng-fill"></div><div class="rng-pip" id="eth-rng-pip"></div></div>
     <div class="stat-grid">
       <div class="stat-block"><span class="sl">Marktcap</span><span class="sv" id="eth-mcap">&#8212;</span></div>
+      <div class="stat-block" title="Fully diluted valuation: koers × maximaal/totaal aanbod"><span class="sl">FDV</span><span class="sv" id="eth-fdv">&#8212;</span></div>
       <div class="stat-block"><span class="sl">Volume 24u</span><span class="sv" id="eth-vol">&#8212;</span></div>
-      <div class="stat-block"><span class="sl">7d wijziging</span><span class="sv" id="eth-7d">&#8212;</span></div>
-      <div class="stat-block"><span class="sl">7d hoog</span><span class="sv" id="eth-7dhi">&#8212;</span></div>
-      <div class="stat-block"><span class="sl">7d laag</span><span class="sv" id="eth-7dlo">&#8212;</span></div>
       <div class="stat-block"><span class="sl">Circulatie</span><span class="sv" id="eth-circ">&#8212;</span></div>
+      <div class="stat-block wide"><span class="sl">Rendement 7d &middot; 30d &middot; 1j</span><span class="sv" id="eth-ret"><span id="eth-7d">&#8212;</span></span></div>
+      <div class="stat-block wide"><span class="sl">All-time high</span><span class="sv" id="eth-ath">&#8212;</span></div>
+      <div class="stat-block wide"><span class="sl">7d bereik</span><span class="sv"><span id="eth-7dlo">&#8212;</span> &ndash; <span id="eth-7dhi">&#8212;</span></span></div>
+      <div class="stat-block wide" id="eth-tsy-wrap" title="Beursgenoteerde bedrijven met ETH op de balans (CoinGecko public treasury). Exclusief ETF’s en overheden."><span class="sl">Bedrijfstreasuries</span><span class="sv" id="eth-tsy">&#8212;</span></div>
     </div>
   </div>
 
-  <div class="coin-panel ccd-panel">
+  <div class="coin-panel ccd-panel" id="ccd-card">
     <div class="cp-top">
       <div class="cp-id"><span class="cp-dot ccd"></span><div><div class="cp-ticker">CCD</div><div class="cp-name">Concordium / USD</div></div></div>
       <span class="cp-rank" id="ccd-rank">#&#8212;</span>
     </div>
     <div class="cp-price" id="ccd-price">$&#8212;</div>
     <div class="chg" id="ccd-chg">&#8212;</div>
-    <div class="cp-spark"><canvas id="ccd-spark"></canvas></div>
+    <div class="cp-spark"><span class="spark-lbl">Koersverloop 24u</span><div class="spark-box"><canvas id="ccd-spark"></canvas></div></div>
     <div class="rng-labels"><span id="ccd-lo">&#8212;</span><span class="rng-mid-lbl">24u bereik</span><span id="ccd-hi">&#8212;</span></div>
     <div class="rng-bar"><div class="rng-fill" id="ccd-rng-fill"></div><div class="rng-pip" id="ccd-rng-pip"></div></div>
     <div class="stat-grid">
       <div class="stat-block"><span class="sl">Marktcap</span><span class="sv" id="ccd-mcap">&#8212;</span></div>
+      <div class="stat-block" title="Fully diluted valuation: koers × maximaal/totaal aanbod"><span class="sl">FDV</span><span class="sv" id="ccd-fdv">&#8212;</span></div>
       <div class="stat-block"><span class="sl">Volume 24u</span><span class="sv" id="ccd-vol">&#8212;</span></div>
-      <div class="stat-block"><span class="sl">7d wijziging</span><span class="sv" id="ccd-7d">&#8212;</span></div>
-      <div class="stat-block"><span class="sl">7d hoog</span><span class="sv" id="ccd-7dhi">&#8212;</span></div>
-      <div class="stat-block"><span class="sl">7d laag</span><span class="sv" id="ccd-7dlo">&#8212;</span></div>
-      <div class="stat-block"><span class="sl">Aanbod</span><span class="sv" id="ccd-circ">&#8212;</span></div>
+      <div class="stat-block"><span class="sl">Circulatie</span><span class="sv" id="ccd-circ">&#8212;</span></div>
+      <div class="stat-block wide"><span class="sl">Rendement 7d &middot; 30d &middot; 1j</span><span class="sv" id="ccd-ret"><span id="ccd-7d">&#8212;</span></span></div>
+      <div class="stat-block wide"><span class="sl">All-time high</span><span class="sv" id="ccd-ath">&#8212;</span></div>
+      <div class="stat-block wide"><span class="sl">7d bereik</span><span class="sv"><span id="ccd-7dlo">&#8212;</span> &ndash; <span id="ccd-7dhi">&#8212;</span></span></div>
+      
     </div>
   </div>
 
 </div>
+
+<!-- ═══ MARKTCONTEXT ═══ -->
+<section class="ctx-row" id="ctx">
+  <div class="ctx-panel ctx-why">
+    <div class="ctx-hdr"><span class="ctx-title">Waarom beweegt de markt?</span><span class="ctx-src">regelgebaseerd &middot; geen advies</span></div>
+    <div class="why-head" id="why-head">Signalen laden&hellip;</div>
+    <ul class="why-list" id="why-list"></ul>
+    <div class="breadth" id="breadth"></div>
+  </div>
+  <div class="ctx-panel">
+    <div class="ctx-hdr"><span class="ctx-title">Derivaten &amp; hefboom</span><span class="ctx-src" id="dv-src">bron per regel</span></div>
+    <table class="kv" id="dv-table">
+      <thead><tr><th></th><th>BTC</th><th>ETH</th></tr></thead>
+      <tbody>
+        <tr><td title="Gemiddelde funding rate Binance, OKX en Bybit per 8 uur; daaronder geannualiseerd">Funding per 8u<span class="sub">gem. Binance/OKX/Bybit</span></td><td id="dv-f-btc">&#8212;</td><td id="dv-f-eth">&#8212;</td></tr>
+        <tr><td title="Open interest op Binance USDT-perpetuals (één beurs, niet het markttotaal), met verandering over 24 uur">Open interest<span class="sub">Binance+OKX+Bybit, USDT-perps</span></td><td id="dv-oi-btc">&#8212;</td><td id="dv-oi-eth">&#8212;</td></tr>
+        <tr><td title="Som van geliquideerde posities op OKX. Long = gedwongen verkoop, short = gedwongen aankoop. Alleen OKX: andere beurzen bieden geen open historiek.">Liquidaties<span class="sub">alleen OKX (indicatief)</span></td><td id="dv-lq-btc">&#8212;</td><td id="dv-lq-eth">&#8212;</td></tr>
+        <tr><td title="Verhouding accounts long vs short op Binance (laatste uur)">Long/short accounts<span class="sub">Binance, 1u</span></td><td id="dv-ls-btc">&#8212;</td><td id="dv-ls-eth">&#8212;</td></tr>
+        <tr><td title="Agressieve koop- vs verkoopvolume (taker) op Binance, laatste uur">Taker koop/verkoop<span class="sub">Binance, 1u</span></td><td id="dv-tk-btc">&#8212;</td><td id="dv-tk-eth">&#8212;</td></tr>
+        <tr><td title="Deribit Volatility Index: verwachte 30-daagse volatiliteit (geannualiseerd)">Impl. volatiliteit<span class="sub">Deribit DVOL</span></td><td id="dv-iv-btc">&#8212;</td><td id="dv-iv-eth">&#8212;</td></tr>
+      </tbody>
+    </table>
+    <div class="ctx-foot" id="dv-age"></div>
+  </div>
+  <div class="ctx-panel">
+    <div class="ctx-hdr"><span class="ctx-title">Liquiditeit &amp; institutioneel</span><span class="ctx-src">Farside &middot; DefiLlama &middot; CoinGecko</span></div>
+    <div class="etf" id="etf"></div>
+    <dl class="liq" id="liq"></dl>
+    <div class="inst-news" id="inst-news"></div>
+    <div class="ctx-foot" id="liq-age"></div>
+  </div>
+</section>
 
 <!-- ═══ NEWS AREA ═══ -->
 <div class="news-area">
@@ -512,18 +691,19 @@ function srcInfo(name){
 // ════════ FORMATTERS ════════
 const f={
   price(n){if(n==null)return'—';if(n>=1000)return'$'+n.toLocaleString('en-US',{maximumFractionDigits:0});if(n>=1)return'$'+n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:4});return'$'+n.toLocaleString('en-US',{minimumFractionDigits:4,maximumFractionDigits:8})},
-  cap(n){if(!n)return'—';if(n>=1e12)return'$'+(n/1e12).toFixed(2)+'T';if(n>=1e9)return'$'+(n/1e9).toFixed(2)+'B';if(n>=1e6)return'$'+(n/1e6).toFixed(2)+'M';return'$'+n.toLocaleString()},
+  cap(n){if(!n)return'—';if(n>=1e12)return'$'+(n/1e12).toFixed(2)+'T';if(n>=1e9)return'$'+(n/1e9).toFixed(2)+'B';if(n>=1e6)return'$'+(n/1e6).toFixed(2)+'M';if(n>=1e3)return'$'+(n/1e3).toFixed(1)+'K';return'$'+n.toLocaleString()},
   pct(n,abs){if(n==null)return'—';const v=abs?Math.abs(n):n;return(n>=0?'+':'')+v.toFixed(2)+'%'},
   supply(n){if(!n)return'—';if(n>=1e9)return(n/1e9).toFixed(2)+'B';if(n>=1e6)return(n/1e6).toFixed(2)+'M';if(n>=1000)return(n/1000).toFixed(1)+'K';return n.toLocaleString('en-US',{maximumFractionDigits:0})},
   num(n){return n?n.toLocaleString('en-US'):'—'},
   score(n){if(!n)return'';return n>=1000?(n/1000).toFixed(1)+'k':String(n)},
 };
+function setMobSrc(){set('mob-src',(window.__srcTxt||'CoinGecko')+'<br><span style="color:var(--dm)">'+(document.getElementById('hdr-fn')?.innerHTML||'')+'</span>');}
 function set(id,html){const e=document.getElementById(id);if(e)e.innerHTML=html}
 function setChg(id,pct){
   const e=document.getElementById(id);if(!e)return;
   const p=pct>=0;
   e.className='chg '+(p?'pos':'neg');
-  e.innerHTML='<span style="font-size:12px">'+(p?'▲':'▼')+'</span>'+f.pct(Math.abs(pct),true);
+  e.innerHTML='<span class="chg-arrow">'+(p?'▲':'▼')+'</span>'+f.pct(pct).replace('-','−')+'<span class="chg-period">24u</span>';
 }
 function timeAgo(d){
   const ms=(d instanceof Date)?d.getTime():(typeof d==='number'?d:Date.now());
@@ -662,24 +842,57 @@ function spark(id,data,pos){
 
 // ════════ GLOBAL MARKET ════════
 async function loadGlobal(){
+  // CoinGecko's /global endpoint has returned implausible values (24h volume > total market cap,
+  // market-cap change far off its own website). We therefore compute the market summary ourselves
+  // from the top-250 coins by market cap (~99% of total market cap), same source as the coin cards.
   try{
-    const {data:g}=await(await fetch('https://api.coingecko.com/api/v3/global')).json();
-    set('g-mcap',f.cap(g.total_market_cap.usd));
-    const chg=g.market_cap_change_percentage_24h_usd;
+    let rows=cacheGet('top250',5*60*1000);
+    if(!rows){
+      const r=await fetchWithTimeout('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1&price_change_percentage=24h',8000);
+      if(!r.ok)throw new Error('HTTP '+r.status);
+      const raw=await r.json();
+      rows=raw.map(c=>({id:c.id,symbol:c.symbol,mc:c.market_cap||0,mcc:c.market_cap_change_24h||0,vol:c.total_volume||0,pc:c.price_change_percentage_24h}));
+      cacheSet('top250',rows);
+    }
+    window.__top250=rows;
+    let mc=rows.reduce((a,c)=>a+c.mc,0), prev=rows.reduce((a,c)=>a+(c.mc-c.mcc),0);
+    let chg=(mc/prev-1)*100, basis='top 250';
+    // Prefer CoinGecko's full-market /global figure, but only if it passes sanity checks against the top-250 sum
+    try{
+      let g=cacheGet('cg_global',5*60*1000);
+      if(!g){const r=await fetchWithTimeout('https://api.coingecko.com/api/v3/global',6000);if(r.ok){g=(await r.json()).data;cacheSet('cg_global',g);}}
+      if(g){
+        const gmc=g.total_market_cap.usd,gchg=g.market_cap_change_percentage_24h_usd,gvol=g.total_volume.usd;
+        const sane=gmc>=mc&&gmc<mc*1.1&&Math.abs(gchg-chg)<1&&gvol<gmc;
+        if(sane){mc=gmc;chg=gchg;basis='totaal';}
+        else console.warn('CoinGecko /global failed sanity check; using top-250 sum',{gmc,gchg,gvol,top250:mc,top250chg:chg});
+      }
+    }catch{}
+    const mcLbl=document.querySelector('#g-mcap')?.closest('.hdr-pill')?.querySelector('.pl');
+    set('hdr-fn','&#185; alternative.me &middot; &#178; excl. stablecoins'+(basis==='totaal'?'':' &middot; * som top 250')); setMobSrc();
+    if(mcLbl){mcLbl.textContent=basis==='totaal'?'Totale marktcap':'Totale marktcap*';mcLbl.title=basis==='totaal'?'CoinGecko, alle munten':'CoinGecko-totaal faalde de controle; dit is de som van de top 250 munten (~99% van de markt)';}
+    const by=id=>rows.find(c=>c.id===id)||{mc:0};
+    const star=basis==='totaal'?'':'*';
+    set('g-dom',(by('bitcoin').mc/mc*100).toFixed(1)+'%'+star);
+    set('g-ethdom',(by('ethereum').mc/mc*100).toFixed(1)+'%'+star);
+    const nonStableVol=rows.filter(c=>!STABLE_SYMS.has(c.symbol)).reduce((a,c)=>a+c.vol,0);
+    set('g-vol',f.cap(nonStableVol));
+    set('g-mcap',f.cap(mc));
     const el=document.getElementById('g-mcap-chg');
-    if(el){el.className='pv '+(chg>=0?'pos':'neg');el.textContent=f.pct(chg)+'(24u)';}
-    set('g-vol',f.cap(g.total_volume.usd));
-    set('g-dom',g.market_cap_percentage.btc.toFixed(1)+'%');
+    if(el){el.className='pv pchg '+(chg>=0?'pos':'neg');el.textContent=f.pct(chg).replace('-','−')+' 24u';}
+
+    document.dispatchEvent(new CustomEvent('cp:top250',{detail:rows}));
   }catch(e){console.warn('global',e)}
   // Fear & Greed Index (alternative.me)
   try{
     const fg=await(await fetchWithTimeout('https://api.alternative.me/fng/?limit=1',5000)).json();
     if(fg.data?.[0]){
       const v=parseInt(fg.data[0].value);
+      const NL={'Extreme Fear':'Extreme angst','Fear':'Angst','Neutral':'Neutraal','Greed':'Hebzucht','Extreme Greed':'Extreme hebzucht'};
       const el=document.getElementById('g-fg');
       if(el){
         el.className='pv '+(v>=60?'pos':v<=40?'neg':'');
-        el.textContent=v+' · '+fg.data[0].value_classification;
+        el.textContent=v+' · '+(NL[fg.data[0].value_classification]||fg.data[0].value_classification);
       }
     }
   }catch{}
@@ -688,7 +901,7 @@ async function loadGlobal(){
 // ════════ COIN PRICES ════════
 async function loadCoins(){
   try{
-    const url='https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin,ethereum,concordium&order=market_cap_desc&per_page=10&page=1&sparkline=true&price_change_percentage=24h,7d';
+    const url='https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin,ethereum,concordium&order=market_cap_desc&per_page=10&page=1&sparkline=true&price_change_percentage=24h,7d,30d,1y';
     const coins=await(await fetch(url)).json();
     coins.forEach(c=>{
       const p=c.id==='bitcoin'?'btc':c.id==='ethereum'?'eth':c.id==='concordium'?'ccd':null;
@@ -701,8 +914,12 @@ async function loadCoins(){
       set(p+'-hi',f.price(c.high_24h));
       set(p+'-lo',f.price(c.low_24h));
       // 24h range bar
-      if(c.high_24h>c.low_24h){
-        const pct=Math.min(98,Math.max(2,Math.round((c.current_price-c.low_24h)/(c.high_24h-c.low_24h)*100)));
+      // CoinGecko's 24h hi/lo can lag the live price; widen the range so price, labels and pip never contradict
+      const lo24=Math.min(c.low_24h,c.current_price), hi24=Math.max(c.high_24h,c.current_price);
+      set(p+'-hi',f.price(hi24));
+      set(p+'-lo',f.price(lo24));
+      if(hi24>lo24){
+        const pct=Math.min(98,Math.max(2,Math.round((c.current_price-lo24)/(hi24-lo24)*100)));
         const isUp=c.price_change_percentage_24h>=0;
         const col=isUp?'#22c55e':'#ef4444';
         const fill=document.getElementById(p+'-rng-fill');
@@ -710,21 +927,301 @@ async function loadCoins(){
         if(fill){fill.style.width=pct+'%';fill.style.background=col;}
         if(pip){pip.style.left=pct+'%';pip.style.background=col;}
       }
-      // 7d change
-      const p7d=c.price_change_percentage_7d_in_currency;
-      const el7d=document.getElementById(p+'-7d');
-      if(el7d&&p7d!=null){el7d.className='sv '+(p7d>=0?'pos':'neg');el7d.textContent=f.pct(p7d);}
+      // Returns 7d / 30d / 1y
+      const rc=v=>v==null?'<span class="muted">—</span>':'<span class="'+(v>=0?'pos':'neg')+'">'+f.pct(v).replace('-','−')+'</span>';
+      set(p+'-ret',rc(c.price_change_percentage_7d_in_currency)+' <span class="muted">·</span> '+rc(c.price_change_percentage_30d_in_currency)+' <span class="muted">·</span> '+rc(c.price_change_percentage_1y_in_currency));
+      // FDV & supply
+      set(p+'-fdv',!c.fully_diluted_valuation?'—':(!c.max_supply&&Math.abs(c.fully_diluted_valuation/c.market_cap-1)<0.01)?'<span class="muted">≈ marktcap (geen max. aanbod)</span>':f.cap(c.fully_diluted_valuation));
+      // ATH & drawdown
+      if(c.ath)set(p+'-ath',f.price(c.ath)+' <span class="neg">'+f.pct(c.ath_change_percentage).replace('-','−')+'</span> <span class="muted">'+new Date(c.ath_date).toLocaleDateString('nl-NL',{day:'numeric',month:'short',year:'numeric'})+'</span>');
       // 7d hi/lo from sparkline
       if(c.sparkline_in_7d?.price?.length){
         const prices=c.sparkline_in_7d.price;
-        set(p+'-7dhi',f.price(Math.max(...prices)));
-        set(p+'-7dlo',f.price(Math.min(...prices)));
-        spark(p+'-spark',prices.slice(-48),c.price_change_percentage_24h>=0);
+        // 7d window contains the last 24h and the live price; hourly samples can miss intraday extremes
+        set(p+'-7dhi',f.price(Math.max(...prices,c.high_24h||0,c.current_price)));
+        set(p+'-7dlo',f.price(Math.min(...prices,c.low_24h||Infinity,c.current_price)));
+        const last24=prices.slice(-25);
+        spark(p+'-spark',last24,c.price_change_percentage_24h>=0);
       }
       // Circulating supply
-      set(p+'-circ',f.supply(c.circulating_supply)+' '+c.symbol.toUpperCase());
+      set(p+'-circ',f.supply(c.circulating_supply)+' '+c.symbol.toUpperCase()+(c.max_supply?' <span class="muted">'+Math.round(c.circulating_supply/c.max_supply*100)+'% v. max</span>':''));
     });
+    window.__coins={};coins.forEach(c=>{const k=c.id==='bitcoin'?'btc':c.id==='ethereum'?'eth':c.id==='concordium'?'ccd':null;if(k)window.__coins[k]={price:c.current_price,chg:c.price_change_percentage_24h,updated:c.last_updated,circ:c.circulating_supply};});
+    // staleness: flag if CoinGecko's own timestamp is older than 10 minutes
+    const newest=Math.max(...coins.map(c=>new Date(c.last_updated).getTime()||0));
+    const stale=Date.now()-newest>10*60*1000;
+    const strip=document.getElementById('mob-strip');
+    if(strip){
+      const order=['bitcoin','ethereum','concordium'];
+      strip.innerHTML=order.map(id=>{const c=coins.find(x=>x.id===id);if(!c)return'';const up=c.price_change_percentage_24h>=0;
+        return '<a class="ms-item" href="#'+c.symbol+'-card"><span class="ms-t">'+c.symbol.toUpperCase()+'</span><span class="ms-p">'+f.price(c.current_price)+'</span><span class="ms-c '+(up?'pos':'neg')+'">'+f.pct(c.price_change_percentage_24h).replace('-','−')+'</span></a>'}).join('');
+    }
+    const t=new Date().toLocaleString('nl-NL',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'});
+    const srcTxt='CoinGecko &middot; '+new Date(newest).toLocaleTimeString('nl-NL',{hour:'2-digit',minute:'2-digit'})+(stale?' &middot; <b>vertraagd</b>':'');
+    window.__srcTxt=srcTxt; set('hdr-src',srcTxt); setMobSrc();
+    ['hdr-src','mob-src'].forEach(id=>document.getElementById(id)?.classList.toggle('stale',stale));
   }catch(e){console.warn('coins',e)}
+}
+
+// ════════ MARKTCONTEXT (informatiedieet: ETF, hefboom, alt-context, liquiditeit, institutioneel) ════════
+const CTX={};                       // latest snapshot per block, used by the "why" engine
+const STABLE_SYMS=new Set(['usdt','usdc','usds','usde','dai','usd1','usdg','pyusd','rlusd','usdf','usdd','u','bfusd','usdgo','fdusd','tusd','gho','crvusd','frax','usx','ausd','usdai','usd0','avusd','gusd','usat','sofid','reusd','apxusd','apyusd','ousd','cash','onyc','eurc','eurcv','jpyc','jpysc','xaut','paxg','kau','kag']);
+const NON_CRYPTO=new Set(['figr_heloc','jaaa','strcx','spcxb','crclb','pc0000031','ylds','nopal','mglo','safo','eursafo']);
+const TOKENIZED_TSY=new Set(['buidl','usyc','usdy','ousg','ustb','jtrsy','ustbl','eutbl','thbill','benji','eursafo']);
+const EUR_STABLES=new Set(['eurc','eurcv','eurs','eure','euri','eurq']);
+const fmtUsd=(n,d=1)=>{if(n==null||isNaN(n))return'—';const a=Math.abs(n),sg=n<0?'−':'';if(a>=1e12)return sg+'$'+(a/1e12).toFixed(2)+'T';if(a>=1e9)return sg+'$'+(a/1e9).toFixed(d)+'B';if(a>=1e6)return sg+'$'+(a/1e6).toFixed(d)+'M';if(a>=1e3)return sg+'$'+(a/1e3).toFixed(0)+'K';return sg+'$'+Math.round(a).toLocaleString('en-US')};
+const sgn=(n,d=2)=>n==null||isNaN(n)?'—':(n>=0?'+':'−')+Math.abs(n).toFixed(d);
+const cls=n=>n==null||isNaN(n)?'':(n>=0?'pos':'neg');
+const hhmm=ts=>new Date(ts).toLocaleTimeString('nl-NL',{hour:'2-digit',minute:'2-digit'});
+async function getJSON(url,ms=7000){const r=await fetchWithTimeout(url,ms);if(!r.ok)throw new Error(url+' HTTP '+r.status);return r.json();}
+
+// ── News tags: institutional/regulatory lens ──
+const NEWS_TAGS=[
+  ['EU/MiCA',/\b(mica|esma|eba|ecb|european union|\beu\b|afm|dnb|bafin|amf\b|latvia|netherlands|nederland|germany|france)/i],
+  ['Beleid',/\b(regulat\w*|sec\b|cftc|aml|travel rule|licen[cs]e|law\b|legislat\w*|parliament|congress|senate|white house|policy|tax(ation|es)?\b|court|lawsuit|sues?\b|cease-and-desist|government)/i],
+  ['ETF',/\betf|etp\b|exchange.traded/i],
+  ['Institutioneel',/\b(blackrock|fidelity|bitwise|grayscale|jpmorgan|goldman|morgan stanley|citi|ubs|deutsche bank|bnp|abn amro|rabobank|visa|mastercard|stripe|paypal|wall street|asset manager|custody|custodian|corporate|institution\w*|banks?\b|treasur(y|ies))/i],
+  ['Stablecoin',/stablecoin|usdc|usdt|tether|eurc|e-money/i],
+  ['Tokenisatie',/tokeni[sz]\w*|\brwa\b|real.world asset|on-chain fund|buidl/i],
+];
+function newsTags(item){
+  const txt=(item.title||'')+' '+(item.summary||'');
+  return NEWS_TAGS.filter(([,re])=>re.test(txt)).slice(0,2).map(([t])=>'<span class="ntag">'+t+'</span>').join('');
+}
+
+// ── Price cross-check: CoinGecko vs Coinbase & Kraken ──
+async function loadCrossCheck(cg){
+  const pairs={btc:{cb:'BTC-USD',kr:'XBTUSD'},eth:{cb:'ETH-USD',kr:'ETHUSD'}};
+  for(const [sym,pp] of Object.entries(pairs)){
+    const el=document.getElementById(sym+'-xchk');if(!el||!cg[sym])continue;
+    try{
+      const [cb,kr]=await Promise.allSettled([getJSON('https://api.coinbase.com/v2/prices/'+pp.cb+'/spot',5000),getJSON('https://api.kraken.com/0/public/Ticker?pair='+pp.kr,5000)]);
+      const refs=[];
+      if(cb.status==='fulfilled')refs.push(['Coinbase',+cb.value.data.amount]);
+      if(kr.status==='fulfilled'){const k=Object.values(kr.value.result||{})[0];if(k)refs.push(['Kraken',+k.c[0]]);}
+      if(!refs.length){el.textContent='';continue;}
+      const dev=Math.max(...refs.map(([,v])=>Math.abs(cg[sym]/v-1)*100));
+      el.className='xchk '+(dev>0.5?'warn':'ok');
+      el.textContent=(dev>0.5?'⚠ ':'✓ ')+'Coinbase/Kraken ±'+dev.toFixed(2)+'%';
+      el.title='Koers CoinGecko vergeleken met '+refs.map(([n,v])=>n+' $'+v.toLocaleString('en-US',{maximumFractionDigits:2})).join(' en ')+'. Afwijking >0,5% wordt oranje gemarkeerd.';
+    }catch{el.textContent='';}
+  }
+}
+
+// ── Derivatives & leverage ──
+async function loadDerivs(){
+  const cached=cacheGet('derivs',5*60*1000);
+  let d=cached;
+  if(!d){
+    d={ts:Date.now()};
+    for(const a of ['BTC','ETH']){
+      const R=await Promise.allSettled([
+        getJSON('https://fapi.binance.com/fapi/v1/premiumIndex?symbol='+a+'USDT'),
+        getJSON('https://www.okx.com/api/v5/public/funding-rate?instId='+a+'-USDT-SWAP'),
+        getJSON('https://api.bybit.com/v5/market/tickers?category=linear&symbol='+a+'USDT'),
+        getJSON('https://fapi.binance.com/futures/data/openInterestHist?symbol='+a+'USDT&period=1h&limit=25'),
+        getJSON('https://fapi.binance.com/futures/data/globalLongShortAccountRatio?symbol='+a+'USDT&period=1h&limit=1'),
+        getJSON('https://fapi.binance.com/futures/data/takerlongshortRatio?symbol='+a+'USDT&period=1h&limit=1'),
+        getJSON('https://www.okx.com/api/v5/public/open-interest?instType=SWAP&instId='+a+'-USDT-SWAP'),
+        getJSON('https://www.deribit.com/api/v2/public/get_volatility_index_data?currency='+a+'&resolution=3600&start_timestamp='+(Date.now()-26*3600e3)+'&end_timestamp='+Date.now()),
+      ]);
+      const v=i=>R[i].status==='fulfilled'?R[i].value:null;
+      const fr=[];
+      if(v(0))fr.push(['Binance',+v(0).lastFundingRate]);
+      if(v(1)?.data?.[0])fr.push(['OKX',+v(1).data[0].fundingRate]);
+      if(v(2)?.result?.list?.[0])fr.push(['Bybit',+v(2).result.list[0].fundingRate]);
+      const oi=v(3)||[];
+      const dv=v(7)?.result?.data||[];
+      const oiVen=[]; if(oi.length)oiVen.push(+oi[oi.length-1].sumOpenInterestValue); if(v(6)?.data?.[0])oiVen.push(+v(6).data[0].oiUsd); if(v(2)?.result?.list?.[0]?.openInterestValue)oiVen.push(+v(2).result.list[0].openInterestValue);
+      d[a]={
+        funding:fr.length?fr.reduce((s,[,x])=>s+x,0)/fr.length*100:null, fundingSrc:fr.map(([n])=>n),
+        oi:oi.length?+oi[oi.length-1].sumOpenInterestValue:null,
+        oiAll:oiVen.length===3?oiVen.reduce((x,y)=>x+y,0):null,
+        oiChg:oi.length>1?(+oi[oi.length-1].sumOpenInterestValue/+oi[0].sumOpenInterestValue-1)*100:null,
+        ls:v(4)?.[0]?+v(4)[0].longShortRatio:null, longPct:v(4)?.[0]?+v(4)[0].longAccount*100:null,
+        taker:v(5)?.[0]?+v(5)[0].buySellRatio:null,
+        dvol:dv.length?dv[dv.length-1][4]:null, dvolChg:dv.length>1?dv[dv.length-1][4]-dv[0][4]:null,
+      };
+    }
+    cacheSet('derivs',d);
+  }
+  CTX.derivs=d;
+  for(const a of ['BTC','ETH']){
+    const x=d[a]||{},k=a.toLowerCase();
+    set('dv-f-'+k,x.funding==null?'—':'<span class="'+(x.funding>0.03?'neg':x.funding<0?'pos':'')+'">'+sgn(x.funding,4)+'%</span><span class="sub">'+sgn(x.funding*3*365,1)+'% p.j.</span>');
+    set('dv-oi-'+k,x.oiAll!=null?fmtUsd(x.oiAll)+'<span class="sub">3 beurzen<br>Binance <span class="'+cls(x.oiChg)+'">'+sgn(x.oiChg,1)+'% 24u</span></span>':x.oi==null?'—':fmtUsd(x.oi)+'<span class="sub">alleen Binance<br><span class="'+cls(x.oiChg)+'">'+sgn(x.oiChg,1)+'% 24u</span></span>');
+    set('dv-ls-'+k,x.ls==null?'—':x.ls.toFixed(2)+'<span class="sub">'+x.longPct.toFixed(0)+'% long</span>');
+    set('dv-tk-'+k,x.taker==null?'—':'<span class="'+(x.taker<0.9?'neg':x.taker>1.1?'pos':'')+'">'+x.taker.toFixed(2)+'</span><span class="sub">'+(x.taker<1?'meer verkoopdruk':'meer koopdruk')+'</span>');
+    set('dv-iv-'+k,x.dvol==null?'—':x.dvol.toFixed(1)+'<span class="sub">'+sgn(x.dvolChg,1)+' pt 24u</span>');
+  }
+  set('dv-age','Bijgewerkt '+hhmm(d.ts)+' · Beurs per regel vermeld; geen van deze cijfers is het volledige markttotaal (CME en kleinere beurzen ontbreken).');
+}
+
+
+// ── Liquidations: OKX public feed (only exchange with keyless, CORS-open history) ──
+async function loadLiquidations(){
+  let L=cacheGet('liqs',15*60*1000);
+  if(!L){
+    L={ts:Date.now()};
+    for(const [a,ct] of [['BTC',0.01],['ETH',0.1]]){
+      let all=[],after='';
+      for(let i=0;i<25;i++){
+        let j;try{j=await getJSON('https://www.okx.com/api/v5/public/liquidation-orders?instType=SWAP&instFamily='+a+'-USDT&state=filled&limit=100'+(after?'&after='+after:''),6000);}catch{break}
+        const det=j.data?.[0]?.details||[];
+        if(!det.length)break;
+        all=all.concat(det);after=det[det.length-1].ts;
+        if(Date.now()-+after>24*3600e3)break;
+      }
+      const win=all.filter(x=>Date.now()-+x.ts<=24*3600e3);
+      const usd=x=>+x.bkPx*+x.sz*ct;
+      const oldest=win.length?Math.min(...win.map(x=>+x.ts)):null;
+      L[a]={long:win.filter(x=>x.posSide==='long').reduce((s,x)=>s+usd(x),0),short:win.filter(x=>x.posSide==='short').reduce((s,x)=>s+usd(x),0),hours:oldest?Math.min(24,(Date.now()-oldest)/36e5):0,n:win.length};
+    }
+    cacheSet('liqs',L);
+  }
+  CTX.liqs=L;
+  for(const a of ['BTC','ETH']){
+    const x=L[a],k=a.toLowerCase();
+    if(!x||!x.n){set('dv-lq-'+k,'—');continue;}
+    set('dv-lq-'+k,fmtUsd(x.long+x.short,1)+'<span class="sub"><span class="neg">'+Math.round(x.long/(x.long+x.short)*100)+'% longs</span> · '+(x.hours>=23.5?'24':x.hours.toFixed(1))+'u</span>');
+  }
+}
+
+
+// ── Corporate treasuries (CoinGecko public treasury, 6h cache) ──
+async function loadTreasuries(){
+  for(const [id,k,u] of [['bitcoin','btc','BTC'],['ethereum','eth','ETH']]){
+    let t=cacheGet('tsy_'+k,6*3600*1000);
+    if(!t){try{const j=await getJSON('https://api.coingecko.com/api/v3/companies/public_treasury/'+id,7000);t={h:j.total_holdings,pct:j.market_cap_dominance,usd:j.total_value_usd,n:(j.companies||[]).length,ts:Date.now()};cacheSet('tsy_'+k,t);}catch{t=null}}
+    const circ=window.__coins?.[k]?.circ;
+    if(t)set(k+'-tsy',Math.round(t.h).toLocaleString('en-US')+' '+u+' <span class="muted">'+(circ?(t.h/circ*100).toFixed(1)+'% v. circulatie · ':'')+t.n+' bedrijven</span>');
+    else{const w=document.getElementById(k+'-tsy-wrap');if(w)w.style.display='none';}
+  }
+}
+
+// ── Liquidity & institutional ──
+async function loadLiquidity(){
+  // ETF flows: data/etf-flows.json is refreshed daily by a GitHub Action from Farside (same-origin, no CORS issue)
+  let etf=cacheGet('etf',60*60*1000);
+  if(!etf){try{etf=await getJSON('data/etf-flows.json?'+Math.floor(Date.now()/36e5),5000);cacheSet('etf',etf);}catch{etf=null}}
+  CTX.etf=etf;
+  const etfEl=document.getElementById('etf');
+  if(etfEl){
+    if(etf&&etf.btc?.length){
+      const box=(lbl,rows)=>{
+        const last=rows[rows.length-1], five=rows.slice(-5).reduce((s,r)=>s+r.total,0);
+        const mx=Math.max(...rows.slice(-10).map(r=>Math.abs(r.total)))||1;
+        // zero-centred bars: top half = inflow, bottom half = outflow
+        const bars=rows.slice(-10).map(r=>{const h=Math.max(4,Math.abs(r.total)/mx*50);return '<span class="eb" title="'+r.date+': '+sgn(r.total,1)+' mln"><i style="height:'+h+'%;background:'+(r.total>=0?'var(--grn)':'var(--red)')+';'+(r.total>=0?'bottom:50%':'top:50%')+'"></i></span>'}).join('');
+        return '<div class="etf-box"><div class="el">'+lbl+' ETF-flow</div><div class="ev '+cls(last.total)+'">'+sgn(last.total,1)+' mln US$</div><div class="es">'+last.date+' · 5 dagen: <span class="'+cls(five)+'">'+sgn(five,0)+' mln US$</span></div><div class="etf-bars">'+bars+'</div></div>';
+      };
+      etfEl.innerHTML=box('BTC',etf.btc)+(etf.eth?.length?box('ETH',etf.eth):'');
+    }else{
+      etfEl.innerHTML='<div class="etf-box" style="grid-column:1/3"><div class="el">ETF-flows</div><div class="es">Nog niet beschikbaar in deze omgeving. Bron: <a href="https://farside.co.uk/btc/" target="_blank" rel="noopener" style="color:var(--acc)">Farside</a></div></div>';
+    }
+  }
+  // Stablecoin supply (DefiLlama)
+  let st=cacheGet('stables',30*60*1000);
+  if(!st){
+    try{
+      const j=await getJSON('https://stablecoins.llama.fi/stablecoins?includePrices=false',10000);
+      const usd=j.peggedAssets.filter(a=>a.pegType==='peggedUSD');
+      const sum=k=>usd.reduce((s,a)=>s+(a[k]?.peggedUSD||0),0);
+      const eur=j.peggedAssets.filter(a=>a.pegType==='peggedEUR');
+      st={now:sum('circulating'),day:sum('circulatingPrevDay'),week:sum('circulatingPrevWeek'),month:sum('circulatingPrevMonth'),
+          eur:eur.reduce((s,a)=>s+(a.circulating?.peggedEUR||0),0),
+          usdt:(usd.find(a=>a.symbol==='USDT')?.circulating?.peggedUSD)||0,usdc:(usd.find(a=>a.symbol==='USDC')?.circulating?.peggedUSD)||0,ts:Date.now()};
+      cacheSet('stables',st);
+    }catch(e){console.warn('stables',e);st=null}
+  }
+  CTX.stables=st;
+  const rows=window.__top250||[];
+  const tsy=rows.filter(r=>TOKENIZED_TSY.has(r.symbol)).reduce((s,r)=>s+r.mc,0);
+  const out=[];
+  if(st){
+    const w=(st.now/st.week-1)*100, m=(st.now/st.month-1)*100;
+    out.push(['Stablecoin-voorraad (USD)',fmtUsd(st.now,1)+'<span class="sub"><span class="'+cls(w)+'">'+sgn(w,2)+'% 7d</span> · <span class="'+cls(m)+'">'+sgn(m,1)+'% 30d</span></span>']);
+    out.push(['USDC-aandeel (USDC ÷ USDT+USDC)',(st.usdc/(st.usdc+st.usdt)*100).toFixed(1)+'%<span class="sub">USDC '+fmtUsd(st.usdc,0)+' · USDT '+fmtUsd(st.usdt,0)+'</span>']);
+    out.push(['EUR-stablecoins (EURC, EURCV e.a.)<br><span style="font-size:10.5px;color:var(--dm)">Onder MiCA e-geldtokens; groei = maat voor EU-adoptie</span>','€'+fmtUsd(st.eur,0).replace('$','')]);
+  }
+  if(tsy)out.push(['Getokeniseerde staatsobligaties<br><span style="font-size:10.5px;color:var(--dm)">BUIDL, USYC, USDY, OUSG e.a. (top 250)</span>',fmtUsd(tsy,2)]);
+  set('liq',out.map(([k,v])=>'<dt>'+k+'</dt><dd>'+v+'</dd>').join(''));
+  set('liq-age',(etf?'ETF: Farside, t/m '+(etf.btc?.slice(-1)[0]?.date||'—')+' (US$ mln, na beurssluiting VS) · ':'')+(st?'Stablecoins: DefiLlama '+hhmm(st.ts)+' · ':'')+'Tokenisatie: CoinGecko');
+}
+
+
+// ── Institutional & regulatory headlines (from the loaded news feeds) ──
+function renderInstNews(){
+  const items=(window.__newsAll||[]).map(it=>({it,tags:NEWS_TAGS.filter(([t,re])=>re.test((it.title||'')+' '+(it.summary||''))).map(([t])=>t)})).filter(x=>x.tags.length).slice(0,4);
+  const el=document.getElementById('inst-news');if(!el)return;
+  el.innerHTML='<div class="in-h">Institutioneel &amp; regelgeving &middot; nieuws</div>'+(items.length?items.map(({it,tags})=>'<a class="in-i" href="'+it.link+'" target="_blank" rel="noopener noreferrer"><span class="ntag">'+tags[0]+'</span> '+String(it.title).replace(/</g,'&lt;')+'<span class="in-m">'+it.source+' · '+timeAgo(it.date)+'</span></a>').join(''):'<div class="in-m">Geen relevante berichten in de laatste nieuwsronde.</div>');
+}
+
+// ── Breadth & movers from top-250 ──
+function renderBreadth(coins){
+  const rows=(window.__top250||[]).slice(0,100).filter(r=>!STABLE_SYMS.has(r.symbol)&&!TOKENIZED_TSY.has(r.symbol)&&!NON_CRYPTO.has(r.symbol)&&r.pc!=null);
+  if(!rows.length)return;
+  const up=rows.filter(r=>r.pc>0).length, pctUp=up/rows.length*100;
+  const sorted=[...rows].sort((a,b)=>b.pc-a.pc);
+  const btc=coins.btc, eth=coins.eth;
+  const ethbtc=eth&&btc?eth.price/btc.price:null, ethbtcChg=eth&&btc?((1+eth.chg/100)/(1+btc.chg/100)-1)*100:null;
+  CTX.breadth={pctUp,up,n:rows.length,ethbtcChg,median:sorted[Math.floor(sorted.length/2)].pc};
+  const mv=r=>'<span class="mv">'+r.symbol.toUpperCase()+' <span class="'+cls(r.pc)+'">'+sgn(r.pc,1)+'%</span></span>';
+  set('breadth',
+    '<span class="bl" title="Top 100 naar marktcap, exclusief stablecoins en getokeniseerde fondsen/RWA">Breedte · top 100 excl. stables/RWA</span><span class="bl">ETH/BTC</span>'+
+    '<span class="mv"><span class="'+(pctUp>=50?'pos':'neg')+'">'+up+' van '+rows.length+'</span> stijgen · mediaan '+sgn(CTX.breadth.median,1)+'%</span>'+
+    '<span class="mv">'+(ethbtc?ethbtc.toFixed(5):'—')+' <span class="'+cls(ethbtcChg)+'">'+sgn(ethbtcChg,2)+'%</span></span>'+
+    '<span class="bl">Sterkst (24u)</span><span class="bl">Zwakst (24u)</span>'+
+    '<span>'+sorted.slice(0,3).map(mv).join(' · ')+'</span><span>'+sorted.slice(-3).reverse().map(mv).join(' · ')+'</span>'+'<span class="bl" style="grid-column:1/3;text-transform:none;letter-spacing:0;font-weight:500;margin-top:6px">Bron: CoinGecko · top 100 excl. stables/RWA · stand '+hhmm(Date.now())+'</span>');
+}
+
+// ── "Why" engine: deterministic causal signals ──
+function renderWhy(coins){
+  const S=[];  // [tone(-1/0/1), title, explanation, source]
+  const btc=coins.btc, d=CTX.derivs, e=CTX.etf, st=CTX.stables, b=CTX.breadth;
+  if(btc&&coins.eth){
+    const rel=coins.eth.chg-btc.chg;
+    if(Math.abs(rel)>=1)S.push([rel<0?-1:1, rel<0?'Alts zwakker dan BTC':'Alts sterker dan BTC', 'ETH '+sgn(coins.eth.chg,1)+'% vs BTC '+sgn(btc.chg,1)+'%. '+(rel<0?'Kapitaal zoekt de relatief veiligere positie (risk-off binnen crypto).':'Risicobereidheid binnen crypto neemt toe.'),'CoinGecko']);
+  }
+  if(b){S.push([b.pctUp>=60?1:b.pctUp<=40?-1:0,'Breedte: '+b.up+' van '+b.n+' munten stijgen', (b.pctUp<=40?'Daling is marktbreed, niet beperkt tot BTC.':b.pctUp>=60?'Stijging is marktbreed gedragen.':'Gemengd beeld; bewegingen zijn coin-specifiek.')+' Mediaan '+sgn(b.median,1)+'%.','top 100 excl. stablecoins/RWA']);}
+  if(e?.btc?.length){
+    const last=e.btc[e.btc.length-1], five=e.btc.slice(-5).reduce((s,r)=>s+r.total,0);
+    S.push([five<-100?-1:five>100?1:0,'Spot-ETF’s BTC: '+sgn(five,0)+' mln US$ in 5 handelsdagen','Laatste dag ('+last.date+') '+sgn(last.total,1)+' mln. '+(five<0?'Netto uitstroom via het TradFi-kanaal: institutionele verkoop of afbouw van basis-trades.':'Netto instroom via het TradFi-kanaal: institutionele vraag (deels mogelijk basis-trades).'),'Farside']);
+  }
+  if(d?.BTC){
+    const x=d.BTC;
+    if(x.oiChg!=null&&btc){
+      const p=btc.chg,o=x.oiChg;
+      const t=p<0&&o>1?[-1,'Prijs ↓, open interest ↑','Nieuwe shortposities of bijkopende longs met hefboom; volatiliteitsrisico neemt toe.']:
+              p<0&&o<-1?[0,'Prijs ↓, open interest ↓','Deleveraging: posities worden gesloten of geliquideerd. Vaak uitputting van verkoopdruk.']:
+              p>0&&o>1?[1,'Prijs ↑, open interest ↑','Nieuwe longs met hefboom dragen de stijging.']:
+              p>0&&o<-1?[0,'Prijs ↑, open interest ↓','Short-covering; stijging minder breed gedragen.']:
+              [0,'Open interest (Binance) stabiel ('+sgn(o,1)+'%)','Geen duidelijke op- of afbouw van hefboom.'];
+      S.push([t[0],t[1],t[2]+' OI '+fmtUsd(x.oi)+' ('+sgn(o,1)+'% 24u op Binance; 3 beurzen samen '+fmtUsd(x.oiAll)+').','Binance/OKX/Bybit']);
+    }
+    if(x.funding!=null){
+      const f8=x.funding;
+      S.push([f8>0.03?-1:f8<0?1:0,'Funding '+sgn(f8,4)+'% per 8u',f8>0.03?'Longs betalen fors: oververhitte positionering, risico op long-squeeze.':f8<0?'Shorts betalen longs: defensieve positionering; bij stijging kans op short-squeeze.':'Neutrale positionering in perpetuals.',(x.fundingSrc||[]).join('/')]);
+    }
+    if(x.taker!=null&&Math.abs(1-x.taker)>0.1)S.push([x.taker<1?-1:1,'Taker '+(x.taker<1?'verkoop':'koop')+'druk ('+x.taker.toFixed(2)+')','Agressieve '+(x.taker<1?'verkopers':'kopers')+' domineren het afgelopen uur.','Binance']);
+  }
+  const lq=CTX.liqs?.BTC, lqe=CTX.liqs?.ETH;
+  if(lq&&lq.n){const tot=lq.long+lq.short+(lqe?.long||0)+(lqe?.short||0), lng=lq.long+(lqe?.long||0);
+    if(tot>1e6)S.push([lng/tot>0.65?-1:lng/tot<0.35?1:0,'Liquidaties: '+fmtUsd(tot,1)+' ('+Math.round(lng/tot*100)+'% longs)','BTC+ETH op OKX, laatste '+(lq.hours>=23.5?'24':lq.hours.toFixed(1))+'u. '+(lng/tot>0.65?'Gedwongen verkoop van longs versterkte de daling.':lng/tot<0.35?'Gedwongen dekking van shorts versterkte de stijging.':'Liquidaties aan beide kanten; geen eenzijdige cascade.'),'OKX']);}
+  if(st){const w=(st.now/st.week-1)*100;if(Math.abs(w)>=0.2)S.push([w>0?1:-1,'Stablecoin-voorraad '+sgn(w,2)+'% (7d)',w>0?'Nieuwe dollar-liquiditeit komt de cryptomarkt in (droog kruit).':'Liquiditeit verlaat de cryptomarkt.','DefiLlama']);}
+  if(!S.length)return;
+  const neg=S.filter(s=>s[0]<0).length,pos=S.filter(s=>s[0]>0).length;
+  const tone=neg>pos+1?['neg','Overwegend negatief']:pos>neg+1?['pos','Overwegend positief']:['neu','Gemengd'];
+  set('why-head','<span class="tone '+tone[0]+'">'+tone[1]+'</span>'+neg+' negatieve, '+pos+' positieve en '+(S.length-neg-pos)+' neutrale signalen');
+  const order=[...S].sort((a,b)=>Math.abs(b[0])-Math.abs(a[0]));
+  set('why-list',order.map(([t,h,x,src])=>'<li><span class="dot '+(t<0?'neg':t>0?'pos':'neu')+'"></span><span><b>'+h+'.</b> '+x+' <span class="src">('+src+')</span></span></li>').join(''));
+}
+
+async function loadContext(){
+  const coins=window.__coins||{};
+  await Promise.allSettled([loadDerivs(),loadLiquidations(),loadLiquidity(),loadTreasuries(),loadCrossCheck({btc:coins.btc?.price,eth:coins.eth?.price})]);
+  renderBreadth(coins);
+  renderWhy(coins);
 }
 
 // ════════ FETCH WITH TIMEOUT ════════
@@ -785,7 +1282,7 @@ function buildNewsCard(item,idx,isBreaking){
   return '<a class="news-card'+(isBreaking?' is-breaking':'')+'" href="'+item.link+'" target="_blank" rel="noopener noreferrer">'
     +'<div class="news-num">'+String(idx+1).padStart(2,'0')+'</div>'
     +'<div class="news-body">'
-    +'<div class="news-source-row"><span class="qb '+si.cls+'" title="'+si.tip+'">'+si.label+'</span><span class="news-src">'+item.source+'</span><span class="news-dot">·</span><span class="news-age">'+timeAgo(item.date)+'</span></div>'
+    +'<div class="news-source-row"><span class="qb '+si.cls+'" title="'+si.tip+'">'+si.label+'</span><span class="news-src">'+item.source+'</span><span class="news-dot">·</span><span class="news-age">'+timeAgo(item.date)+'</span>'+newsTags(item)+'</div>'
     +'<div class="news-title translating" id="nt-'+id+'">Vertalen...</div>'
     +(item.summary?'<div class="news-summ translating" id="ns-'+id+'">Vertalen...</div>':'')
     +'</div></a>';
@@ -861,6 +1358,7 @@ async function loadNews(){
   const now=Date.now(),brkCut=now-3*3600*1000,h24Cut=now-24*3600*1000;
   const dedup=(arr)=>{const s=new Set();return arr.filter(it=>{const k=it.title.slice(0,40).toLowerCase();if(s.has(k))return false;s.add(k);return true;});};
   const allItems=dedup(items);
+  window.__newsAll=allItems; if(typeof renderInstNews==='function')renderInstNews();
   const breaking=allItems.filter(it=>it.date>brkCut);
   const news=allItems.filter(it=>it.date<=brkCut&&it.date>h24Cut);
   const brkBadge=document.getElementById('tc-breaking');
@@ -1070,7 +1568,7 @@ function setRefreshMode(mode){
   priceInterval=setInterval(()=>{
     priceCd=priceSec;
     set('hdr-time',new Date().toLocaleTimeString('nl-NL',{hour:'2-digit',minute:'2-digit',second:'2-digit'}));
-    loadGlobal();loadCoins();
+    Promise.allSettled([loadGlobal(),loadCoins()]).then(loadContext);
   },priceSec*1000);
   newsInterval=setInterval(()=>{
     newsCd=newsSec;
@@ -1080,7 +1578,8 @@ function setRefreshMode(mode){
 function manualRefresh(){
   const btn=document.getElementById('manual-refresh-btn');
   if(btn){btn.disabled=true;btn.innerHTML='&#8635; Laden...';}
-  Promise.allSettled([loadGlobal(),loadCoins(),loadNews(),loadReddit(),loadBankNews()]).then(()=>{
+  Promise.allSettled([loadGlobal(),loadCoins()]).then(loadContext);
+  Promise.allSettled([loadNews(),loadReddit(),loadBankNews()]).then(()=>{
     if(btn){btn.disabled=false;btn.innerHTML='&#8635; Vernieuwen';}
   });
 }
@@ -1098,6 +1597,7 @@ function manualRefresh(){
   const savedMode=localStorage.getItem('cp_refresh_mode')||'auto';
   setRefreshMode(savedMode);
   await Promise.allSettled([loadGlobal(),loadCoins(),loadNews(),loadReddit(),loadBankNews()]);
+  loadContext();
 })();
 </script>
 </body>
