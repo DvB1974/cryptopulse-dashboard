@@ -1,0 +1,6 @@
+{
+  "source": "CoinGecko public treasury (beursgenoteerde bedrijven; excl. ETF's en overheden)",
+  "updated": "2026-10-18T20:50:00Z",
+  "btc": {"holdings": 1302063.2192943657, "value_usd": 105243229783.85501, "companies": 180, "top": []},
+  "eth": {"holdings": 8096612.229976, "value_usd": 18979947696.17293, "companies": 34, "top": []}
+}
