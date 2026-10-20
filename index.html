@@ -1090,12 +1090,19 @@ async function loadLiquidations(){
 
 // ── Corporate treasuries (CoinGecko public treasury, 6h cache) ──
 async function loadTreasuries(){
+  // Primary: data/treasuries.json, refreshed daily by the GitHub Action (CoinGecko blocks this endpoint for browsers).
+  let file=cacheGet('tsy_file',3600*1000);
+  if(!file){try{file=await getJSON('data/treasuries.json?'+Math.floor(Date.now()/36e5),5000);cacheSet('tsy_file',file);}catch{file=null}}
   for(const [id,k,u] of [['bitcoin','btc','BTC'],['ethereum','eth','ETH']]){
-    let t=cacheGet('tsy_'+k,6*3600*1000);
-    if(!t){try{const j=await getJSON('https://api.coingecko.com/api/v3/companies/public_treasury/'+id,7000);t={h:j.total_holdings,pct:j.market_cap_dominance,usd:j.total_value_usd,n:(j.companies||[]).length,ts:Date.now()};cacheSet('tsy_'+k,t);}catch{t=null}}
+    let t=file?.[k]?{h:file[k].holdings,n:file[k].companies,ts:Date.parse(file.updated)}:null;
+    if(!t){ // fallback: direct API (often blocked from the browser)
+      t=cacheGet('tsy_'+k,6*3600*1000);
+      if(!t){try{const j=await getJSON('https://api.coingecko.com/api/v3/companies/public_treasury/'+id,7000);t={h:j.total_holdings,n:(j.companies||[]).length,ts:Date.now()};cacheSet('tsy_'+k,t);}catch{t=null}}
+    }
     const circ=window.__coins?.[k]?.circ;
-    if(t)set(k+'-tsy',Math.round(t.h).toLocaleString('en-US')+' '+u+' <span class="muted">'+(circ?(t.h/circ*100).toFixed(1)+'% v. circulatie · ':'')+t.n+' bedrijven</span>');
-    else{const w=document.getElementById(k+'-tsy-wrap');if(w)w.style.display='none';}
+    const w=document.getElementById(k+'-tsy-wrap');
+    if(t){if(w)w.style.display='';set(k+'-tsy',Math.round(t.h).toLocaleString('en-US')+' '+u+' <span class="muted">'+(circ?(t.h/circ*100).toFixed(1)+'% v. circulatie · ':'')+t.n+' bedrijven · '+new Date(t.ts).toLocaleDateString('nl-NL',{day:'numeric',month:'short'})+'</span>');}
+    else if(w)w.style.display='none';
   }
 }
 
