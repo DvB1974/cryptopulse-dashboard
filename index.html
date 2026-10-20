@@ -296,6 +296,14 @@
     .xchk.ok{color:var(--mu)}.xchk.warn{color:var(--amb)}
     .ntag{font-size:9.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:2px 6px;border-radius:3px;background:rgba(245,158,11,.1);color:var(--amb);border:0.5px solid rgba(245,158,11,.25)}
     .stale{color:var(--amb)!important}
+    .nlb-filters{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 8px}
+    .nlb-chip{background:var(--s1);border:0.5px solid var(--b2);color:var(--mu);border-radius:20px;padding:4px 10px;font-size:11.5px;font-weight:600;cursor:pointer;font-family:Inter,sans-serif}
+    .nlb-chip span{color:var(--dm);font-weight:500;margin-left:3px}
+    .nlb-chip.on{background:var(--acc);border-color:var(--acc);color:#fff}.nlb-chip.on span{color:rgba(255,255,255,.75)}
+    .nlb-chip.own{border-style:dashed}
+    .nlb-bank{font-size:10px;font-weight:700;padding:2px 6px;border-radius:3px;background:rgba(59,130,246,.12);color:#93c5fd;border:0.5px solid rgba(59,130,246,.3)}
+    .nlb-bank.own{background:rgba(247,147,26,.12);color:#fbbf24;border-color:rgba(247,147,26,.35)}
+    #pane-banknl .bank-title-text{font-size:13px;font-weight:600;line-height:1.45;color:var(--tx)}
     .inst-news{margin-top:12px;padding-top:10px;border-top:0.5px solid var(--b1)}
     .in-h{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--dm);margin-bottom:6px}
     .in-i{display:block;font-size:12px;line-height:1.4;color:var(--tx);text-decoration:none;padding:5px 0}
@@ -489,7 +497,7 @@
   <div class="tab-bar">
     <button class="tab active" data-tab="news24"  onclick="switchTab('news24')">24u Nieuws <span class="tab-badge" id="tc-news24"></span></button>
     <button class="tab" data-tab="breaking" onclick="switchTab('breaking')">&#9889; Breaking <span class="tab-badge brk" id="tc-breaking" style="display:none"></span></button>
-    <button class="tab" data-tab="banknl"   onclick="switchTab('banknl')">&#127475;&#127473; NL Banken <span class="tab-badge" id="tc-banknl"></span></button>
+    <button class="tab" data-tab="banknl"   onclick="switchTab('banknl')">&#127475;&#127473; NL banken <span class="tab-badge" id="tc-banknl"></span></button>
     <button class="tab" data-tab="bankint"  onclick="switchTab('bankint')">&#127758; Internationaal <span class="tab-badge" id="tc-bankint"></span></button>
     <button class="tab" data-tab="reddit"   onclick="switchTab('reddit')">Reddit <span class="tab-badge" id="tc-reddit"></span></button>
   </div>
@@ -518,14 +526,13 @@
     <div class="tab-pane" id="pane-banknl">
       <div class="bank-pane-hdr">
         <span class="bank-flag">&#127475;&#127473;</span>
-        <div><div class="bank-pane-label">Nederlandse banken &amp; financi&#235;le instellingen</div><div class="bank-pane-sources">DNB &middot; AFM &middot; NVB &middot; ABN AMRO &middot; ING &middot; Rabobank &middot; Van Lanschot &middot; Triodos &middot; Robeco &middot; RTL Z &middot; BNR</div></div>
-        <span class="bank-period">40 dagen</span>
+        <div><div class="bank-pane-label">Nederlandse banken &middot; concurrentiemonitor</div><div class="bank-pane-sources" id="nlb-src">Alleen berichten met een Nederlandse bank in de kop &middot; Google Nieuws NL</div></div>
+        <span class="bank-period" id="nlb-period">30 dagen</span>
         <span class="bank-pane-count" id="bank-nl-count"></span>
       </div>
-      <div class="news-feed" id="bank-nl-grid">
-        <div class="bank-card nl-card" style="pointer-events:none"><div class="bank-num sk" style="width:20px;height:16px"></div><div class="bank-body"><div class="sk" style="height:9px;width:40%;margin-bottom:8px"></div><div class="sk" style="height:13px;width:84%;margin-bottom:5px"></div><div class="sk" style="height:13px;width:62%;margin-bottom:7px"></div><div class="sk" style="height:9px;width:48%"></div></div></div>
-        <div class="bank-card nl-card" style="pointer-events:none"><div class="bank-num sk" style="width:20px;height:16px"></div><div class="bank-body"><div class="sk" style="height:9px;width:35%;margin-bottom:8px"></div><div class="sk" style="height:13px;width:76%;margin-bottom:5px"></div><div class="sk" style="height:13px;width:55%;margin-bottom:7px"></div><div class="sk" style="height:9px;width:43%"></div></div></div>
-      </div>
+      <div class="nlb-filters" id="nlb-banks"></div>
+      <div class="nlb-filters" id="nlb-themes"></div>
+      <div class="news-feed" id="bank-nl-grid"><div class="bank-empty">Laden&hellip;</div></div>
     </div>
 
     <div class="tab-pane" id="pane-bankint">
@@ -557,7 +564,7 @@
 </div>
 
 <footer>
-  <span>Koersen: CoinGecko &middot; Nieuws: CoinTelegraph, CoinDesk, The Block, Decrypt, Bitcoin Magazine, CryptoSlate &middot; NL Banken: DNB, AFM, Bitcoin Magazine NL, CoinTelegraph NL, IEX, NOS, BNR &middot; Vertaling: Claude AI (Haiku)</span>
+  <span>Koersen: CoinGecko &middot; Nieuws: CoinTelegraph, CoinDesk, The Block, Decrypt, Bitcoin Magazine, CryptoSlate &middot; NL banken: Google Nieuws (per bank) &middot; Vertaling: Claude AI (Haiku)</span>
   <div class="footer-timers">
     <div class="ft"><span class="ft-lbl">Koersen:</span>&nbsp;<span class="ft-val" id="cd">60</span></div>
     <div class="ft"><span class="ft-lbl">Nieuws:</span>&nbsp;<span class="ft-val" id="news-cd">600</span></div>
@@ -1510,11 +1517,6 @@ function dedupBank(arr){
   return arr.filter(it=>{const k=it.title.slice(0,45).toLowerCase();if(seen.has(k))return false;seen.add(k);return true;});
 }
 function renderBankItems(nlItems,intItems){
-  const nlBadge=document.getElementById('tc-banknl');if(nlBadge)nlBadge.textContent=nlItems.length||'';
-  set('bank-nl-count',nlItems.length?nlItems.length+' berichten':'');
-  const nlGrid=document.getElementById('bank-nl-grid');
-  if(nlItems.length){nlGrid.innerHTML=nlItems.map((it,i)=>buildBankCard(it,i)).join('');queueTx('banknl',nlItems,translateBankCard);}
-  else{nlGrid.innerHTML='<div class="bank-empty">Geen crypto-gerelateerd nieuws gevonden van Nederlandse banken &amp; instellingen in de afgelopen 40 dagen.<br><span style="font-size:10px;margin-top:4px;display:block">Probeer later opnieuw — sommige feeds zijn mogelijk tijdelijk niet beschikbaar.</span></div>';}
   const intBadge=document.getElementById('tc-bankint');if(intBadge)intBadge.textContent=intItems.length||'';
   set('bank-int-count',intItems.length?intItems.length+' berichten':'');
   const intGrid=document.getElementById('bank-int-grid');
@@ -1526,15 +1528,46 @@ async function loadBankNews(){
   const cachedNL=cacheGet('bank_nl',BANK_TTL);
   const cachedINT=cacheGet('bank_int',BANK_TTL);
   // Only use cache if it actually has items (empty array is truthy in JS but useless)
-  if(cachedNL?.length&&cachedINT?.length){renderBankItems(cachedNL,cachedINT);return;}
-  const [nlResults,intResults]=await Promise.all([
-    Promise.all(BANK_NL_FEEDS.map(s=>fetchBankRSS(s))),
-    Promise.all(BANK_INT_FEEDS.map(s=>fetchBankRSS(s))),
-  ]);
-  const nlItems=dedupBank(nlResults.flat()).slice(0,15);
+  loadNLBanks();
+  if(cachedINT?.length){renderBankItems(null,cachedINT);return;}
+  const intResults=await Promise.all(BANK_INT_FEEDS.map(s=>fetchBankRSS(s)));
   const intItems=dedupBank(intResults.flat()).slice(0,15);
-  cacheSet('bank_nl',nlItems);cacheSet('bank_int',intItems);
-  renderBankItems(nlItems,intItems);
+  cacheSet('bank_int',intItems);
+  renderBankItems(null,intItems);
+}
+
+
+// ════════ NL BANKEN: concurrentiemonitor (data/nl-banks.json via GitHub Action) ════════
+const NLB={data:null,bank:'Alle',theme:'Alle'};
+const OWN_BANK='Van Lanschot Kempen';
+async function loadNLBanks(){
+  let d=cacheGet('nlb',15*60*1000);
+  if(!d){try{d=await getJSON('data/nl-banks.json?'+Math.floor(Date.now()/9e5),6000);cacheSet('nlb',d);}catch{d=null}}
+  NLB.data=d; renderNLBanks();
+}
+function renderNLBanks(){
+  const d=NLB.data, grid=document.getElementById('bank-nl-grid'); if(!grid)return;
+  if(!d||!d.items?.length){
+    grid.innerHTML='<div class="bank-empty">Nog geen berichten. De lijst wordt elke 2 uur ververst via GitHub Actions'+(d?.updated?'':' (eerste run nog niet gedraaid)')+'.</div>';
+    set('bank-nl-count','');const b=document.getElementById('tc-banknl');if(b)b.textContent='';return;
+  }
+  const counts={};d.items.forEach(it=>it.banks.forEach(b=>counts[b]=(counts[b]||0)+1));
+  const themes=['Crypto & digitaal','Private banking','Resultaten','Toezicht','Tarieven','Strategie & product'];
+  const tcount={};d.items.forEach(it=>it.themes.forEach(t=>tcount[t]=(tcount[t]||0)+1));
+  const chip=(grp,val,label,n,active)=>'<button class="nlb-chip'+(active?' on':'')+(val===OWN_BANK?' own':'')+'" onclick="NLB.'+grp+'=\''+val.replace(/'/g,"\\'")+'\';renderNLBanks()">'+label+(n!=null?' <span>'+n+'</span>':'')+'</button>';
+  set('nlb-banks',chip('bank','Alle','Alle banken',d.items.length,NLB.bank==='Alle')+d.banks.filter(b=>counts[b]).sort((a,b)=>counts[b]-counts[a]).map(b=>chip('bank',b,b+(b===OWN_BANK?' (eigen)':''),counts[b],NLB.bank===b)).join(''));
+  set('nlb-themes',chip('theme','Alle','Alle thema’s',null,NLB.theme==='Alle')+themes.filter(t=>tcount[t]).map(t=>chip('theme',t,t,tcount[t],NLB.theme===t)).join(''));
+  const list=d.items.filter(it=>(NLB.bank==='Alle'||it.banks.includes(NLB.bank))&&(NLB.theme==='Alle'||it.themes.includes(NLB.theme)));
+  const esc=t=>String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;');
+  grid.innerHTML=list.length?list.map((it,i)=>'<a class="bank-card nl-card" href="'+esc(it.link)+'" target="_blank" rel="noopener noreferrer"><div class="bank-num">'+String(i+1).padStart(2,'0')+'</div><div class="bank-body"><div class="bank-source-row">'
+    +it.banks.map(b=>'<span class="nlb-bank'+(b===OWN_BANK?' own':'')+'">'+esc(b)+'</span>').join('')
+    +it.themes.map(t=>'<span class="ntag">'+esc(t)+'</span>').join('')
+    +'<span class="news-src">'+esc(it.source)+'</span><span class="news-dot">·</span><span class="news-age">'+timeAgo(it.ts)+'</span></div>'
+    +'<div class="bank-title-text">'+esc(it.title)+'</div></div></a>').join('')
+    :'<div class="bank-empty">Geen berichten voor deze combinatie.</div>';
+  set('bank-nl-count',list.length+' berichten');
+  const badge=document.getElementById('tc-banknl');if(badge)badge.textContent=d.items.length;
+  set('nlb-src','Alleen berichten met een Nederlandse bank in de kop · Google Nieuws NL · bijgewerkt '+(d.updated?new Date(d.updated).toLocaleString('nl-NL',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}):'—'));
 }
 
 // ════════ TIMERS ════════
