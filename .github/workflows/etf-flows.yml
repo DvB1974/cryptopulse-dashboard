@@ -1,0 +1,33 @@
+name: ETF flows refresh
+
+on:
+  schedule:
+    # Weekdays 23:30 and 03:30 UTC: after US close, when Farside publishes the day's flows
+    - cron: "30 23 * * 1-5"
+    - cron: "30 3 * * 2-6"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch Farside flows
+        run: python3 scripts/fetch_etf_flows.py
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- data/etf-flows.json; then
+            echo "No change"
+          else
+            git config user.name "etf-flows-bot"
+            git config user.email "actions@users.noreply.github.com"
+            git add data/etf-flows.json
+            git commit -m "ETF flows: daily refresh"
+            git push
+          fi
