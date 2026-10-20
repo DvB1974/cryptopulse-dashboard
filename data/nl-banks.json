@@ -1,6 +1,6 @@
 {
  "source": "Google Nieuws NL, per bank gezocht; alleen berichten met de bank in de kop",
- "updated": "2026-10-20T12:04:48Z",
+ "updated": "2026-10-20T17:12:09Z",
  "days": 30,
  "banks": [
   "ABN AMRO",
@@ -16,6 +16,16 @@
  ],
  "items": [
   {
+   "title": "ING geeft 10.000 jongeren aandelen à €100: ‘Leuk en aardig, maar…’",
+   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE44VVNsdlduNHVUU241SXl0Yzd0dFA1WUYyX1hKMkc2UUkwYzVHOVRNTXR6dExTakdCR1dKbGRnVjBOQmFEc1RudGI4MWM5czRxWTJXQ0ZIZlZPLW1KVzljR1hLMDlUdjYteGc?oc=5",
+   "source": "Manners",
+   "ts": 1792497711000,
+   "banks": [
+    "ING"
+   ],
+   "themes": []
+  },
+  {
    "title": "De vrouw van Rick (36) krijgt telefoontje van ING, dan wijst ze hem de deur: ‘Besefte niet hoeveel schade ik had aangericht’",
    "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxQVUFMOTN2TEJXcVJtdC1ZbVRPYkZOWS1QRGV0QUdUblNXN3V4X09MMnItZ2ZxbTlkeWdVM0R3a1F5VFZoMFZOcHBOOVp2eWJOQlVzRmpTMVYtUlBuVUtrVFBoWURBUmVJUnpZUE9RTnQ0RkwzXzdvSnlXOVNnSDI5ekNydGlRZXUzX2Z4aVUwdElnVUFQUnJyQjB3ZEFLY2huT0p2MHJUakh1ZjRibkVnWlNsZDJCY1ZzZjFGMW1lWDEyWjVLQjdwQ2dmMlBSaGNZNnFrWGE5bkYzWGFwcTVnN0hueVROMFhfMXI3S2VRWUNKdDcyZWNfQmVxcWt3MTg1?oc=5",
    "source": "De Gelderlander",
@@ -29,13 +39,33 @@
    "title": "Gazprom behoudt laatste Europese bankrekening bij ING na rechterlijk oordeel",
    "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQcFJHUWFGZzJFSUlPbEVsS1pxd3c3LW0wRy1JRkhtWmtOLXBGejJhMW1NM2tjYkNaTC1BNVZYLW4wTTZYY19sMWxfZGFoTURzWG1WYjlKU2dfVzN5NnVnYVYwYVNFSWFGQUl1V203NUZVd2I4a3loNG5DYjk0LVhtX1pDbGtMX1NRVloxdTVMRGNWT0JoRDFnd2VvQnZpbUNLV2d2VkxrdTlrNHRaOUt0cUpRUC1BeGJYcWdNMHoyYXkxT3FE?oc=5",
    "source": "bnr.nl",
-   "ts": 1792486500000,
+   "ts": 1792479360000,
    "banks": [
     "ING"
    ],
    "themes": [
     "Toezicht"
    ]
+  },
+  {
+   "title": "Hoe Rabobank 175 teams laat bouwen op één platform zonder release trains - IT Pro - .Plans",
+   "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQcFpGd0QxY0VkNGlMMkY3YUd4MUJoVzFmNzZCX2JPQ2NJNG1fMzRtMnc4d1RmOG9hNmEwSTRWVzRWMUExdmFBenYzZHU2UzZabFFMNWlIdjl3dDBWMmhjZVZBNHdUc0ROei1FbERhWlpRQTNrVWJwdjloY1Q0MHFQS1dqWnM2LXRnNmdLdDFHczBDQzFMbFVMd2liejEtZWJtMWZ4U2JNSkhwbTZX?oc=5",
+   "source": "Tweakers",
+   "ts": 1792476000000,
+   "banks": [
+    "Rabobank"
+   ],
+   "themes": []
+  },
+  {
+   "title": "ABN AMRO: Torenhoog prijskaartje drijft AI in cyclische hoek",
+   "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQMFNYSXdRNWVsZDlzUTNzUDBCalFOTldXZm5RUnctMGpDZ0Q5OE14SzNoYUdxZ2h1cXVfQ0VyYWwyZ3JLVV9MaFlra1I2N0dVSlRPalVmQmFhbDBqUkNPQWlzWll5SmFRY3FoaklfeDRiWENaWFNyS0tJWDdvZkp3aEdWMU5Ja2pyRUxmcDRiVUgydW01YjFXTGIzODRjcDVJUzRF?oc=5",
+   "source": "Dutch IT Channel",
+   "ts": 1792473177000,
+   "banks": [
+    "ABN AMRO"
+   ],
+   "themes": []
   },
   {
    "title": "Gazprom mag van rechter bij ING blijven bankieren",
@@ -47,6 +77,10 @@
    ],
    "themes": [
     "Toezicht"
+   ],
+   "more": 1,
+   "also": [
+    "NRC - Nieuws, achtergronden en onderzoeksjournalistiek"
    ]
   },
   {
@@ -252,6 +286,16 @@
    "themes": []
   },
   {
+   "title": "ING verbood eerst alle AI, tot die bewezen veilig was. In de zomer van 2023 was AI als ChatGPT bij ING nog helemaal verboden, tot de bank had bewezen dat het veilig kon. Dat zegt chief analytics officer Bahadir Yilmaz van ING. Inmiddels beslist een commis",
+   "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQSmpGbHZzZ0VSQUJ3Yl8tRHJWejlmSERPQ0V0cU5uUXJKTkpLX3ZNNGdmOWIxNUx6bHNlTEtLM0VDTzA5UVNtWnJIZ0pESjNsY3V3bzBIbjlBdVZueUZvUm5rMnRvV3pLNzJXUzl4LVp2Z3R0RUFGbHpzZm1zY2ZsNTdtNnZuYlE5RW5COW84NmZTbVhSUVBmQ3FxMWlVcUZQVjJ2Vjk4ZFVuZnlKRkpCVVZ2aVp6WHV6dEtydA?oc=5",
+   "source": "LinkedIn",
+   "ts": 1791990999000,
+   "banks": [
+    "ING"
+   ],
+   "themes": []
+  },
+  {
    "title": "ING stopt op 1 januari 2027 met Cashcode: wie nog een Maestro- of V PAY-pas heeft, kan daarna niet meer zonder pas geld opnemen",
    "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPQTMtTDdBd2NrQ1g1UE5EbjZZVXdvTjQ2eE5MNW8zdmlNckFZdWphX0VjMmNmalBUWlBrWGhMcEpCRXZRX1BfVG1QVUdDaHZ0WmpPNFJBWjBCc0pkZXlsYnROcnBMY3pad3NpRm1hQ2VBSXVCWWV6Y0NPS3BvUlBGMG9yYVBGcU96Q0Y2V2xlbEpMZ2QxYTJiTXNUZjVXMGZyNEsyYUcwd2F3TEVTQmxDU1lRSmhfMVFZM1NTWXJhVmJIVlFjbjVVYVNaYUx4MDkxQ0dqbERFUjc5ZjJoV1RHVkcyOFU4OG9CS0RPMA?oc=5",
    "source": "Headliner.nl",
@@ -404,18 +448,6 @@
     "de Volksbank"
    ],
    "themes": []
-  },
-  {
-   "title": "Platform Zero en Rabobank bekrachtigen partnership",
-   "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOcXBwblJRRlliWm42c0VWaWw5MzdKSkJEOGcwV0hrcGtlNEVIeVpDVHUwRl9mcXNXQVFFZ3hPZTZONFE5NGhfcnNycEs1V3JsU2VnZTVxczUyOW5XR3RHNlZQcUNWRkxWZkNsQ01tTVpzSnVXd1FKU1lRVkdwMmZYMlY5THQ0d2x1NWw2VEh4c1VvOG9xcVM0eTRSYWRmbmNiOFJyUEg5UE9HQjIzczBOSmtnZHlqbHlMZHZJdHVoRm9PeTA?oc=5",
-   "source": "Rabobank",
-   "ts": 1791556650000,
-   "banks": [
-    "Rabobank"
-   ],
-   "themes": [
-    "Strategie & product"
-   ]
   },
   {
    "title": "ING volgt ABN Amro met loonbod in nieuwe cao-onderhandelingen, tot woede van FNV",
@@ -650,6 +682,16 @@
    "themes": []
   },
   {
+   "title": "Beursblik: afbouw staatsbelang raakt ABN AMRO nauwelijks",
+   "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOT01HeVlzZVJZMDU1X3FwMWg1elM5YWhXYS1yM0Q4YjVsMkRmclRyLUt2eVpqVUxqTkJkTEk4eVZHR2NNNldoU1h4TkhIMUpHazJJZURjRnRwcUh3Y1FJX012b0J5ZGN0NnQ0RDhqQzJKankxRXRJaDVweGRqTDVnOTNPWV84YzZTaWl1UU1Wa1dRMjNNSGFkZndyWUJHZHM?oc=5",
+   "source": "Beleggen.nl",
+   "ts": 1791362564000,
+   "banks": [
+    "ABN AMRO"
+   ],
+   "themes": []
+  },
+  {
    "title": "Nederlandse Staat brengt belang in ABN AMRO verder terug naar 10,5 procent",
    "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQVnloMVVZVlN1U3EyZENBN3lwbFNINlZ1ckJTQXl6cjJsUFg5VjZGbzU3V0N0bW1jc1pFUGhwVlRSUU0tc19WajBQSWxkNlhLamkxT1E1TUlQakV4eFpWU0V2Q3dsQzdzTFhQX3Q0cWFtcGhWcmg0dUk2N2Y1cllnWmpWM2lVaklHcS1ub3BaaFVqZEtKZm5rZV9IYjdTQXJuaFE1ZmM3cGF2YjRvUGZuTXV2WQ?oc=5",
    "source": "NU",
@@ -684,16 +726,6 @@
    "themes": [
     "Resultaten"
    ]
-  },
-  {
-   "title": "Beursblik: afbouw staatsbelang raakt ABN AMRO nauwelijks",
-   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNZlZaeElONDI5a09ORkZoTmE4OWZaRVJQbWJSRUd0ZTNRblVENFVMdmZ1WHU1QTVxVDhtVnR6RFoxUEZnYTRxS1UzM2V6UzF6bTZUWlVPOXBjZW1ueXJwWW9Ia0pkaXUwaEgzQ0c3YndsN2UzejE1UHAyNElFYU5QNXZuRE01NHNkSndtWkI5Z0NBSHhGd1d0Qw?oc=5",
-   "source": "IEX.nl",
-   "ts": 1791356400000,
-   "banks": [
-    "ABN AMRO"
-   ],
-   "themes": []
   },
   {
    "title": "ABN Amro na 2 weken adverteren in ChatGPT: ‘Doorklik is beter dan verwacht’",
@@ -734,7 +766,7 @@
     "ABN AMRO"
    ],
    "themes": [],
-   "more": 10,
+   "more": 11,
    "also": [
     "De AandeelHouder",
     "De AandeelHouder",
@@ -815,10 +847,6 @@
    ],
    "themes": [
     "Tarieven"
-   ],
-   "more": 1,
-   "also": [
-    "De Dagelijkse Standaard"
    ]
   },
   {
@@ -856,18 +884,6 @@
    ]
   },
   {
-   "title": "Rabobank: AI-beleggingen blijven kansrijk ondanks toenemende zorgen",
-   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPSFk3Q1Jad1dhakdDYU5TRFJpVG8wVjlnX2U1d2RzeEVFT2c2dHhTN1VWdWJTbkV3RXFaOF92ZFNZRGIzQ2dJTHZnVllFay13eUdTcnJKOTQycmIycmFQY05aS1FfQlB2UFh0RnM0UGJFWV9kVEZoTXFLWDYtNDNwT0lyOHoxREZQc1R1RERkbw?oc=5",
-   "source": "Newsbit",
-   "ts": 1791010800000,
-   "banks": [
-    "Rabobank"
-   ],
-   "themes": [
-    "Private banking"
-   ]
-  },
-  {
    "title": "ING Bank: Negotiations for the new ING collective agreement will start on Monday 5 October",
    "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQM1phbWhTenVDVU1WWi1mNzV3aVFiU053OTlVbml1V1U0ckl4RzJpOExMaUM0TVNPUnlNWVN5TTFLaUgtVnZLOFBYdlphVXFsZjJTOVdWTFZDSGI5NnVucXJVam5tLW43T095ZDBISjgyeEtPR0J4RzEyVmRjYnhqaVBvY1NZNURueWNHOWxBOWpyQUU1NExBM0gtOXRfV3J5OHRMZHZzZHdLSXA1YXdTcTdvTjRMdk94a2VqOVEwTXdzLVNuNmpPVDBtR1hzR00zRllleWRLTkFGOEhWMmlFcA?oc=5",
    "source": "De Unie",
@@ -886,31 +902,6 @@
     "ABN AMRO"
    ],
    "themes": []
-  },
-  {
-   "title": "ABN AMRO: Hoe ver wil jij gaan?",
-   "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1OeGxBc2NjZzkzNXBJdVN4RmZDRjVkYzllRS1La3VMcmlHdDc4UEFrbHdzajJTNHN2VkJPcXFuZHJra2ZyWTZqam1iNmNLU2JGdzB6TjYzTzdsS2NtcFJZdFdjblUyRkpTc2J2VHNtRm5TM0lBV05WTA?oc=5",
-   "source": "De Unie",
-   "ts": 1790924400000,
-   "banks": [
-    "ABN AMRO"
-   ],
-   "themes": []
-  },
-  {
-   "title": "Strengere hypotheekeisen Rabobank en ABN Amro",
-   "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPU1dzb1FkNkZVajM2VUVySmtLYk43NEJRemRPbGdsU0k3bmpIZDA3M1RNN1dtSmRfSDBxbGNhRVhHbU1fTGZNRHhOV1J5UjNxOXdYZWM1Zi1Way1ERUFlaXRYaGZyWlRlM0JUUHZabmNTX25YRS1QTzFJRzJlZ3dGSlNZM0tlZUVzdDdJSg?oc=5",
-   "source": "IEX.nl",
-   "ts": 1790924400000,
-   "banks": [
-    "ABN AMRO",
-    "Rabobank"
-   ],
-   "themes": [],
-   "more": 1,
-   "also": [
-    "Tweakers"
-   ]
   }
  ]
 }
