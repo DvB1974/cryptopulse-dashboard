@@ -68,8 +68,8 @@ def gnews(query):
 BE_TITLE = re.compile(r"Belgi[eë]|Belgisch|Vlaams|Vlaanderen|Brussel|Antwerpen", re.I)
 BE_SOURCES = re.compile(r"\.be\b|HLN|Nieuwsblad|De Standaard|De Tijd|GVA|HBVL|Gazet van|VRT|Knack|Trends|De Morgen|Het Belang|Welingelichte Kringen|Made in|RTV$", re.I)
 # Local/consumer noise that says nothing about competitive position
-NOISE = re.compile(r"phishing|nep-?(sms|mail)|oplicht|pas op voor|donatie|bijdrage van|co[oö]peratief dividend|clubsupport|sponsor|dorpsfeest|onder clubs|verdeelt .* (clubs|verenigingen)|pand\b|appartementen|opinie:", re.I)
-NOISE_SOURCES = re.compile(r"Opgelicht|Instagram|Facebook|Raisin|YouTube", re.I)
+NOISE = re.compile(r"\bOpen\b|Tour of|wieler|tennis|voetbal|hockey|marathon|toernooi|klassement|etappe|samenwerking met drie jaar|verlengen samenwerking|phishing|nep-?(sms|mail)|oplicht|pas op voor|donatie|bijdrage van|co[oö]peratief dividend|clubsupport|sponsor|dorpsfeest|onder clubs|verdeelt .* (clubs|verenigingen)|pand\b|appartementen|opinie:", re.I)
+NOISE_SOURCES = re.compile(r"Opgelicht|Instagram|Facebook|Raisin|YouTube|Traders Union|Wielerflits|Tennisnieuws|Sportnieuws", re.I)
 STOP = set("de het een en van in op voor met aan bij naar over uit is zijn wordt worden als dat die ook om te nu nog meer dan door tot zo".split())
 
 
