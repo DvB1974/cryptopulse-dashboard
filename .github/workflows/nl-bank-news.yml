@@ -1,0 +1,37 @@
+name: NL bank news refresh
+
+on:
+  schedule:
+    # Every 2 hours between 06:00 and 22:00 Amsterdam time (UTC+1/+2)
+    - cron: "15 4-20/2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch NL bank news (Google Nieuws)
+        run: python3 scripts/fetch_nl_banks.py
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- data/nl-banks.json && [ -z "$(git ls-files --others --exclude-standard data/nl-banks.json)" ]; then
+            echo "No change"
+          else
+            git config user.name "nl-bank-news-bot"
+            git config user.email "actions@users.noreply.github.com"
+            git add data/nl-banks.json
+            git commit -m "NL bank news: refresh"
+            git pull --rebase
+            git push
+          fi
