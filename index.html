@@ -301,6 +301,7 @@
     .nlb-chip span{color:var(--dm);font-weight:500;margin-left:3px}
     .nlb-chip.on{background:var(--acc);border-color:var(--acc);color:#fff}.nlb-chip.on span{color:rgba(255,255,255,.75)}
     .nlb-chip.own{border-style:dashed}
+    .nlb-more{color:var(--dm);font-weight:500;margin-left:4px}
     .nlb-bank{font-size:10px;font-weight:700;padding:2px 6px;border-radius:3px;background:rgba(59,130,246,.12);color:#93c5fd;border:0.5px solid rgba(59,130,246,.3)}
     .nlb-bank.own{background:rgba(247,147,26,.12);color:#fbbf24;border-color:rgba(247,147,26,.35)}
     #pane-banknl .bank-title-text{font-size:13px;font-weight:600;line-height:1.45;color:var(--tx)}
@@ -1562,7 +1563,7 @@ function renderNLBanks(){
   grid.innerHTML=list.length?list.map((it,i)=>'<a class="bank-card nl-card" href="'+esc(it.link)+'" target="_blank" rel="noopener noreferrer"><div class="bank-num">'+String(i+1).padStart(2,'0')+'</div><div class="bank-body"><div class="bank-source-row">'
     +it.banks.map(b=>'<span class="nlb-bank'+(b===OWN_BANK?' own':'')+'">'+esc(b)+'</span>').join('')
     +it.themes.map(t=>'<span class="ntag">'+esc(t)+'</span>').join('')
-    +'<span class="news-src">'+esc(it.source)+'</span><span class="news-dot">·</span><span class="news-age">'+timeAgo(it.ts)+'</span></div>'
+    +'<span class="news-src">'+esc(it.source)+(it.more?' <span class="nlb-more" title="Ook bij: '+esc((it.also||[]).join(', '))+'">+'+it.more+' bronnen</span>':'')+'</span><span class="news-dot">·</span><span class="news-age">'+timeAgo(it.ts)+'</span></div>'
     +'<div class="bank-title-text">'+esc(it.title)+'</div></div></a>').join('')
     :'<div class="bank-empty">Geen berichten voor deze combinatie.</div>';
   set('bank-nl-count',list.length+' berichten');
