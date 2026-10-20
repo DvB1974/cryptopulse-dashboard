@@ -27,7 +27,7 @@ BANKS = [
     ("Rabobank", "Rabobank", re.compile(r"Rabobank", re.I)),
     ("de Volksbank", '"de Volksbank" OR "ASN Bank" OR "SNS Bank" OR RegioBank', re.compile(r"Volksbank|ASN\s?Bank|\bSNS\b|RegioBank", re.I)),
     ("Triodos", "Triodos", re.compile(r"Triodos", re.I)),
-    ("Van Lanschot Kempen", '"Van Lanschot" OR "Kempen"', re.compile(r"Van\s?Lanschot|\bKempen\b", re.I)),
+    ("Van Lanschot Kempen", '"Van Lanschot" OR "Kempen Capital" OR "Kempen & Co"', re.compile(r"Van\s?Lanschot|Kempen\s?(&|en)\s?Co|Kempen Capital", re.I)),
     ("bunq", "bunq", re.compile(r"\bbunq\b", re.I)),
     ("Knab", "Knab bank", re.compile(r"\bKnab\b", re.I)),
     ("NIBC", "NIBC", re.compile(r"\bNIBC\b", re.I)),
@@ -64,6 +64,19 @@ def gnews(query):
         yield {"title": title, "link": it.findtext("link") or "", "source": source, "ts": int(dt.timestamp() * 1000)}
 
 
+# Belgian coverage is not relevant for Dutch competitive positioning
+BE_TITLE = re.compile(r"Belgi[eë]|Belgisch|Vlaams|Vlaanderen|Brussel|Antwerpen", re.I)
+BE_SOURCES = re.compile(r"\.be\b|HLN|Nieuwsblad|De Standaard|De Tijd|GVA|HBVL|Gazet van|VRT|Knack|Trends|De Morgen|Het Belang|Welingelichte Kringen|Made in|RTV$", re.I)
+# Local/consumer noise that says nothing about competitive position
+NOISE = re.compile(r"phishing|nep-?(sms|mail)|oplicht|pas op voor|donatie|bijdrage van|co[oö]peratief dividend|clubsupport|sponsor|dorpsfeest|onder clubs|verdeelt .* (clubs|verenigingen)|pand\b|appartementen|opinie:", re.I)
+NOISE_SOURCES = re.compile(r"Opgelicht|Instagram|Facebook|Raisin|YouTube", re.I)
+STOP = set("de het een en van in op voor met aan bij naar over uit is zijn wordt worden als dat die ook om te nu nog meer dan door tot zo".split())
+
+
+def words(t):
+    return {w for w in re.findall(r"[a-z0-9à-ÿ]+", t.lower()) if len(w) > 2 and w not in STOP}
+
+
 def norm(t):
     return re.sub(r"[^a-z0-9]+", " ", t.lower()).strip()[:70]
 
@@ -75,6 +88,8 @@ def main():
         try:
             for it in gnews(query):
                 if it["ts"] < cutoff.timestamp() * 1000 or not rx.search(it["title"]):
+                    continue
+                if BE_TITLE.search(it["title"]) or BE_SOURCES.search(it["source"]) or NOISE.search(it["title"]) or NOISE_SOURCES.search(it["source"]):
                     continue
                 key = norm(it["title"])
                 if key in seen:
@@ -89,6 +104,23 @@ def main():
     if errors == len(BANKS) or not items:
         print("no data fetched; keeping existing file", file=sys.stderr)
         return
+    # Cluster near-duplicate stories (same bank, strong word overlap, within 3 days): keep the earliest report
+    items.sort(key=lambda x: x["ts"])
+    clusters = []
+    for it in items:
+        w = words(it["title"])
+        for c in clusters:
+            cw = c["_w"]
+            overlap = len(w & cw) / max(1, min(len(w), len(cw)))
+            if set(it["banks"]) & set(c["banks"]) and abs(it["ts"] - c["ts"]) < 3 * 86400e3 and overlap >= 0.5:
+                c["more"] = c.get("more", 0) + 1
+                c["also"] = (c.get("also", []) + [it["source"]])[:5]
+                c["_w"] = cw | w
+                break
+        else:
+            it["_w"] = w
+            clusters.append(it)
+    items = [{k: v for k, v in c.items() if k != "_w"} for c in clusters]
     items.sort(key=lambda x: x["ts"], reverse=True)
     data = {
         "source": "Google Nieuws NL, per bank gezocht; alleen berichten met de bank in de kop",
