@@ -1,6 +1,42 @@
 {
   "source": "CoinGecko public treasury (beursgenoteerde bedrijven; excl. ETF's en overheden)",
-  "updated": "2026-10-18T20:50:00Z",
-  "btc": {"holdings": 1302063.2192943657, "value_usd": 105243229783.85501, "companies": 180, "top": []},
-  "eth": {"holdings": 8096612.229976, "value_usd": 18979947696.17293, "companies": 34, "top": []}
+  "updated": "2026-10-21T01:47:15Z",
+  "btc": {
+    "holdings": 1303553.2192943657,
+    "value_usd": 108109532494.41907,
+    "companies": 180,
+    "top": [
+      {
+        "name": "Strategy",
+        "holdings": 848517.0
+      },
+      {
+        "name": "Metaplanet",
+        "holdings": 44000.0
+      },
+      {
+        "name": "Twenty One Capital",
+        "holdings": 43514.0
+      }
+    ]
+  },
+  "eth": {
+    "holdings": 8109187.229976,
+    "value_usd": 19849231220.738655,
+    "companies": 34,
+    "top": [
+      {
+        "name": "BitMine Immersion",
+        "holdings": 6041481.0
+      },
+      {
+        "name": "SharpLink",
+        "holdings": 888938.0
+      },
+      {
+        "name": "The Ether Machine",
+        "holdings": 496712.0
+      }
+    ]
+  }
 }
