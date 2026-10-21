@@ -1,6 +1,6 @@
 {
  "source": "Google Nieuws NL, per bank gezocht; alleen berichten met de bank in de kop",
- "updated": "2026-10-21T15:18:18Z",
+ "updated": "2026-10-21T20:11:47Z",
  "days": 30,
  "banks": [
   "ABN AMRO",
@@ -16,6 +16,16 @@
  ],
  "items": [
   {
+   "title": "ING Markets | Dubbele bodem in zilver",
+   "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9qTGVWZlhxS3ZTOTdpRUY4QnA5Y0NKTWJlOEFydkJldzhpU0ozSnR2Y1l4X0VxamlWMGpQYzROeWY0ZjcwVThoZmpsbk1nWS0weURaM1NmM2VfRU1CMzJiaGRVSDNmcTJCeWlzZTRzLVJXSlU?oc=5",
+   "source": "ING Sprinters",
+   "ts": 1792597168000,
+   "banks": [
+    "ING"
+   ],
+   "themes": []
+  },
+  {
    "title": "ASN Bank: verslag derde cao-overleg",
    "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOeUphSGUxUk9lYWh1S3VKOC14R21XMkRaY0h2SXFGMFFpS1Y0ak1WUXFfSmhBMlBBNHZydGVXNTlHOUFGaXlvb2lZX1BZS2ZWV3ZjSHRydWQxZlNBMDI0T0FCdUQwWV9RYUxMNmFfUGJ5RWxMblB6TXNJY1lYeGlna0Q3a2JCd0hBZG5KZFE1Mm0tQmNxZlpKTVBBNExGZw?oc=5",
    "source": "www.cnv.nl",
@@ -26,12 +36,35 @@
    "themes": []
   },
   {
+   "title": "Rabobank noemt handtekening van ex vals, klant ontkent: rechter wijst schadeclaim af, €5.852 kosten",
+   "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPM2VyZERjVEg0MVkxY3JQa3RWeFZmajZ4a3ZpUU5OdHFJNVVOZzNjUk82WkM5VzYtQVE3MnVSdXBOTlBTSHk3Qm9zblRvMU91V1lOVmlzYlNodk4zRVFfb29NTTdJRFNQRVE1bVIxQ0kzeEhUSnh4R2dSblVIdEVDdEFWMTZPT3ZQWXJEZmdkUkN6MkR0OVVvWEtaSHdrTUxOYnl3SEp4SklaMzM0eEZTTU5oLVpmaGow?oc=5",
+   "source": "De Dagelijkse Standaard",
+   "ts": 1792582200000,
+   "banks": [
+    "Rabobank"
+   ],
+   "themes": [
+    "Toezicht",
+    "Tarieven"
+   ]
+  },
+  {
    "title": "Bunq ondervraagt advocaten van gedupeerde klanten in de rechtbank",
    "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNMXpNc1NOZVNKb1NVVFlxdU43a1dEZTlfMG13MENWc3QxOXYzVWRlb2Zqei1YY2JvTTJFSWM3dWVnNUdtbFl4bXFFOFJRSlFzZFNXdWZoUm1IX2MyLUJYaExaWU5ybkhZWGtBVDMwd0l5dGNOR2FNU05JMVNGM1hUcmFmX2xlWFJsR0FmcDhGUU1sZk1BT3pRam4yZWxkMXo3WHphRjRrWHU0dw?oc=5",
    "source": "Het Financieele Dagblad",
    "ts": 1792581733000,
    "banks": [
     "bunq"
+   ],
+   "themes": []
+  },
+  {
+   "title": "Rabobank-actie spekt de kas van jeu de boulesclub De Stetters in Castricum",
+   "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOUGotbHV4enpMa0VacW5tNnZvU0NzNm5OUEl1TW1JVDNZU3ZQMGY3MGNUU3JmRG5tVXVOVWJfUkdjelpCMEhxWU1UeEcwTF9SLVhNY0cxVmRtMkNyLU1mMWppY1oyYkFGZW52Nlp1QWg0UkVpRWJzWDVXZXZHTlZxVE10Nk40bTlfcU13b3pIeXRVdktISklhbE1VeW5IcERyanE0UUJmU0J0Vl94dHJTTW1GTUxPdHA0cGc?oc=5",
+   "source": "Rodi.nl",
+   "ts": 1792579320000,
+   "banks": [
+    "Rabobank"
    ],
    "themes": []
   },
@@ -98,6 +131,16 @@
    "themes": []
   },
   {
+   "title": "Rabobank-leden Oost-Brabant verdelen 1,7 miljoen euro onder verenigingen",
+   "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPT2ZpOF80TUZsaDVKWXhBZGlfa3loMC0tN1ZvNDROeWJCUE04bEV6ZUZzS2dVdjlIbUNEem5CR0hyZFViMFdYdDNwQjFHdDl1WXNUcVozd1otMVVaM0ZueXV3SDNVLTJWeTNXTDBlejZqODFTZnBLQVdfcVpFcjVraEhvajhVMzJGZmk5c3huenB0Y1ZOSHZCcldCTjdsM2xWWmU2R1RYT0E4cmwtcTBNTE8yZzB0ejZ6ODBjaTVfbXNCUFNTMFVqQQ?oc=5",
+   "source": "brabantscentrum.nl",
+   "ts": 1792479571000,
+   "banks": [
+    "Rabobank"
+   ],
+   "themes": []
+  },
+  {
    "title": "Gazprom behoudt laatste Europese bankrekening bij ING na rechterlijk oordeel",
    "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQcFJHUWFGZzJFSUlPbEVsS1pxd3c3LW0wRy1JRkhtWmtOLXBGejJhMW1NM2tjYkNaTC1BNVZYLW4wTTZYY19sMWxfZGFoTURzWG1WYjlKU2dfVzN5NnVnYVYwYVNFSWFGQUl1V203NUZVd2I4a3loNG5DYjk0LVhtX1pDbGtMX1NRVloxdTVMRGNWT0JoRDFnd2VvQnZpbUNLV2d2VkxrdTlrNHRaOUt0cUpRUC1BeGJYcWdNMHoyYXkxT3FE?oc=5",
    "source": "bnr.nl",
@@ -157,6 +200,16 @@
    ]
   },
   {
+   "title": "Rabobank weegt je pensioen straks al op je 52e mee, en ook déze producten kennen een harde leeftijdsgrens 💶",
+   "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNajNyQTZQR3dHV01TQm9WNm9qYTJDRXV0ZWdBQzhrdDBPRnA5VW5rbElKQk9zT21KYWk5a0RjN2hma0c1eUhkVld5WUpndUhIRUp3SXcxY2ZYa3Q5c2wzN05RbFNlZ2VRRlNDUG1pbmdmV2ZjY0ZqRjFvNTlJR1RUUDVKSjhtQms?oc=5",
+   "source": "Libelle",
+   "ts": 1792430759000,
+   "banks": [
+    "Rabobank"
+   ],
+   "themes": []
+  },
+  {
    "title": "Van ambitie naar groei – Rabobank x FEM-START",
    "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNMHFsSXduTnBLVTJpTk11VHplMFBFZzVyTlA5R0Z5TTkzdXBDU1VjQW5FVTNmSW9GQ0JqcHUxa2l6RmI3Y1VPT1M3MWZjSjg0TUNJbUJ0dG1KNXRoYUpoODI0WGZKTS1XRC1XTUE2b0lzMWw3QlRSYXpVVG9FWVlyNHp6NVhZU1RxMFBtWGxTV0drSlh6bURqakM5bDJUQQ?oc=5",
    "source": "Rabobank",
@@ -177,6 +230,28 @@
    "themes": [
     "Private banking"
    ]
+  },
+  {
+   "title": "Kinderboerderij ’t Weidje krijgt 4500 euro van Rabobank voor nieuwe eendenvijver",
+   "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNWXhXSDdXSTRfMjBsODJzUjJJa0Fka25TSmFkSEtzd3d1dkdubnVQQVpxM3IwLU5ITlZKc1I0SlQ3U2w1Wm0yblJkM2c4ekc1bGd3VFNoUXQ1Wm5oUS1GRThVYUNIMkR0Ylk1TEFkbHZrYWZoOU5XMEU1M1dHU2psVy1qT3FmSGx3LVFzYnoxd1FNa0UzT3dyV3h2Uzc5emNxYmVxTHNueWRIdC1DcHQ1a2J4Y1lLWDRCM0l4NFBNVktTQQ?oc=5",
+   "source": "Rodi.nl",
+   "ts": 1792413670000,
+   "banks": [
+    "Rabobank"
+   ],
+   "themes": [
+    "Strategie & product"
+   ]
+  },
+  {
+   "title": "Mantelzorgpunt Sliedrecht krijgt extra steun van Rabobank",
+   "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxObElWTnB0Y3dta2pZTDI4NFdjc0tPSjZVczEzRFpLSmhQbmVpdUQwZ1pHMmkyNHVCVll6U3Zmb2JqTUp4dlFQR1d4aEFWNkZTYnVXZllWZkZVc1Jrd1B1VnViTUNKXzdaVDZXRVBGdlVVbDdTMEFqNk1tME1meXRwdHp6WndsRWRqSmFUUE0xWnZKNXpwbk1qdnRTZUhoQXNsVl9TOVB6OHlKb2x1cmVPcjNR?oc=5",
+   "source": "Het Kompas Sliedrecht",
+   "ts": 1792408680000,
+   "banks": [
+    "Rabobank"
+   ],
+   "themes": []
   },
   {
    "title": "ABN AMRO: Samen voor een goede én eerlijke cao! Week 1: trek aan het touw",
@@ -209,16 +284,14 @@
    "themes": []
   },
   {
-   "title": "Rabobank nieuwe projectaanvoerder bij De Graafschap Verbindt!",
-   "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQb1E4NV9ITkc4YkVjc3d0VEtlUFduNkRmZE9WOFNJTk5KREhRSXZzd3p6MHRhWXZUcDA0RjNqWk5hbXBzbkE2V1ZOSHhnV0RjM1ZISDlSakpuSG1Edy1TaGhxbXNqMTdybmlMSkVuUzNWeG1yeW1YNFdqb210R2tfS21RQWprSVVTVTZVTXdDWHB1TjZyOVc2dXgxOA?oc=5",
-   "source": "De Graafschap",
-   "ts": 1792145115000,
+   "title": "Rabobank Randmeren steunt Bottermuseum Harderwijk met € 7.500",
+   "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxONUxWS3J3enJ6MHBGQlZhcmJ5UHJPbFA1bWNjSVg1RFUzSHJ4U3k1alExSVNfNmg3YXNfOUtmcS11LXYzZWdNb2owQzBRU2tfSnRWanNELTRUN0lpc2ZEX0VNRVkyQXVkY2pVYmFXYXBRaTd3UV9ZS3pMbzNNdy1FTW1rN0JVMHNab29lV05pc01SSzBfbURLXzJfOWJqN21o?oc=5",
+   "source": "Harderwijksezaken.nl",
+   "ts": 1792368000000,
    "banks": [
     "Rabobank"
    ],
-   "themes": [
-    "Strategie & product"
-   ]
+   "themes": []
   },
   {
    "title": "ING helpt grootste slachter ter wereld JBS aan ruim 5 miljard dollar",
@@ -239,22 +312,6 @@
     "ING"
    ],
    "themes": []
-  },
-  {
-   "title": "ABN Amro zit volledig klem door Amerikaanse ICC-sancties",
-   "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQNmdpVTZYLXhISTRnOTkteTgyU29VY2JKbTNMMlVIbTBsYUZJcmtGOUEtSDMxU2J1azRDajgtY2ZHc3dYN2Vib1A0Q2tJaFlsUlBHU0paOU5ZbC1kSHRzR0c3TF83TjBYSXBRTDF3bklobW9DRTJXVU90N0hRVG9BTjlPNVZ3SWFtcVE?oc=5",
-   "source": "Reformatorisch Dagblad",
-   "ts": 1792055139000,
-   "banks": [
-    "ABN AMRO"
-   ],
-   "themes": [
-    "Toezicht"
-   ],
-   "more": 1,
-   "also": [
-    "RTL.nl"
-   ]
   },
   {
    "title": "bunq verhoogt spaarrente naar 1,61 procent, bonustarief naar 3,11 procent",
@@ -278,12 +335,6 @@
    ],
    "themes": [
     "Toezicht"
-   ],
-   "more": 3,
-   "also": [
-    "NRC - Nieuws, achtergronden en onderzoeksjournalistiek",
-    "CFO.nl",
-    "NOS"
    ]
   },
   {
@@ -309,6 +360,25 @@
    "themes": []
   },
   {
+   "title": "ABN Amro volledig klem door sancties VS tegen Strafhof",
+   "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNdDgyZ3lHZmdVa1NuODEzZWdfQVQzU2hRWTBzeGoycDRwRTZuMVY0dlRBRlN4elQ5dEE1bGpiaGh5TUtMUDI4bVBsbjVJLVNfbmV2MjYtTjBoajBWb1ZncnJJVlpvU2FoTWRTSmZILVUwUzNyT1kyaUF2eHhLTWNPQ0hQdkNjUGZDakIzeWFXMlZQcmNIblFPWUZ6OUlUamltZTNnc3UzR0FPdTA?oc=5",
+   "source": "RTL.nl",
+   "ts": 1792040621000,
+   "banks": [
+    "ABN AMRO"
+   ],
+   "themes": [
+    "Toezicht"
+   ],
+   "more": 4,
+   "also": [
+    "Reformatorisch Dagblad",
+    "NRC - Nieuws, achtergronden en onderzoeksjournalistiek",
+    "CFO.nl",
+    "NOS"
+   ]
+  },
+  {
    "title": "Waarom we juist ING aanklagen: de uitstoot",
    "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOWHZQTnJQRjhrZTdGd1BRV0h5VnZWVG5SaV94ZE9ZbC1keHh0Y0k1cndxeTdfQ0pLd1FPZ3dobk9xMHh4dXpLejVzM1dqYWszaUZFVi1hMkQ5QURlcTczZkRTRUpZYmd2ckxwSXFxOUlrbFJEUkJ3VV94RTljam1lNA?oc=5",
    "source": "Milieudefensie",
@@ -317,6 +387,20 @@
     "ING"
    ],
    "themes": []
+  },
+  {
+   "title": "Rabobank-leden geven samen €150.000 extra slagkracht",
+   "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPVU4wUVlzd2VEanNUWF9ud1lpekNtTWFCVGtWbHdkaWdNZm5BdGlRT0c3eFBRcnVuRUJIcVgwc2drd2pjR1doNllsUW1kMldaY0F4Q29mRmU0NWtyNElzQXF0V1AtbTZpMUJoTVAwbXdWakUxc0prV29aOXpyZFpYaVZKTEV1TlJCRWRyN2NkRURyTXVuMUFORGRiRXJrdTgyM2NSTXlhYzdsYl9WZWc?oc=5",
+   "source": "Drimble",
+   "ts": 1792012860000,
+   "banks": [
+    "Rabobank"
+   ],
+   "themes": [],
+   "more": 1,
+   "also": [
+    "De Nieuwsbode"
+   ]
   },
   {
    "title": "Tijd voor een ander systeem: ‘Ook het kapitalisme is maar een verhaal, het zijn onze verzinsels’, stelt Triodos-econoom Hans Stegeman",
@@ -342,8 +426,8 @@
   },
   {
    "title": "Banken verdwijnen uit het straatbeeld, maar ASN Bank opent juist weer een kantoor in Borculo",
-   "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQNWtoYTdzOXFLTFQ2czljb1ZCZjlvMVlER2RWM1pYNXRqVG1YMU1Pc2VWMDlYemdPVTlDSHRobjNka01Rcno1NmRjTmQ3MEZwR3FCamQ3Y0l3TWs3SzF5NnhlTF91UGtBcWswRUtwQ3doX3NLckZTYUpzamZqdlZNS21pUXRTUTZZUHBVQWZoNzIzTG5MTVFSejRxeG5GdTg2dUhsa3FOR0hoeVZyQklnZFd3UFlfWENldVcycUF4QnF1cXc3ZU1yc0pyeWRXTWszcVE?oc=5",
-   "source": "Tubantia",
+   "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOSTFBRUo5TEx5Z3hWVHkzS2N4YmJfTGxqaGxZR2QtUnFMS05sNTJzQlRsQThSUmZ6MWxCVFc3YU5ZaE5hbE54OU9SRnY2VkROcHFnWDBSTkhnNU1YTGdVV1BhYVBXMDZkcEloQW9hdlhPdzR2SzFqY2h2UlFjUTdmZWZMbWs3NnR4MGI3SW9IbU55Z0ZaQXpiMk9rTmN0RjlGQmQ4Si13aGYwYTExWlQtZ1R1aDNucDBNc0dWVmVIeXZ2LUc2aUx2emJiZjY2eUZaNWVB?oc=5",
+   "source": "de Stentor",
    "ts": 1791993603000,
    "banks": [
     "de Volksbank"
@@ -371,16 +455,6 @@
    "themes": []
   },
   {
-   "title": "ING stopt op 1 januari 2027 met Cashcode: wie nog een Maestro- of V PAY-pas heeft, kan daarna niet meer zonder pas geld opnemen",
-   "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPQTMtTDdBd2NrQ1g1UE5EbjZZVXdvTjQ2eE5MNW8zdmlNckFZdWphX0VjMmNmalBUWlBrWGhMcEpCRXZRX1BfVG1QVUdDaHZ0WmpPNFJBWjBCc0pkZXlsYnROcnBMY3pad3NpRm1hQ2VBSXVCWWV6Y0NPS3BvUlBGMG9yYVBGcU96Q0Y2V2xlbEpMZ2QxYTJiTXNUZjVXMGZyNEsyYUcwd2F3TEVTQmxDU1lRSmhfMVFZM1NTWXJhVmJIVlFjbjVVYVNaYUx4MDkxQ0dqbERFUjc5ZjJoV1RHVkcyOFU4OG9CS0RPMA?oc=5",
-   "source": "Headliner.nl",
-   "ts": 1791981420000,
-   "banks": [
-    "ING"
-   ],
-   "themes": []
-  },
-  {
    "title": "ABN Amro: zelfvoorziening in Azië zet Nederlandse voedselexport onder druk",
    "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNVlFzTEY5N2ppSmJURDJuZGttSGVjQURNTTE0eDd1TGUzczRQdks4SEZDMTA4M1V3Tk9JWDNCTlVENHYtYmQ5aUJLMmN2NXBMb0RiVXY0LWR5M1FKRlEyem1ubUk3MUo3bEt6NFhmNlpPMFZaaGg4RTRZMFJOTEN1ZDVtcjdhRmlheDRUd29yVmpuSThnb3dnV01ab1g5dw?oc=5",
    "source": "Boerderij",
@@ -397,6 +471,16 @@
    "ts": 1791967440000,
    "banks": [
     "ABN AMRO"
+   ],
+   "themes": []
+  },
+  {
+   "title": "Melkveehouderij toekomst: Rabobank over keuzes en impact",
+   "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQelczOGtldnBfbllaRmpTNDY5NzJycnRIYWZmVUtfTFhsMjM4WkxXRHhJMWdZNWtQVG5VaHdwRElMLU1aV3ktYjloSGlhNWF5R3VrRDJVYXphNDdTQnhIaDdUUU80YTV3WUwzX3ZYX3gtLXY1d2txc1VCMkE3Um13Y25KckI1QnJKWkVvbUFXM2VzeEZhdWdMblFjRWU?oc=5",
+   "source": "Boerderij",
+   "ts": 1791961200000,
+   "banks": [
+    "Rabobank"
    ],
    "themes": []
   },
@@ -474,28 +558,6 @@
    ]
   },
   {
-   "title": "Stefaan Decraene (Rabobank): ‘Rabobank zou voor iedereen als thuis moeten voelen’",
-   "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPbHFzQWNfMEtVeGlCYng0Z2ZZY0ZndjRPUGlpdVFLWDB3Sy1GaGprcmxzM053T21BOFVCM0R3LW9aUjlQTmY4OHl3aGZTbldkRDkxV0JLU3pMUHE5bndudUVYX3VDVUl5NGdkZkJxWGh0Vlhud3RFRzRHX1NWaGtGbzhnSk9IN1JodzRuYXRZa2p4Z194bFBBVzRRd0czMGVOT1ZBSNIBqgFBVV95cUxOZU1xc1VrUUNmSDRtZGVmaHhoWXYxZWZYTDZWX3k1UUFldktSLU1Ua0JSMTZOQm9ieVJpdUs4bzI0b09qc2ZzVmZtMDl1ekNkVFBwMW9LZlp6eUpCVnQtVmhleURRdFVoUFlHWGxkVTlrTTZpUk11bWxld3F4elhsVU1CN2FaNUc3bHhZTUFHeUMzZVFQaTZSZlg3Ql9COTNwSVE4Ti1GOFJYZw?oc=5",
-   "source": "Banken.nl",
-   "ts": 1791786296000,
-   "banks": [
-    "Rabobank"
-   ],
-   "themes": []
-  },
-  {
-   "title": "Rabobank Private Banking voert MT1000-ranglijst voor private banking aan",
-   "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPTm12S2lId3NsS25UbWNsUlIxTXRoRkRwVDl2RTFyOExZRFRQYW00dmdkYk9pd0RpbkxYM2ZhU01mUkFaWktBRFdrZmFIZmtzWmdXejJ4dDZqMTdXUWtDN0o5WTIxc2VYOWxwRUUzcHNrNFVvS21JM0haLW5vQVF6dGJxRWJGMWQwNm5laW5iRm5ZRUlxcnd3WWhKdEpXTEptc1huRXRmcFZDWjTSAbABQVVfeXFMTWQxRnNYNHRWc0JZc0p2N0hfZm1mUFRjejF1TUE5Z0lNeU5NOG1WcXZuMkVpcDg4cjNnVENaRkNKLVZPYzBRVFJzSklXdzFHNWt3aXFRLUhtakhqVmhTS2w4a3gwVm4zdEsxX2hMNG9USVEtTjFQRjlIV1NiME5yM3BabmpneUxkcWE3TzROczYwRzVWTGt6azhQdEVsZDFfb28wdTRjY1B1cnRjN2tWMmw?oc=5",
-   "source": "Banken.nl",
-   "ts": 1791784910000,
-   "banks": [
-    "Rabobank"
-   ],
-   "themes": [
-    "Private banking"
-   ]
-  },
-  {
    "title": "ASN Bank in de etalage: dit zijn de mogelijke gevolgen voor klanten",
    "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxObThIYnBXWkJxYTM2QmEtV0xScDRObmxrNzF1U1RnWnNlNmVZbGpwZGpKT2VvVmtoNUJhOWgxOGRDSHJzc3diaUNVdUU5cXJWM09yM1ZwWWJ2S1RSa0ZlbzlxaThxMDFURWdkcEZOMDF4Y0ZTemYwUmIyaWp5QUJuQl9vcFowampRVkJqTGp1eVdKaFB1RW5qVnY0Z1ZfS3I5TlA1Xy1fMTlVam5yZXdHckFHNnd1XzBT?oc=5",
    "source": "De Telegraaf",
@@ -538,16 +600,6 @@
    "banks": [
     "ABN AMRO",
     "Van Lanschot Kempen"
-   ],
-   "themes": []
-  },
-  {
-   "title": "Kranten groeien vooral door betalende lezers, ziet ABN AMRO",
-   "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNOU9ERFZaSGJLZm14T090YzhmVm4ycFFEeGZwQ2pmVTR3OWpLVllqcU9wV0M0V3JLcXZTZ2hDYllVQVkwUUN5MWI0RVJaY2VpcE8zSzh3ZmZVbDJGOFcxcjZOWTh0Q0NDWnAtb0trQWIzcHdzVzM3X2ZuZURJNWdyTFlyeDNMYnZVUllVMDhLOTNKR3pLOHdHU21jRTMydUpndjJuYVR5Z3otSkhod3c?oc=5",
-   "source": "De Telegraaf",
-   "ts": 1791529200000,
-   "banks": [
-    "ABN AMRO"
    ],
    "themes": []
   },
@@ -688,26 +740,6 @@
    "themes": []
   },
   {
-   "title": "Slimme keuzes voor nu en later | ADO Den Haag x Rabobank",
-   "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPQ1pNdi1uV1VsQmxKUDhsbGJXd2ZHVklaOVgyMTUxOFYyT0E0M0VGWFRmVU5VbVFGVUphSE1jM1hBb1hYaTNrN2FwTUs5cGl4TGlaNGNhdmRjSi1ERS1kMkkyREhZc3dpd0ViVVYwZjE0Tm4tcjJvX3lBRFp5eThMQmkwQ1hNQnk2WElkZkRTTHdDS3I2Nm43Tzg1d3cyUC1CYVR1alpZek1GZ1dBal81SlJrSHI4LXJZ?oc=5",
-   "source": "ADO Den Haag",
-   "ts": 1791442800000,
-   "banks": [
-    "Rabobank"
-   ],
-   "themes": []
-  },
-  {
-   "title": "Derde ronde onderhandelingem cao Rabobank",
-   "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNWHFOdkhLczRFaEg0dzF3SkdSa0ZqZ3diRnNuYVZuS1dnRWNWUGVJV2ItdzNMb2lubUwzVk9tdXBEOUMxLXdoLXVpTHVHQTFNWGt5NkM3VGZDQWZQT1JFWlF5c3F3b21kdVFuRlE1S0ZNaHI0SkdHcFRMYVp1eXJpLXdBcUhCdTNscVZLZV9aZmVzclRTMGNSUElyMmRGRl84Y29fME5nYw?oc=5",
-   "source": "www.cnv.nl",
-   "ts": 1791442800000,
-   "banks": [
-    "Rabobank"
-   ],
-   "themes": []
-  },
-  {
    "title": "Thuiswerken blijft bij ASN Bank, vakbonden stemmen ook looneis af",
    "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPVlp1YV9YcVg0V2ZHUFVReGRYa3FILURfaTRPYldFSzNwUXBoOTFXclVfTk5SRVZMLTFfT0FzWFRrM09IcUYwTU1QNExoVjFJZjRNTVY3czJramU5ZURqaTVpWGh4RF9aOFZWSWxPeFEwV0RPbjl3bURMeVFnMVlfWmxBLUY4TDFZc0VVYlZsbUtXY1VvOWFkdHB3?oc=5",
    "source": "AMweb",
@@ -738,14 +770,29 @@
    "themes": []
   },
   {
-   "title": "ABN Amro weer een beetje minder in handen van Nederlandse Staat",
-   "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQck9YbmQ5ZGVyZGxlWUgwUFhueVZ2azVONXgxWXhUbllBVGJieHJQUVZ2VEt5em1NNWpBZ0lhTlFFa2RkZzVlTUFKNW1PckJPczVnM0F6Z1VIRW1BR1ZqMl8yY3E1X1NfTFFGRVJjSjh5d3hkb0ZOdnk0MkNDa1RVOTBDOVdBTVNoSlUxSmJFNlRMTmlBdGkxRUxB?oc=5",
-   "source": "NOS",
-   "ts": 1791356400000,
+   "title": "Beursblik: afbouw staatsbelang raakt ABN AMRO nauwelijks",
+   "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOT01HeVlzZVJZMDU1X3FwMWg1elM5YWhXYS1yM0Q4YjVsMkRmclRyLUt2eVpqVUxqTkJkTEk4eVZHR2NNNldoU1h4TkhIMUpHazJJZURjRnRwcUh3Y1FJX012b0J5ZGN0NnQ0RDhqQzJKankxRXRJaDVweGRqTDVnOTNPWV84YzZTaWl1UU1Wa1dRMjNNSGFkZndyWUJHZHM?oc=5",
+   "source": "Beleggen.nl",
+   "ts": 1791362564000,
    "banks": [
     "ABN AMRO"
    ],
    "themes": []
+  },
+  {
+   "title": "Nederlandse Staat brengt belang in ABN AMRO verder terug naar 10,5 procent",
+   "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQVnloMVVZVlN1U3EyZENBN3lwbFNINlZ1ckJTQXl6cjJsUFg5VjZGbzU3V0N0bW1jc1pFUGhwVlRSUU0tc19WajBQSWxkNlhLamkxT1E1TUlQakV4eFpWU0V2Q3dsQzdzTFhQX3Q0cWFtcGhWcmg0dUk2N2Y1cllnWmpWM2lVaklHcS1ub3BaaFVqZEtKZm5rZV9IYjdTQXJuaFE1ZmM3cGF2YjRvUGZuTXV2WQ?oc=5",
+   "source": "NU",
+   "ts": 1791356400000,
+   "banks": [
+    "ABN AMRO"
+   ],
+   "themes": [],
+   "more": 2,
+   "also": [
+    "NOS",
+    "bnr.nl"
+   ]
   },
   {
    "title": "Nederland verdient redding ABN Amro na bankencrisis terug: staatskas aangevuld met 3,5 miljard",
@@ -790,16 +837,6 @@
    "themes": []
   },
   {
-   "title": "AI stuurt ZZP’ers vooral naar de Rabobank",
-   "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQLXk1UFFWWjB2bW0yeF96d1p3RnJGMHJmY3JmTEh2QWwxZTVOcG81Q2l1MHo1SHRHZnlCNXdUYWdUUWxOZmZKVWNGU1dvX091TnhHX2hIZzFkZGxrWjBtYm15ZEZONlczYlY5NzV1UTNlZE9BeENlNTlTV2pQSFVCejNRbjVmYm03?oc=5",
-   "source": "Marketingfacts",
-   "ts": 1791356400000,
-   "banks": [
-    "Rabobank"
-   ],
-   "themes": []
-  },
-  {
    "title": "NLFI kondigt vijfde handelsplan aan om belang in ABN AMRO verder af te bouwen",
    "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNT3lyb0p0aGljN0FEOW45UFBYN2s0MFlheExuV3dyX2FhMElQUjA0bWtDa19tV2dNRlo3c1paeVN0TE1odDltREpnZnZ2Ny1uZ1d0YjRSM1NNNUJKa0lWTWlrcENzNEljR0l1TXFzdE91ZENyR2prLXFlOVVGamtESGpMc2xjYzFqWFpXSHM0cHctMWNpMUZubm9BTC1JTUpfMXJQZG1XYTFDMzJhbC02Xw?oc=5",
    "source": "ABN AMRO",
@@ -808,13 +845,13 @@
     "ABN AMRO"
    ],
    "themes": [],
-   "more": 10,
+   "more": 9,
    "also": [
     "De AandeelHouder",
-    "Nieuws.nl",
     "De AandeelHouder",
-    "NU",
-    "bnr.nl"
+    "NRC - Nieuws, achtergronden en onderzoeksjournalistiek",
+    "AD.nl",
+    "RTL.nl"
    ]
   },
   {
@@ -856,36 +893,6 @@
    "ts": 1791270000000,
    "banks": [
     "Van Lanschot Kempen"
-   ],
-   "themes": []
-  },
-  {
-   "title": "Topvrouw bunq: 'de oplossing is vaak helemaal geen AI' Wie bij bunq met AI experimenteert, komt vaak uit bij een oplossing zonder AI. Dat zegt chief strategy officer Bianca Zwart van bunq. Elke vrijdag krijgt iedereen bij de bank de kans om met AI te experime",
-   "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPX3lLM1lKWHp4YW9DZFJaakZBQmp0S1NnTjVsZzBoWlNhNDVYRGlTei10VVlwT1BHWEdoSzlaQ0pLaFhzdW02N3Bib3lNOXpTT1lxdVR5SmlpWTE0TDBNSnhzSXZRTEVJV1VkaVJ6N29SQW9XZjNvc2dJeFlhYVFSWS1OQWFwSXVtWk1zVG1kXzJvd0hJU0xraDg0WXFPUlVxdEhjU0pTeF9JbXZwYWdkYnNXTmdHU21xQVpXREd1cw?oc=5",
-   "source": "LinkedIn",
-   "ts": 1791270000000,
-   "banks": [
-    "bunq"
-   ],
-   "themes": []
-  },
-  {
-   "title": "bunq Business of Revolut Business: gratis kan duurder zijn",
-   "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNVWxac2g1WmU0WEhrTi1PZ2dJMDVfV0pLNnJ2dE92MUIyRmtYcUdQYlJVZ3VfZEgwZlh4dWtPTTBFNjV2TVQtWHNocW1qSnRXWkZQTEdUSGlUa1NBQ3U4R2JwYXZGdU9MYlgzdHJfRmNrWEFiT0Nnc1kxd1RRM2M5MG9QTjNYeG9CYWRlSW5Yc0w1VXJTOVE?oc=5",
-   "source": "quasa.io",
-   "ts": 1791270000000,
-   "banks": [
-    "bunq"
-   ],
-   "themes": []
-  },
-  {
-   "title": "Triodos-hoofdeconoom pleit voor einde aan groei-economie",
-   "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQS2lBTkhKWXB6UUJBbHp6cF9OZHlIQmxHVzJtb3diWkUtTHI4MUk0UThtM3hqdjRia3NNSC10ekZJN1J5elF1VERlRFhMMUhTTDgyZFZ1azhyeER0OW5PaGVTWG1nejhwUFVwcjJ1dlZYNGw5THpmT01hbzdyazFqYUJpQTA3SFEzMTExVFRsWmdBVTJVSWpYV2pGbDJ5X3U5ckE?oc=5",
-   "source": "BioJournaal",
-   "ts": 1791208761000,
-   "banks": [
-    "Triodos"
    ],
    "themes": []
   }
