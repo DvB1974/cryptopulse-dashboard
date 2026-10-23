@@ -1,6 +1,6 @@
 {
  "source": "Google Nieuws NL, per bank gezocht; alleen berichten met de bank in de kop",
- "updated": "2026-10-23T19:58:12Z",
+ "updated": "2026-10-23T23:10:28Z",
  "days": 30,
  "banks": [
   "ABN AMRO",
@@ -18,7 +18,7 @@
   {
    "title": "Als de rekeningen van het Internationaal Strafhof niet veilig zijn bij ABN AMRO, wat betekent dat dan voor die van jou?",
    "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPNEJVX2lpX1RxOEZoUE9wdnFXY0REdVhCa2pxTEdsSlpSaVRZTEhOSHR1S0ltQkRaaHhEcTcwNFM1X0dsQzZ2ZHlvVC1TVmZ5d1RmcVJ6Ml85cG1FRVFJb0FDWTlVRFBBNEQtZzhrY1VNRkxfaGRoOTl1dlBGRUpCYUhzaWpqUjhYV3JaTDBXZ184aF9OeG1hakVfTG9kQmc5R2NyWG9aMFp2cGRWV1JiY3Q1T3VMQzBJU29fNFN6YXJ2cUdtQTJrMk9rM1A0OTFCRkxsdDV3RlI4N2phQWhKUG55c1pHc2Z6RGNZ?oc=5",
-   "source": "Bnnvara",
+   "source": "bnnvara",
    "ts": 1792780912000,
    "banks": [
     "ABN AMRO"
@@ -246,6 +246,18 @@
    ]
   },
   {
+   "title": "Overname aandelen NIBC afgerond",
+   "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE50c1g1VGJYX0tHUHRSclMzVmtXV2JBU2txWHRWVzBpVlFkajlQNjlXOVIwOEpCNlpqY3VLUU9GT2tKRmY3eE51QVJadExRREtPRFFRMFU5N001R1VqR1FVaFY0SVpJaTZ6ZHcxSA?oc=5",
+   "source": "VVP online -",
+   "ts": 1792567008000,
+   "banks": [
+    "NIBC"
+   ],
+   "themes": [
+    "Strategie & product"
+   ]
+  },
+  {
    "title": "Rabobank, ABN AMRO, ASN Bank en partners bouwen Nederlandse identiteitswallet MyCheck",
    "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQODdEWm1XeVBldWtPZElqUWJWaDYta0R5MWswSXYwb1g4V0hMOUwydFdPbVhPSjhsSzVmMnowV1FIYmkyNFpXazFCTGVfbXI5QnM1cGh1S0V3bzVEU3dlTGlwM01takpuUjlKamNWaXBaOWRTMjhucFE0Nm9VenhtZ29ES1JQUmhnT3N2dnVneW9SRlZBRFJtOEpyc3pJbTc0SDlaOXZQWk1Cd0ZuRXhvejZBTkNlUTZSZlHSAb8BQVVfeXFMUEZnQktiaE9ubE50aDhWYzhXZXpqZjB0a3JjYkN2MXk3dFRGUnlORlMwYkVHSDlvOHRHQldMUzJ1M2c1Nl9FelBzY0dWdW9jZjdBMnhOWWJwclBNTjlRVUJDLU1tVGpiMGJCTGhVNVNTaWFpY3psV21qb2JQR3prU2lVNTk1XzhJNEtZZmpKSkp6WHU0UnFINjNjNlp4aVozbnFlNWE3QnNPd1U0eFFOSGFQUWFQSVRnendsZzhyLVE?oc=5",
    "source": "Banken.nl",
@@ -276,6 +288,18 @@
     "ING"
    ],
    "themes": []
+  },
+  {
+   "title": "ABN AMRO MeesPierson: vermogen verdient meer dan alleen beheer",
+   "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNclA0d1FQQ2FvWlhoeE1EVnY2Tlh0R2lKUGdXWkduN25KZm1tOTI5UHBsNS1wakd0SndXLV9QbWd6Ujdsc3N0U0MtcENIU1NnZDlIMjJBNnZYNF9Cdld5ODZ6R2NZalVraDJFRENJQlZQajBMRkxESEdTdHVoQkFXSjZpTl9RWGVwcU1kRFQwcml6eHZGbGRnSXRSTWkzQQ?oc=5",
+   "source": "aalsmeervandaag",
+   "ts": 1792499882000,
+   "banks": [
+    "ABN AMRO"
+   ],
+   "themes": [
+    "Private banking"
+   ]
   },
   {
    "title": "Triodos: minimaal verduurzamen kan vastgoed minder waard maken",
@@ -482,7 +506,11 @@
    "banks": [
     "ABN AMRO"
    ],
-   "themes": []
+   "themes": [],
+   "more": 1,
+   "also": [
+    "CashCow.nl"
+   ]
   },
   {
    "title": "bunq verhoogt spaarrente naar 1,61 procent, bonustarief naar 3,11 procent",
@@ -740,11 +768,12 @@
    "themes": []
   },
   {
-   "title": "Dit betekent de reorganisatie bij ING Real Estate Finance voor medewerkers en klanten",
-   "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOQVVWOS1EbnZYYTVKUHZfQXZGNFY3S1l4bUZjM0FUY00zeW43ZkV2RmV3Z09VOHdlRndoSHpVenlQS1F5VW9neEFrWmRZZkljSlpOUTlQWC1ERkh2LXpVUVQxUDY4VlhEN2ZVSXdKR0pyRmZEMm9LLWdweXFiYUg4N3FoamotQUlybU5ZSnVwNjZFWE1TNXdsSzBHb3FnNEdIbFBXT0JVQnJNU2VJcDVrOFBsQ2p2dG44SVJ6MHV3?oc=5",
-   "source": "Vastgoedmarkt",
+   "title": "ING volgt ABN Amro met loonbod in nieuwe cao-onderhandelingen, tot woede van FNV",
+   "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNUEdyNXhZd3ZJYnBYTE1VVjJlLTgyLVB4RE03ejNYclZTLTYzdlVlTEdVaWlRcTFMWGxaN1pBbXZxemtVVU5YeHBaVlRiM2Zid29jN09ubDFiRWwzYy1hUVNfM1FkY0hoZDRFRkttVjljSE1ET0FFOFpzR3A0Smlra3RrekxxWE1UZXM2VzkzQ1c4MDBLUDFCM3NOaGFzSjRHRlRvZ0NndUhxTHM?oc=5",
+   "source": "AMweb",
    "ts": 1791529200000,
    "banks": [
+    "ABN AMRO",
     "ING"
    ],
    "themes": [
@@ -752,12 +781,11 @@
    ]
   },
   {
-   "title": "ING volgt ABN Amro met loonbod in nieuwe cao-onderhandelingen, tot woede van FNV",
-   "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNUEdyNXhZd3ZJYnBYTE1VVjJlLTgyLVB4RE03ejNYclZTLTYzdlVlTEdVaWlRcTFMWGxaN1pBbXZxemtVVU5YeHBaVlRiM2Zid29jN09ubDFiRWwzYy1hUVNfM1FkY0hoZDRFRkttVjljSE1ET0FFOFpzR3A0Smlra3RrekxxWE1UZXM2VzkzQ1c4MDBLUDFCM3NOaGFzSjRHRlRvZ0NndUhxTHM?oc=5",
-   "source": "AMweb",
+   "title": "Dit betekent de reorganisatie bij ING Real Estate Finance voor medewerkers en klanten",
+   "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOQVVWOS1EbnZYYTVKUHZfQXZGNFY3S1l4bUZjM0FUY00zeW43ZkV2RmV3Z09VOHdlRndoSHpVenlQS1F5VW9neEFrWmRZZkljSlpOUTlQWC1ERkh2LXpVUVQxUDY4VlhEN2ZVSXdKR0pyRmZEMm9LLWdweXFiYUg4N3FoamotQUlybU5ZSnVwNjZFWE1TNXdsSzBHb3FnNEdIbFBXT0JVQnJNU2VJcDVrOFBsQ2p2dG44SVJ6MHV3?oc=5",
+   "source": "Vastgoedmarkt",
    "ts": 1791529200000,
    "banks": [
-    "ABN AMRO",
     "ING"
    ],
    "themes": [
@@ -862,26 +890,6 @@
    "title": "Loonbod ING zet vakbonden op scherp: ‘Wat op tafel ligt, is schofferend’",
    "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQSWhJZ1p2eENjZUtNYXFoYzdUUlpISG5McXlSQ0U2U0g1TTV1Tkd1VGdSX1JwZnlmajV0eU9jbTRrWHJsM0lxcmVsbXRoTG5VNFNpdU1nZU10UnF0bGNkVnhfMTg3TGNaXzhPZG9NWTVQTFhaempxVDlXVjFjTjduSEk3enc4QjVZZ1hQR2daN3BpTlhZSTkzN1JkREx0Q3RBbU56SXJBSEktMTAtMEV4eTY4dWd5d09F?oc=5",
    "source": "Het Financieele Dagblad",
-   "ts": 1791442800000,
-   "banks": [
-    "ING"
-   ],
-   "themes": []
-  },
-  {
-   "title": "ING Markets | DAX Index verzwakt",
-   "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFAzTjVJQ1l2MDZISDIyS21vck9FeS1qNVhWWWxibW1UWndNLWViYXVKSzF0dDBLR3E1UXVxdG5seDF6RkJIa2ZmNi1TZFlhRTJPZEItb0JSNVZNZkJYVW56YXNidkI0blJmRWxlR2JPNUpkZw?oc=5",
-   "source": "ING Sprinters",
-   "ts": 1791442800000,
-   "banks": [
-    "ING"
-   ],
-   "themes": []
-  },
-  {
-   "title": "UBS verhoogt koersdoel ING",
-   "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTFA4NjZjcUQ4U2p5NmJQcFhnNUhzbllfUElmeXBaLTI0T001UW9SeDFhUy1SM3BaMVlrS1YwdUNsTHUtY21iUG9WWlcxTlptZy04dmtxbjk4azVHd1NKRm5PWWpSQzJrTE1pNE83UGJESUhPMWFNbHgxZldLQXpvUQ?oc=5",
-   "source": "Beursgorilla.nl",
    "ts": 1791442800000,
    "banks": [
     "ING"
