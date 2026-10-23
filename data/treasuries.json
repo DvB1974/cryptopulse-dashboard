@@ -1,10 +1,10 @@
 {
   "source": "CoinGecko public treasury (beursgenoteerde bedrijven; excl. ETF's en overheden)",
-  "updated": "2026-10-23T01:42:39Z",
+  "updated": "2026-10-23T08:47:40Z",
   "btc": {
-    "holdings": 1303553.2192943657,
-    "value_usd": 105814175050.84904,
-    "companies": 180,
+    "holdings": 1303574.2192943657,
+    "value_usd": 106564294834.56183,
+    "companies": 181,
     "top": [
       {
         "name": "Strategy",
@@ -21,9 +21,9 @@
     ]
   },
   "eth": {
-    "holdings": 8109187.229976,
-    "value_usd": 19324078101.19377,
-    "companies": 34,
+    "holdings": 8116686.229976,
+    "value_usd": 19534345003.06611,
+    "companies": 35,
     "top": [
       {
         "name": "BitMine Immersion",
