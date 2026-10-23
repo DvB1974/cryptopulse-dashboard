@@ -1,6 +1,6 @@
 {
  "source": "Google Nieuws NL, per bank gezocht; alleen berichten met de bank in de kop",
- "updated": "2026-10-23T15:07:44Z",
+ "updated": "2026-10-23T19:58:12Z",
  "days": 30,
  "banks": [
   "ABN AMRO",
@@ -15,6 +15,46 @@
   "InsingerGilissen"
  ],
  "items": [
+  {
+   "title": "Als de rekeningen van het Internationaal Strafhof niet veilig zijn bij ABN AMRO, wat betekent dat dan voor die van jou?",
+   "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPNEJVX2lpX1RxOEZoUE9wdnFXY0REdVhCa2pxTEdsSlpSaVRZTEhOSHR1S0ltQkRaaHhEcTcwNFM1X0dsQzZ2ZHlvVC1TVmZ5d1RmcVJ6Ml85cG1FRVFJb0FDWTlVRFBBNEQtZzhrY1VNRkxfaGRoOTl1dlBGRUpCYUhzaWpqUjhYV3JaTDBXZ184aF9OeG1hakVfTG9kQmc5R2NyWG9aMFp2cGRWV1JiY3Q1T3VMQzBJU29fNFN6YXJ2cUdtQTJrMk9rM1A0OTFCRkxsdDV3RlI4N2phQWhKUG55c1pHc2Z6RGNZ?oc=5",
+   "source": "Bnnvara",
+   "ts": 1792780912000,
+   "banks": [
+    "ABN AMRO"
+   ],
+   "themes": []
+  },
+  {
+   "title": "Klimaatactivisten hangen illegaal kunst op in Rijksmuseum: ‘Ze moeten oppassen met het greenwashen van ING’",
+   "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOU09xSmQ1MHZWSEI4cFpubUJtZGpnV0JQbU43aFo4djRPV0tFUEp5eUhpOElrd3lHX0dQM1puNzllU0ZfXzhaVEtRcDhOeE44UlZkemZOdXhNdHhZVHFJVm1vaXlwZk9ueWplbTJNeDRzcVVseW54V3AzZU9sNE50SFFieUJfclpLVW1HZGljY2xsME9ZajloMUlOdUZaR09RbXdySExNbkI4NVVGRHRhdlBnN3FVT0dfd3hZNHdlaUswbjRLN2pSWHVwc3NtVTBBZWFaV3U4YmhndWhraVg4?oc=5",
+   "source": "Het Parool",
+   "ts": 1792766166000,
+   "banks": [
+    "ING"
+   ],
+   "themes": []
+  },
+  {
+   "title": "Duurzaamheidseconoom Hobma (Triodos & GroenLinks) in mineur over mislukte routekaart ‘fossiel’.",
+   "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNSmFnSl9aRDZxY3ZTZHF0MEJWWENBUmllQ3FRUW8tbEZYVXh3WFR6c1ZPQXFzZTVaNVU3eEFTQ1gyU0U0a25GOHpta2IzeDB5a3hTSFNXdm9jc3VNRU95WEV1MWVwVC1HTUpxNEtjeGN6c3R1NmlRbkxmTmJmZ0s1czlLVDNWOUFOZDFPVmtuUzhobmY0NS00SlVQYmVSX0p4QVJMV1pITlctNFM1WXZTU3Z4b25paUVnUm9HTUtZdzdEY0I5d0JDYVljQThSRDVzSnhpMmd3?oc=5",
+   "source": "Climategate Klimaat",
+   "ts": 1792765710000,
+   "banks": [
+    "Triodos"
+   ],
+   "themes": []
+  },
+  {
+   "title": "Positieve trend ABN Amro, ondanks verlies",
+   "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE0teDdZbnBnUjAtR3cza0lxdWhZUElpYk9YdzByRDJBd01rbkM5UHFuYkxTV1pUUk5SQWk5TDRFOXpfUm5PUzFVWExWcWQ3bUxvOEZnYVRwRzQybTZjYkU0MmFLSkdCSEYxc1ZHNA?oc=5",
+   "source": "CashCow.nl",
+   "ts": 1792765268000,
+   "banks": [
+    "ABN AMRO"
+   ],
+   "themes": []
+  },
   {
    "title": "ING: hogere hypotheekrente raakt vooral verkoop nieuwbouw",
    "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQQlQzMDIwWHEzY1kyd0UwOWd6NnotSGdYZE4wYWU1d0JFQXNyRVR2ZXJXNlRGWmVhb3J5d245bmlCWERUaEwzWFlBaXF0Tkxzb0J2cTNlR0Q0TUVCSDU1cXB0cUJyeWZ2MzljWWZxemRSQU0wVTUybkZTV0JrMWtTTXZzT2tMbUVsZ0FBQXhXclNsb1VOODhMaGFENVI3THZrQVp0Zk83LVRkTmpxRHA2T2pVWk1WclkteVRad2duSGo?oc=5",
@@ -38,20 +78,10 @@
    "themes": []
   },
   {
-   "title": "Duurzaamheidseconoom Hobma (Triodos & GroenLinks) in mineur over mislukte routekaart ‘fossiel’.",
-   "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNSmFnSl9aRDZxY3ZTZHF0MEJWWENBUmllQ3FRUW8tbEZYVXh3WFR6c1ZPQXFzZTVaNVU3eEFTQ1gyU0U0a25GOHpta2IzeDB5a3hTSFNXdm9jc3VNRU95WEV1MWVwVC1HTUpxNEtjeGN6c3R1NmlRbkxmTmJmZ0s1czlLVDNWOUFOZDFPVmtuUzhobmY0NS00SlVQYmVSX0p4QVJMV1pITlctNFM1WXZTU3Z4b25paUVnUm9HTUtZdzdEY0I5d0JDYVljQThSRDVzSnhpMmd3?oc=5",
-   "source": "Climategate Klimaat",
-   "ts": 1792752232000,
-   "banks": [
-    "Triodos"
-   ],
-   "themes": []
-  },
-  {
-   "title": "Als de rekeningen van het Internationaal Strafhof niet veilig zijn bij ABN AMRO, wat betekent dat dan voor die van jou?",
-   "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPNEJVX2lpX1RxOEZoUE9wdnFXY0REdVhCa2pxTEdsSlpSaVRZTEhOSHR1S0ltQkRaaHhEcTcwNFM1X0dsQzZ2ZHlvVC1TVmZ5d1RmcVJ6Ml85cG1FRVFJb0FDWTlVRFBBNEQtZzhrY1VNRkxfaGRoOTl1dlBGRUpCYUhzaWpqUjhYV3JaTDBXZ184aF9OeG1hakVfTG9kQmc5R2NyWG9aMFp2cGRWV1JiY3Q1T3VMQzBJU29fNFN6YXJ2cUdtQTJrMk9rM1A0OTFCRkxsdDV3RlI4N2phQWhKUG55c1pHc2Z6RGNZ?oc=5",
-   "source": "Bnnvara",
-   "ts": 1792748330000,
+   "title": "BofAm verhoogt koersdoel ABN Amro",
+   "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOTG14WkZZVWFQS3ViUUctd0xnUHdiUWN4OWFndzU1UlUxMjlsWmE2cnNvNDNvUU1nMHJMWHlpOGwtN0xHWVhGdWU3bmMzZFl2QkdaYmUyX3dyeFhYS25ISDNaWGtjcW5IN3M0VHY0XzYtRU4yVjFPM2otR0dKRFd4bmJnWmVnWnpfYjUw?oc=5",
+   "source": "Beurs.nl",
+   "ts": 1792749720000,
    "banks": [
     "ABN AMRO"
    ],
@@ -64,6 +94,16 @@
    "ts": 1792747435000,
    "banks": [
     "ABN AMRO"
+   ],
+   "themes": []
+  },
+  {
+   "title": "Rabobank hoofdpartner van Regio de Peel Innoveert",
+   "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNbmJLNnVHVFdHd0ZWc3pvWGg4OUt4dVlRMmFqaU9mQkc3RnUyaGs2QXlwZ1dYdUNJeHNORHV4eWtXYUt2WnFnNEFRSHpna1NrS2lqbkdEckhnR3FWT2REQmVGN0ZFc2lpdFRpVVNsNXhta3B3blh2S01obXB6SHVnSVNPYzNKSEQ5eTNZeWlYeXljLUdCREo2YmkyVXRMcFR6eUxaYQ?oc=5",
+   "source": "Rabobank",
+   "ts": 1792742708000,
+   "banks": [
+    "Rabobank"
    ],
    "themes": []
   },
@@ -124,16 +164,6 @@
    "ts": 1792656556000,
    "banks": [
     "ABN AMRO"
-   ],
-   "themes": []
-  },
-  {
-   "title": "Rabobank verbindt jongeren via sportcreators",
-   "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQNWNscWhLLXR5YTl5VkxHaElmdWhheEZXbkRVWlV3b3psYkliMjk3TDR3SnFra1gtS2Z3NzFqWE9DMnVjU0xXMEpVWmt6RkhlTHZ3bjhzdEZYTU9YYmRNSmw0VTJpeEdCREl1Vks2Y1NSUjM4R0h3WGpqVVlKSjM2VjBYSG8tNThwV2xxTU1sRFdCYVVtMHhmaU1QV3RFd3lTUHFRQm1ZaFJlMUVf?oc=5",
-   "source": "MarketingTribune",
-   "ts": 1792649040000,
-   "banks": [
-    "Rabobank"
    ],
    "themes": []
   },
@@ -280,16 +310,6 @@
    "themes": []
   },
   {
-   "title": "ABN AMRO: Torenhoog prijskaartje drijft AI in cyclische hoek",
-   "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQMFNYSXdRNWVsZDlzUTNzUDBCalFOTldXZm5RUnctMGpDZ0Q5OE14SzNoYUdxZ2h1cXVfQ0VyYWwyZ3JLVV9MaFlra1I2N0dVSlRPalVmQmFhbDBqUkNPQWlzWll5SmFRY3FoaklfeDRiWENaWFNyS0tJWDdvZkp3aEdWMU5Ja2pyRUxmcDRiVUgydW01YjFXTGIzODRjcDVJUzRF?oc=5",
-   "source": "Dutch IT Channel",
-   "ts": 1792473177000,
-   "banks": [
-    "ABN AMRO"
-   ],
-   "themes": []
-  },
-  {
    "title": "ABN AMRO: elektrische truck wordt aantrekkelijker",
    "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOWjJhS2lIVW1lUlZiTW5vT0RKZGV6UmtEQmEzZ1U5ZGVPZEFGd1lMcjNHcVdScXhxOW1oWUY1blV1OVl6aUdfbURGV20xczFsOFRnWjl1TC1ISmJHVnZicmNaQVdESFRvRVAteW5yaldyZ29GVUpudVZsdm1hSE1vZTllejRTUHg5RlhVYkNXMVVzdw?oc=5",
    "source": "Evofenedex",
@@ -335,6 +355,18 @@
     "Rabobank"
    ],
    "themes": []
+  },
+  {
+   "title": "Rabobank Private Banking nummer 1 in MT1000 2026",
+   "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNT0lIWGtDS21OemNkenJxWHk4RTU5Y1FDZFpkTGczLTNsQWl5My1VYTNEQ085QXNPOW9Ec3RZOHJoYmRBQ1RZcG9xb2FpZTBCVDJhOEMxdmNhX1RLMVlwTURKenpXU1BsSzk1UnotU0ZjTk1fTlpyNjNES3RTYVFOR0FWT2dES3VRVWF3cjdCQnlPX09ta19kZ0doMF84Tm02?oc=5",
+   "source": "Rabobank",
+   "ts": 1792418599000,
+   "banks": [
+    "Rabobank"
+   ],
+   "themes": [
+    "Private banking"
+   ]
   },
   {
    "title": "ABN AMRO: Samen voor een goede én eerlijke cao! Week 1: trek aan het touw",
@@ -409,18 +441,6 @@
    "themes": []
   },
   {
-   "title": "bunq verhoogt spaarrente naar 1,61 procent, bonustarief naar 3,11 procent",
-   "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOUm84WFI4UHpfU2VBbzg5U2NRUnBNaVBOTE9OWjhsVnBQYWpodjl0eUJnMFFQcTQ4emFkaGR2OC1nMS1SX0tEZEpXbkl3YVN6Y1hDMkxqRUotY1hOVmdjYkM0VmlxQXJfVktIb3l3OFBXcnNhcFRwM0xWNXN1aE5SaFJDb3BHUXhLaWVjSkFRbWU?oc=5",
-   "source": "Emerce",
-   "ts": 1792051269000,
-   "banks": [
-    "bunq"
-   ],
-   "themes": [
-    "Tarieven"
-   ]
-  },
-  {
    "title": "ABN Amro volledig klem door sancties VS tegen Strafhof",
    "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNdDgyZ3lHZmdVa1NuODEzZWdfQVQzU2hRWTBzeGoycDRwRTZuMVY0dlRBRlN4elQ5dEE1bGpiaGh5TUtMUDI4bVBsbjVJLVNfbmV2MjYtTjBoajBWb1ZncnJJVlpvU2FoTWRTSmZILVUwUzNyT1kyaUF2eHhLTWNPQ0hQdkNjUGZDakIzeWFXMlZQcmNIblFPWUZ6OUlUamltZTNnc3UzR0FPdTA?oc=5",
    "source": "RTL.nl",
@@ -463,6 +483,18 @@
     "ABN AMRO"
    ],
    "themes": []
+  },
+  {
+   "title": "bunq verhoogt spaarrente naar 1,61 procent, bonustarief naar 3,11 procent",
+   "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOUm84WFI4UHpfU2VBbzg5U2NRUnBNaVBOTE9OWjhsVnBQYWpodjl0eUJnMFFQcTQ4emFkaGR2OC1nMS1SX0tEZEpXbkl3YVN6Y1hDMkxqRUotY1hOVmdjYkM0VmlxQXJfVktIb3l3OFBXcnNhcFRwM0xWNXN1aE5SaFJDb3BHUXhLaWVjSkFRbWU?oc=5",
+   "source": "Emerce",
+   "ts": 1792047600000,
+   "banks": [
+    "bunq"
+   ],
+   "themes": [
+    "Tarieven"
+   ]
   },
   {
    "title": "Rabobank en ING in wereldwijde top tien van bankapps",
@@ -853,36 +885,6 @@
    "ts": 1791442800000,
    "banks": [
     "ING"
-   ],
-   "themes": []
-  },
-  {
-   "title": "Slimme keuzes voor nu en later | ADO Den Haag x Rabobank",
-   "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPQ1pNdi1uV1VsQmxKUDhsbGJXd2ZHVklaOVgyMTUxOFYyT0E0M0VGWFRmVU5VbVFGVUphSE1jM1hBb1hYaTNrN2FwTUs5cGl4TGlaNGNhdmRjSi1ERS1kMkkyREhZc3dpd0ViVVYwZjE0Tm4tcjJvX3lBRFp5eThMQmkwQ1hNQnk2WElkZkRTTHdDS3I2Nm43Tzg1d3cyUC1CYVR1alpZek1GZ1dBal81SlJrSHI4LXJZ?oc=5",
-   "source": "ADO Den Haag",
-   "ts": 1791442800000,
-   "banks": [
-    "Rabobank"
-   ],
-   "themes": []
-  },
-  {
-   "title": "Derde ronde onderhandelingem cao Rabobank",
-   "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNWHFOdkhLczRFaEg0dzF3SkdSa0ZqZ3diRnNuYVZuS1dnRWNWUGVJV2ItdzNMb2lubUwzVk9tdXBEOUMxLXdoLXVpTHVHQTFNWGt5NkM3VGZDQWZQT1JFWlF5c3F3b21kdVFuRlE1S0ZNaHI0SkdHcFRMYVp1eXJpLXdBcUhCdTNscVZLZV9aZmVzclRTMGNSUElyMmRGRl84Y29fME5nYw?oc=5",
-   "source": "www.cnv.nl",
-   "ts": 1791442800000,
-   "banks": [
-    "Rabobank"
-   ],
-   "themes": []
-  },
-  {
-   "title": "Thuiswerken blijft bij ASN Bank, vakbonden stemmen ook looneis af",
-   "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPVlp1YV9YcVg0V2ZHUFVReGRYa3FILURfaTRPYldFSzNwUXBoOTFXclVfTk5SRVZMLTFfT0FzWFRrM09IcUYwTU1QNExoVjFJZjRNTVY3czJramU5ZURqaTVpWGh4RF9aOFZWSWxPeFEwV0RPbjl3bURMeVFnMVlfWmxBLUY4TDFZc0VVYlZsbUtXY1VvOWFkdHB3?oc=5",
-   "source": "AMweb",
-   "ts": 1791442800000,
-   "banks": [
-    "de Volksbank"
    ],
    "themes": []
   }
