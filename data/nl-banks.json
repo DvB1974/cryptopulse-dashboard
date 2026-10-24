@@ -1,6 +1,6 @@
 {
  "source": "Google Nieuws NL, per bank gezocht; alleen berichten met de bank in de kop",
- "updated": "2026-10-24T17:28:45Z",
+ "updated": "2026-10-24T20:52:39Z",
  "days": 30,
  "banks": [
   "ABN AMRO",
@@ -80,7 +80,7 @@
   {
    "title": "Als de rekeningen van het Internationaal Strafhof niet veilig zijn bij ABN AMRO, wat betekent dat dan voor die van jou?",
    "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPNEJVX2lpX1RxOEZoUE9wdnFXY0REdVhCa2pxTEdsSlpSaVRZTEhOSHR1S0ltQkRaaHhEcTcwNFM1X0dsQzZ2ZHlvVC1TVmZ5d1RmcVJ6Ml85cG1FRVFJb0FDWTlVRFBBNEQtZzhrY1VNRkxfaGRoOTl1dlBGRUpCYUhzaWpqUjhYV3JaTDBXZ184aF9OeG1hakVfTG9kQmc5R2NyWG9aMFp2cGRWV1JiY3Q1T3VMQzBJU29fNFN6YXJ2cUdtQTJrMk9rM1A0OTFCRkxsdDV3RlI4N2phQWhKUG55c1pHc2Z6RGNZ?oc=5",
-   "source": "Bnnvara",
+   "source": "bnnvara",
    "ts": 1792748360000,
    "banks": [
     "ABN AMRO"
@@ -234,6 +234,16 @@
    "themes": []
   },
   {
+   "title": "ABN AMRO omarmt Europese AI-oplossingen",
+   "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9ud2ZDeDljaHlZQWM3cllaZWJMeV96Q0dZZmtKUkh2LVA3SzhKUnhCOXBPVXM2ZjFmWFdxV0NMM2RkZzdtWUlNcWVqa2N3ektZX29zSDRRenhwYXpaQ1o3cG5FUElaTjV5OXFNTXB5XzQtMzZCTldF?oc=5",
+   "source": "VVP online -",
+   "ts": 1792567008000,
+   "banks": [
+    "ABN AMRO"
+   ],
+   "themes": []
+  },
+  {
    "title": "Kans groot dat ook ABN AMRO, ING en ASN Bank de rente gaan verhogen",
    "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOeVBnLXROQUw4bElWTE1kS2I2UGt3azBDNUFLTDRNWU5KVXhtOWphUGdxejRqaHdsZURCeHI2YjJwOFgyV0hEMU1tbHdYRUpPWWhweHpRWDZ5WWxkalA2WmJLMjd6SjJqb0dwTmVibmhhbGI2TTRzVlpISF9fd003dmg1RVg5Y21RNHBYYThrdjk5QQ?oc=5",
    "source": "VVP online -",
@@ -292,6 +302,18 @@
    "themes": []
   },
   {
+   "title": "ABN AMRO MeesPierson: vermogen verdient meer dan alleen beheer",
+   "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNclA0d1FQQ2FvWlhoeE1EVnY2Tlh0R2lKUGdXWkduN25KZm1tOTI5UHBsNS1wakd0SndXLV9QbWd6Ujdsc3N0U0MtcENIU1NnZDlIMjJBNnZYNF9Cdld5ODZ6R2NZalVraDJFRENJQlZQajBMRkxESEdTdHVoQkFXSjZpTl9RWGVwcU1kRFQwcml6eHZGbGRnSXRSTWkzQQ?oc=5",
+   "source": "aalsmeervandaag",
+   "ts": 1792499882000,
+   "banks": [
+    "ABN AMRO"
+   ],
+   "themes": [
+    "Private banking"
+   ]
+  },
+  {
    "title": "Triodos: minimaal verduurzamen kan vastgoed minder waard maken",
    "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPQWNmZlVhYmh3Y2FnaWJhWTVfcW96eWlqcXkwVzVWWUc0dzlETFh1NVZGRFNNSmJiNEdsSXNPdks3eGt3dFJxaG5vQ19qaHpsaVdQSkg3ZmNtQTR4WExaaHhRRmlOSDBxbDNGSERWai1hZ2dZRnR3YnRRekJMQUpGLW41Y3NYNzBaMjd2WTB4MlJlRER1cU9yajhBel9BX2c?oc=5",
    "source": "Vastgoedmarkt",
@@ -320,16 +342,6 @@
    "ts": 1792476000000,
    "banks": [
     "Rabobank"
-   ],
-   "themes": []
-  },
-  {
-   "title": "ABN AMRO: Torenhoog prijskaartje drijft AI in cyclische hoek",
-   "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNeklsMXZRSzhfY2FOakhETWpaQUM5X1RyeURKMTA5eXY5M0ZLUklzbER0aUVtdzdrSUVwa3pNLXFWczdVbFk2bWcxOEpHaDctMjI2eno3U09YdXM5VDNqRFJXMmY0ckpJeEtDZVlyX0lhaTJvczJHOW44TXRTenhsT1dzNEFGbDZuS2JxQ29PY1gzaFdfVmNwRlA0Vk1rTGtfazZz?oc=5",
-   "source": "Dutch IT Leaders",
-   "ts": 1792473794000,
-   "banks": [
-    "ABN AMRO"
    ],
    "themes": []
   },
@@ -455,6 +467,16 @@
    "themes": []
   },
   {
+   "title": "Aandeleninkoop bij ING loont pas bij een hoge ROTE",
+   "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQdW5CSnNWdjdsU1FaWENlMXRMWV9mbUlJYzQ5NDZmWDlKaWVDdy0zMjE5cVBwQzlUMWZjbC1uLTN0cTItS2pzRUdKMTI1anB3ajhJQjJ6SHp2U0xpaENKTUREUURKNFFMemUyTGZDMG1qM3NlTFNvN1Z6dU5JTXJBUTB0cWdTN2Va?oc=5",
+   "source": "De Belegger",
+   "ts": 1792121004000,
+   "banks": [
+    "ING"
+   ],
+   "themes": []
+  },
+  {
    "title": "Beursblik: UBS verhoogt koersdoel ABN AMRO",
    "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOSUo4dmdpWUlnYzYwMkdjRFZqZ2lRMWRuVzhrZ005V0FnT3k4Q0I5dE1NRXNsNjhYbTJITXhkMDdXWlVDd2NMb0t2RUZLelNtR0hnZjNvM3RrRElFQXEzMk1lX25HUDRKWmlqWWR5cVFSUkx4b20xWEoxVXNJR2NOZ0p6dkh5QQ?oc=5",
    "source": "IEX.nl",
@@ -469,23 +491,6 @@
    ]
   },
   {
-   "title": "‘ABN Amro riskeert hoge Amerikaanse boetes als huisbankier van Strafhof’",
-   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxObks1YmF2NEZaMDR3UXZ6UXVCQkx3T3pIT2VaVW10a3phakRQYklXZVNiUXRQampMY3E2ajZrYXBxMjRwTWxFUE9PRmFPMEo1eTVmYnkwblV5aWFkbjN4dUd0a29Kb3ZlUFRkRXk5TkM4RS1XT252SWtNcWxjTl9UU2tJdnh0bE10V254c1VVWnFhbHNRRi0yRHVYWHlXbGlJSEFOcjBhLXZaZDdrc1k0NENGSW96cG8?oc=5",
-   "source": "NRC - Nieuws, achtergronden en onderzoeksjournalistiek",
-   "ts": 1792047600000,
-   "banks": [
-    "ABN AMRO"
-   ],
-   "themes": [
-    "Toezicht"
-   ],
-   "more": 2,
-   "also": [
-    "bnr.nl",
-    "CFO.nl"
-   ]
-  },
-  {
    "title": "ABN Amro volledig klem door sancties VS tegen Strafhof",
    "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNdDgyZ3lHZmdVa1NuODEzZWdfQVQzU2hRWTBzeGoycDRwRTZuMVY0dlRBRlN4elQ5dEE1bGpiaGh5TUtMUDI4bVBsbjVJLVNfbmV2MjYtTjBoajBWb1ZncnJJVlpvU2FoTWRTSmZILVUwUzNyT1kyaUF2eHhLTWNPQ0hQdkNjUGZDakIzeWFXMlZQcmNIblFPWUZ6OUlUamltZTNnc3UzR0FPdTA?oc=5",
    "source": "RTL.nl",
@@ -496,10 +501,27 @@
    "themes": [
     "Toezicht"
    ],
-   "more": 2,
+   "more": 3,
    "also": [
     "Reformatorisch Dagblad",
-    "NOS"
+    "NOS",
+    "CFO.nl"
+   ]
+  },
+  {
+   "title": "‘ABN Amro riskeert hoge Amerikaanse boetes als huisbankier van Strafhof’",
+   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxObks1YmF2NEZaMDR3UXZ6UXVCQkx3T3pIT2VaVW10a3phakRQYklXZVNiUXRQampMY3E2ajZrYXBxMjRwTWxFUE9PRmFPMEo1eTVmYnkwblV5aWFkbjN4dUd0a29Kb3ZlUFRkRXk5TkM4RS1XT252SWtNcWxjTl9UU2tJdnh0bE10V254c1VVWnFhbHNRRi0yRHVYWHlXbGlJSEFOcjBhLXZaZDdrc1k0NENGSW96cG8?oc=5",
+   "source": "NRC - Nieuws, achtergronden en onderzoeksjournalistiek",
+   "ts": 1792047600000,
+   "banks": [
+    "ABN AMRO"
+   ],
+   "themes": [
+    "Toezicht"
+   ],
+   "more": 1,
+   "also": [
+    "bnr.nl"
    ]
   },
   {
@@ -590,10 +612,6 @@
    "themes": [
     "Crypto & digitaal",
     "Toezicht"
-   ],
-   "more": 1,
-   "also": [
-    "MarketScreener Nederland"
    ]
   },
   {
@@ -777,21 +795,12 @@
    "themes": []
   },
   {
-   "title": "Kranten groeien vooral door betalende lezers, ziet ABN AMRO",
-   "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNOU9ERFZaSGJLZm14T090YzhmVm4ycFFEeGZwQ2pmVTR3OWpLVllqcU9wV0M0V3JLcXZTZ2hDYllVQVkwUUN5MWI0RVJaY2VpcE8zSzh3ZmZVbDJGOFcxcjZOWTh0Q0NDWnAtb0trQWIzcHdzVzM3X2ZuZURJNWdyTFlyeDNMYnZVUllVMDhLOTNKR3pLOHdHU21jRTMydUpndjJuYVR5Z3otSkhod3c?oc=5",
-   "source": "De Telegraaf",
+   "title": "ING volgt ABN Amro met loonbod in nieuwe cao-onderhandelingen, tot woede van FNV",
+   "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNUEdyNXhZd3ZJYnBYTE1VVjJlLTgyLVB4RE03ejNYclZTLTYzdlVlTEdVaWlRcTFMWGxaN1pBbXZxemtVVU5YeHBaVlRiM2Zid29jN09ubDFiRWwzYy1hUVNfM1FkY0hoZDRFRkttVjljSE1ET0FFOFpzR3A0Smlra3RrekxxWE1UZXM2VzkzQ1c4MDBLUDFCM3NOaGFzSjRHRlRvZ0NndUhxTHM?oc=5",
+   "source": "AMweb",
    "ts": 1791529200000,
    "banks": [
-    "ABN AMRO"
-   ],
-   "themes": []
-  },
-  {
-   "title": "Dit betekent de reorganisatie bij ING Real Estate Finance voor medewerkers en klanten",
-   "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOQVVWOS1EbnZYYTVKUHZfQXZGNFY3S1l4bUZjM0FUY00zeW43ZkV2RmV3Z09VOHdlRndoSHpVenlQS1F5VW9neEFrWmRZZkljSlpOUTlQWC1ERkh2LXpVUVQxUDY4VlhEN2ZVSXdKR0pyRmZEMm9LLWdweXFiYUg4N3FoamotQUlybU5ZSnVwNjZFWE1TNXdsSzBHb3FnNEdIbFBXT0JVQnJNU2VJcDVrOFBsQ2p2dG44SVJ6MHV3?oc=5",
-   "source": "Vastgoedmarkt",
-   "ts": 1791529200000,
-   "banks": [
+    "ABN AMRO",
     "ING"
    ],
    "themes": [
@@ -799,12 +808,11 @@
    ]
   },
   {
-   "title": "ING volgt ABN Amro met loonbod in nieuwe cao-onderhandelingen, tot woede van FNV",
-   "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNUEdyNXhZd3ZJYnBYTE1VVjJlLTgyLVB4RE03ejNYclZTLTYzdlVlTEdVaWlRcTFMWGxaN1pBbXZxemtVVU5YeHBaVlRiM2Zid29jN09ubDFiRWwzYy1hUVNfM1FkY0hoZDRFRkttVjljSE1ET0FFOFpzR3A0Smlra3RrekxxWE1UZXM2VzkzQ1c4MDBLUDFCM3NOaGFzSjRHRlRvZ0NndUhxTHM?oc=5",
-   "source": "AMweb",
+   "title": "Dit betekent de reorganisatie bij ING Real Estate Finance voor medewerkers en klanten",
+   "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOQVVWOS1EbnZYYTVKUHZfQXZGNFY3S1l4bUZjM0FUY00zeW43ZkV2RmV3Z09VOHdlRndoSHpVenlQS1F5VW9neEFrWmRZZkljSlpOUTlQWC1ERkh2LXpVUVQxUDY4VlhEN2ZVSXdKR0pyRmZEMm9LLWdweXFiYUg4N3FoamotQUlybU5ZSnVwNjZFWE1TNXdsSzBHb3FnNEdIbFBXT0JVQnJNU2VJcDVrOFBsQ2p2dG44SVJ6MHV3?oc=5",
+   "source": "Vastgoedmarkt",
    "ts": 1791529200000,
    "banks": [
-    "ABN AMRO",
     "ING"
    ],
    "themes": [
@@ -894,16 +902,6 @@
    "themes": [
     "Private banking"
    ]
-  },
-  {
-   "title": "Enschede wil ABN Amro aan het Stationsplein slopen, maar erfgoedclubs zetten de hakken in het zand",
-   "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPQzFvSFFJVUV6T0oxa3RObE1QaEYzTGtIVDJYdHhrd3B2ekZLV3JfR1VCVzRwV2JUb2tTS3hGYXRuaVpSTmE0TGZheVI1dDBqc1FsX3EwdFZ0T3VEdVFKS2VHZllVaFdSaFB2cWdGQmw0Qnk3aktYR1ZvMXVkTlZ3SGllS0Q2cThybnFObUFqWmJEUnZ0UGoyN3NSX19sUUx3cnJMeDFibmFNeExwenRUWGhzX3poR3M1ajVpeXNnRmxLUlk1ZnZHZFBYM2pkNXdmc19LVHpVWQ?oc=5",
-   "source": "Tubantia",
-   "ts": 1791442800000,
-   "banks": [
-    "ABN AMRO"
-   ],
-   "themes": []
   }
  ]
 }
