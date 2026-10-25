@@ -1,6 +1,6 @@
 {
  "source": "Google Nieuws NL, per bank gezocht; alleen berichten met de bank in de kop",
- "updated": "2026-10-25T19:05:00Z",
+ "updated": "2026-10-25T22:35:30Z",
  "days": 30,
  "banks": [
   "ABN AMRO",
@@ -112,16 +112,6 @@
    "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1lemlZaWxudUtaZnE4bmoxSUh3aEVrU1NWRVJmZHRoSkM2ajFoNVhvVmtzaE55NDMzN3dOTzZ4VHF4MWp3SzBGd3cxLTlLbGZTUVpJNXRJMFZTLUFYeHVrQzlZYXdVQQ?oc=5",
    "source": "VVP online -",
    "ts": 1792741920000,
-   "banks": [
-    "bunq"
-   ],
-   "themes": []
-  },
-  {
-   "title": "Nederlandse AI-pioniers zoals bunq en Prosus schalen via Nebius",
-   "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOMHJvU1pwSEJqVzVOcDRST2ZjLV9TWlZVcmZWRm8xelRJSU5BRW1sbGUwRnRBcUJ1V3ZSZTlzSFUtMHA5Q0pZMnV2MjBLTXhUMmJqZmtFOXpBaklWSTZXdDhFRnl6V1JDcTl2SFB3cDdNeUNWVXh4Y0NRTjFsZm9UaUl6X3A3MWE2dmE2UVZ3RktGMU1xMkk5alN1R1RsblNjLWJQaUFVbXM?oc=5",
-   "source": "Dutch IT Leaders",
-   "ts": 1792739253000,
    "banks": [
     "bunq"
    ],
@@ -429,18 +419,6 @@
    "themes": []
   },
   {
-   "title": "Rabobank nieuwe projectaanvoerder bij De Graafschap Verbindt!",
-   "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQb1E4NV9ITkc4YkVjc3d0VEtlUFduNkRmZE9WOFNJTk5KREhRSXZzd3p6MHRhWXZUcDA0RjNqWk5hbXBzbkE2V1ZOSHhnV0RjM1ZISDlSakpuSG1Edy1TaGhxbXNqMTdybmlMSkVuUzNWeG1yeW1YNFdqb210R2tfS21RQWprSVVTVTZVTXdDWHB1TjZyOVc2dXgxOA?oc=5",
-   "source": "De Graafschap",
-   "ts": 1792145115000,
-   "banks": [
-    "Rabobank"
-   ],
-   "themes": [
-    "Strategie & product"
-   ]
-  },
-  {
    "title": "ING helpt grootste slachter ter wereld JBS aan ruim 5 miljard dollar",
    "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBMajlMQktaUzZkbHh3RlFXRi1ZSmcxUFozaXV6eVNELXZJYXJqX3V1MDVSUkticW92NHB2TDZqNE1YY3FFR1A3V01zelg1SDdLVG1Sd3pjTVhTSWVubloydzExbVp1Z3p6Q0p6T0ltcEZ1SUpqYWRIUg?oc=5",
    "source": "Milieudefensie",
@@ -461,9 +439,8 @@
    "themes": [
     "Toezicht"
    ],
-   "more": 3,
+   "more": 2,
    "also": [
-    "Reformatorisch Dagblad",
     "NOS",
     "CFO.nl"
    ]
@@ -693,9 +670,9 @@
    "themes": []
   },
   {
-   "title": "Rabobank verhoogt spaarrente met 0,1 procentpunt",
-   "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQOW0zRDVLcnA4UU4wVHBEcU4tOGF2WUdOci1LeU1XV0ZfNUNYZDN2U0o4c09NNnBMMktMMldTQy1jRUhnMkpkdlBROGRXWUc0YWFXZjNXaVNhbDl6M25WOElBbUVXU2xwa251SjQxMnI3TngtSzhaelpMUVpIalZtT2VYZUhJQUNxRnZVTG1UNnY?oc=5",
-   "source": "NU",
+   "title": "Rabobank verhoogt spaarrente, maar niet voor iedereen",
+   "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPbnB6VFBkemhVNDRzSG5GRHd4YzhfV3ltZHlNU044S29EZDR5V0hkaDEwc3d5MWFJMVhqN0gyd3hhX3h4cHBFNFpQMzhnVXhGLUxJT0N3X1AxSDBJOFJ0WFgybGJWMWYxSzN2bGFhX2NYeFBYSjlJRmFBSG5xT3ZKLW1xRGJVSzB2N1FITXBmbXNIQ1dzakNnWFBHd3o?oc=5",
+   "source": "bnr.nl",
    "ts": 1791788400000,
    "banks": [
     "Rabobank"
@@ -703,10 +680,9 @@
    "themes": [
     "Tarieven"
    ],
-   "more": 2,
+   "more": 1,
    "also": [
-    "bnr.nl",
-    "NRC - Nieuws, achtergronden en onderzoeksjournalistiek"
+    "NU"
    ]
   },
   {
@@ -894,6 +870,26 @@
    "themes": [
     "Resultaten"
    ]
+  },
+  {
+   "title": "ING Markets | DAX Index verzwakt",
+   "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFAzTjVJQ1l2MDZISDIyS21vck9FeS1qNVhWWWxibW1UWndNLWViYXVKSzF0dDBLR3E1UXVxdG5seDF6RkJIa2ZmNi1TZFlhRTJPZEItb0JSNVZNZkJYVW56YXNidkI0blJmRWxlR2JPNUpkZw?oc=5",
+   "source": "ING Sprinters",
+   "ts": 1791442800000,
+   "banks": [
+    "ING"
+   ],
+   "themes": []
+  },
+  {
+   "title": "UBS verhoogt koersdoel ING",
+   "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTFA4NjZjcUQ4U2p5NmJQcFhnNUhzbllfUElmeXBaLTI0T001UW9SeDFhUy1SM3BaMVlrS1YwdUNsTHUtY21iUG9WWlcxTlptZy04dmtxbjk4azVHd1NKRm5PWWpSQzJrTE1pNE83UGJESUhPMWFNbHgxZldLQXpvUQ?oc=5",
+   "source": "Beursgorilla.nl",
+   "ts": 1791442800000,
+   "banks": [
+    "ING"
+   ],
+   "themes": []
   }
  ]
 }
