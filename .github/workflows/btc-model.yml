@@ -27,12 +27,12 @@ jobs:
         run: python3 model/btc_model.py
       - name: Commit if changed
         run: |
-          if git diff --quiet -- data/btc-model.json data/btc-daily.json && [ -z "$(git ls-files --others --exclude-standard data/btc-model.json data/btc-daily.json)" ]; then
+          if git diff --quiet -- data/btc-model.json data/btc-daily.json data/fred-cache.json && [ -z "$(git ls-files --others --exclude-standard data/btc-model.json data/btc-daily.json data/fred-cache.json)" ]; then
             echo "No change"
           else
             git config user.name "btc-model-bot"
             git config user.email "actions@users.noreply.github.com"
-            git add data/btc-model.json data/btc-daily.json
+            git add data/btc-model.json data/btc-daily.json data/fred-cache.json
             git commit -m "BTC model: daily refresh"
             for i in 1 2 3; do
               git pull --rebase origin main && git push origin HEAD:main && exit 0

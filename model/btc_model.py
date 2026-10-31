@@ -5,8 +5,9 @@ Runs daily in GitHub Actions (.github/workflows/btc-model.yml). Standard library
 Writes data/btc-model.json. Every block carries its source and the date of the data.
 
 What it computes
-- Trend checklist (4 checks): weekly close vs 50-week SMA, higher high, higher low,
-  direction of the 50-week SMA.
+- Trend checklist (4 checks): weekly close vs 50-week SMA (with a 2% / 2-week buffer),
+  higher high, higher low after the higher high, direction of the 50-week SMA.
+- Two faster trend signals: monthly close vs 10-month SMA, daily close vs 200-day SMA.
 - Swing structure via zigzag pivots (20% for market structure, 12% for higher lows,
   45% for the multi-year market cycle).
 - Cycle position: 4-year cycle, weekly cycle (ICL), daily cycle (DCL) with timing bands.
@@ -30,6 +31,7 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "data" / "btc-model.json"
 ETF_FILE = ROOT / "data" / "etf-flows.json"
 DAILY_OUT = ROOT / "data" / "btc-daily.json"
+FRED_CACHE = ROOT / "data" / "fred-cache.json"
 UA = "Mozilla/5.0 (compatible; btc-model/1.0; +https://github.com/DvB1974/cryptopulse-dashboard)"
 
 CONFIG = {
@@ -46,11 +48,22 @@ CONFIG = {
     "daily_swing": {"pivot_days": 5, "rally_pct": 0.04, "rally_window": 20, "min_age": 5},
     "four_year_months": (47.5, 0.15),  # mean months between 4-year cycle lows, +/- band
     "weights": {"base": 5, "b1": 40, "b2": 20, "b3": 15, "b4": 15},
+    # faster trend signals added on top of the checklist (backtest 2018-2026, 31 okt 2026)
+    "weights_extra": {"above10m": 10, "above200d": 10},
+    # the 50W check only flips on a weekly close more than 2% beyond the SMA,
+    # or on 2 weekly closes in a row on the other side
+    "handrem_buffer": (0.02, 2),
+    "base_hysteresis": True,    # a bull probability of exactly 50 keeps the previous base case
     "macro_weight": 2.5,        # bull-probability points per macro score point
     "failed_dcl_penalty": 5,
     "history_days": 460,
     "deep_bear_share": 0.25,    # share of the bear probability assigned to a deep bear
 }
+
+# days between a FRED observation date and the moment it is published (approximate)
+MACRO_LAG_DAYS = {"DGS2": 1, "DGS10": 1, "DGS30": 1, "T10YIE": 1, "NFCI": 5, "DCOILBRENTEU": 7, "DTWEXBGS": 7}
+MACRO_STALE_DAYS = {"NFCI": 14}   # older than this (after the lag) = stale; default below
+MACRO_STALE_DEFAULT = 10
 
 
 # ---------------------------------------------------------------- fetching
@@ -273,6 +286,31 @@ def acceptance_since(S, start_i, end_i, level, weekly):
     return None
 
 
+def handrem_states(wc):
+    """Buffered 50W check per completed week, aligned with wc: None for the first 49 weeks,
+    otherwise (raw_above, state, sma50w). The state flips only on a weekly close more than
+    `margin` beyond the 50-week SMA, or after `consec` weekly closes in a row on the other side,
+    so a close a fraction above or below the average does not flip the check on its own."""
+    margin, consec = CONFIG["handrem_buffer"]
+    out, st, run_up, run_dn = [], None, 0, 0
+    for k in range(len(wc)):
+        if k < 49:
+            out.append(None)
+            continue
+        s = sum(wc[k - 49:k + 1]) / 50
+        c = wc[k]
+        run_up = run_up + 1 if c > s else 0
+        run_dn = run_dn + 1 if c < s else 0
+        if st is None:
+            st = c > s
+        elif not st and (c > s * (1 + margin) or run_up >= consec):
+            st = True
+        elif st and (c < s * (1 - margin) or run_dn >= consec):
+            st = False
+        out.append((c > s, st, s))
+    return out
+
+
 def cycle_chain(lows, highs, dates, start_i, end_i, band, unit_days, confirm_days, rally_pct):
     """Hurst-style chain: from a cycle low at start_i, the next cycle low is the lowest low
     within [start+band_min, start+band_max]. Once the band has fully elapsed that low is taken.
@@ -332,9 +370,11 @@ def cycle_chain_swing(lows, highs, dates, start_i, end_i, band, pivot_days=5, ra
         cur = nxt
 
 
-def evaluate(S, t, macro, flows_ctx=None, full=False):
-    """Model state using daily data up to and including index t (no look-ahead)."""
+def evaluate(S, t, macro, flows_ctx=None, full=False, prev_base=None):
+    """Model state using daily data up to and including index t (no look-ahead).
+    prev_base: base case of the previous day, used for the hysteresis at exactly 50%."""
     W = CONFIG["weights"]
+    WE = CONFIG["weights_extra"]
     D, H, L, C = S.D[: t + 1], S.H[: t + 1], S.L[: t + 1], S.C[: t + 1]
     today = D[-1]
     days = S.days[: t + 1]
@@ -353,13 +393,17 @@ def evaluate(S, t, macro, flows_ctx=None, full=False):
     last_wc = wc[-1] if wc else None
 
     # checklist
-    b1 = bool(last_wc and sma50w and last_wc > sma50w)
+    hr_states = handrem_states(wc)
+    hr_last = hr_states[-1] if hr_states else None
+    b1_raw = bool(last_wc and sma50w and last_wc > sma50w)
+    b1 = bool(hr_last[1]) if hr_last else b1_raw
     b4 = bool(sma50w and sma50w_prev and sma50w_prev4 and sma50w > sma50w_prev and sma50w > sma50w_prev4)
 
     piv20, prov20 = zigzag(H, L, CONFIG["zigzag_structure"])
     lows20 = [i for k, i in piv20 if k == "L"]
     highs20 = [i for k, i in piv20 if k == "H"]
     b2, b2_detail = False, {}
+    acc = l_last = None
     if lows20:
         l_last = lows20[-1]
         h_ref_cands = [i for i in highs20 if i < l_last]
@@ -371,14 +415,32 @@ def evaluate(S, t, macro, flows_ctx=None, full=False):
                          "since_low": r0(L[l_last]), "since_low_date": D[l_last].isoformat(),
                          "accepted_on": D[acc].isoformat() if acc is not None else None}
 
+    # higher low: the last 12% swing low is above the previous one AND it formed after the
+    # higher high was accepted, above the low the up-move started from (trend order HH -> HL)
     piv12, _ = zigzag(H, L, CONFIG["zigzag_hl"])
     lows12 = [i for k, i in piv12 if k == "L"]
-    b3, b3_detail = False, {}
+    b3_swing, b3_detail = False, {}
     if len(lows12) >= 2:
         a, b = lows12[-2], lows12[-1]
-        b3 = L[b] > L[a]
+        b3_swing = L[b] > L[a]
         b3_detail = {"last_low": r0(L[b]), "last_low_date": D[b].isoformat(),
                      "prev_low": r0(L[a]), "prev_low_date": D[a].isoformat()}
+    after_hh = [i for i in lows12 if acc is not None and i > acc]
+    b3_after_hh = bool(after_hh) and min(L[i] for i in after_hh) > L[l_last] and C[-1] > L[l_last]
+    b3 = b3_swing and b3_after_hh
+    b3_detail.update({"after_hh": b3_after_hh,
+                      "pullback_low": r0(min(L[i] for i in after_hh)) if after_hh else None,
+                      "pullback_low_date": D[min(after_hh, key=lambda i: L[i])].isoformat() if after_hh else None,
+                      "structure_low": r0(L[l_last]) if l_last is not None else None})
+
+    # faster trend signals: monthly close vs 10-month SMA, daily close vs 200-day SMA
+    months = aggregate(days, lambda d: (d.year, d.month))
+    mdone = [mm for mm in months if (mm["end"] + timedelta(days=1)).month != mm["end"].month]
+    mc = [mm["c"] for mm in mdone]
+    sma10m = sma_last(mc, 10)
+    above10m = bool(mc and sma10m and mc[-1] > sma10m)
+    sma200d_v = sma_last(C, 200)
+    above200d = bool(sma200d_v and C[-1] > sma200d_v)
 
     # major cycle (bull/bear) via 45% zigzag
     pivM, provM = zigzag(H, L, CONFIG["zigzag_major"])
@@ -450,10 +512,20 @@ def evaluate(S, t, macro, flows_ctx=None, full=False):
     m = macro_state(macro, today)
 
     # probabilities
-    bull = W["base"] + W["b1"] * b1 + W["b2"] * b2 + W["b3"] * b3 + W["b4"] * b4
-    bull += CONFIG["macro_weight"] * (m["score"] if m else 0)
+    bull_why = [(W["base"], "basis")]
+    for key, lbl, on in (("b1", "weekslot boven 50W", b1), ("b2", "hogere top", b2),
+                         ("b3", "hogere bodem", b3), ("b4", "50W stijgt", b4)):
+        if on:
+            bull_why.append((W[key], lbl))
+    if above10m:
+        bull_why.append((WE["above10m"], "maandslot boven 10-maands gemiddelde"))
+    if above200d:
+        bull_why.append((WE["above200d"], "koers boven 200-daags gemiddelde"))
+    if m and m["score"]:
+        bull_why.append((CONFIG["macro_weight"] * m["score"], "macro %+d" % m["score"]))
     if daily_info and daily_info["failed_close"]:
-        bull -= CONFIG["failed_dcl_penalty"]
+        bull_why.append((-CONFIG["failed_dcl_penalty"], "dagslot onder rode lijn"))
+    bull = sum(p for p, _ in bull_why)
     bull = max(5, min(95, 5 * round(bull / 5)))
     bear = 100 - bull
     deep = 5 * round(bear * CONFIG["deep_bear_share"] / 5)
@@ -488,10 +560,16 @@ def evaluate(S, t, macro, flows_ctx=None, full=False):
         bias_pts += s; bias_why.append("%+d macro %s" % (s, "rugwind" if s > 0 else "tegenwind"))
     bias = "bullish" if bias_pts >= 2 else ("bearish" if bias_pts <= -2 else "neutraal")
 
+    if CONFIG["base_hysteresis"] and prev_base in ("bull", "bear") and bull == 50:
+        base_case = prev_base
+    else:
+        base_case = "bull" if bull >= 50 else "bear"
+
     state = {
         "date": today.isoformat(), "close": r0(C[-1]),
         "checks": {"b1": b1, "b2": b2, "b3": b3, "b4": b4}, "n_checks": int(b1) + int(b2) + int(b3) + int(b4),
-        "regime": regime, "base_case": "bull" if bull >= 50 else "bear",
+        "extra": {"above10m": above10m, "above200d": above200d, "b1_raw": b1_raw},
+        "regime": regime, "base_case": base_case,
         "scenarios": {"bull": bull, "mild_bear": mild, "deep_bear": deep},
         "bias": bias, "bias_points": bias_pts,
         "sma50w": r0(sma50w), "sma10w": r0(sma10w),
@@ -505,26 +583,44 @@ def evaluate(S, t, macro, flows_ctx=None, full=False):
 
     # ------- full detail for the latest day
     lw = wk_done[-1] if wk_done else None
+    b1_note = ""
+    if b1 != b1_raw:
+        b1_note = " Nog niet bevestigd: telt pas bij een slot >%d%% voorbij het gemiddelde of %d weken op rij." % (
+            round(CONFIG["handrem_buffer"][0] * 100), CONFIG["handrem_buffer"][1])
+    if b3_detail.get("after_hh"):
+        b3_txt = "Bodem na de hogere top %s (%s) ligt boven de startbodem %s" % (
+            fmt(b3_detail.get("pullback_low")), b3_detail.get("pullback_low_date"), fmt(b3_detail.get("structure_low")))
+    elif acc is None:
+        b3_txt = "Telt pas na een hogere top; die is er nog niet"
+    elif not after_hh:
+        b3_txt = "Na de hogere top (%s) nog geen bevestigde terugvalbodem (12%%-swing)" % D[acc].isoformat()
+    else:
+        b3_txt = "Terugval na de hogere top kwam onder de startbodem %s" % fmt(b3_detail.get("structure_low"))
+    if b3_detail.get("last_low") is not None:
+        b3_txt += "; laatste swingbodem %s (%s) vs vorige %s (%s)" % (
+            fmt(b3_detail.get("last_low")), b3_detail.get("last_low_date"), fmt(b3_detail.get("prev_low")), b3_detail.get("prev_low_date"))
     checklist = [
         {"id": "b1", "label": "Weekslot boven het 50-weekse gemiddelde", "ok": b1,
-         "detail": "Weekslot %s (week t/m %s) vs 50W SMA %s" % (fmt(last_wc), lw["end"].isoformat() if lw else "?", fmt(sma50w))},
+         "detail": "Weekslot %s (week t/m %s) vs 50W SMA %s (%s%%).%s" % (
+             fmt(last_wc), lw["end"].isoformat() if lw else "?", fmt(sma50w),
+             ("%+.1f" % pct(last_wc, sma50w)) if (last_wc and sma50w) else "?", b1_note)},
         {"id": "b2", "label": "Hogere top (acceptatie boven laatste lagere top)", "ok": b2,
          "detail": ("Referentietop %s (%s), geaccepteerd op %s" % (fmt(b2_detail.get("ref_high")), b2_detail.get("ref_high_date"), b2_detail.get("accepted_on") or "nog niet")) if b2_detail else "Geen referentie gevonden"},
-        {"id": "b3", "label": "Hogere bodem (laatste swing low boven de vorige)", "ok": b3,
-         "detail": ("Laatste bodem %s (%s) vs vorige %s (%s)" % (fmt(b3_detail.get("last_low")), b3_detail.get("last_low_date"), fmt(b3_detail.get("prev_low")), b3_detail.get("prev_low_date"))) if b3_detail else "Te weinig swing lows"},
+        {"id": "b3", "label": "Hogere bodem (na de hogere top, boven de vorige bodem)", "ok": b3,
+         "detail": b3_txt},
         {"id": "b4", "label": "50-weeks gemiddelde stijgt", "ok": b4,
          "detail": "50W SMA nu %s, vorige week %s, 4 weken terug %s" % (fmt(sma50w), fmt(sma50w_prev), fmt(sma50w_prev4))},
     ]
 
-    # handrem events: weekly close crossing the 50W SMA
+    # handrem events: the buffered 50W check flipping (see handrem_states)
     events = []
-    for k in range(51, len(wc)):
-        prev_above = wc[k - 1] > sum(wc[k - 50:k]) / 50 if k >= 50 else None
-        cur_sma = sum(wc[k - 49:k + 1]) / 50
-        cur_above = wc[k] > cur_sma
-        if prev_above is not None and cur_above != prev_above:
-            events.append({"week_end": wk_done[k]["end"].isoformat(), "type": "handrem eraf" if cur_above else "handrem erop",
-                           "close": r0(wc[k]), "sma50w": r0(cur_sma)})
+    for k in range(50, len(wc)):
+        if hr_states[k - 1] is None or hr_states[k] is None:
+            continue
+        if hr_states[k][1] != hr_states[k - 1][1]:
+            events.append({"week_end": wk_done[k]["end"].isoformat(),
+                           "type": "handrem eraf" if hr_states[k][1] else "handrem erop",
+                           "close": r0(wc[k]), "sma50w": r0(hr_states[k][2])})
 
     # monthly
     months = aggregate(days, lambda d: (d.year, d.month))
@@ -574,8 +670,16 @@ def evaluate(S, t, macro, flows_ctx=None, full=False):
                      "sma10": r0(sum(wc[k - 9:k + 1]) / 10) if k >= 9 else None}
                     for k in range(max(0, len(wc) - 110), len(wc))]
 
+    extra_signals = [
+        {"id": "above10m", "label": "Maandslot boven het 10-maandse gemiddelde", "ok": above10m, "points": WE["above10m"],
+         "detail": "Maandslot %s vs 10M SMA %s" % (fmt(mc[-1] if mc else None), fmt(sma10m))},
+        {"id": "above200d", "label": "Dagslot boven het 200-daagse gemiddelde", "ok": above200d, "points": WE["above200d"],
+         "detail": "Dagslot %s vs 200D SMA %s" % (fmt(C[-1]), fmt(sma200d_v))},
+    ]
     state.update({
         "checklist": checklist,
+        "extra_signals": extra_signals,
+        "bull_why": ["%+g %s" % (p, lbl) for p, lbl in bull_why],
         "b2_detail": b2_detail, "b3_detail": b3_detail,
         "cycles": {"daily": daily_info, "weekly": weekly_info, "four_year": four},
         "levels": levels,
@@ -632,17 +736,22 @@ def asof(series, d):
 
 
 def macro_state(macro, d):
+    """Macro score as it could be known on day d: each FRED series is only used from its
+    (approximate) publication date, observation date + MACRO_LAG_DAYS."""
     if not macro:
         return None
-    items, score = [], 0
+    items, score, missing, stale = [], 0, [], []
     for sid, label in MACRO_SERIES.items():
         s = macro.get(sid)
-        if not s:
-            continue
-        i = asof(s, d)
+        lag = MACRO_LAG_DAYS.get(sid, 0)
+        i = asof(s, d - timedelta(days=lag)) if s else None
         if i is None:
+            if sid != "DGS30":
+                missing.append(sid)
             continue
         val_d, val = s[i]
+        if (d - timedelta(days=lag) - val_d).days > MACRO_STALE_DAYS.get(sid, MACRO_STALE_DEFAULT) and sid != "DGS30":
+            stale.append(sid)
         j = asof(s, val_d - timedelta(days=28))
         prev = s[j][1] if j is not None else None
         ch = None if prev is None else val - prev
@@ -660,6 +769,7 @@ def macro_state(macro, d):
             if e is not None:
                 sig, why = (1, "financiële condities verruimen (onder 28w EMA)") if val < e else (-1, "financiële condities verkrappen (boven 28w EMA)")
             items.append({"id": sid, "label": label, "value": round(val, 3), "date": val_d.isoformat(),
+                          "available_from": (val_d + timedelta(days=lag)).isoformat(),
                           "change_4w": None if ch is None else round(ch, 3), "ema28": None if e is None else round(e, 3),
                           "signal": sig, "why": why})
             score += sig
@@ -682,10 +792,15 @@ def macro_state(macro, d):
             elif ch is not None and ch >= 0.10:
                 sig, why = -1, "inflatieverwachting stijgt"
         items.append({"id": sid, "label": label, "value": round(val, 3), "date": val_d.isoformat(),
+                      "available_from": (val_d + timedelta(days=lag)).isoformat(),
                       "change_4w": None if ch is None else round(ch, 3), "signal": sig, "why": why})
         score += sig
     label = "rugwind" if score >= 2 else ("tegenwind" if score <= -2 else "neutraal")
-    return {"score": score, "label": label, "items": items}
+    complete = not missing and not stale
+    if not complete:
+        label += " (onvolledig)"
+    return {"score": score, "label": label, "items": items, "complete": complete,
+            "missing": missing, "stale": stale}
 
 
 # ---------------------------------------------------------------- main
@@ -727,25 +842,49 @@ def main():
     except Exception as e:  # noqa: BLE001
         errors.append("Kraken cross-check: %s" % e)
 
-    macro = {}
+    # FRED with a local cache: if a download fails the last good series is used (and reported),
+    # so a FRED outage does not silently turn the macro score into 0
+    try:
+        fred_cache = json.loads(FRED_CACHE.read_text())
+    except Exception:  # noqa: BLE001
+        fred_cache = {}
+    macro, cache_used = {}, []
     for sid in MACRO_SERIES:
         try:
             macro[sid] = fetch_fred(sid, date(2023, 1, 1))
+            fred_cache[sid] = {"fetched_at": now.strftime("%Y-%m-%dT%H:%M:%SZ"),
+                               "rows": [[d.isoformat(), v] for d, v in macro[sid]]}
             time.sleep(0.3)
         except Exception as e:  # noqa: BLE001
-            errors.append("FRED %s: %s" % (sid, e))
-    sources["macro"] = "FRED (St. Louis Fed) CSV"
+            cached = fred_cache.get(sid)
+            if cached and cached.get("rows"):
+                macro[sid] = [(date.fromisoformat(d), v) for d, v in cached["rows"]]
+                cache_used.append(sid)
+                errors.append("FRED %s: %s (cache van %s gebruikt)" % (sid, e, cached.get("fetched_at", "?")[:10]))
+            else:
+                errors.append("FRED %s: %s (geen cache)" % (sid, e))
+    sources["macro"] = "FRED (St. Louis Fed) CSV" + (", deels uit cache: %s" % ", ".join(cache_used) if cache_used else "")
+    try:
+        FRED_CACHE.parent.mkdir(parents=True, exist_ok=True)
+        FRED_CACHE.write_text(json.dumps(fred_cache, separators=(",", ":")))
+    except Exception as e:  # noqa: BLE001
+        errors.append("FRED cache: %s" % e)
 
-    latest = evaluate(S, t, macro, full=True)
-
-    # history without look-ahead
-    hist = []
+    # history without look-ahead; the base case carries over day to day (hysteresis at 50%)
+    hist, prev_base = [], None
     for i in range(max(400, t - CONFIG["history_days"] + 1), t + 1):
         try:
-            hist.append(evaluate(S, i, macro))
+            row = evaluate(S, i, macro, prev_base=prev_base)
+            hist.append(row)
+            prev_base = row["base_case"]
         except Exception as e:  # noqa: BLE001
             errors.append("history %s: %s" % (S.D[i], e))
             break
+    latest = evaluate(S, t, macro, full=True, prev_base=hist[-2]["base_case"] if len(hist) > 1 else None)
+    m_now = latest.get("macro")
+    if m_now and not m_now.get("complete"):
+        errors.append("Macro onvolledig: ontbrekend %s, verouderd %s" % (
+            ", ".join(m_now.get("missing") or []) or "-", ", ".join(m_now.get("stale") or []) or "-"))
 
     # ETH context
     eth = None
