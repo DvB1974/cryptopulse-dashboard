@@ -41,7 +41,9 @@ CONFIG = {
     "weekly_band": (22, 40),    # weeks between weekly cycle lows (avg ~26-32)
     "daily_band": (35, 75),     # days between daily cycle lows (avg ~60)
     "weekly_confirm": (21, 0.12),  # early recognition of a weekly cycle low: age (days), rally
-    "daily_confirm": (5, 0.04),    # early recognition of a daily cycle low: age (days), rally
+    # daily cycle low = lowest confirmed swing low in the band (a deeper low before the cycle
+    # high that falls before band_min counts as a half-cycle low)
+    "daily_swing": {"pivot_days": 5, "rally_pct": 0.04, "rally_window": 20, "min_age": 5},
     "four_year_months": (47.5, 0.15),  # mean months between 4-year cycle lows, +/- band
     "weights": {"base": 5, "b1": 40, "b2": 20, "b3": 15, "b4": 15},
     "macro_weight": 2.5,        # bull-probability points per macro score point
@@ -295,6 +297,41 @@ def cycle_chain(lows, highs, dates, start_i, end_i, band, unit_days, confirm_day
         cur = nxt
 
 
+def cycle_chain_swing(lows, highs, dates, start_i, end_i, band, pivot_days=5, rally_pct=0.04, rally_window=20, min_age=5):
+    """Daily-cycle chain built from confirmed swing lows.
+    A candidate is a local low (lowest low within +/- pivot_days) that price has left behind:
+    within `rally_window` days it rallied `rally_pct` above the low, and it is at least
+    `min_age` days old. From a cycle low at start_i the next cycle low is the lowest candidate
+    within [start+band_min, start+band_max] days; it is accepted as soon as it is confirmed,
+    even while the band is still open. A lower low that is not yet confirmed does not replace
+    it: a daily close below the current cycle low is reported as a failed cycle instead.
+    When the band has fully elapsed without a candidate, the lowest low in the band is used."""
+    def is_candidate(i):
+        if (dates[end_i] - dates[i]).days < min_age:
+            return False
+        lo, hi = max(0, i - pivot_days), min(end_i, i + pivot_days)
+        if lows[i] > min(lows[lo:hi + 1]):
+            return False
+        ahead = highs[i + 1:min(end_i, i + rally_window) + 1]
+        return bool(ahead) and max(ahead) >= lows[i] * (1 + rally_pct)
+
+    chain = [start_i]
+    cur = start_i
+    while True:
+        lo_d = dates[cur] + timedelta(days=band[0])
+        hi_d = dates[cur] + timedelta(days=band[1])
+        win = [i for i in range(cur + 1, end_i + 1) if lo_d <= dates[i] <= hi_d]
+        cand = [i for i in win if is_candidate(i)]
+        if cand:
+            nxt = min(cand, key=lambda i: lows[i])
+        elif win and hi_d <= dates[end_i]:
+            nxt = min(win, key=lambda i: lows[i])
+        else:
+            return chain, cur, True
+        chain.append(nxt)
+        cur = nxt
+
+
 def evaluate(S, t, macro, flows_ctx=None, full=False):
     """Model state using daily data up to and including index t (no look-ahead)."""
     W = CONFIG["weights"]
@@ -361,8 +398,7 @@ def evaluate(S, t, macro, flows_ctx=None, full=False):
     if cyc_low_i is not None:
         chainW, icl_i, _ = cycle_chain(L, H, D, cyc_low_i, t, CONFIG["weekly_band"], 7,
                                        CONFIG["weekly_confirm"][0], CONFIG["weekly_confirm"][1])
-        chainD, dcl_i, _ = cycle_chain(L, H, D, icl_i, t, CONFIG["daily_band"], 1,
-                                       CONFIG["daily_confirm"][0], CONFIG["daily_confirm"][1])
+        chainD, dcl_i, _ = cycle_chain_swing(L, H, D, icl_i, t, CONFIG["daily_band"], **CONFIG["daily_swing"])
         wk_age = (today - D[icl_i]).days / 7.0
         d_age = (today - D[dcl_i]).days
         closes_after = C[dcl_i + 1:]
