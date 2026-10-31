@@ -1,0 +1,42 @@
+name: Bert-Bot model
+
+on:
+  schedule:
+    # Daily after the UTC daily close (also covers the Sunday weekly close),
+    # and a second run in the European morning for fresh macro data.
+    - cron: "20 0 * * *"
+    - cron: "40 4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data-refresh
+  cancel-in-progress: false
+
+jobs:
+  model:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run model
+        run: python3 model/btc_model.py
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- data/btc-model.json && [ -z "$(git ls-files --others --exclude-standard data/btc-model.json)" ]; then
+            echo "No change"
+          else
+            git config user.name "btc-model-bot"
+            git config user.email "actions@users.noreply.github.com"
+            git add data/btc-model.json
+            git commit -m "BTC model: daily refresh"
+            for i in 1 2 3; do
+              git pull --rebase origin main && git push origin HEAD:main && exit 0
+              sleep 10
+            done
+            exit 1
+          fi
