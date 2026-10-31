@@ -29,6 +29,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "data" / "btc-model.json"
 ETF_FILE = ROOT / "data" / "etf-flows.json"
+DAILY_OUT = ROOT / "data" / "btc-daily.json"
 UA = "Mozilla/5.0 (compatible; btc-model/1.0; +https://github.com/DvB1974/cryptopulse-dashboard)"
 
 CONFIG = {
@@ -771,6 +772,12 @@ def main():
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(out, separators=(",", ":"), default=str))
+    # raw completed daily candles, for calibration and audits
+    DAILY_OUT.write_text(json.dumps({
+        "source": sources.get("btc"), "generated_at": out["generated_at"],
+        "fields": ["date", "open", "high", "low", "close", "volume"],
+        "rows": [[r[0].isoformat(), round(r[1], 2), round(r[2], 2), round(r[3], 2), round(r[4], 2), round(r[5], 2)] for r in completed],
+    }, separators=(",", ":")))
     print("ok: as_of %s close %s regime %s bull %s%% errors %d" % (out["as_of"], fmt(S.C[t]), latest["regime"], latest["scenarios"]["bull"], len(errors)))
     return 0
 
