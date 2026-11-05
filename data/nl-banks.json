@@ -1,6 +1,6 @@
 {
  "source": "Google Nieuws NL, per bank gezocht; alleen berichten met de bank in de kop",
- "updated": "2026-11-04T19:50:55Z",
+ "updated": "2026-11-05T00:54:46Z",
  "days": 30,
  "banks": [
   "ABN AMRO",
@@ -15,6 +15,18 @@
   "InsingerGilissen"
  ],
  "items": [
+  {
+   "title": "ASN Bank: Vierde cao-ronde – ophef AFC en nieuwe voorstellen",
+   "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOLVE3RGVfNUFjekdlc2lpUTNiTXNTOG5qTTJBdnpIX09QWl9Vd2RtSk1rNTJ6cG90QWlJb1ZVR2t5OUJDTzJ2X0xSbEw2Tl9pSzlmUERwc04wN0I1SUJYQ1RvSEpvRlI5SFQ1SThENEk1RFpfT09ETmtXWk1oNHlreVl1TnpIdFV3SUNhZnl3M3M5OGZvbk9JUVpLYXFpZw?oc=5",
+   "source": "De Unie",
+   "ts": 1793816819000,
+   "banks": [
+    "de Volksbank"
+   ],
+   "themes": [
+    "Strategie & product"
+   ]
+  },
   {
    "title": "ABN AMRO wint rechtszaak bij EU-hof over bijdragen aan noodfonds",
    "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPSllING4zWXJoWUZyQlV0ZVVLd2p1dnpOWXRSczBBRGVtQWtYT1Z5aFlkTjVTZ2hhWDNpenc5c1laX19QV1I0VUo2Y0VuX1lpc3U2WnBhNndpYWlvT3ExQjV3RVVNSlM1VW1ZTjh2enU0Rmd3elYtSG5tbi1pQmV0bkY4ZlI5ZTNQX2oya0xQcHlmOEdyRlhMMkYyNDhQQQ?oc=5",
@@ -31,7 +43,7 @@
    "title": "ABN AMRO krijgt deels gelijk in zaak over Europees bankenfonds",
    "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNdjQ2REIybENDaUlYSzhWeDNrVWMzbWx5dWlHei01NFdwVUF3bWo2NGVYTl9adWxkQ0FCdHY5U1hDWVJwdjFmYjBUX3pEMDR5TFExRWQ3VmZ0dEJrTWo3SjVKR0Q0cG9SV2dpN1FPZlptZ1huYzNuRU1qZ2FFNHczOE5nWGRvOHRfYXBjQ2ZmQmxjejNqT3R5eEZnWXREajhWbzJ6dXE5S2VMeGZsY1E?oc=5",
    "source": "Beursgorilla.nl",
-   "ts": 1793806340000,
+   "ts": 1793807036000,
    "banks": [
     "ABN AMRO"
    ],
@@ -50,7 +62,7 @@
   {
    "title": "ABN AMRO-medewerkers leggen werk neer vanwege loonbod en kantoorplicht",
    "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNZGJwNDBRaTNmUnZsblFvWFg5SDVXVVNtSUprQmgtTHFnVEozRllQY2FsdGRJdHkzaFJ5b05TZElEdTZYQWtYRUFNSFl3dmVpcjJ1bnZ3SnMwdWVUWjVrcVFyVUJicDRGd0NyZzFzNmlWRDBjbXprSFlMeW9hX2l5cWpmRkVCZGhGeVJGS25xeThIM1pDb1J6ZG5TQ00zZw?oc=5",
-   "source": "www.facto.nl",
+   "source": "Facto",
    "ts": 1793800800000,
    "banks": [
     "ABN AMRO"
@@ -76,21 +88,10 @@
     "ABN AMRO"
    ],
    "themes": [],
-   "more": 2,
+   "more": 1,
    "also": [
-    "bnr.nl",
-    "Het Financieele Dagblad"
+    "bnr.nl"
    ]
-  },
-  {
-   "title": "Vakbond FNV start donderdag in Diemen met acties bij ABN AMRO",
-   "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQdVFodERlWjlzRjRfa0pKakdtNVNsc1VxdWlEOEt2dXNIc0FTZ0loYlhSbmwwSWx5dGhlZGlGUW82WXZDNVU1TGhlbkVJYjdsRlU4eFQ5NXJPbGJYbTlhVkl0TXI4ZEw4OTZjdExpQmhjcE1XV2E3U2V1Sk1OOXZwM1Fjb3FSOWJjWUZJTkN4aUppT0hEQjh1MXd3?oc=5",
-   "source": "ZeelandNet, startpagina van Zeeland",
-   "ts": 1793790482000,
-   "banks": [
-    "ABN AMRO"
-   ],
-   "themes": []
   },
   {
    "title": "Man eist ruim half miljoen euro van ABN Amro: ’Bank wist van betalingen aan illegale goksites’",
@@ -141,7 +142,7 @@
    "title": "Van Lanschot Kempen boekt €20,8 miljard netto-instroom in negen maanden",
    "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPalg1NldyMFpNa1VXRmxsdDVRSUdtRXpSMUFMd0dzSzFGeXBrOWYtRHRZXzh4WmNsNnlOR196M3BqUmFqUVlmYVVCR01yMTlNZWlrQ1FwRjJDdUFiYVJiLVVxa1lxUFk2bnRCSUVCQTkwR2J2Q2RIcHA5eTVxVWRuc3BFZm4yYmVROHhDU1U0VG5zUFZJb2hkZUpLRXh0c1NvUDBPemhzSdIBrAFBVV95cUxPSDFqZlM3WUVyRXVoOEJNa1hfWlg1VFMtclowQnNNMm84ZE5Fek54Q21TQXlQUERDSV9jZ0JmV2VSV0RxajlXZWI5TUtEN3NGNXp1bGJIbVREQWFRR0Q2a0ctRl9jQm1BdHJYUl9WY1Y0c09DTUdId290bnZBWk9jUmxhNFNiOUlzc2R4YUhIZVBQclMtNG9hTW9XVV9xbkZFRF9Fc3dZUVdJN2oz?oc=5",
    "source": "Banken.nl",
-   "ts": 1793770964000,
+   "ts": 1793770999000,
    "banks": [
     "Van Lanschot Kempen"
    ],
@@ -278,6 +279,23 @@
    "themes": []
   },
   {
+   "title": "FNV stelt ultimatum aan ABN AMRO na vastgelopen cao-overleg",
+   "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOaC1VVFcxb0NBYWVPQklJSzhLRGtsX1FDX0RualZ5MWRZY0hRSnhVenNYT2ZBZXMxWUt3M00tY3U4Wlk5U2cxU1pXcmx4YUlLYkg0aTYtSl9nVkE3dUlvM0J5bmh5ak9WVnVfR2lIQ2JRVGdfQS03VHBZZ1BqVHVFa1ktVzMyQmdCS05aQmkyNFpyeFBSVWROX1VjNC1YVUFpa2FoUUVTZUZiMEhHck56RjR3?oc=5",
+   "source": "Drimble",
+   "ts": 1793627279000,
+   "banks": [
+    "ABN AMRO"
+   ],
+   "themes": [],
+   "more": 4,
+   "also": [
+    "AMweb",
+    "De Dagelijkse Standaard",
+    "ZeelandNet, startpagina van Zeeland",
+    "Het Financieele Dagblad"
+   ]
+  },
+  {
    "title": "ABN AMRO benoemt Eric Jones tot Head of Marketing & Digital",
    "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQX3Q0TnJzR2xkRTg5VWpBU2Q5TjlmeVhxUFh1LXpjMTNvZmdZSnU1anNjMjl4aDV0OW9CV3dWeU04a2p1U2dyTzBMVVlIV1FQNTJhZXBhWXRnMlBpOC1lSE03RkRWdEEyRmt1OERMMTZlcDFjN2plUk10VDlVUzJpMXdFNXQwc0xoMl9jNWd3OG9CSFlnMEt4WWpB?oc=5",
    "source": "ABN AMRO",
@@ -300,20 +318,20 @@
    "themes": []
   },
   {
-   "title": "Rik (26) kan geen huis bemachtigen in zijn geboortedorp, maar dan komt de oude Rabobank vrij, mét bankkluis",
-   "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQRlFocnhETEs2azFmb09XZ2RhcW01dWxPbkU5NWU3NFcwM2QyV2RXQXNvaEFaWERPZ3E5UWpVMHNWbjV1SXJXNUNRanRsdlozbDJJd1NaNEo2d2lmTUFPcWJjYWJZWmtxdDJ4LTlYNndiQVlNS0tITERHQWRsSGFCdFBDNkJTYklBQy1wVGxROE1zQ3FIdERoZHYtdG9QaW9UVTYwc29lX0hqamh2NWh4QVJKc2FOUGZ6SUsybFk1RTBiZ1J5R1VqdFZEX1dYMWNHVVVIZy1pMHptSktDLU1Pd2JQNC1vT3FtRnl2cw?oc=5",
-   "source": "De Gelderlander",
-   "ts": 1793608502000,
+   "title": "Buurtgezinnen Purmerend krijgt steuntje in de rug van Rabobank Waterland",
+   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQb0FLbm1jMndSQ05PTHAyRVVUYUhZYWVISURuSWhrckc2b1ZaWjdvS3dqd0ZoT2E3SVQ0LWM1YUJsQ2RwdHRoaGZaNWwzZG9MRDd3NWhKS3ZaRWExSEUtdDJyRVlaaDRiYXd6T2d6VURaajRja0c2Mm95QV9GT2xmdEg2RHY4YXhIZlRkNU80SFo5UF9tMVFLclpRaGVXQ1hwX1pYbDlKNTZDdFFaWHN3ZUJta1N1WTA?oc=5",
+   "source": "Rodi.nl",
+   "ts": 1793609933000,
    "banks": [
     "Rabobank"
    ],
    "themes": []
   },
   {
-   "title": "Rapport Rabobank: laagwater verhoogt vrachtprijzen, maar niet onbeperkt",
-   "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOanB5d2ZTOFJEb1BRU045STNWSTVCYzNEZlZocDJCdWFqR25yTXdDOFVaWUFDV3o0S3RDVmFrSmV4TExWdUVzT3lhdEc3TzBGT2lqdVR3bXZkS3NNTmY4dzdKQ0NkZk1ENzBhbFM2QUQtNlpxQ0xkcHpzSEw0MjEyQ3YzSk14X1hrY0s1MWdOci1tTGh2c2VSa2VrUEQ0bkc4ck5RT01DTEt5UHppSXpYaDNDeHBPZXFBMkZTOXRfcWI?oc=5",
-   "source": "Schuttevaer.nl",
-   "ts": 1793607407000,
+   "title": "Rik (26) kan geen huis bemachtigen in zijn geboortedorp, maar dan komt de oude Rabobank vrij, mét bankkluis",
+   "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQRlFocnhETEs2azFmb09XZ2RhcW01dWxPbkU5NWU3NFcwM2QyV2RXQXNvaEFaWERPZ3E5UWpVMHNWbjV1SXJXNUNRanRsdlozbDJJd1NaNEo2d2lmTUFPcWJjYWJZWmtxdDJ4LTlYNndiQVlNS0tITERHQWRsSGFCdFBDNkJTYklBQy1wVGxROE1zQ3FIdERoZHYtdG9QaW9UVTYwc29lX0hqamh2NWh4QVJKc2FOUGZ6SUsybFk1RTBiZ1J5R1VqdFZEX1dYMWNHVVVIZy1pMHptSktDLU1Pd2JQNC1vT3FtRnl2cw?oc=5",
+   "source": "De Gelderlander",
+   "ts": 1793608502000,
    "banks": [
     "Rabobank"
    ],
@@ -344,21 +362,6 @@
    ],
    "themes": [
     "Strategie & product"
-   ]
-  },
-  {
-   "title": "FNV stelt ultimatum aan ABN AMRO na vastgelopen cao-overleg",
-   "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQeGhvQ2J5LXB3MnNQZjUxS1pldVZEMzEtNkR6UXNfZEpraFpPelhJcUstZjhBVHYtZV9ZTF92Z0tMdmcxdkVURXdXcGhJSklNdVNXb1RBTjB5SEdlSFlxVDBlaHpFS0NqYm81ZUdQN25fbzB2aVRqdTZUV1lKQzNnZ0pyejIyQXRFNXFHZERraUNwd091NXlERE4wOFItMGJpRko0a2FUYThTQQ?oc=5",
-   "source": "Blik op nieuws",
-   "ts": 1793523720000,
-   "banks": [
-    "ABN AMRO"
-   ],
-   "themes": [],
-   "more": 2,
-   "also": [
-    "AMweb",
-    "De Dagelijkse Standaard"
    ]
   },
   {
@@ -437,16 +440,6 @@
    "ts": 1793357257000,
    "banks": [
     "Rabobank"
-   ],
-   "themes": []
-  },
-  {
-   "title": "‘Pennenlikkersleed bij ABN Amro: personeel vaker op kantoor’",
-   "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNOW95dGVsYXdjS0x4eUF6dlh1bVBHRVZYNEJPZmxEaHo3TElKR0RLT1BVY1FJLVRNemctSnRzaGczZUNZSzVFVlFwTUp3VFBiN2V3ZzQzMkVUY3NMSllKaHExZUg5RlNOUFBnZ3lxQ0thdk0tXzU1aGtvVlNHU2xxdTM2V1dDVklFWXc?oc=5",
-   "source": "Boerderij",
-   "ts": 1793350800000,
-   "banks": [
-    "ABN AMRO"
    ],
    "themes": []
   },
@@ -919,6 +912,16 @@
    "ts": 1791961200000,
    "banks": [
     "ABN AMRO"
+   ],
+   "themes": []
+  },
+  {
+   "title": "Banken verdwijnen uit het straatbeeld, maar ASN Bank opent juist weer een kantoor in Borculo",
+   "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQNWtoYTdzOXFLTFQ2czljb1ZCZjlvMVlER2RWM1pYNXRqVG1YMU1Pc2VWMDlYemdPVTlDSHRobjNka01Rcno1NmRjTmQ3MEZwR3FCamQ3Y0l3TWs3SzF5NnhlTF91UGtBcWswRUtwQ3doX3NLckZTYUpzamZqdlZNS21pUXRTUTZZUHBVQWZoNzIzTG5MTVFSejRxeG5GdTg2dUhsa3FOR0hoeVZyQklnZFd3UFlfWENldVcycUF4QnF1cXc3ZU1yc0pyeWRXTWszcVE?oc=5",
+   "source": "Tubantia",
+   "ts": 1791961200000,
+   "banks": [
+    "de Volksbank"
    ],
    "themes": []
   }
