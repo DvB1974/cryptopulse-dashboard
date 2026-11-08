@@ -1,6 +1,6 @@
 {
  "source": "Google Nieuws NL, per bank gezocht; alleen berichten met de bank in de kop",
- "updated": "2026-11-08T17:56:44Z",
+ "updated": "2026-11-08T22:09:42Z",
  "days": 30,
  "banks": [
   "ABN AMRO",
@@ -48,12 +48,12 @@
    "themes": []
   },
   {
-   "title": "ING stelt 128,5 miljoen euro beschikbaar voor innovatieve mkb-bedrijven",
-   "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNZVFTaFZzbDhWTVlfZlFfVnNGYjFMRVZvRmpVM1pQTkNaOW1LMENVT29ZYkdyQ21HNEJNWTZKOTVRM2tqUzlUSm1YWS1aSUh0U0JsQXRyRW85SDk0MlVLLXpuVUxiWWRiWHNvRE9KSk0tbWs1Z0JNcWVvZUJFOENrc21TVUxaRDhuR1N6WWtiMXhTakpuUF81RTJ3YzdYVGdEVEdGOU5aNUFYRTJja05qb1JqX1MtZw?oc=5",
-   "source": "bnr.nl",
-   "ts": 1794058080000,
+   "title": "ABN AMRO Bank (AB2): € 40,83 · 6 nov 08:06",
+   "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5jUkc0UFpRM2tlQkpCX0lYeWhWOUV3U1F5bUZyOF8yZlh3bHpMNkpWZ2UxR3pscVFKa2pReTA1VlpIa0ZjS0dxNEVfQU1xdw?oc=5",
+   "source": "www.debelegger.nl",
+   "ts": 1794086356000,
    "banks": [
-    "ING"
+    "ABN AMRO"
    ],
    "themes": []
   },
@@ -150,16 +150,6 @@
    "ts": 1793955600000,
    "banks": [
     "ABN AMRO"
-   ],
-   "themes": []
-  },
-  {
-   "title": "In de pers: 'Krottenkoning' overhoop met Belastingdienst & ING trekt bijna €130 miljoen uit voor mkb",
-   "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNVnZjQ25lOEhOdjNWN0l3dDVXaXByM2lvanV2NzVGUTNId05lSHlLN3N1LUMweUE0alRiVmdfc2tiWGZaRmg3YXFtUUpUYVRtWGZrRnR0Q3JVRi1RclBENHZEZFczRmVLLWVqTVJ4QnlfazAtMGRtNGJUV3Z5RGdCYlhTc2xaV1NfM0twX2FrT3JPX29sOWNyallHaGxLbUJybXpwWkN4V1dVWXpDZGQxeENLUnBVdWlLdkNjam41NEN5eTF5MkMtb3JvWmhpd2tqRUJoRQ?oc=5",
-   "source": "quotenet.nl",
-   "ts": 1793954386000,
-   "banks": [
-    "ING"
    ],
    "themes": []
   },
@@ -277,6 +267,23 @@
    "themes": []
   },
   {
+   "title": "ING stelt tientallen miljoenen aan risicovolle leningen beschikbaar voor Nederlands mkb",
+   "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQWWR5VlkwdldsNGhjMVFTOTFHZENDRlNaZW04RGZWRVpSV0VFazFNN0Rla2kyd1o3RncyU3ZMZVh4aG9aNE5qUWNXc2RkWnZINWhEQkU5emNTNVZiMVRMay1QUzJsOTFIeHR3Qkh5ZGZQbTg0N0cwUlE5UDFSYldsVTdDVENsQzhvR0NGR29qcWQ0TW1mT3dfM3NjTERURWo4YldMWTFXZG1OZDlRY3VoX2l1QldiOFg5TlI5czFoQVdWeDZ6dFVST2FJQ2FfTkVSOGc?oc=5",
+   "source": "bnr.nl",
+   "ts": 1793865480000,
+   "banks": [
+    "ING"
+   ],
+   "themes": [],
+   "more": 4,
+   "also": [
+    "De Telegraaf",
+    "Accountantweek",
+    "quotenet.nl",
+    "bnr.nl"
+   ]
+  },
+  {
    "title": "ING breidt private banking uit naar Spanje en Italië",
    "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOcDEtNFIyWTc3em9wd2E1Qm5TeWluTEtIRjBIX1pMd1BmVXkzdUdiX2dBMldYcURHZ2RZaDRsT3ZVXzF3Y2I4MmUzQ0ltWVBsYlJYT3JCWEJOZXdWNERJTThra3UzSzZoUF9vVGNEby1NV3owejQyeU56ai1JREpmSU5VSzJmYUhpWHNBTnk0MEvSAZYBQVVfeXFMTmlQT0FqNVlFN2N4d3E5WDdmVXRBcmdpU1NXbTRreldxR2Y0STVCTTMtdy1HQW1GNW9CZW1yRFRXQ1BlaWJySnE0MEc0M1BKY21wMW14TTE3bklOXzNJZGIwOTNYeVNZNHhWNWd0NVdsaEx1TWNMbFZLTUw3N21aTWxrWnVuRnVOOGFhQ3hVQkNjbXJiV0p3?oc=5",
    "source": "Banken.nl",
@@ -335,16 +342,6 @@
    "also": [
     "AMweb"
    ]
-  },
-  {
-   "title": "ABN AMRO krijgt deels gelijk in zaak over Europees bankenfonds",
-   "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQekpxZHpPZUpXaUtoMVNRZVh2Zzgzb2lpcVVYQ3JIVXNveEJyaXVXcXZzZjVjd1ZkbGJTbno4X0JYWlZTRmtfSDVMc2VybWVZRElycVlKeHJMcW9mY09TRVR6TkRxMG9QdnhHUFhwWm5OX0E1UWo3TFdmeWFxckNWLTlVVjZaWTNjUlNsSWlsMDZMemtRSnZaeTZNVzlGcm9ZaWc?oc=5",
-   "source": "IEX.nl",
-   "ts": 1793806200000,
-   "banks": [
-    "ABN AMRO"
-   ],
-   "themes": []
   },
   {
    "title": "4 vragen aan Bianca de Bruijn (Director Lending ASN Bank)",
@@ -629,20 +626,10 @@
    ]
   },
   {
-   "title": "Van Lanschot Kempen | Instroom kapitaal houdt aan",
-   "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPMXFKYlhVaTU1VndFWGo2TnBJYjFiWXVJX1o0OHNOdk1SVGJfUUxJaTdzelVlRG8wcW1RTDE5cUtNMGgxN1ZqaFBzNFJaOG9WR09fbWpqdmwwUlRLTVZWd2hkQ2dqRm9nemN1OWtON0pkNHE2WW9BbDU5SllrSl9TQmdOclR0ckhFcWc?oc=5",
-   "source": "IEX.nl",
-   "ts": 1793343600000,
-   "banks": [
-    "Van Lanschot Kempen"
-   ],
-   "themes": []
-  },
-  {
    "title": "Meer winst voor Van Lanschot Kempen, maar groei van vermogen valt stil",
    "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNZVlkbXkzY2xIMHdCYnFBMEtiRUF3dC1XMHB3cTlyQUc2UXhtZ0RVSGk2UVVjc2ZwSVh3UzJRME9INnFmVEpBODc4aFhQU2xveWNsV1kzV2RjNWNKREN0amEzc3U5YktGT2RHWXpPQ29jdXRGY1ZwSV9lYTV4eC0zUU9oZEZXamJuV0tzZ0ZlazdLWGxBakZiTzItUi1sWUNiR2pua0drQ2Q4QQ?oc=5",
    "source": "Het Financieele Dagblad",
-   "ts": 1793343424000,
+   "ts": 1793343600000,
    "banks": [
     "Van Lanschot Kempen"
    ],
@@ -654,6 +641,16 @@
    "also": [
     "Beleggen.nl"
    ]
+  },
+  {
+   "title": "Van Lanschot Kempen | Instroom kapitaal houdt aan",
+   "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPMXFKYlhVaTU1VndFWGo2TnBJYjFiWXVJX1o0OHNOdk1SVGJfUUxJaTdzelVlRG8wcW1RTDE5cUtNMGgxN1ZqaFBzNFJaOG9WR09fbWpqdmwwUlRLTVZWd2hkQ2dqRm9nemN1OWtON0pkNHE2WW9BbDU5SllrSl9TQmdOclR0ckhFcWc?oc=5",
+   "source": "IEX.nl",
+   "ts": 1793343600000,
+   "banks": [
+    "Van Lanschot Kempen"
+   ],
+   "themes": []
   },
   {
    "title": "ING schrapt wereldwijd vierhonderd banen bij zakendivisie",
@@ -672,9 +669,9 @@
    ]
   },
   {
-   "title": "ING ziet vraag naar hypotheken ‘langzamerhand’ inzakken door hoge rentes",
-   "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPZDNka1p1RmNFRXlEYTRyeEFFVl9tc2dCQlVjdEYwSFJoQ2VuYU5zdEl3R1A5SHl3M0RwNnJFTEd3RG9qWGducS1GVnlwU1dJcU13b1FhSmppSGw0bi0yYVI5eUdBbGh5NHZ3aFZrSzJXUG5nUmQ0VWxQbExqUjdKSzE4RXN2Qml1dzd4UUlGVjVVRUFUVG9pb3NlcHc2cUFtdGR3Q3pHUFVfT1kyMGRGNVBSM0U?oc=5",
-   "source": "bnr.nl",
+   "title": "ING Bank: 29 oktober is een belangrijke dag!",
+   "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQWm14aGstVHR3LUZUZV9BenJwOWJ2MldBRUNhRGUwSkxqUG00dU5xbUxXOVBSOS1ZRlcxTWtacGFaVmdmeWJUb1pHZkpkQndTWjhUQ1dsQ2VfaFAxQTdVSTR1S19hOWprRUh3SXJwZzJOT2x6NVk5SWNob3FfNGtkZjZvdXRYNFF6MlE?oc=5",
+   "source": "De Unie",
    "ts": 1793257200000,
    "banks": [
     "ING"
@@ -682,9 +679,9 @@
    "themes": []
   },
   {
-   "title": "ING Bank: 29 oktober is een belangrijke dag!",
-   "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQWm14aGstVHR3LUZUZV9BenJwOWJ2MldBRUNhRGUwSkxqUG00dU5xbUxXOVBSOS1ZRlcxTWtacGFaVmdmeWJUb1pHZkpkQndTWjhUQ1dsQ2VfaFAxQTdVSTR1S19hOWprRUh3SXJwZzJOT2x6NVk5SWNob3FfNGtkZjZvdXRYNFF6MlE?oc=5",
-   "source": "De Unie",
+   "title": "ING ziet vraag naar hypotheken ‘langzamerhand’ inzakken door hoge rentes",
+   "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPZDNka1p1RmNFRXlEYTRyeEFFVl9tc2dCQlVjdEYwSFJoQ2VuYU5zdEl3R1A5SHl3M0RwNnJFTEd3RG9qWGducS1GVnlwU1dJcU13b1FhSmppSGw0bi0yYVI5eUdBbGh5NHZ3aFZrSzJXUG5nUmQ0VWxQbExqUjdKSzE4RXN2Qml1dzd4UUlGVjVVRUFUVG9pb3NlcHc2cUFtdGR3Q3pHUFVfT1kyMGRGNVBSM0U?oc=5",
+   "source": "bnr.nl",
    "ts": 1793257200000,
    "banks": [
     "ING"
@@ -905,6 +902,16 @@
    "ts": 1792652400000,
    "banks": [
     "ABN AMRO"
+   ],
+   "themes": []
+  },
+  {
+   "title": "Even voorstellen…Lara Kalhouri: ledenraadslid Rabobank Apeldoorn en omgeving",
+   "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQZ0F3NHc1eG1hQVJFdWluRTMzemlIaFkyMXQ2TEJFaXdGb1cyUjFEOEUzUWg3SzFKWGM4eFkweHc5NGh2SXpFNGpySHhwTFZVNHpycnVGZDdHdUhLZ3V0U1UxMkdpQ2x2d0RWRGcwYThaOUlvbWdBSWxSSG9wNmJMOEJ2eDlRdnNmcEpkdXBrVEcyVUxxQnoxdm41NERYd1NjanNlV2dHSGhBZWdjNWpNNXJrMTZIclVERkFibWt2dWNLTWJpWTYw?oc=5",
+   "source": "Rabobank",
+   "ts": 1792652400000,
+   "banks": [
+    "Rabobank"
    ],
    "themes": []
   }
