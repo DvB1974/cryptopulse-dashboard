@@ -1,6 +1,6 @@
 {
  "source": "Google Nieuws NL, per bank gezocht; alleen berichten met de bank in de kop",
- "updated": "2026-11-08T11:19:07Z",
+ "updated": "2026-11-08T17:56:44Z",
  "days": 30,
  "banks": [
   "ABN AMRO",
@@ -15,6 +15,16 @@
   "InsingerGilissen"
  ],
  "items": [
+  {
+   "title": "FNV kondigt 24-uursstaking aan bij ABN AMRO in Amersfoort",
+   "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOdHM0cUMxUWM4bkRZZXp6QjBDaldNVWtYSVBwTDh1Tm1uSGVmVHRvaVlKNzFpcTVydF93V3d2WjN2RTNDQWpDZXQ1OHE3OTRQVHhFcGY5cTVVMzdQM2pRTExMbnhsOEpabnh6UGRhN0ZoQmlMdVpNRHBRUXk1c04xejdxakwxLWxjNmNtYlB2aHpLRHMzN0lka0ZHNkJLWEpVYkhuY1A4aFFHdl9hRFFCYkxUSExzM09yS3JwMQ?oc=5",
+   "source": "destadamersfoort.nl",
+   "ts": 1794146220000,
+   "banks": [
+    "ABN AMRO"
+   ],
+   "themes": []
+  },
   {
    "title": "Spaarrente Rabo, ING en ABN omhoog, maar zijn deze banken voor spaarders nog wel interessant?",
    "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNSTNrUVNDbE1lWF9tVGY2MWN0aGdzMUliWjBWdzZWcXZnYU5CNWFEcTRUZzk5S1RZRHBLUkZwY0EyN0szejdkNzBuWFRjUHhObFo2WVZIMlVYQkwxVGtaTnFOQTRyQTF6UG1pd3FGSGRhdjR1WXpQQXlObDc3S0NkWlhxT0VqRXh0bG03RVlSRTYwSGJvVGZVQ1dnQU9TWVh6MW1IZWdYLWo5V0xCa2hBVDBGOXplWTJBbnc?oc=5",
@@ -38,20 +48,10 @@
    "themes": []
   },
   {
-   "title": "ABN AMRO Bank (AB2): € 40,83 · 6 nov 08:06",
-   "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5jUkc0UFpRM2tlQkpCX0lYeWhWOUV3U1F5bUZyOF8yZlh3bHpMNkpWZ2UxR3pscVFKa2pReTA1VlpIa0ZjS0dxNEVfQU1xdw?oc=5",
-   "source": "www.debelegger.nl",
-   "ts": 1794086356000,
-   "banks": [
-    "ABN AMRO"
-   ],
-   "themes": []
-  },
-  {
    "title": "ING stelt 128,5 miljoen euro beschikbaar voor innovatieve mkb-bedrijven",
    "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNZVFTaFZzbDhWTVlfZlFfVnNGYjFMRVZvRmpVM1pQTkNaOW1LMENVT29ZYkdyQ21HNEJNWTZKOTVRM2tqUzlUSm1YWS1aSUh0U0JsQXRyRW85SDk0MlVLLXpuVUxiWWRiWHNvRE9KSk0tbWs1Z0JNcWVvZUJFOENrc21TVUxaRDhuR1N6WWtiMXhTakpuUF81RTJ3YzdYVGdEVEdGOU5aNUFYRTJja05qb1JqX1MtZw?oc=5",
    "source": "bnr.nl",
-   "ts": 1794058113000,
+   "ts": 1794058080000,
    "banks": [
     "ING"
    ],
@@ -257,6 +257,16 @@
    "themes": []
   },
   {
+   "title": "Raming flink omhoog: Rabobank verwacht 4,1% inflatie in 2027 door conflict in Midden-Oosten",
+   "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOWkZXbTl0YUNaSktEejAxV3RldktYeEM0ZUFld0I1bWl5MzY4Qk9Fak5fRGRRVG9Jb3J0akV6NFc5clRIQVJfR3BTU0lNR0Z0UVUtOXpSNkc4N2M2YkhzRDU2UExGdVlFa0VTdFV2clQxN1l6VnZkX2VZc2RCOEc4ajFDQ3VydkhZcGpXd29kQzJ6eXpIY1NfNGVkbm5JT3RPbER4eVBwQnhWN3hCNmFtM3RjTGJybkN3c3RzcGd3aEs4Q3diZVFXRVBn?oc=5",
+   "source": "Wonen360",
+   "ts": 1793873660000,
+   "banks": [
+    "Rabobank"
+   ],
+   "themes": []
+  },
+  {
    "title": "Kies de beste creditcard voor reizen: Wise, bunq en N26",
    "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQZXl1QlVfWnY0MGQyb0FzdFh6ZjEwLTVDWDd1M20yWUtReks2bDJKRk9jZEtDVUgxZnZIa1VsOUdIc0xWek9pTW1oRlRGVDFVN3ktbDkyZFlrTVdXRlM4RkFUSE5OZDI3bGhnLUJQWnBkNlFXRmdyRmJtTnlEcGVON050OTdvaUlnQlE?oc=5",
    "source": "Wereldreizigers.nl",
@@ -320,7 +330,11 @@
    "banks": [
     "ABN AMRO"
    ],
-   "themes": []
+   "themes": [],
+   "more": 1,
+   "also": [
+    "AMweb"
+   ]
   },
   {
    "title": "ABN AMRO krijgt deels gelijk in zaak over Europees bankenfonds",
@@ -362,10 +376,9 @@
     "ING"
    ],
    "themes": [],
-   "more": 3,
+   "more": 2,
    "also": [
     "Curacao.nu",
-    "bonaire.nu",
     "Banken.nl"
    ]
   },
@@ -430,9 +443,10 @@
     "ABN AMRO"
    ],
    "themes": [],
-   "more": 1,
+   "more": 2,
    "also": [
-    "Nieuws.nl"
+    "Nieuws.nl",
+    "VVP online -"
    ]
   },
   {
@@ -553,7 +567,7 @@
   {
    "title": "Dienst Boekhouden van ABN Amro offline na mogelijk cyberincident",
    "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQSVVlNHM4MXd1NjVTWkxHM0ZXQXRoRXNyR0Vua29SU0MwM2JuMEVWaVEzb21La2Z2ZlE1b1FwUTBEa0FXSDY3QTYydC0xVWF6amx0SDZOQ1d5NmluUTRGRmZURVZlMFM1RkdWbFFRWm5LRnlaVGxiVFlsUHBQM0hqZU1PZmY2WWxTc2VqNVM3OXVkckFMZlBPYjU3TFJhVXItcTU5MmlTTi0?oc=5",
-   "source": "Zaanstad,nieuws.nl",
+   "source": "Nieuws.nl",
    "ts": 1793455378000,
    "banks": [
     "ABN AMRO"
@@ -571,18 +585,6 @@
    "themes": []
   },
   {
-   "title": "Hypotheekklant blijft ook na halve eeuw aan ABN Amro vastzitten: ’Krijgt 71.000 euro aan rente niet terug’",
-   "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNNmhwdWZsZFh1V2FUWXZKdDVaRDd6cE5ZellncmNXbHAyMjR1SXNhWmF2d3VTTnBpZXdRTUNFNjlwZ2wzTzdESlY1TWJfWGp0MEFtRXJUX1ZGNlNsNU5Bd21Yd0VnMk9zWUxiZGVvYmRranliNTBDS0VKZzg2LUJFdklyUm80NE4tY1JtMEJ2U2FwVE9nODlKZlNkLVRzWU9qaTk0NFJzZEVNaTdWM0JET2ExX3Y5SW1UOWJPT0FacjZPMXM4SEF1enhNQnZIMWllYzVsemRaSmJjU2tqTFRLMTFMU0Z1THJBTldVWUpQV2k?oc=5",
-   "source": "De Telegraaf",
-   "ts": 1793377320000,
-   "banks": [
-    "ABN AMRO"
-   ],
-   "themes": [
-    "Tarieven"
-   ]
-  },
-  {
    "title": "Finom vs Knab Zakelijk | Vergelijking zakelijke rekening",
    "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBrZVhrNDNTS1A5NDJHNElOczNXbUMzRXVrTk1FTGQ5TnFwTGJuTVBPVmd2UkdxbUZsQXRzZHBGVHE2U0xwNldsYkNrVHV1Q29mVml1MUIzYjM3Njk4Ty13?oc=5",
    "source": "www.ondernemeneninternet.nl",
@@ -593,20 +595,22 @@
    "themes": []
   },
   {
-   "title": "Van Lanschot Kempen | Instroom kapitaal houdt aan",
-   "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPMXFKYlhVaTU1VndFWGo2TnBJYjFiWXVJX1o0OHNOdk1SVGJfUUxJaTdzelVlRG8wcW1RTDE5cUtNMGgxN1ZqaFBzNFJaOG9WR09fbWpqdmwwUlRLTVZWd2hkQ2dqRm9nemN1OWtON0pkNHE2WW9BbDU5SllrSl9TQmdOclR0ckhFcWc?oc=5",
-   "source": "IEX.nl",
-   "ts": 1793368800000,
+   "title": "Hypotheekklant blijft ook na halve eeuw aan ABN Amro vastzitten: ’Krijgt 71.000 euro aan rente niet terug’",
+   "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNNmhwdWZsZFh1V2FUWXZKdDVaRDd6cE5ZellncmNXbHAyMjR1SXNhWmF2d3VTTnBpZXdRTUNFNjlwZ2wzTzdESlY1TWJfWGp0MEFtRXJUX1ZGNlNsNU5Bd21Yd0VnMk9zWUxiZGVvYmRranliNTBDS0VKZzg2LUJFdklyUm80NE4tY1JtMEJ2U2FwVE9nODlKZlNkLVRzWU9qaTk0NFJzZEVNaTdWM0JET2ExX3Y5SW1UOWJPT0FacjZPMXM4SEF1enhNQnZIMWllYzVsemRaSmJjU2tqTFRLMTFMU0Z1THJBTldVWUpQV2k?oc=5",
+   "source": "De Telegraaf",
+   "ts": 1793343600000,
    "banks": [
-    "Van Lanschot Kempen"
+    "ABN AMRO"
    ],
-   "themes": []
+   "themes": [
+    "Tarieven"
+   ]
   },
   {
    "title": "ING legt de onderhandelingen stil",
    "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE03cWkwT3N3akVLbHpYSkszb2N0WEFiUXhHZ1Z3SDQwVmt3RVlBNUkxZXVEcl9mNXM2cXZ6MVF2MnB4bEMyOFdjdlA2bGctd1RqWXVkNWFxb3BNbTZTYjNhZ3U3QW5ObGhmdE5JdWo3S3d4em5QdUx4SDc5UWpnQQ?oc=5",
    "source": "De Unie",
-   "ts": 1793347264000,
+   "ts": 1793343600000,
    "banks": [
     "ING"
    ],
@@ -623,6 +627,16 @@
    "themes": [
     "Resultaten"
    ]
+  },
+  {
+   "title": "Van Lanschot Kempen | Instroom kapitaal houdt aan",
+   "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPMXFKYlhVaTU1VndFWGo2TnBJYjFiWXVJX1o0OHNOdk1SVGJfUUxJaTdzelVlRG8wcW1RTDE5cUtNMGgxN1ZqaFBzNFJaOG9WR09fbWpqdmwwUlRLTVZWd2hkQ2dqRm9nemN1OWtON0pkNHE2WW9BbDU5SllrSl9TQmdOclR0ckhFcWc?oc=5",
+   "source": "IEX.nl",
+   "ts": 1793343600000,
+   "banks": [
+    "Van Lanschot Kempen"
+   ],
+   "themes": []
   },
   {
    "title": "Meer winst voor Van Lanschot Kempen, maar groei van vermogen valt stil",
@@ -891,16 +905,6 @@
    "ts": 1792652400000,
    "banks": [
     "ABN AMRO"
-   ],
-   "themes": []
-  },
-  {
-   "title": "Even voorstellen…Lara Kalhouri: ledenraadslid Rabobank Apeldoorn en omgeving",
-   "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQZ0F3NHc1eG1hQVJFdWluRTMzemlIaFkyMXQ2TEJFaXdGb1cyUjFEOEUzUWg3SzFKWGM4eFkweHc5NGh2SXpFNGpySHhwTFZVNHpycnVGZDdHdUhLZ3V0U1UxMkdpQ2x2d0RWRGcwYThaOUlvbWdBSWxSSG9wNmJMOEJ2eDlRdnNmcEpkdXBrVEcyVUxxQnoxdm41NERYd1NjanNlV2dHSGhBZWdjNWpNNXJrMTZIclVERkFibWt2dWNLTWJpWTYw?oc=5",
-   "source": "Rabobank",
-   "ts": 1792652400000,
-   "banks": [
-    "Rabobank"
    ],
    "themes": []
   }
