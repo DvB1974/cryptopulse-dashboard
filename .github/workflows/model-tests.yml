@@ -1,0 +1,27 @@
+name: Bert-Bot tests
+
+# Runs the model tests whenever the model code changes. The daily data refresh is a separate
+# workflow and is not blocked by this one.
+on:
+  push:
+    paths:
+      - "model/**"
+      - ".github/workflows/model-tests.yml"
+  pull_request:
+    paths:
+      - "model/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Unit tests
+        run: python3 -m unittest discover -s model -v

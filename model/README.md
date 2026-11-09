@@ -19,6 +19,17 @@ Rule-based trend and cycle model for bitcoin. It runs daily in GitHub Actions (`
 - Bull probability: 5 + 40 (50W) + 20 (higher high) + 15 (higher low) + 15 (50W rising) + 10 (monthly close above 10-month SMA) + 10 (close above 200-day SMA) + 2.5 per macro point - 5 after a close below the daily-cycle low; rounded to 5, capped 5-95. Exactly 50 keeps the previous base case.
 - Backtest 2018-2026 (daily, no look-ahead): weekly Brier score for "weekly close above 50W SMA 13 weeks later" 0.162 (previous rules 0.180, always-62% 0.237); base-case flips 20 (previous 24). The bull probability is a regime measure, not a price forecast: as a forecast of a higher price 3-12 months later it is worse than a constant base rate.
 
+## Rules (since 9 Nov 2026)
+- Published bull probability is limited to 15-85% (`prob_clamp`); the unclamped score stays in `bull_raw`. Reason: in the 2018-2026 backtest a raw 90-95% was followed by a weekly close above the 50W SMA 13 weeks later in 84% of cases, and a raw 5-10% in 22%. Brier 0.163 -> 0.155; out of sample 0.130 -> 0.128 (fit 2018-21, test 2022-26) and 0.202 -> 0.191 (the reverse). Base case and regime are unaffected.
+- Point-in-time history: `data/btc-model-ledger.json` keeps the macro score per day as first published. FRED revises the NFCI history every week; without the ledger that rewrote past days (7 days in June 2026 changed on 5 Nov 2026). `integrity.macro_revised_days` counts the days where today's data would give another score.
+- Data integrity: missing days are filled with the previous close and reported in `errors`; a low below half the candle body is treated as a bad tick (2017-04-15, low 0.06); Coinbase with holes falls back to Bitstamp; a Kraken mismatch above 1.5% is reported in `errors`.
+- ETF flows: every flow day seen is kept in the ledger (the flow file holds 15 days); `flows.window_days` says how many days `sum_20d` really covers.
+- For reference: the single rule "weekly close above the 50W SMA now" scores Brier 0.168 on the same target, so the extra factors add little forecasting power. Their purpose is to follow the methodology, not to beat it.
+
+## Tests and replay
+- `python3 -m unittest discover -s model` (also runs in `.github/workflows/model-tests.yml` on every change to `model/`).
+- `python3 model/btc_model.py --offline` recomputes `data/btc-model.json` from the stored candles and FRED cache without network access.
+
 ## Compare
 `compare.py` scores external stance records against `history` (see the docstring).
 

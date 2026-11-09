@@ -32,6 +32,8 @@ OUT = ROOT / "data" / "btc-model.json"
 ETF_FILE = ROOT / "data" / "etf-flows.json"
 DAILY_OUT = ROOT / "data" / "btc-daily.json"
 FRED_CACHE = ROOT / "data" / "fred-cache.json"
+LEDGER = ROOT / "data" / "btc-model-ledger.json"
+RULES_VERSION = "2026-11-09"
 UA = "Mozilla/5.0 (compatible; btc-model/1.0; +https://github.com/DvB1974/cryptopulse-dashboard)"
 
 CONFIG = {
@@ -58,6 +60,11 @@ CONFIG = {
     "failed_dcl_penalty": 5,
     "history_days": 460,
     "deep_bear_share": 0.25,    # share of the bear probability assigned to a deep bear
+    # calibration (backtest 2018-2026, 9 nov 2026): when the raw score said 90-95% the weekly
+    # close was above the 50W SMA 13 weeks later in 84% of cases, and at 5-10% in 22%. The
+    # published probability is therefore limited to this range; the raw score stays in bull_raw.
+    "prob_clamp": (15, 85),
+    "bad_tick_ratio": 0.5,      # a low below half the candle body is treated as a bad tick
 }
 
 # days between a FRED observation date and the moment it is published (approximate)
@@ -258,6 +265,63 @@ def pct(a, b):
     return round((a / b - 1) * 100, 2)
 
 
+def missing_days(days):
+    """Calendar days without a candle between the first and last row."""
+    have = {r[0] for r in days}
+    if not have:
+        return []
+    d, end, out = min(have), max(have), []
+    while d <= end:
+        if d not in have:
+            out.append(d)
+        d += timedelta(days=1)
+    return out
+
+
+def clean_days(days):
+    """Integrity pass on completed daily candles (date, open, high, low, close, volume).
+    - a low far below the candle body (bad tick, e.g. 0.06 on 2017-04-15) is cut back to the body
+    - a missing day is filled with the previous close (flat candle, zero volume), so the weekly
+      series keeps every Sunday close; every repair is reported
+    Returns (rows, report)."""
+    ratio = CONFIG["bad_tick_ratio"]
+    rows, bad, filled = [], [], []
+    for d, o, h, l, c, v in sorted(days):
+        if rows:
+            nxt = rows[-1][0] + timedelta(days=1)
+            while nxt < d:
+                pc = rows[-1][4]
+                rows.append((nxt, pc, pc, pc, pc, 0.0))
+                filled.append(nxt.isoformat())
+                nxt += timedelta(days=1)
+        body = min(o, c)
+        if l < body * ratio:
+            bad.append({"date": d.isoformat(), "low": l, "used": body})
+            l = body
+        rows.append((d, o, h, l, c, v))
+    return rows, {"bad_ticks": bad, "filled_days": filled}
+
+
+def farside_date(s):
+    """'06 Nov 2026' -> '2026-11-06' (locale independent)."""
+    mon = {"Jan": 1, "Feb": 2, "Mar": 3, "Apr": 4, "May": 5, "Jun": 6, "Jul": 7, "Aug": 8, "Sep": 9, "Oct": 10, "Nov": 11, "Dec": 12}
+    dd, mm, yy = s.split()
+    return date(int(yy), mon[mm], int(dd)).isoformat()
+
+
+def load_ledger():
+    """Append-only memory of what the model knew at the time: the macro score per day as first
+    published (FRED revises the NFCI history every week, which would otherwise rewrite past days)
+    and every ETF flow day seen (the flow file itself only keeps the last 15 days)."""
+    try:
+        led = json.loads(LEDGER.read_text())
+    except Exception:  # noqa: BLE001
+        led = {}
+    led.setdefault("macro_score", {})
+    led.setdefault("etf_btc", {})
+    return led
+
+
 # ---------------------------------------------------------------- model core
 
 class Series:
@@ -370,9 +434,11 @@ def cycle_chain_swing(lows, highs, dates, start_i, end_i, band, pivot_days=5, ra
         cur = nxt
 
 
-def evaluate(S, t, macro, flows_ctx=None, full=False, prev_base=None):
+def evaluate(S, t, macro, flows_ctx=None, full=False, prev_base=None, macro_score_frozen=None):
     """Model state using daily data up to and including index t (no look-ahead).
-    prev_base: base case of the previous day, used for the hysteresis at exactly 50%."""
+    prev_base: base case of the previous day, used for the hysteresis at exactly 50%.
+    macro_score_frozen: the macro score as published for this day at the time (see load_ledger);
+    when given it replaces the score recomputed from today's revised FRED data."""
     W = CONFIG["weights"]
     WE = CONFIG["weights_extra"]
     D, H, L, C = S.D[: t + 1], S.H[: t + 1], S.L[: t + 1], S.C[: t + 1]
@@ -510,6 +576,7 @@ def evaluate(S, t, macro, flows_ctx=None, full=False, prev_base=None):
 
     # macro score as of today
     m = macro_state(macro, today)
+    m_score = macro_score_frozen if macro_score_frozen is not None else (m["score"] if m else None)
 
     # probabilities
     bull_why = [(W["base"], "basis")]
@@ -521,12 +588,14 @@ def evaluate(S, t, macro, flows_ctx=None, full=False, prev_base=None):
         bull_why.append((WE["above10m"], "maandslot boven 10-maands gemiddelde"))
     if above200d:
         bull_why.append((WE["above200d"], "koers boven 200-daags gemiddelde"))
-    if m and m["score"]:
-        bull_why.append((CONFIG["macro_weight"] * m["score"], "macro %+d" % m["score"]))
+    if m_score:
+        bull_why.append((CONFIG["macro_weight"] * m_score, "macro %+d" % m_score))
     if daily_info and daily_info["failed_close"]:
         bull_why.append((-CONFIG["failed_dcl_penalty"], "dagslot onder rode lijn"))
-    bull = sum(p for p, _ in bull_why)
-    bull = max(5, min(95, 5 * round(bull / 5)))
+    bull_raw = sum(p for p, _ in bull_why)
+    bull_raw = max(5, min(95, 5 * round(bull_raw / 5)))
+    clamp_lo, clamp_hi = CONFIG["prob_clamp"]
+    bull = max(clamp_lo, min(clamp_hi, bull_raw))
     bear = 100 - bull
     deep = 5 * round(bear * CONFIG["deep_bear_share"] / 5)
     mild = bear - deep
@@ -555,8 +624,8 @@ def evaluate(S, t, macro, flows_ctx=None, full=False, prev_base=None):
             bias_pts += 1; bias_why.append("+1 weekslot boven 10-weeks gemiddelde")
         else:
             bias_pts -= 1; bias_why.append("-1 weekslot onder 10-weeks gemiddelde")
-    if m and abs(m["score"]) >= 2:
-        s = 1 if m["score"] > 0 else -1
+    if m_score is not None and abs(m_score) >= 2:
+        s = 1 if m_score > 0 else -1
         bias_pts += s; bias_why.append("%+d macro %s" % (s, "rugwind" if s > 0 else "tegenwind"))
     bias = "bullish" if bias_pts >= 2 else ("bearish" if bias_pts <= -2 else "neutraal")
 
@@ -570,13 +639,13 @@ def evaluate(S, t, macro, flows_ctx=None, full=False, prev_base=None):
         "checks": {"b1": b1, "b2": b2, "b3": b3, "b4": b4}, "n_checks": int(b1) + int(b2) + int(b3) + int(b4),
         "extra": {"above10m": above10m, "above200d": above200d, "b1_raw": b1_raw},
         "regime": regime, "base_case": base_case,
-        "scenarios": {"bull": bull, "mild_bear": mild, "deep_bear": deep},
+        "scenarios": {"bull": bull, "mild_bear": mild, "deep_bear": deep}, "bull_raw": bull_raw,
         "bias": bias, "bias_points": bias_pts,
         "sma50w": r0(sma50w), "sma10w": r0(sma10w),
         "dcl_date": daily_info["dcl_date"] if daily_info else None,
         "dcl_low": daily_info["dcl_low"] if daily_info else None,
         "icl_date": weekly_info["icl_date"] if weekly_info else None,
-        "macro_score": m["score"] if m else None,
+        "macro_score": m_score,
     }
     if not full:
         return state
@@ -805,42 +874,67 @@ def macro_state(macro, d):
 
 # ---------------------------------------------------------------- main
 
-def main():
+def main(argv=None):
+    """Daily run. With --offline the stored candles (data/btc-daily.json) and the FRED cache are
+    replayed without any network access: used for tests and after a rule change."""
+    argv = sys.argv[1:] if argv is None else argv
+    offline = "--offline" in argv
     errors, sources = [], {}
     now = datetime.now(timezone.utc)
     today = now.date()
     start = CONFIG["history_start"]
-
-    days = None
-    try:
-        days = fetch_coinbase_daily("BTC-USD", start, today)
-        sources["btc"] = "Coinbase Exchange daily candles (UTC)"
-    except Exception as e:  # noqa: BLE001
-        errors.append("Coinbase BTC: %s" % e)
-    if not days or len(days) < 1500:
+    prev_out = {}
+    if offline:
+        prev_out = json.loads(OUT.read_text())
+        dj = json.loads(DAILY_OUT.read_text())
+        days = [(date.fromisoformat(r[0]), r[1], r[2], r[3], r[4], r[5]) for r in dj["rows"]]
+        today = days[-1][0] + timedelta(days=1)
+        sources["btc"] = dj.get("source")
+    else:
+        # price history: Coinbase, with Bitstamp as fallback when Coinbase fails or has holes
+        cands = []
         try:
-            days = fetch_bitstamp_daily("btcusd", start)
-            sources["btc"] = "Bitstamp daily OHLC (UTC), fallback"
+            cb = fetch_coinbase_daily("BTC-USD", start, today)
+            cands.append(("Coinbase Exchange daily candles (UTC)", cb))
         except Exception as e:  # noqa: BLE001
-            errors.append("Bitstamp BTC: %s" % e)
-    if not days or len(days) < 1500:
-        print("FATAL: no usable BTC price history; keeping previous file", file=sys.stderr)
-        print("\n".join(errors), file=sys.stderr)
-        return 1
+            cb = None
+            errors.append("Coinbase BTC: %s" % e)
+        if not cb or len(cb) < 1500 or missing_days(cb):
+            try:
+                cands.append(("Bitstamp daily OHLC (UTC), fallback", fetch_bitstamp_daily("btcusd", start)))
+            except Exception as e:  # noqa: BLE001
+                errors.append("Bitstamp BTC: %s" % e)
+        cands = [(n, d) for n, d in cands if d and len(d) >= 1500]
+        if not cands:
+            print("FATAL: no usable BTC price history; keeping previous file", file=sys.stderr)
+            print("\n".join(errors), file=sys.stderr)
+            return 1
+        sources["btc"], days = min(cands, key=lambda x: len(missing_days(x[1])))
 
     live = days[-1] if days[-1][0] == today else None
-    completed = [r for r in days if r[0] < today]
+    completed, integrity = clean_days([r for r in days if r[0] < today])
+    if integrity["filled_days"]:
+        errors.append("Prijsdata: %d ontbrekende dag(en) opgevuld met het vorige slot (%s)" % (
+            len(integrity["filled_days"]), ", ".join(integrity["filled_days"][-5:])))
+    recent_bad = [b["date"] for b in integrity["bad_ticks"] if (today - date.fromisoformat(b["date"])).days <= 400]
+    if recent_bad:
+        errors.append("Prijsdata: verdachte uitschieter in de low gecorrigeerd (%s)" % ", ".join(recent_bad))
+    if completed[-1][0] != today - timedelta(days=1):
+        errors.append("Prijsdata loopt achter: laatste volledige dagcandle is van %s" % completed[-1][0].isoformat())
     S = Series(completed)
     t = len(completed) - 1
 
-    cross = None
-    try:
-        kr = fetch_kraken_closes()
-        diffs = [abs(S.C[S.idx[d]] / kr[d] - 1) * 100 for d in S.D[-5:] if d in kr]
-        cross = {"source": "Kraken", "max_diff_pct": round(max(diffs), 3) if diffs else None,
-                 "ok": bool(diffs) and max(diffs) < 1.5}
-    except Exception as e:  # noqa: BLE001
-        errors.append("Kraken cross-check: %s" % e)
+    cross = prev_out.get("price", {}).get("cross_check") if offline else None
+    if not offline:
+        try:
+            kr = fetch_kraken_closes()
+            diffs = [abs(S.C[S.idx[d]] / kr[d] - 1) * 100 for d in S.D[-5:] if d in kr]
+            cross = {"source": "Kraken", "max_diff_pct": round(max(diffs), 3) if diffs else None,
+                     "ok": bool(diffs) and max(diffs) < 1.5}
+            if diffs and not cross["ok"]:
+                errors.append("Kraken-controle: dagslot wijkt tot %.1f%% af van %s" % (max(diffs), sources["btc"]))
+        except Exception as e:  # noqa: BLE001
+            errors.append("Kraken cross-check: %s" % e)
 
     # FRED with a local cache: if a download fails the last good series is used (and reported),
     # so a FRED outage does not silently turn the macro score into 0
@@ -851,6 +945,8 @@ def main():
     macro, cache_used = {}, []
     for sid in MACRO_SERIES:
         try:
+            if offline:
+                raise RuntimeError("offline")
             macro[sid] = fetch_fred(sid, date(2023, 1, 1))
             fred_cache[sid] = {"fetched_at": now.strftime("%Y-%m-%dT%H:%M:%SZ"),
                                "rows": [[d.isoformat(), v] for d, v in macro[sid]]}
@@ -859,27 +955,41 @@ def main():
             cached = fred_cache.get(sid)
             if cached and cached.get("rows"):
                 macro[sid] = [(date.fromisoformat(d), v) for d, v in cached["rows"]]
-                cache_used.append(sid)
-                errors.append("FRED %s: %s (cache van %s gebruikt)" % (sid, e, cached.get("fetched_at", "?")[:10]))
+                if not offline:
+                    cache_used.append(sid)
+                    errors.append("FRED %s: %s (cache van %s gebruikt)" % (sid, e, cached.get("fetched_at", "?")[:10]))
             else:
                 errors.append("FRED %s: %s (geen cache)" % (sid, e))
     sources["macro"] = "FRED (St. Louis Fed) CSV" + (", deels uit cache: %s" % ", ".join(cache_used) if cache_used else "")
-    try:
-        FRED_CACHE.parent.mkdir(parents=True, exist_ok=True)
-        FRED_CACHE.write_text(json.dumps(fred_cache, separators=(",", ":")))
-    except Exception as e:  # noqa: BLE001
-        errors.append("FRED cache: %s" % e)
-
-    # history without look-ahead; the base case carries over day to day (hysteresis at 50%)
-    hist, prev_base = [], None
-    for i in range(max(400, t - CONFIG["history_days"] + 1), t + 1):
+    if not offline:
         try:
-            row = evaluate(S, i, macro, prev_base=prev_base)
+            FRED_CACHE.parent.mkdir(parents=True, exist_ok=True)
+            FRED_CACHE.write_text(json.dumps(fred_cache, separators=(",", ":")))
+        except Exception as e:  # noqa: BLE001
+            errors.append("FRED cache: %s" % e)
+
+    # history without look-ahead; the base case carries over day to day (hysteresis at 50%).
+    # Past days keep the macro score that was published for them at the time (ledger): FRED
+    # revises old NFCI values every week and that must not rewrite what the model said then.
+    ledger = load_ledger()
+    frozen = ledger["macro_score"]
+    hist, prev_base, revised = [], None, []
+    for i in range(max(400, t - CONFIG["history_days"] + 1), t + 1):
+        dkey = S.D[i].isoformat()
+        fz = frozen.get(dkey) if i < t else None
+        try:
+            row = evaluate(S, i, macro, prev_base=prev_base, macro_score_frozen=fz)
             hist.append(row)
             prev_base = row["base_case"]
         except Exception as e:  # noqa: BLE001
             errors.append("history %s: %s" % (S.D[i], e))
             break
+        if fz is not None:
+            fresh = macro_state(macro, S.D[i])
+            if fresh and fresh["score"] != fz:
+                revised.append(dkey)
+        if row["macro_score"] is not None:
+            frozen[dkey] = row["macro_score"]   # the latest day stays live until the next day
     latest = evaluate(S, t, macro, full=True, prev_base=hist[-2]["base_case"] if len(hist) > 1 else None)
     m_now = latest.get("macro")
     if m_now and not m_now.get("complete"):
@@ -887,48 +997,56 @@ def main():
             ", ".join(m_now.get("missing") or []) or "-", ", ".join(m_now.get("stale") or []) or "-"))
 
     # ETH context
-    eth = None
-    try:
-        ed = [r for r in fetch_coinbase_daily("ETH-USD", today - timedelta(days=420), today) if r[0] < today]
-        ec = [r[4] for r in ed]
-        e100 = ema_series(ec, 100)[-1]
-        e200 = ema_series(ec, 200)[-1]
-        ethbtc = [ec[-1] / S.C[S.idx[ed[-1][0]]]] if ed[-1][0] in S.idx else None
-        eb30 = None
-        if ed[-31][0] in S.idx:
-            eb30 = pct(ec[-1] / S.C[S.idx[ed[-1][0]]], ec[-31] / S.C[S.idx[ed[-31][0]]])
-        eth = {"date": ed[-1][0].isoformat(), "close": r0(ec[-1]), "ema100d": r0(e100), "ema200d": r0(e200),
-               "above_ema100": ec[-1] > e100, "above_ema200": ec[-1] > e200,
-               "eth_btc": round(ethbtc[0], 5) if ethbtc else None, "eth_btc_30d_pct": eb30,
-               "source": "Coinbase Exchange"}
-    except Exception as e:  # noqa: BLE001
-        errors.append("ETH: %s" % e)
+    eth = prev_out.get("eth") if offline else None
+    if not offline:
+        try:
+            ed = [r for r in fetch_coinbase_daily("ETH-USD", today - timedelta(days=420), today) if r[0] < today]
+            ec = [r[4] for r in ed]
+            e100 = ema_series(ec, 100)[-1]
+            e200 = ema_series(ec, 200)[-1]
+            ethbtc = [ec[-1] / S.C[S.idx[ed[-1][0]]]] if ed[-1][0] in S.idx else None
+            eb30 = None
+            if ed[-31][0] in S.idx:
+                eb30 = pct(ec[-1] / S.C[S.idx[ed[-1][0]]], ec[-31] / S.C[S.idx[ed[-31][0]]])
+            eth = {"date": ed[-1][0].isoformat(), "close": r0(ec[-1]), "ema100d": r0(e100), "ema200d": r0(e200),
+                   "above_ema100": ec[-1] > e100, "above_ema200": ec[-1] > e200,
+                   "eth_btc": round(ethbtc[0], 5) if ethbtc else None, "eth_btc_30d_pct": eb30,
+                   "source": "Coinbase Exchange"}
+        except Exception as e:  # noqa: BLE001
+            errors.append("ETH: %s" % e)
 
+    # ETF flows: the flow file keeps 15 days, so every day seen is added to the ledger and the
+    # sums are taken over that longer memory; window_days says how many days the long sum covers
     flows = None
     try:
         ef = json.loads(ETF_FILE.read_text())
-        btc_rows = ef.get("btc", [])
-        vals = [r["total"] for r in btc_rows if r.get("total") is not None]
+        btc_rows = [r for r in ef.get("btc", []) if r.get("total") is not None]
+        for r in btc_rows:
+            ledger["etf_btc"][farside_date(r["date"])] = r["total"]
+        vals = [ledger["etf_btc"][k] for k in sorted(ledger["etf_btc"])]
         flows = {"source": ef.get("source"), "updated": ef.get("updated"),
                  "last_date": btc_rows[-1]["date"] if btc_rows else None,
                  "last": vals[-1] if vals else None,
                  "sum_5d": round(sum(vals[-5:]), 1) if vals else None,
                  "sum_20d": round(sum(vals[-20:]), 1) if vals else None,
+                 "window_days": min(20, len(vals)),
                  "days_available": len(vals)}
     except Exception as e:  # noqa: BLE001
         errors.append("ETF flows: %s" % e)
 
-    sentiment = None
-    try:
-        fg = fetch_fear_greed()
-        sentiment = {"fear_greed": fg[-1][1], "label": fg[-1][2], "date": fg[-1][0].isoformat(),
-                     "avg_7d": round(sum(v for _, v, _ in fg[-7:]) / min(7, len(fg)), 1),
-                     "source": "alternative.me Fear & Greed"}
-    except Exception as e:  # noqa: BLE001
-        errors.append("Fear & Greed: %s" % e)
+    sentiment = prev_out.get("sentiment") if offline else None
+    if not offline:
+        try:
+            fg = fetch_fear_greed()
+            sentiment = {"fear_greed": fg[-1][1], "label": fg[-1][2], "date": fg[-1][0].isoformat(),
+                         "avg_7d": round(sum(v for _, v, _ in fg[-7:]) / min(7, len(fg)), 1),
+                         "source": "alternative.me Fear & Greed"}
+        except Exception as e:  # noqa: BLE001
+            errors.append("Fear & Greed: %s" % e)
 
     out = {
         "schema": 1,
+        "rules": RULES_VERSION,
         "generated_at": now.strftime("%Y-%m-%dT%H:%M:%SZ"),
         "as_of": S.D[t].isoformat(),
         "price": {"last_close": r0(S.C[t]), "last_close_date": S.D[t].isoformat(),
@@ -939,6 +1057,13 @@ def main():
                   "from_ath_pct": pct(S.C[t], max(S.H)), "cross_check": cross},
         "model": latest,
         "eth": eth, "flows": flows, "sentiment": sentiment,
+        "integrity": {
+            "price_days": len(completed), "filled_days": integrity["filled_days"],
+            "bad_ticks": integrity["bad_ticks"],
+            # days whose macro score would be different with today's revised FRED data
+            "macro_revised_days": len(revised), "macro_revised_last": revised[-1] if revised else None,
+            "note": "Historie gebruikt per dag de macroscore zoals die toen is gepubliceerd.",
+        },
         "history": hist,
         "config": {k: (list(v) if isinstance(v, tuple) else v) for k, v in CONFIG.items() if k != "history_start"},
         "sources": sources, "errors": errors,
@@ -947,12 +1072,18 @@ def main():
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(out, separators=(",", ":"), default=str))
-    # raw completed daily candles, for calibration and audits
-    DAILY_OUT.write_text(json.dumps({
-        "source": sources.get("btc"), "generated_at": out["generated_at"],
-        "fields": ["date", "open", "high", "low", "close", "volume"],
-        "rows": [[r[0].isoformat(), round(r[1], 2), round(r[2], 2), round(r[3], 2), round(r[4], 2), round(r[5], 2)] for r in completed],
-    }, separators=(",", ":")))
+    ledger["rules"] = RULES_VERSION
+    ledger["macro_score"] = dict(sorted(frozen.items()))
+    ledger["etf_btc"] = dict(sorted(ledger["etf_btc"].items()))
+    LEDGER.write_text(json.dumps(ledger, separators=(",", ":")))
+    if not offline:
+        # raw completed daily candles as downloaded, for calibration and audits
+        DAILY_OUT.write_text(json.dumps({
+            "source": sources.get("btc"), "generated_at": out["generated_at"],
+            "fields": ["date", "open", "high", "low", "close", "volume"],
+            "rows": [[r[0].isoformat(), round(r[1], 2), round(r[2], 2), round(r[3], 2), round(r[4], 2), round(r[5], 2)]
+                     for r in days if r[0] < today],
+        }, separators=(",", ":")))
     print("ok: as_of %s close %s regime %s bull %s%% errors %d" % (out["as_of"], fmt(S.C[t]), latest["regime"], latest["scenarios"]["bull"], len(errors)))
     return 0
 
