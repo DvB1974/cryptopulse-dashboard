@@ -1,6 +1,6 @@
 {
  "source": "Google Nieuws NL, per bank gezocht; alleen berichten met de bank in de kop",
- "updated": "2026-11-14T18:07:55Z",
+ "updated": "2026-11-14T22:28:12Z",
  "days": 30,
  "banks": [
   "ABN AMRO",
@@ -66,16 +66,6 @@
    "themes": []
   },
   {
-   "title": "Rabobank ziet kansen in Chinese aandelen na harde koersval",
-   "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5LX0dZSzdzV2NaZjNEY1JZUG91ZkpGdGpXaTQyalcwYkdOU25TanFuVWctckJUdHdnbjVKRGtsLTh0NDFWbExBN1dLN3g2emQtb3hwbFd5a2dwX2Q0V05aMF9ISmE1NkhReF9CbWZwb1F3ZUNwdHhnOGV3alhjTzQ?oc=5",
-   "source": "Newsbit",
-   "ts": 1794583680000,
-   "banks": [
-    "Rabobank"
-   ],
-   "themes": []
-  },
-  {
    "title": "Rabobank: herstel marges akkerbouwers laat op zich wachten",
    "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNbmlBNXV2SzRSanFjdVJyMnpmdVFRbV9qVk5neWR2NDVHVWxqcm9fVHhXSmU1UEs4bFFaSTBjUjc5R2NPM1psSGgtU0JRaHNneFJwc1hNSE8wLW1jei1udEpRU1VuaU1hano5Qmxzak13aWN0SnozQ2o0a3RJN29iUkZFTWRnaUNUZFREZWtsUm84cHh1andIZ0FDNjAxOUZpZk5mWQ?oc=5",
    "source": "Nieuwe Oogst",
@@ -104,16 +94,6 @@
    "ts": 1794548557000,
    "banks": [
     "Van Lanschot Kempen"
-   ],
-   "themes": []
-  },
-  {
-   "title": "ING: transport moet zich klaarmaken voor blijvende veranderingen",
-   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNV2gyck4weXIxM1JlOXBSMXhMVjBYdzlZOXVxYm5BMXRWRmUxazk3TmpHWHRBbUR2akFkeEhOd2M4bmpnV2RvMWt1cXpLZHNQRjIxQ1gtU0lfUUg4WDlOcE5iWTdCVzBvM0VQR1hIcTZNV3NESnVWWUo1R3JZTGQ1UTFLSFU4bVpveS1Ia1ZWZHJlb1VZTW9aTkFxSUFXZmxZVVJTSkdUWmlNY1U5MjB6SDBEY0ZtcHA2ZXRF?oc=5",
-   "source": "Headliner.nl",
-   "ts": 1794548220000,
-   "banks": [
-    "ING"
    ],
    "themes": []
   },
@@ -249,6 +229,22 @@
    "more": 1,
    "also": [
     "de Volkskrant"
+   ]
+  },
+  {
+   "title": "Sterk derde kwartaal voor ABN AMRO",
+   "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5PdFpNVG94X19TX01felFuU3pzeXF1M3ZzYWVMMC1IakJqLTYxQTFoYTBLdmRaNHpnRDNUSEhKa1V2MTNiektEMjdMd1JKNDcwaEtQNUNXSEJTM05qbWdKczZxTFE4U0VsTk0wMjZzUVJUQQ?oc=5",
+   "source": "CashCow.nl",
+   "ts": 1794389543000,
+   "banks": [
+    "ABN AMRO"
+   ],
+   "themes": [
+    "Resultaten"
+   ],
+   "more": 1,
+   "also": [
+    "CashCow.nl"
    ]
   },
   {
@@ -495,26 +491,6 @@
    "themes": []
   },
   {
-   "title": "Rabobank: Verslag cao-onderhandelingen",
-   "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxONWZOakg4N0tYdGl1OHFOaTRzQ2E4OU96Sm83X1RRVjFyZ3JBcjhobVBoSG9pam56Q3AxRUItR1hWNFZnazJPLXNmZ2dGRmNpSExGLVNTYnpyQjRQbmlTU2NZZmlWeUg5VmJpaHVkQnl5ZDYtNElwZ2RJckxJVUJYcVBFUmZBZw?oc=5",
-   "source": "De Unie",
-   "ts": 1793990262000,
-   "banks": [
-    "Rabobank"
-   ],
-   "themes": []
-  },
-  {
-   "title": "Rabobank: loonbod omhoog, investeren in mensen noodzakelijk",
-   "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNYVQ2OC1XNXRVY25wRlllWG1aLXFsamtVc2hJLTlTOWhUR1NtcHQ1X00zN1QxN1BhN05HRTZobTN6VS1KUFB0azhKZ3NxVzR1c2psc1pRRXFtUzdXOHRuVGg5NkY0ZjhyN3NmOGY4SXRvY3I4b1E3eXZkZHdTWklpT2lQWXFqSmZObVhucmtjUGVUcjZjd0lsOW5hMHRCd2txNmtBSTZ5VUtQb3NzcVdNZVdoZHhNbDJKeWtoVFdTZTMycDFNLUtKOE1YSQ?oc=5",
-   "source": "CNV Vakmensen",
-   "ts": 1793978049000,
-   "banks": [
-    "Rabobank"
-   ],
-   "themes": []
-  },
-  {
    "title": "Mobiele apps van Rabobank en ING in top tien beste bankapps ter wereld",
    "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNcVBEQW55cnNnYW5wU0NkZUtCUVFiampES0h4dExwU1UtcF85c2VDTXhPRkNYTkxIckYyMWIzVDc4MkhaQWZXRVlWNVR6aFZXZFhrQ3RZN002a1BwaG00c2JXZEFIcFpTWVhoUm1JRkFfV1M5Y0NlQUREcmt5TXpMV0pmRHVraFBXTl9GRzl2d1ZwYkJYZlV1dEFHQk9jZ3ZjNEg1Si1jc19XM3RtdE5j0gG0AUFVX3lxTE1PREZmNm81RDY0UUpnU0ctVzJhT0FwbmVyMHhwcDZqYWJ0cGNMMHZNUTdIeTBmS1pYc3FpWGJfUGJfenFHTkRDWnd6Qndubi00OEpuYXF2N19SX3pRdld4SEs0V3lpWUhZUFZPekJyUDhIYzBqMnlsWEpQWFhjSXpRd1VxX016YnRFMGFORFFCV2lJd01TZzM2eUx1d2JjNjJBNC1sTWVGWWJxMmxNOFNHcVZYVA?oc=5",
    "source": "Consultancy.nl",
@@ -524,6 +500,40 @@
     "Rabobank"
    ],
    "themes": []
+  },
+  {
+   "title": "ING verkoopt half miljard euro aan leningen voor datacenters",
+   "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPZkZ6bE04N2k1RnJmNTRXR0dYRFphdm1sbXFGS3hoeThQZFBycHdabzZib0hxWGwyNkxTbS1NQjRGU0FkZF9qSk0tWFFJTjQ5Zi1lbjJhWXdDdDhfT3VoVFRITXhYVWNDRTZqRF9DQ2U3c0ZuQ3VOWUdsaWRVaFRHOWhjcWE2Z1djQ0tfTDV1RkpvT09SY2NGazFGanRsZ0o4QlZQS3ljU19GM2J2OGg2TEctTURxc0lyMUE?oc=5",
+   "source": "De Telegraaf",
+   "ts": 1793952000000,
+   "banks": [
+    "ING"
+   ],
+   "themes": []
+  },
+  {
+   "title": "Rabobank: loonbod omhoog, investeren in mensen noodzakelijk",
+   "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNYVQ2OC1XNXRVY25wRlllWG1aLXFsamtVc2hJLTlTOWhUR1NtcHQ1X00zN1QxN1BhN05HRTZobTN6VS1KUFB0azhKZ3NxVzR1c2psc1pRRXFtUzdXOHRuVGg5NkY0ZjhyN3NmOGY4SXRvY3I4b1E3eXZkZHdTWklpT2lQWXFqSmZObVhucmtjUGVUcjZjd0lsOW5hMHRCd2txNmtBSTZ5VUtQb3NzcVdNZVdoZHhNbDJKeWtoVFdTZTMycDFNLUtKOE1YSQ?oc=5",
+   "source": "CNV Vakmensen",
+   "ts": 1793952000000,
+   "banks": [
+    "Rabobank"
+   ],
+   "themes": []
+  },
+  {
+   "title": "Rabobank: Verslag cao-onderhandelingen dag 5, loonbod 1,6%.",
+   "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNaE5ScUk1TVIwb2kxVDE4blZ2MzhkaHlpUU5jNVVIdUZwQmdQLVdzdGp2cUU3WUFXRXhUbGxCQks3eEtvNm5tMVZVdE9jRllLUWNaeE9GYVA0ZzZNTVRBa0hNUFRrYTlzdUtxZUE5Z25iS2JNamJ4c1BYVnVacmNza2k2dkJDMmZwTGxKaS1iVWVpaWIxY2c?oc=5",
+   "source": "De Unie",
+   "ts": 1793952000000,
+   "banks": [
+    "Rabobank"
+   ],
+   "themes": [],
+   "more": 1,
+   "also": [
+    "De Unie"
+   ]
   },
   {
    "title": "ASN Bank geeft € 500 miljoen aan Additional Tier 1-kapitaalinstrumenten uit",
@@ -694,8 +704,9 @@
     "ING"
    ],
    "themes": [],
-   "more": 1,
+   "more": 2,
    "also": [
+    "nu.CW",
     "Banken.nl"
    ]
   },
