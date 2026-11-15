@@ -1,6 +1,6 @@
 {
  "source": "Google Nieuws NL, per bank gezocht; alleen berichten met de bank in de kop",
- "updated": "2026-11-15T11:58:30Z",
+ "updated": "2026-11-15T18:53:46Z",
  "days": 30,
  "banks": [
   "ABN AMRO",
@@ -16,22 +16,32 @@
  ],
  "items": [
   {
+   "title": "ASN Bank Alphen aan den Rijn sluit zich aan als partner van Alphen Verlicht",
+   "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPY0Y3WjdwRHR0RkhYNHJiMDF5bjI1N1Z4bjhmc3ZsenpSVjBjX1ZWdDlNa3E2eU9sQnA0Sm45SUREcVlxRWtxanJtcHFBeldzQUJBTE5HRjc5d1ptc1lZZENmMFVBay1MWDRCSXhjc0xhUW13ZzB6c185VEk1Uzh5clRjRTBKdGhZNlZKd2l0N3otdWZlckF6ZHJlTU42ZTI0anhoX3VSQ1VhWjVGZGhR0gGuAUFVX3lxTE9xSklTU0t1Q3NkVTBfTDJMYlB2ek1tR0N1LUcwSlFUSUJOSTJPd2JyX3oyN2ptN0I4MnFhalJyZ3M2M0tOQWJuZUY0dE5DZmQzdFlJRVVVWXBKM3BLRHlGN1pTWHl6V0NvZkFzU0N6QTZLc3U5V0c2bFpFRGtvTy1IWmFHb18zdkVwSy0zNXRuZGZ2RFMtUGRnSjU1MUJQZWNVWDM4UFVsVElmbzYwUQ?oc=5",
+   "source": "Alphens.nl",
+   "ts": 1794743340000,
+   "banks": [
+    "de Volksbank"
+   ],
+   "themes": []
+  },
+  {
    "title": "Weekend: Make or Break voor AI en gratis pinnen bij de Rabobank",
    "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPNjcxSS1xempYVFBaRmhwVVRqbUtiSTBtcnVxUGFKdFN1VElfWml5VUc4WWVCSlR3SW5iSDM0MkVtZFhVU19OYVU1OVNuSWpkMHRUX0QwWnF2MkdZaXF5UFN4dVpST2tubnk1bjZBdF9JdjZSdUhYM2hoNTI1OVREQXVmbXFFTk8wdVAySmVpa0hQbDNTX0V4Tmk5N1BQTVMyVnRVVw?oc=5",
    "source": "De AandeelHouder",
-   "ts": 1794738227000,
+   "ts": 1794742716000,
    "banks": [
     "Rabobank"
    ],
    "themes": []
   },
   {
-   "title": "ASN Impact Investors en ABN AMRO winnaars duurzaamheidsprijzen bij Cashcow Awards 2026",
-   "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNZEFwRGFVd0xfc1RwS3FvZTNPamJGRVlNbm12U2RNWk1SNkFmMGtXOGJGU1RyS0hxekdPWEtsSGJQczY0WmZyXzhPNERxcmxILUQzb3RZcEREcXRmOTdUMUxQVEVjSldaelJaSFBWZW45MXFwSTI4bFdJaHRudWdYMkZ0TTd5MnpDM2RkV1pvQVFvSFprQUw0NkdKNjdqc01OWGJPbG1WOHJyTXY3cWF6bW5uQzBoTm4xZ0NJbmtZUV9fV3RfLTZjTzVmNA?oc=5",
-   "source": "Duurzaam Financieel",
-   "ts": 1794658044000,
+   "title": "Hoe boeren in Borger de basis legden voor de Rabobank: ‘Samen sparen, samen lenen’",
+   "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPR0VvNDNoZ2xaQ0M1OFVQcEJfUFF5SWl6TzhMWjRmZEJtbjhkNTY5M0hRc29tNUtmdXkyY2VNenZYNnlKMmhfay1BVXZnX0ZrcHlCbEtsR1d5bDB5LUcyeXZTZV82RU5qT0FJVGNYbUZ1S2dxSUlZOFdsUGRvNVRzMkxPS2NGWjlVRTFvdHJSeWhuWTZ0Z3ZRekwybmtjRk0?oc=5",
+   "source": "RTVeen",
+   "ts": 1794732965000,
    "banks": [
-    "ABN AMRO"
+    "Rabobank"
    ],
    "themes": []
   },
@@ -62,26 +72,6 @@
    "ts": 1794598200000,
    "banks": [
     "de Volksbank"
-   ],
-   "themes": []
-  },
-  {
-   "title": "Rabobank: lichte krimp rundvleesproductie in 2027",
-   "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9wUy1iRkxrTjhmRDRWakJ1OFkzYUd0YmI1a0w2eW1VSDFnQUFsR1g4LU9KTU5hRy1JUUVYZWJRSENvZVhxOVpwSUFYTXZUV2FYWWdCZnNEX0ZyTFdyMnVNZnpYcGNWVGNsdU1KVThJZC1lbl9Z?oc=5",
-   "source": "Boerderij",
-   "ts": 1794584353000,
-   "banks": [
-    "Rabobank"
-   ],
-   "themes": []
-  },
-  {
-   "title": "Rabobank ziet kansen in Chinese aandelen na harde koersval",
-   "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5LX0dZSzdzV2NaZjNEY1JZUG91ZkpGdGpXaTQyalcwYkdOU25TanFuVWctckJUdHdnbjVKRGtsLTh0NDFWbExBN1dLN3g2emQtb3hwbFd5a2dwX2Q0V05aMF9ISmE1NkhReF9CbWZwb1F3ZUNwdHhnOGV3alhjTzQ?oc=5",
-   "source": "Newsbit",
-   "ts": 1794583680000,
-   "banks": [
-    "Rabobank"
    ],
    "themes": []
   },
@@ -132,16 +122,6 @@
    "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOQWwyREdacU9zemUxMVJySWtsMUFqSXBuYWdfUTYtNi1XaGpKdDl3ZUd0Y2llcVVrbUpYeHNHZXd1bFFIemg3bnBpYVE3RjdRR2E3VldFUWNUXzNsWkZZUWFBa3NtdVVELXRScUxPVVRwc3RaWVZ1MVhLdTZJRzh3bHJkcVhxNmVnTlY1MFpTLVEtdGhoRDhqQnFwanpmcFlNYWhJbHIwQmlqSEQ2dU93RVBHMA?oc=5",
    "source": "Sterke Erven",
    "ts": 1794546120000,
-   "banks": [
-    "Rabobank"
-   ],
-   "themes": []
-  },
-  {
-   "title": "Rabobank trekt miljoenen uit voor boeren die minder bestrijdingsmiddelen willen gebruiken",
-   "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOeWhHNWF3RHRheklVbkxtaklfQVh4eGpsdnZxaFAzRzMzU2ZPMlljdlNwam1JcDRmOTBlTlJwVC1qcm9ZZlBtWVdxNGhPU2p4RERhdG1XdHBSV0l6VUVvVWZVMEs1b1pPTHNHenQ2QS0xSGE5MWs0TFM0MHNlQ2RxTU10YUprZXV5ekloVW1LSEctUlVrbERjOGppbXh5SjlPTkY0OU9WM3dxdnZwejVsZFN3Zm1OQjBpaEZKdDk4SGFsTnpTeWt2TWo2czF6VzA?oc=5",
-   "source": "de Volkskrant",
-   "ts": 1794501734000,
    "banks": [
     "Rabobank"
    ],
@@ -491,20 +471,10 @@
    "themes": []
   },
   {
-   "title": "Triodos voert voor de tiende keer ranglijst schone-energiedeals aan",
-   "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNWXFaRHU4UVlmdzhER19td1RzeFBhejBEbmdoNHl3bzRZREV2V043QWRvYlpMR0dGYmd1SHBacjlPRVNOS1ktaHhVbDJydG9wa3I4dDFqbVkydUxydThvejlRVlMzaW9OSWl2OWNQYUJONnpmaDlJR0VkNXRDNC11Y3pPakxxcm5UdW9LZHBjckZjbHpPdUozcV9seDl4VGFWTk0wRtIBqgFBVV95cUxQZ0lCWGwteHBIUXVuZHI3ajJCR242T1QzdnhoM1FfQ194aUJ3UFl4bzBrbUhZaUZhZHJvRjVnTnV0NkZ3Zjc2RFVYRWVSLTZNX1JHR2l6bExhN3RGZ0g3TF9adV9hWTZHZHVKeW5LMlkteXY5QktUN2MyaHByUmVBUDI3U2hXUm9NcDhybUo3MHpON3pnSmFOMzI1dGZEOWxzdmlsZVIxRlpQZw?oc=5",
-   "source": "Banken.nl",
-   "ts": 1794289239000,
-   "banks": [
-    "Triodos"
-   ],
-   "themes": []
-  },
-  {
    "title": "Van Lanschot Kempen uitgeroepen tot beste private bank van Nederland",
-   "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPc3Q1cHpMTzlnbVpVdzdBY2l4ZlRiRHdhQWEwU3NIRkVjUHY4Z3h5TVZtYXEzejk2bTJFeTAybE51Z3g5TWJzbVVDZ1pxc1E3TXJuSXNnZ01iWm95NlpENWU3VVNkcjJYOE9Ba1hTSlZzNW5YWmt1cDlRSkE0RFMwVFJCdG1CWlNRMi03d1Z5TXlENFk2bWZzZU4ySUdULVY2UFQxV3lB0gGrAUFVX3lxTE9WeERPN1pGN25NT3h3WFJSVEZKNlZkcnVIY2stQ1E3QjJ1MWJWandjeUFkajJVcWRwelh2MENjRWxKV0hqMFpJZ0RlVHJ1NzFMWjVBWGJ2TFRTblNQR3Q3RFVGUzlHYkxkT2Y1UG1uM2tlTmxOamtEcTFsc1NIRHdzdnF3dHRObHVaa2JYRVpLWFpDMmNSMWxBTDdXM2p1TXVlRWFFOTJBaVo0Yw?oc=5",
-   "source": "Banken.nl",
-   "ts": 1794289239000,
+   "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNYTNfMGtDX1k1dTFXemZ6U0U0Z2Q1OHhNeVhEcDdnRmFDLVpNbENrX2lYMW5zLUVocHlUSVBNQlZDRnlzeExLYmtNVHZHaDVnSDRxY3dYdHNQcDkybEVOUzVBa01TN3hYNUx5VjAzcEpPdHd5SU54VnR5UXdZNmVmVEhyQVd4Zk5oamk1SmJfWUQxV1ExTENNVjZWaU5sOGx4eE1Ma3Eyay00b1UtVmRpSzVTUTNoYTAw?oc=5",
+   "source": "Headliner.nl",
+   "ts": 1794298380000,
    "banks": [
     "Van Lanschot Kempen"
    ],
@@ -513,12 +483,12 @@
    ]
   },
   {
-   "title": "Is de tech-correctie een koopkans? Dit zegt Rabobank",
-   "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPRzBSb2YzODV2S2cwSzU1ZWpfcXJtNmxNMW96WWxCbzQ2MzZXMm13RFl5ei1yWlowV2FtRURGUUFwVVg1UkNVM3pCNjZVa0tnYVo4dkxLaUVjdmhzZmJ0aFIyMkpfZFV3WDh6cUljVVBlZ284NEY4ZFdTQi1aN1YyOVhlTWVnN3ZPLXMw?oc=5",
-   "source": "Newsbit",
-   "ts": 1794247260000,
+   "title": "Triodos voert voor de tiende keer ranglijst schone-energiedeals aan",
+   "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNWXFaRHU4UVlmdzhER19td1RzeFBhejBEbmdoNHl3bzRZREV2V043QWRvYlpMR0dGYmd1SHBacjlPRVNOS1ktaHhVbDJydG9wa3I4dDFqbVkydUxydThvejlRVlMzaW9OSWl2OWNQYUJONnpmaDlJR0VkNXRDNC11Y3pPakxxcm5UdW9LZHBjckZjbHpPdUozcV9seDl4VGFWTk0wRtIBqgFBVV95cUxQZ0lCWGwteHBIUXVuZHI3ajJCR242T1QzdnhoM1FfQ194aUJ3UFl4bzBrbUhZaUZhZHJvRjVnTnV0NkZ3Zjc2RFVYRWVSLTZNX1JHR2l6bExhN3RGZ0g3TF9adV9hWTZHZHVKeW5LMlkteXY5QktUN2MyaHByUmVBUDI3U2hXUm9NcDhybUo3MHpON3pnSmFOMzI1dGZEOWxzdmlsZVIxRlpQZw?oc=5",
+   "source": "Banken.nl",
+   "ts": 1794289239000,
    "banks": [
-    "Rabobank"
+    "Triodos"
    ],
    "themes": []
   },
@@ -543,26 +513,13 @@
    "themes": [
     "Resultaten"
    ],
-   "more": 4,
+   "more": 5,
    "also": [
     "bnr.nl",
     "NU",
+    "InFinance",
     "De Telegraaf",
     "Financieel Management"
-   ]
-  },
-  {
-   "title": "ABN AMRO bij Europees initiatief groeikapitaal tech bedrijven",
-   "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOVzlnX0UtZjhLZ095N2lkOFh3a3JLY1BkSzluNmU4QnZOLVVUQjdUWFNaSi1xS0JaOW40cmFjU1JvbkdmMEFHdnFKcEp2cW5MMUVlREZUemtCRVMwSDIycDRuNF9LODdQYWplRkFFZTJhN3Y2bnNxbjhWbWVNMEZpekdjOTFKQ0dMd2ZBMWw3NHByVElocTk1bzNHdXBOdTdzbVYwemdkQkFGQkVKdDJPQ2ZkUWxiVkNaTHNENU03Yk1JUHcx?oc=5",
-   "source": "ABN AMRO",
-   "ts": 1794215920000,
-   "banks": [
-    "ABN AMRO"
-   ],
-   "themes": [],
-   "more": 1,
-   "also": [
-    "InFinance"
    ]
   },
   {
@@ -602,6 +559,16 @@
    "ts": 1794097620000,
    "banks": [
     "ING"
+   ],
+   "themes": []
+  },
+  {
+   "title": "De berichten 'Rabobank en Obvion passen hypotheeknormen aan per maart 2027' en 'Rabobank schrijft gescheiden vrouwen die in de bloei van hun leven staan vanaf hun 52ste al af'",
+   "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPRUFUc1pBOUdOS3FucnlEcjY3MmJzRW5uMVJuVGJTWkZDbHQ0bWFnNjZCbjNEVXVoVTR1M3ZEaDFWejlJek53eWdnYk5ST0hyaElVNG15d1lDQ0h4clJxUlhmRmE3RXlXTWdXZHFRdE5PYjNaUVdOSmE1SzQ5dEVKSzJlaHZiOHhmZUZXSjlNVEo?oc=5",
+   "source": "Tweede Kamer",
+   "ts": 1793967624000,
+   "banks": [
+    "Rabobank"
    ],
    "themes": []
   },
@@ -657,22 +624,6 @@
    "themes": []
   },
   {
-   "title": "Waarom Triodos hypotheekrente gaat koppelen aan CO2-uitstoot",
-   "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNN2JJT2JSX09NYWdnZXk4b25uV05pVkRjWHJZSWFFS080bmoyZFBQaUNnN0tDcTFxU0hQcmxWTktmVDNiSHBJQTdFSlQtYlM3VVFVclFhSjdDWHF5bGRpN3F3bk9fcG1DTjk0bXJJYmc4ZGg3SmFqQ182SUhRNDREMzNQRkpoV0U2TG5YZTlGZG42MnhLZy0xSFE4REw?oc=5",
-   "source": "Vastgoedmarkt",
-   "ts": 1793893028000,
-   "banks": [
-    "Triodos"
-   ],
-   "themes": [
-    "Tarieven"
-   ],
-   "more": 1,
-   "also": [
-    "InFinance"
-   ]
-  },
-  {
    "title": "Start Foundation en Triodos Bank starten samenwerking",
    "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOZGowS1d5NEdKZ2Y2MExGSUtOeXlHWlNlcHpDbVR5UHhTdmxGMHdlWGNxdzc5LWdxMmo3X1laR21tRjZ4bnY3YXNmcWl2VUp2Z0Iwdi0tdE9mYWFwVTM1eU8wai1ENUlmakZzd1ZKYkNfZjdsaGgtai1GN3FBM3JKWTNsYjd5RF9fcmZWdEJZU1ZORGQw?oc=5",
    "source": "Ondernemen & Internet",
@@ -682,10 +633,6 @@
    ],
    "themes": [
     "Strategie & product"
-   ],
-   "more": 1,
-   "also": [
-    "VVP online -"
    ]
   },
   {
@@ -742,6 +689,22 @@
    "more": 1,
    "also": [
     "Duurzaam Financieel"
+   ]
+  },
+  {
+   "title": "Waarom Triodos hypotheekrente gaat koppelen aan CO2-uitstoot",
+   "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNN2JJT2JSX09NYWdnZXk4b25uV05pVkRjWHJZSWFFS080bmoyZFBQaUNnN0tDcTFxU0hQcmxWTktmVDNiSHBJQTdFSlQtYlM3VVFVclFhSjdDWHF5bGRpN3F3bk9fcG1DTjk0bXJJYmc4ZGg3SmFqQ182SUhRNDREMzNQRkpoV0U2TG5YZTlGZG42MnhLZy0xSFE4REw?oc=5",
+   "source": "Vastgoedmarkt",
+   "ts": 1793865600000,
+   "banks": [
+    "Triodos"
+   ],
+   "themes": [
+    "Tarieven"
+   ],
+   "more": 1,
+   "also": [
+    "InFinance"
    ]
   },
   {
@@ -805,9 +768,8 @@
     "ING"
    ],
    "themes": [],
-   "more": 2,
+   "more": 1,
    "also": [
-    "nu.CW",
     "Banken.nl"
    ]
   },
@@ -914,6 +876,43 @@
    "ts": 1793606400000,
    "banks": [
     "ABN AMRO"
+   ],
+   "themes": [
+    "Strategie & product"
+   ]
+  },
+  {
+   "title": "ING voegt reis-e-sim voor ruim 140 landen toe aan huidige betaalpakketten",
+   "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPZ0ZLelNiZ2JqTHBYTjVlM3hmV0J2VDZOWl9QZy1DOFM5ZzN6OUpiMVFxVWRVVFpYYnU1Wll1VHJIMnlzMmhyamx3UEpkeXJYTkxQaVBOeENoUU9aNWhUSnhFUWpsallCVDN4cUR1dzZyZjFTWHE3RmtLNUcweTBNRXNZeWdhVEhEd0h2T3B5Mmtxamp6SHlpMU5DaE9VNVNsZjFYU195bnNzSG5NaTVwenNnTQ?oc=5",
+   "source": "Tweakers",
+   "ts": 1793606400000,
+   "banks": [
+    "ING"
+   ],
+   "themes": []
+  },
+  {
+   "title": "ABN AMRO en Rabobank ronden overdracht van Alfam af",
+   "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxONXAyOHktU09VTXJ2QUpHcENEd0xZM0Q4RXF3bWhuRWxFdUVSSV9WNXEyRW5jbmNOY211ZUhkT0l1VXpqZW5HQjRsazNWZVEzUTRlSDlRRE15N19HTVQzUUFzZkg1MWM4WE5hZ2pqQ0dRTF91UWhjSW9tMjRrcTFEcFJpVE0tZ0dyaG9FZHpR?oc=5",
+   "source": "ABN AMRO",
+   "ts": 1793601630000,
+   "banks": [
+    "ABN AMRO",
+    "Rabobank"
+   ],
+   "themes": [],
+   "more": 1,
+   "also": [
+    "Rabobank"
+   ]
+  },
+  {
+   "title": "Van Lanschot Kempen ziet meer overnamekansen in pensioenmarkt",
+   "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQNlpYUVZoMGlRZHNSWWxZMF9OSDg2SUhJUzB4NlVMSjBoenBhZmZiOXhfN2YtNXFkSVE1cmdlc09meFFzeWk3MkdYTGNFQlJ3a2RXQUtBRFRucGQtMVdBYV8xLTdwODlyZ1hpbkl4dkN6YUxjenhwRlB4SURDbm9JLUdJTHVqRUdwcUxFMVk1QTVCTFNiajU2aWhCempnS2xVcHpTcjZpd0ZPN1ZfMlZIYjJVRjk?oc=5",
+   "source": "bnr.nl",
+   "ts": 1793516400000,
+   "banks": [
+    "Van Lanschot Kempen"
    ],
    "themes": [
     "Strategie & product"
