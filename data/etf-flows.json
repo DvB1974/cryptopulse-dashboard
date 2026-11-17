@@ -1,19 +1,7 @@
 {
   "source": "Farside Investors (farside.co.uk), US$ mln, netto dagflow per handelsdag",
-  "updated": "2026-11-14T10:49:33Z",
+  "updated": "2026-11-17T05:09:27Z",
   "btc": [
-    {
-      "date": "26 Oct 2026",
-      "total": 110.3
-    },
-    {
-      "date": "27 Oct 2026",
-      "total": 176.0
-    },
-    {
-      "date": "28 Oct 2026",
-      "total": 137.3
-    },
     {
       "date": "29 Oct 2026",
       "total": 17.2
@@ -61,21 +49,13 @@
     {
       "date": "13 Nov 2026",
       "total": -185.4
+    },
+    {
+      "date": "16 Nov 2026",
+      "total": -68.6
     }
   ],
   "eth": [
-    {
-      "date": "26 Oct 2026",
-      "total": -88.6
-    },
-    {
-      "date": "27 Oct 2026",
-      "total": -60.2
-    },
-    {
-      "date": "28 Oct 2026",
-      "total": -21.4
-    },
     {
       "date": "29 Oct 2026",
       "total": -105.5
@@ -123,6 +103,10 @@
     {
       "date": "13 Nov 2026",
       "total": 2.3
+    },
+    {
+      "date": "16 Nov 2026",
+      "total": -8.4
     }
   ]
 }

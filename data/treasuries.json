@@ -1,14 +1,14 @@
 {
   "source": "CoinGecko public treasury (beursgenoteerde bedrijven; excl. ETF's en overheden)",
-  "updated": "2026-11-14T10:49:33Z",
+  "updated": "2026-11-17T05:09:27Z",
   "btc": {
-    "holdings": 1301532.2192943657,
-    "value_usd": 87549437131.26714,
+    "holdings": 1287131.2192943657,
+    "value_usd": 83463621884.7937,
     "companies": 181,
     "top": [
       {
         "name": "Strategy",
-        "holdings": 850363.0
+        "holdings": 850848.0
       },
       {
         "name": "Metaplanet",
@@ -21,13 +21,13 @@
     ]
   },
   "eth": {
-    "holdings": 8147667.229976,
-    "value_usd": 15559200063.45026,
+    "holdings": 8155320.229976,
+    "value_usd": 14934890096.96574,
     "companies": 35,
     "top": [
       {
         "name": "BitMine Immersion",
-        "holdings": 6070092.0
+        "holdings": 6077745.0
       },
       {
         "name": "SharpLink",
