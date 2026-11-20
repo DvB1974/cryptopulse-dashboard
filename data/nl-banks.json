@@ -1,6 +1,6 @@
 {
  "source": "Google Nieuws NL, per bank gezocht; alleen berichten met de bank in de kop",
- "updated": "2026-11-19T22:10:39Z",
+ "updated": "2026-11-20T12:57:40Z",
  "days": 30,
  "banks": [
   "ABN AMRO",
@@ -15,6 +15,39 @@
   "InsingerGilissen"
  ],
  "items": [
+  {
+   "title": "Grote belangstelling voor Veilig Bankieren: 250 aanwezigen bij bijeenkomst Rabobank in Rijsbergen",
+   "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNSUpTQW9Vd2V5eksyaFNlQWtROWVDQTlpRWtURGhCUHVMLTRWLWN5NnlTNXRJaFBoSXhpUG5yNnRXaE10NTZYSDB6STBwMFRFMzRta2Fub09TaVJDVkZPaWFHbUhMWW8zQjh2N1c5blkzVERVTUtzWU4wcmtmSmt0c1pvend0QzJxVm5pZXFvakZpRHZGT25VVWNCcnZzajFqdTk1UkVvX2hxbDg1d3FwQkNSMnV5cTIxZ3c0dl9jdmMzbXFyR2JFT284ekRSaWxZR1Z2RVdB?oc=5",
+   "source": "Internetbode",
+   "ts": 1795177956000,
+   "banks": [
+    "Rabobank"
+   ],
+   "themes": []
+  },
+  {
+   "title": "ABN Amro: AI biedt kansen voor groei, maar voordeel niet vanzelfsprekend",
+   "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNcW1uUTR1Q3NKM2drNDlXMzFkdHNsX3VNc2t2TDhCU2ZVOFBxbmZDcjVVVkFNaVFyWVB3QVlmVktMbjgtd1JDcnNaOVV3WW1UX2Z4dkIzZ29NbEdEcXEzbXI5QXhkTjVMM2lyWnhxX09LcUlJQld6aUxUTEtsTWhEbVRVbTJqYmV2MHJXRWdfRHc1R0t6U05vT1BIUmNhalY5V1pucGZoOE5yUTVQNEhwRDBR?oc=5",
+   "source": "Accountant.nl",
+   "ts": 1795168451000,
+   "banks": [
+    "ABN AMRO"
+   ],
+   "themes": []
+  },
+  {
+   "title": "ABN AMRO en vakbonden komen tot resultaat van onderhandelingen over nieuwe cao",
+   "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxORzlQdEZLSzFveG9Pcnd5OFNmS19jVGRicW1KcS1RbUZ2dHQxNEZ1ZklUUnM3eHNMN25aTUdtOWp2eDlfdkVpRGlHNmtmUnhuTUZUZ1h0TkhkT0wyX3V4REF6MmUyRkphWGo3bHF2eXBTX2I1ZXVwdlBtX0pDZ2IxUlZULUd1dGtWOFhvYkJJQXF1bFVkMTRfcFc1ZENnSUhUMmVOSkxBX1hESzNYSTJlYUJB?oc=5",
+   "source": "ABN AMRO",
+   "ts": 1795163468000,
+   "banks": [
+    "ABN AMRO"
+   ],
+   "themes": [
+    "Resultaten",
+    "Strategie & product"
+   ]
+  },
   {
    "title": "Uitreiking impact cheque Rabobank voor EHBO Sint Lucas",
    "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNRENDWi12WWxPa2VzLWpUZlN6YTUyX0xsZHhnYUNpZ0duRHJqQUdzNHdKd2pPVlEyMWdrS3FqT284NzVMNXE2U3VkRnpZaGNpLTAxZnhBMEJpTGsxc0lLQjcyOTE5VExnMjU2ZjhiRHZpcmdYSFNUQWJxOE81NGg0RjZEMXA1azQ?oc=5",
@@ -39,16 +72,6 @@
    ]
   },
   {
-   "title": "Minder lenen vanaf 15 jaar voor je pensioen? Rabobank twijfelt over eigen hypotheekregel",
-   "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPS2pPc2pkSXlxSDlYaUVHaDc3ZzNtdmp5Q1BEZTlydmF3Nkt2MWxaWGExbWllT0ljbGR5VWdsSkluRUl5ZEktSS1FcU16ZVNsaFlIY2h5VUk3SEFib3c2ZXNBb2Vhb2xSaGh6ckJDdGtYSFhJbnQwd04zLWN3SklsakgzVlZhSVViYjN4UmYzbFZKVFZzMlBmZzRzdEF0WmpxblRNRzloYkdNZm5ibUQ1QllGRTlJMldzUHZlRWRlX3UxZw?oc=5",
-   "source": "ed.nl",
-   "ts": 1795116383000,
-   "banks": [
-    "Rabobank"
-   ],
-   "themes": []
-  },
-  {
    "title": "Rabobank bekijkt strengere hypotheekgrens opnieuw na zorgen over 50-plussers",
    "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPVTRmZkg1aGZvXzRQZ3BUZnBxOGJuS1NmSGdkbFpSdzBtc3V1Wm9BWWdvdUg2UHpCT1ktcmszMVdJc3FURlB0ZDZ5WGJ2LVFBQjN3VW14RzRFb1JsUDFmaFdDNUs1Uko2cUo4dUVYU1M5ZjJJOGhKaGo3UTFGUU5BbjRFdGZzZENQdjlVOTRXZWNGMHJZVHNfZ0VBSXVUTW9ZWWhGb19ORkRWNXNoSXdPYldWUQ?oc=5",
    "source": "AD.nl",
@@ -64,7 +87,7 @@
    "title": "Rabobank heroverweegt omstreden aanpassing hypotheekbeoordeling",
    "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQY1l0UktnY2k0aDVrUmQ2Z051NWQ5YzBVUVgzNjdZVnNoRDRfMzZMa3BCcmJnRndnNkVPQTdGcUJpMDNMYTlrMkhjcnRuZ0N5TmI2QzNBTWttNUFiRmlmVXNwNHJHUi14VUNlQlN6VWNieFZFakg0VnR0b2JsQ192alZodFVfSlFrWGRWX2FxU1dnRXdxMnZweHhVb0JROHVHSXYxWlE1NWY3US1ZckJfQmtpZnBlQmdpRVI4?oc=5",
    "source": "Drimble",
-   "ts": 1795110839000,
+   "ts": 1795110600000,
    "banks": [
     "Rabobank"
    ],
@@ -74,7 +97,7 @@
    "title": "Duizenden meldingen na storing bij Rabobank, probleem verholpen",
    "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNNmJCU19iOVkycVBZemJkc2RiS29kYU8wN1BnQW01blZtR3QtS3pVc2VHb0h2MGJLUnZ6MXB3OTZsS1J2R1Nab3g0cUZmTmdfWU1BYmp4a0dPQTBYODFUZDYzdnY4OEF2b3lnVnVVSks5NUd2cXZ3cFZtV1YzLU1feXNXQ1NtN3YzaGxGMmRMNmZoUU1wYmNRakRVYmEzZ2dKR0JsMDAtQnk2WkxicTktRjhHVlVIT01XQXc?oc=5",
    "source": "Hart van Nederland",
-   "ts": 1795105151000,
+   "ts": 1795105323000,
    "banks": [
     "Rabobank"
    ],
@@ -84,7 +107,7 @@
    "title": "112-nieuws: ´Technische storing´ bij Rabobank • Nep-KPN-medewerkers proberen huizen binnen te komen in Haren",
    "link": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxQV2o1bllQclpCNzRJWEhROE5Uc3l3NEp0RHZCekZDdHlJUEZlR3UwZFZRSEh4a183WjlsTTlualA4QTJucUtkbXZsc0lVNGJtaXk1UlhSbUJLZm1BeVJKdDRHc1l4dXEzMTRyTElqd1BRNTlNbVZEcmhYMEw5UjlfYkFaVmZSbHN1YU5QaVUwMHh3a0ltdkxTUHZ6RmNCSlZodVNqYnVWLVFEMXJQOE1kQjV1cmFwdXhaWHNnRHkxdzZ6UDFYZ1k4NHdOcUl6ZzVNczlfeF9GdE9yc0dTcjNNb0t4N0hFc2twd2Z4cVdlaWZvUUt4MEs3OUk4UDI?oc=5",
    "source": "Drimble",
-   "ts": 1795103638000,
+   "ts": 1795103580000,
    "banks": [
     "Rabobank"
    ],
@@ -111,28 +134,6 @@
    "themes": []
   },
   {
-   "title": "ABN AMRO posts net profit of € 940 million in Q3 2026",
-   "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOek1EZVJKdWJUeXZ5LTlHdEFrNm1weE8xVjdwaEFidWNGTWRYT1pHN1RHeVZiTTFsQUwzbFkyZGRZN2lVYnVqU3pNRzZJa2RTR29xTFNKazZNbFFIWXpTeUdqQ2tCSDA5eUVwNVZuX2dwMEFZZVRWTkhWVS1GM0ZLNXV5MEdNaGxNeTIwRU5kNjU?oc=5",
-   "source": "ABN AMRO",
-   "ts": 1795096377000,
-   "banks": [
-    "ABN AMRO"
-   ],
-   "themes": [
-    "Resultaten"
-   ]
-  },
-  {
-   "title": "Rabobank ziet financiële positie tuinbouw verbeteren",
-   "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNU1NFRjZTSE9Cb05Kak1nWThxdGdNeXNEUHM1YVpLZHNuTXZuSTFxNkp0dUg2Vm1jbU1ZbjlGU0ozc2VkaE1nWlp0Qi0xdHAwMm9TVXJGOEVYaTdCRU1uMnlEVlpqbnFqeDN1Tlh6UGJCMldDeDZZR2hCSGw2ckF2YklnbGU?oc=5",
-   "source": "Vakblad Onder Glas",
-   "ts": 1795095015000,
-   "banks": [
-    "Rabobank"
-   ],
-   "themes": []
-  },
-  {
    "title": "Rabobank zet omstreden plan met lagere hypotheek voor 52-plussers in de ijskast: ’We gaan het heroverwegen’",
    "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQa3l5dVRwYmRQRE9CZ2FEMHlsN3FHWTlZN1lvZW9YNy05Z1lDZ3Nzb3Q3VndGWmlvWFVHVGFqcWJzZEozdl9WWjVsXzk4Uld2RV82WlJwd3o1UmFwZjhOb0ZnZ3ZpWlVHcDg4ZkxBck1KZGRsOUgzYVB0Zm5fczhaT0g3dE5lX1JSdjQ4RHkzZzVrMnNqNVRkRVV1OF9GelFTekdNU2djMXpYcXp6TGxTM3p1OUdaMF81bnhQS011NTl6TzZBMGctWHlPbjJXbHRNdkh0RHpPek9rbkFQVUMzWjFMRURHSHpPeGJN?oc=5",
    "source": "De Telegraaf",
@@ -141,6 +142,21 @@
     "Rabobank"
    ],
    "themes": []
+  },
+  {
+   "title": "ABN Amro: melkproductie daalt ook in 2027 en 2028",
+   "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9QUzhuSVVCbXFkZVBNNG9pdm9jMHdFdi1OT1NhaUVsZndkVGN0aHVkTXp3QlhyNEVOQy1aUVNPbTFGa3BqTUItYnp3LUJVZUxjeFd6U195SGJiZzNhcDhMenZMd1hPaGtEMDB1X010UmJZX0JHdkdYNDM3MDF3c3c?oc=5",
+   "source": "Veeteelt",
+   "ts": 1795086755000,
+   "banks": [
+    "ABN AMRO"
+   ],
+   "themes": [],
+   "more": 2,
+   "also": [
+    "Pretwerk",
+    "AG Connect"
+   ]
   },
   {
    "title": "ING: Nederlandse economie groeit minder hard, maar blijft boven Europees gemiddelde",
@@ -175,16 +191,6 @@
    ]
   },
   {
-   "title": "ABN AMRO: Inzet AI leidt niet automatisch tot hogere marges",
-   "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNSDNvLUlsQUdDdVkwcmJQa091bFFJby1VMHA3OVIwR254Nkk3Z092R1JWU0VGOXl6RnRTZ0pTdTljeDhqbVFrOFBmVXR1cW1BVDRCWDUtQzk0NmRPdExKUnU0b0pGZnpXMURsckJ2VlpCUjY3dXVjMWpYajZqbnRNUGRQYUVoRWR3aFBhTlR3WE4?oc=5",
-   "source": "VVP online -",
-   "ts": 1795076040000,
-   "banks": [
-    "ABN AMRO"
-   ],
-   "themes": []
-  },
-  {
    "title": "Rabobank en Obvion heroverwegen aangekondigde wijzigingen in hypotheekbeoordeling",
    "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPVFhEbmh2Q2xVRExCQ2ZoejN3cmtvODl4YzB5UUhTSXI0S24yT3BJOVVzaFdYU04xdmI0Z1FRTlFwUy15endybWxrTHI2ODJtWEFSTmhDTjljS3E2NE9Ed2k0czhRQWcwaWJqZnJhRGRJV3lvQk1QejhsVkZOMnRNRjJGNkVtdXRxd2hBRjJiRllOcG9qaThoYTlEZGx0MVRid2wwaWt5eDVkcnZkUjNz?oc=5",
    "source": "VVP online -",
@@ -199,6 +205,16 @@
    ]
   },
   {
+   "title": "NIBC verdubbelt statiegeld",
+   "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBMaThGM1NUbXpNN3ViLWtuRVM0NWUtd2t4Y1k3OHV5aEF5UFRBVktTTV9lcXRDaGk3Zi1PSXZSVjFtbWxCVTVsRkpaeTlNQ09yVlNERnlNNi1QRVVMX3paaHZiZHA2dw?oc=5",
+   "source": "VVP online -",
+   "ts": 1795076040000,
+   "banks": [
+    "NIBC"
+   ],
+   "themes": []
+  },
+  {
    "title": "ABN Amro: let op streng toezicht NIS2",
    "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1GS29BQ2RMU3YzbkdRTnBQWk5IOFdncEFvOFZsdHFVN3JHRjJoTk9MWDFadnFOVm9MNkxPLXF1cUdFV29YMVRnTXRid3ZnaDF6UmhtZFAza1RVM2t3N2hpdXZPaGtWM1U2VHZwMnh1WGtzVVUxRHZFUGJROFF6UE0?oc=5",
    "source": "Computable.nl",
@@ -208,31 +224,7 @@
    ],
    "themes": [
     "Toezicht"
-   ],
-   "more": 1,
-   "also": [
-    "Dutch IT Leaders"
    ]
-  },
-  {
-   "title": "Rabobank trekt €60 miljoen uit om gebruik gewasbeschermingsmiddelen terug te dringen",
-   "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOUDlfdkNXcHVVR3ZaNkVjYVlLSWozWklRdWFBSF82Q3pLd0NrS25oQTg2UEZ2dGdwLVVQMHRWNUVEQ01ZVWV5RFRLbWpNbl9nU1U4UUVYaVRfcG10elA0TjI5dGJsOTl1Z1ZGaTJodlRJZG1fN1otMmVoUzRVQkJlMXRvS2VJbFg1aUs1clB6d1l6Tzh3cHZSRndRWHdIOVJubXY4S25kZWZTSF9RbGFVbUxqa0ZwdF8tMzdkbXdwVllfQWJzQTYtVDQ2UDY?oc=5",
-   "source": "Headliner.nl",
-   "ts": 1795067880000,
-   "banks": [
-    "Rabobank"
-   ],
-   "themes": []
-  },
-  {
-   "title": "ABN AMRO: kleine bedrijven lopen achter bij AI-gebruik, terwijl concurrentiedruk toeneemt",
-   "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOYUhxODRwYUdyOVpRZjI2T0hhQ25FYVl5Q0ZCNHNPYmhMRUNzdWFMSUR4ZnU3ZTQ4eTI0S0tMQzlWRHRlZ2ZpQks4dWJZWExJV2cwbUdZVm91Qkh2R3F1SVFteFFXTUkxRUFsU3owR0xxUXpVQjYzR1lVb2FHWnE1WHlfa19IWGRyalFyQnFVd1o0dnBnV1BBZDZYMUxCRks5ZjhxWWpubWtkY3VwS3Fkd3pkUXJjVGVLZktiZTRXbnNsYWhV?oc=5",
-   "source": "Dutch IT Leaders",
-   "ts": 1795065605000,
-   "banks": [
-    "ABN AMRO"
-   ],
-   "themes": []
   },
   {
    "title": "ABN AMRO verwacht gematigde groei transport en logistiek, AI en robotisering winnen terrein",
@@ -242,15 +234,7 @@
    "banks": [
     "ABN AMRO"
    ],
-   "themes": [],
-   "more": 5,
-   "also": [
-    "FashionUnited",
-    "Veeteelt",
-    "AG Connect",
-    "Logistiek",
-    "Pretwerk"
-   ]
+   "themes": []
   },
   {
    "title": "Uitnodiging CNV Ledenvergaderingen ABN AMRO",
@@ -287,16 +271,6 @@
    "themes": []
   },
   {
-   "title": "Uitreiking cheques Stichting Helemaal Helvoirt van uit de Rabobank",
-   "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNZFhLX2VqZ0o3Y3pMRDFFV3pEOGktTmNRaVR0QThNWmcycUU4Mmhsel9uUXdZV09fOTkyUjkyeVU4dVM2M0tJV2YxcmU2TWZvVVFqN2VWUHloQzVZUmN2d0hYSDJsRGR2TW0tS3NDUG5XQjI0QVBPQVNPTzEydHowQXM1a3dHZnlxQzRNT3lSb3d3MXFXcnN3?oc=5",
-   "source": "Helvoirt.net",
-   "ts": 1795018550000,
-   "banks": [
-    "Rabobank"
-   ],
-   "themes": []
-  },
-  {
    "title": "Rabobank keert €150.000 uit aan Jonge Pioniers",
    "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPbFVmazE5Z090U3kxX081YkVJU2xXUFExT0tDWW42Z25maTF0aC1pSEpyYlhibzhCSWRHQl9yX01EbzROc29fbWN5dWxuUGpCQk1hMkJCZDc2eGJzcnRtaGFjM2YzLUFhb2x3eERWd2VCTVFZNlplTXh2WEV5S0dTdVNhaWVQa29SNS1sS2NkWXNlZ2FlcHZN?oc=5",
    "source": "Westerwolde Actueel",
@@ -319,10 +293,20 @@
    ]
   },
   {
-   "title": "Jefferies verhoogt koersdoel ABN AMRO",
-   "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPSlEzMjV5Uk94bnJWYXZsdzNlNU0xYnJSbGxKSHhMU1RObEc0VTRpckVUeUlkMUdJdTQxb0cwYUk2WjNkVTFMSWhfbHdKYjBrMEJScy1kXzFNZDN0RVVSMy0tZVpqemVZcTFYVkVrWnZEVlJjUmRwdWFWSUlXMnMyTUJCbw?oc=5",
-   "source": "Beurs.nl",
-   "ts": 1794993180000,
+   "title": "TA-column Nico Bakker: ABN Amro in topconditie",
+   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNUmlYeHh3aHF5bzJaWlNPWEowZm9fY3ZRLUMwTkV4SXdjak9wUWViczlrOFk1RXFNdnp2MGlmUVVjbE4xZjVYSWE3YUFWcFBpbFNTZUwwUkNobUViMWxsWjhyR2VucGVnVFYtMVYyTEk1Mm9kUFNkOGpBY0NZU3MtRGVXNlhKblgwQkxGZzRhOXJXLXBXdHIwaQ?oc=5",
+   "source": "Beursgorilla.nl",
+   "ts": 1794996241000,
+   "banks": [
+    "ABN AMRO"
+   ],
+   "themes": []
+  },
+  {
+   "title": "Beursblik: ABN AMRO Oddo zet Colruyt op de verkooplijst",
+   "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOb1pjSk5nTnZweGd4SnpiWXZXeWpUTFVhTEMyV1cwMlpkdHFtZFQ2VkVaSnJza2dBbEh1blBYVUVfSjFuRmw0X2Y5aEJ0WUd5VUgzZm05Mk9KWUIxSlZWT1g3TE1BX1JhTkVIWGV1bDFGX3ZRMzRBR2wwLXdQUFNiOGxObW9Fa0NUQm9DcGMyMHZaTkN3bURHLUhnY25mTFhtT1Vlb3JCRQ?oc=5",
+   "source": "De AandeelHouder",
+   "ts": 1794991788000,
    "banks": [
     "ABN AMRO"
    ],
@@ -371,16 +355,14 @@
    ]
   },
   {
-   "title": "Koers ABN AMRO BANK N.V. | Advies, nieuws, dividend en koersdoelen",
-   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9UckNXQURDOGMyMUw3dkJvZU00Wm8tM0RXemZiT2owcGxpbWt4VEkwUHNJNmVmNG51cTVKQWJCWk5obFgweHFZNXJzVF9scXNKeHFPeWdWRGN5bFlGOTBBNDRvZ2JWVHB3LUlKcFpB?oc=5",
-   "source": "IEX.nl",
-   "ts": 1794925800000,
+   "title": "Steun jij de ABN Amro ook financieel?-SHORT",
+   "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNNEU1a21uVGkwRU9CeFpKWDNJMHZoY0N5T2RPNzhtT08xdzlpOHVweDJOYklqSHhKYlU0YjNwb1BKcnJ0dHg1djhINEZqMjU4Nk96MFJlZVJRLVMzc05Db0ZmZ2xnZmRadldKeTE5eElrTjk5cjNCanEyVDZ1Mm96cGUwTVdFVzl5?oc=5",
+   "source": "De AandeelHouder",
+   "ts": 1794925028000,
    "banks": [
     "ABN AMRO"
    ],
-   "themes": [
-    "Resultaten"
-   ]
+   "themes": []
   },
   {
    "title": "Rabobank koopt eigen Certificaten terug, maar is het bod aantrekkelijk?",
@@ -403,6 +385,18 @@
    "themes": []
   },
   {
+   "title": "Cijfers ABN AMRO: dankzij hogere rente betere cijfers dan verwacht, ondanks stijgende kosten en kapitaalopbouw",
+   "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNNDZnRkN6OXhBMXlNQUhTZ1p6TjZObllSSndTSUU4bXNqMjBubm9pQzByMWJ6VnNfSHBHWmdyTTRKVEE1SEZQQ1FfS2FQM2h4cWpLZ0k3LWZlemdoRC12b0FTQ0Y0VVdYTlNyTlVPV2RhNGlCd1RVOXdkRDQzenB6VWo0Q0Q3dVBsbTZTYnZCTEhDZTljMll1ZUVibWRmWGlQZndSNFBVaXNXWlczS1R6bFdmR0xjeksxb3VOdWhnOVBIRHhSU2xtd0g3TE80ODhfMWZRQkk5Z3YtMmxKMVRzRWhKSnlsZw?oc=5",
+   "source": "Morningstar",
+   "ts": 1794918130000,
+   "banks": [
+    "ABN AMRO"
+   ],
+   "themes": [
+    "Tarieven"
+   ]
+  },
+  {
    "title": "Future Up, Schevichoven Groeit en Foodvalley starten programma met steun van Rabobank met nieuwe afzetketens voor omschakeling naar regeneratieve landbouw",
    "link": "https://news.google.com/rss/articles/CBMimAJBVV95cUxNQ0xmemxRNUxabF9fb2FCd0hYXzhSX2VwUC04TTBlbmxCSWJacVVmRDRlSkloLUJBeElBSlpDRk52QTZYSkQ3Y205UGtaeC1XZDNqSEdmZmdVYVN2WTdCRVBmVTBXSEV2WTMteWEzZS04cl85RkYxRGZGeE8wVE8tOUtOX3VTOEZkVHRGMkROU2ZqZ2hRVFlCdTJwaUd3SFhjREtDODVlc3UwTzU1cWVqWk5VVDcxQWtSekd1eERROTQtVncxeW5JMTFpUjR6WWh6cm9Ia0FaN3JTemxlUnNWQmZfcFdDcGVSUDhCMTdWMWRaNEJDd0hibENqVzNnY1dnQ3RRUVUyQ2huV2IycS0xZ1ctQVlVZzZi?oc=5",
    "source": "Duurzaam Ondernemen",
@@ -415,18 +409,14 @@
    ]
   },
   {
-   "title": "ABN AMRO en KLM staan op lijst van sites met besmette code",
-   "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPRnoyNmg5Q1dCeU9pMG5RdUF3dVBYYUlCNW9ySE54MldCVlByb2lJTWJWM240Y0lGVDVhSXVhbjJCdE1TdEpRQzc4YTQzSXA4RmtUTmVTZ3hWZVViTjZjNTY1RGk4em5Ca2Zsd2hoYnRLbTE1ZnhVVlcxWHpvWFczNkZZbDhVTlBGd2xsOFgwWWgta0hJTU44dmVKaklBblFEYllIU2gweU84TWc1bUJzcDNR?oc=5",
-   "source": "De Dagelijkse Standaard",
-   "ts": 1794907980000,
+   "title": "ABN AMRO sluit als eerste Nederlandse bank aan bij European Tech Champions Initiative",
+   "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNd0xuYmFMZGJyVUtJV01IOGZuTHVGX21NVld0MDhQTzFBV3ZaZTlMX2Vvd3FfdnYyYklkMUt1NUhNc080ckpJcm5kZEs2NTVKNjJDZy1hRk9aT0otN29WV0FSNWRfSWd5c1Z4UjBRYmY5VE5nZmhSVEstdEY5MXhudkNQeHYtWENMT1hwbDBONkVaMl9FMEcxY005ZkRYWTVFUHJHZHZrSDZFUm9yaDFveVkzR2c3VFBiQXNQSNIBwgFBVV95cUxPS2xhZEZ5aURucUtLMHdtZHFKa0NEZXA1dUhPVXdqVzkxQWRFdnN1aUppY1R0Q3RiNkdpdDJJZ0lSSlQ4R2EtX1Y5UXJ1UEFDNU5ROVN5VkN1NWNwZkp2YVphaWM0M0RidXpnYk05dmVfZzh1QmtxdGltOU9UMEZ5eHpRV19QbnRCZ3ZxZzlkbjBQV1l4Q1MxbF9iVVRvODBCTVRmdkstcXRqRFpvSGwzX3hQU2p3dVBnLTNTZ3BQMVFNdw?oc=5",
+   "source": "Banken.nl",
+   "ts": 1794905987000,
    "banks": [
     "ABN AMRO"
    ],
-   "themes": [],
-   "more": 1,
-   "also": [
-    "Dutchcowboys"
-   ]
+   "themes": []
   },
   {
    "title": "Bezocht je onlangs KLM, ABN AMRO of Zoom? Check je creditcard",
@@ -439,14 +429,18 @@
    "themes": []
   },
   {
-   "title": "Rabobank sluit aan bij Utrechtse Monitor Duurzame Landbouw",
-   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQS29nTUdRS0I3M210S1Z4THFHdmRRdTFsa0c0MkJpUm1TSmc0M0JTNEtxMTBoS2ZYQkdYNkZFbXpyXzBxLUF6Rm1XRDN0MkZ5YTkyMkhuLTc1RFBId0lJUnd6bU94ODlVOFVERnNIbDdQRHdlZDBiSXF1LWJuektDNmU4bEJxYjkwMDNKNnB2akZKMlZ3UnJaOQ?oc=5",
+   "title": "Rabobank sluit aan bij Utrechtse Monitor Rabobank sluit aan bij Utrechtse Monitor Duurzame Landbouw",
+   "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNWi0yVGV4cFBIQXlHMVJzREwtcW5QbEFMakh3Q3NDMC1lQW9vMzVkOTVzVWVpOVYybE1xdV9uN2ZiLUNMbHZiWmZQTGZTT0V0VHpHTVVpaU5oSlZFMFI1VjBfSzZkRzZ0d19Na0JueXVCUnVRb09lUEZlZ2JDUVh6dVNFbVNFZFM1U3hIaEU0dDNJVDZKVkdhc3p3?oc=5",
    "source": "VARnws",
    "ts": 1794904979000,
    "banks": [
     "Rabobank"
    ],
-   "themes": []
+   "themes": [],
+   "more": 1,
+   "also": [
+    "Duurzaam Ondernemen"
+   ]
   },
   {
    "title": "Websites KLM, ABN Amro en Heineken verspreidden ongemerkt malware, ‘al cryptogeld gestolen’",
@@ -459,13 +453,12 @@
    "themes": [
     "Crypto & digitaal"
    ],
-   "more": 7,
+   "more": 4,
    "also": [
     "Dutch IT Leaders",
     "Hart van Nederland",
-    "Drimble",
     "De Telegraaf",
-    "Drimble"
+    "BLOX | Nieuws"
    ]
   },
   {
@@ -479,47 +472,21 @@
    ],
    "themes": [
     "Crypto & digitaal"
-   ]
-  },
-  {
-   "title": "ABN AMRO sluit als eerste Nederlandse bank aan bij European Tech Champions Initiative",
-   "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPaUJOeUd5YjhEb2lDei1GZnVNaklNVzVjcGJYQ21jSzl1VFNMWWJjUmpQeFJrMUFHdkFDSlpwWmhJU0FDOXhuUm1XS3UtcXBHNnZ2b1NLXzA3TnJlR0VuYm9STDVyaEh0ZGNQS0JNVEF1UzNfRHlua01pWlFUUTJZcE44UDVJOEdXV3ZBTGJGNkxTSzdhS1JoX2c2VjZfODBjZW5kV052UzJWVVh3ZFVmS2RmeURGdDMtbEl4V0xMWE9CUy0wSERqQUo2YmxiWVE?oc=5",
-   "source": "Headliner.nl",
-   "ts": 1794895080000,
-   "banks": [
-    "ABN AMRO"
    ],
-   "themes": [],
-   "more": 3,
+   "more": 1,
    "also": [
-    "Beursgorilla.nl",
-    "IEX.nl",
     "ITchannelPRO"
    ]
   },
   {
-   "title": "Magnum op plek 11 in Global Dairy Top 20 van Rabobank",
-   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOaFVSSWo5N2FablprMGdXeFdnWE15MWh1c0xiT3Eta2J1WjFiVWRIeE55T1ByQ2hsSlpNZ21qR2E1T2QyUl9jbm5Bc1l2Mk1fTDJ3OXVKSmNLNjZBMFhzMXBUdVFobl9fVWdnREdjME55Vk90R05TZUpRQnV0UjdRZ1Y2WThwd21LdkVSOG9ZbmFyWUxwdjZvYQ?oc=5",
-   "source": "Sterke Erven",
-   "ts": 1794888000000,
+   "title": "Gratis Geld?! Niels koopt voor 50.000 euro Rabobank certificaten!",
+   "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNUVhjdjNDZWJYQXV3MU92dS1PNUJWT3pfVHZtZlZEc3NpalhWS19tVGg1U21MV3pycGpTODQ1VG9SNUNma3ZnS01tbjBxS0hEOWw4LUtFa3hkbFFjX3V3a29QcmFmUm1sdXM3MlhsN0duY0dhenJGSFBFVEFSZ3Y2UGlBOWtuaEVIRnFBTXZzMXBYa3E1WXpKS3NOZw?oc=5",
+   "source": "https://www.stockwatch.nl/",
+   "ts": 1794840867000,
    "banks": [
     "Rabobank"
    ],
    "themes": []
-  },
-  {
-   "title": "Rabobank stelt 60 miljoen euro beschikbaar voor terugdringen gewasbeschermingsmiddelen",
-   "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNV1VuWkJfUjFtWFdtMzZuaEsySDRvTlUwZi1faGVsNTJReUVsa3g3QzB1YXZJUFVEUVlIX1FJR2FmMWZ5dmw1bXdSUHd2WlJZVUk3TUlMTHJWX2x5TGdwMmY0VmluS2pjOEU5UVAzYnlIMzRpSVlyMXE2cTV1Tk01SVJoWTZTWDRpZlF0UmEwclpRbmtuWE5ZSWNudnlXRmpKREpqdmRiMjRVQTlHbHRMVlNpb0VKYTBrWGhLQk1PNWZMZE9EeFEtQmVR?oc=5",
-   "source": "BioJournaal",
-   "ts": 1794849009000,
-   "banks": [
-    "Rabobank"
-   ],
-   "themes": [],
-   "more": 1,
-   "also": [
-    "Agf.nl"
-   ]
   },
   {
    "title": "Rabobank: verslag van overleg van vrijdag 13 november",
@@ -559,10 +526,30 @@
    ]
   },
   {
-   "title": "Voormalig Rabobank-renner wordt ploegleider op conti-niveau - en wil duurzame carrière uitbouwen",
-   "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOZVJJSE9aME04a1RqUzRfSGVCVnJ4cnItSHFPLU4wTW9PUVNUQ0IzMEM3dlp4Z2FJT1NGeWlSdWdqd3FBUndkOTY4WjRDSWxRWEVfd3drcnVwY0VKNVNOTXNBTExZSjJYclowSVNDY0VUNjBDRDB5eHNNTUI5T2ZpY1c4ajFIdkZPR0lMdURqWjBlSDh3NG8waXFSYk9NTWtZTUl1eFRfMnRsZ0hHMkxHR201M2M3U016eWItZDVn?oc=5",
-   "source": "WielerVerhaal",
-   "ts": 1794806848000,
+   "title": "Rabobank ziet financiële positie tuinbouw verbeteren",
+   "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQMnI0S1NrR1dXODNKMWtELXVlb0RnZnFjYVFBZjVyNmNsTGIzSVZZZnVlMmZjTjNRckxLdG1pMHFnOFRSRUM3QUVfdzNfNXhXWkhGcXU0bFN4WklzelRTdjlzQTVCTWZsVmVMdHlwaXhUUVBqYjgxVnR4U2NyVVQ5N0JDcjZlaDFiVC03c0tCRnI3SmFzaGRTZWRudEVodw?oc=5",
+   "source": "Nieuwe Oogst",
+   "ts": 1794829140000,
+   "banks": [
+    "Rabobank"
+   ],
+   "themes": []
+  },
+  {
+   "title": "ING: verslag onderhandelingen van 16 november 2026",
+   "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNWm1MM2ZWZVYwQkdJZ1JuXzM2dWpkUlBlQWsyQzJlSXNJb3Npek90eW1TUzRELU5BdTRPUmIxZGJsazFMQWl4WDByamtXbVVFSnkxMFFhNHRDdWNXdGI4Ukdkb095NU1CdHJIdXEtYW1jSUtaWVFpRGZUaTBYSFZEN1c0S0ZpVFZxYmhDVm1FVU12QVU?oc=5",
+   "source": "De Unie",
+   "ts": 1794816000000,
+   "banks": [
+    "ING"
+   ],
+   "themes": []
+  },
+  {
+   "title": "IG&H haalt voormalig Rabobank-manager Brian Lamme binnen als Director Banking",
+   "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNOG1GbE9UZFRWNUwySHRrQXR2Tk5EeVBkbnk4a3lGUWo2bHlwRGdvVE9aMGtjbDN1V1BBNEJoMkNES1ZOZ3prU2VVVzRESlE1cHExRDU1ak9VaHozQl9NWXltTHlnRS0td1dTS2ZLUXp3SjFkcFFEX3M1UzZtZVJEU2MyeXdXU1dDaGxRZC1XbVl1RmhVV09GbzU0QlI2Z1hVQzFYWE9lQlp1YVhHM0lXNGpsaFIwVnlqbjJ6ZzNZZEk4WEk0RXpmdg?oc=5",
+   "source": "Headliner.nl",
+   "ts": 1794808680000,
    "banks": [
     "Rabobank"
    ],
@@ -579,12 +566,12 @@
    "themes": []
   },
   {
-   "title": "Hoe boeren in Borger de basis legden voor de Rabobank: ‘Samen sparen, samen lenen’",
-   "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPR0VvNDNoZ2xaQ0M1OFVQcEJfUFF5SWl6TzhMWjRmZEJtbjhkNTY5M0hRc29tNUtmdXkyY2VNenZYNnlKMmhfay1BVXZnX0ZrcHlCbEtsR1d5bDB5LUcyeXZTZV82RU5qT0FJVGNYbUZ1S2dxSUlZOFdsUGRvNVRzMkxPS2NGWjlVRTFvdHJSeWhuWTZ0Z3ZRekwybmtjRk0?oc=5",
-   "source": "RTVeen",
-   "ts": 1794732965000,
+   "title": "ASN Impact Investors en ABN AMRO winnaars duurzaamheidsprijzen bij Cashcow Awards 2026",
+   "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNZEFwRGFVd0xfc1RwS3FvZTNPamJGRVlNbm12U2RNWk1SNkFmMGtXOGJGU1RyS0hxekdPWEtsSGJQczY0WmZyXzhPNERxcmxILUQzb3RZcEREcXRmOTdUMUxQVEVjSldaelJaSFBWZW45MXFwSTI4bFdJaHRudWdYMkZ0TTd5MnpDM2RkV1pvQVFvSFprQUw0NkdKNjdqc01OWGJPbG1WOHJyTXY3cWF6bW5uQzBoTm4xZ0NJbmtZUV9fV3RfLTZjTzVmNA?oc=5",
+   "source": "Duurzaam Financieel",
+   "ts": 1794658044000,
    "banks": [
-    "Rabobank"
+    "ABN AMRO"
    ],
    "themes": []
   },
@@ -609,16 +596,6 @@
    "themes": []
   },
   {
-   "title": "Spaarder die uiterlijk 30 december €25.000 bij ASN Bank zet, krijgt €125 bonusrente",
-   "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPUDRWZ2dkRFBSUHQtVTZiYkZYNWNKV2ZnOG9fX3QtUEYwYmlFcnBmQU5zUDhjYmRnay16R0xYZi1RUi1jWmQ5U2ZHT25pckNyTk15S1NkR25LTUFLYUZwbWN5ZWR5emk3Ry0wQ1pvSVFCN0dlQWNOYktHMG1VeUxWRnd4Z25fbXpoQ0hGbE5Jbm9iNk1wbjJDaEM5NkVGSjFqTkE?oc=5",
-   "source": "De Dagelijkse Standaard",
-   "ts": 1794598200000,
-   "banks": [
-    "de Volksbank"
-   ],
-   "themes": []
-  },
-  {
    "title": "Rabobank ziet kansen in Chinese aandelen na harde koersval",
    "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5LX0dZSzdzV2NaZjNEY1JZUG91ZkpGdGpXaTQyalcwYkdOU25TanFuVWctckJUdHdnbjVKRGtsLTh0NDFWbExBN1dLN3g2emQtb3hwbFd5a2dwX2Q0V05aMF9ISmE1NkhReF9CbWZwb1F3ZUNwdHhnOGV3alhjTzQ?oc=5",
    "source": "Newsbit",
@@ -629,22 +606,22 @@
    "themes": []
   },
   {
-   "title": "Rabobank: herstel marges akkerbouwers laat op zich wachten",
-   "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNbmlBNXV2SzRSanFjdVJyMnpmdVFRbV9qVk5neWR2NDVHVWxqcm9fVHhXSmU1UEs4bFFaSTBjUjc5R2NPM1psSGgtU0JRaHNneFJwc1hNSE8wLW1jei1udEpRU1VuaU1hano5Qmxzak13aWN0SnozQ2o0a3RJN29iUkZFTWRnaUNUZFREZWtsUm84cHh1andIZ0FDNjAxOUZpZk5mWQ?oc=5",
-   "source": "Nieuwe Oogst",
-   "ts": 1794580200000,
+   "title": "Uitreiking cheques Stichting Helemaal Helvoirt van uit de Rabobank",
+   "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNZFhLX2VqZ0o3Y3pMRDFFV3pEOGktTmNRaVR0QThNWmcycUU4Mmhsel9uUXdZV09fOTkyUjkyeVU4dVM2M0tJV2YxcmU2TWZvVVFqN2VWUHloQzVZUmN2d0hYSDJsRGR2TW0tS3NDUG5XQjI0QVBPQVNPTzEydHowQXM1a3dHZnlxQzRNT3lSb3d3MXFXcnN3?oc=5",
+   "source": "Helvoirt.net",
+   "ts": 1794556800000,
    "banks": [
     "Rabobank"
    ],
    "themes": []
   },
   {
-   "title": "Rabobank gaat meebetalen aan schoffelmachine, spotsprayer of laserwieder",
-   "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOYmoyTkxPUU5uWWJYNGF1RVo5dmxGMWxVQjVZTlUwMVczQlFfRzNZaFhCcHZSeEFyU09SSW00YU5xemM1UHY4elRoRHduOUE2N09JNDVfa0hBR3hHTWF6bmZ0NVJrSlVIMGczWXBKQjVNTXVaWjgyUnN3c0x2MnV1dlNkNTczSUp3OFhwbkV1ZWF1VjFXTXA4VFRmT2Rzcno0eWg3cXpmQUhVQlJURFdrLTltMjE5YUZDOXEwTXozbTlpZm1VaTQxNmh2aEppM28?oc=5",
-   "source": "Mechaman",
-   "ts": 1794554629000,
+   "title": "ABN AMRO waarschuwt voor steeds moeilijker herkenbare nepwebshops richting Black Friday",
+   "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPbDVxZUdYYnJ6dmhLZDkzTkgtRkxoa1ljd25fSHJicGtJZmUzbXVCUExwejlWNU1CenowVGNIZWtDY1IyaURnc0tncm01b1VwTlZGVzNoOFhUQW9URm5xbFBkWW0xV3RXaDZXb2JORXk4Z2oyay1kRkMyTjlZYWNTOElCUFpIajZqM1VSaFlCUW5fVC1PaHhUdFJFZEpOTmRCbW8yd3lUOHptVHlhcXlkT2x1M3c4NkNvZUtYWGxvQdIBxAFBVV95cUxNcUNERlpDS2YyVzRINVZOYmZGMXBvbUY2UW5Wb3FRYTVnY05aODdlTkpIOTR4REF6aTZZQ0lpcVkyamRZbE90SUlKb2E3aHN0NTdQWEZmUTFrVkNNWVd3X3JNVWlKZk1aRWduc21ab3VYX0VDTW40UW9sWnh5MnRVNG9acmN4eFA4SjJQSGxlcE9odVh5bkRzWkdBRXJkb1pENC1ES2h6MmNENEdiTktjMU05N1RxT3FRRlFrWkwwZUFRcUIz?oc=5",
+   "source": "Banken.nl",
+   "ts": 1794548557000,
    "banks": [
-    "Rabobank"
+    "ABN AMRO"
    ],
    "themes": []
   },
@@ -671,22 +648,32 @@
    "themes": []
   },
   {
+   "title": "Rabobank trekt miljoenen uit voor boeren die minder bestrijdingsmiddelen willen gebruiken",
+   "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOeWhHNWF3RHRheklVbkxtaklfQVh4eGpsdnZxaFAzRzMzU2ZPMlljdlNwam1JcDRmOTBlTlJwVC1qcm9ZZlBtWVdxNGhPU2p4RERhdG1XdHBSV0l6VUVvVWZVMEs1b1pPTHNHenQ2QS0xSGE5MWs0TFM0MHNlQ2RxTU10YUprZXV5ekloVW1LSEctUlVrbERjOGppbXh5SjlPTkY0OU9WM3dxdnZwejVsZFN3Zm1OQjBpaEZKdDk4SGFsTnpTeWt2TWo2czF6VzA?oc=5",
+   "source": "de Volkskrant",
+   "ts": 1794501734000,
+   "banks": [
+    "Rabobank"
+   ],
+   "themes": []
+  },
+  {
+   "title": "ABN Amro stelt doelen nog scherper, hoe veel rek zit er nog in het aandeel?",
+   "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxONFgxMXVDYnp0S0NYV3pTRnY5Sm94cndrUzFjTERpX0NYTW1tN2IzTWhwYV9uaG9oMzFxMjZjVUlKLXBkb0h1ZzdpbDcwdzd3QXYwM3dJUU9peEY1cnlGZ3Q2S1FjT2lCazgyM3IwcGZtZy1FekxCZmdzZFhicWRPeWpRLW1iQ0RkdjJaU21vLTI3UG56d3FzNTlpWHhHX1Zx?oc=5",
+   "source": "Beleggers Belangen",
+   "ts": 1794492360000,
+   "banks": [
+    "ABN AMRO"
+   ],
+   "themes": []
+  },
+  {
    "title": "top-cases-Triodos-restaurant-Rau-1080-x-600px-1024x569",
    "link": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxPbFRENFdNN3lRTE9zZ3E1WmNJZnNIaG1jT2ExLVNyMnlJbUJVMWJkRXBBODRXa2RlaVR6akVlbWlDd2FuWWhjT1RodFhERVZfSkV4TFlsQ2l2ajkxWElSSHliWUtZVFR3ZnJXNjVUNnBnSVhYVXF5cnBJaUVSOW1YTmkwYlJJMVhNaUMwU2wxT0JMNFg4clNneXEyUnUtZ3hQTld2NkRJc2VRVDhlcTltalp3eWFJVFNPWE1jMzZkVTBXNzVzMGZob25lUEtMaGNfaGg1aXhQZ3J6M3VZbFZjX0x4dHF6aGpVa3RWSmM5cE9zZEVXZXd1c0pR?oc=5",
    "source": "Duurzaam Ondernemen",
    "ts": 1794481050000,
    "banks": [
     "Triodos"
-   ],
-   "themes": []
-  },
-  {
-   "title": "Krimp in de Achterhoek dreigt bedrijfsleven stil te zetten, waarschuwen onderzoekers van Rabobank",
-   "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxObW90eUZEUzNZNkYwWUpnZzFpMk9GbU0zbUVQM1ZjcjJWbkRHU095R0dSOGdETC1LVkFTbVVTMUF5azZvd1BfU0Q5NlNiaDFET1liOGVjd0ZyOUx6VWNZSzF6UDBmQ1VKa3lWU2NCTEpGWmp3NXlSU2hFWDB5b1FsWklmQnJKS2xDV25lMmRKUndRdVZyNTJXN1h2Q2JuU09lWXJ1QUFXRFNBYWEyWEZQd1FtYlE0X3hyVUxtSVJ6cGpNUklhNlZhWVVReFJxU0JiMkRuX2UzRWV3ZlJ5Y3c?oc=5",
-   "source": "De Gelderlander",
-   "ts": 1794471207000,
-   "banks": [
-    "Rabobank"
    ],
    "themes": []
   },
@@ -701,32 +688,12 @@
    "themes": []
   },
   {
-   "title": "ING draait de pensioenvraag om: wanneer begin je?",
-   "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPSTVjU21tUFRyallybWI3OHM0OXEyZ1JoNk56Zl9PM1dZcFFadFVmZUU5TDAzLVlYazdpd3d0S1ZtSU9aMzBBQXphWVg4cnRsdUJBNDNOSlRoZ0dBdFlzNTVhT3VremduckRlQ3RPdGhKMTE2ZGxoYVVWVHZNdHNJcGs0ajhsUnBLREHSAY8BQVVfeXFMTXQtdlhsckk5dF82R3hDTEhtMWl5R0lzSTdldHlrcEFKUTd1R3dPdGYwSDhDT2FZQ3NYSkpIRWJTaVVKMEVWTkw4dzFlRTJ0NkNmdmUtZW8teXJkbmV4OFkzTmc1OHVqVy11bm9YaUVzSnN0SHdqR1dpbEk4NnhsUFc5Si1JZ1BGc2JwTzZWYTg?oc=5",
-   "source": "Banken.nl",
-   "ts": 1794467308000,
-   "banks": [
-    "ING"
-   ],
-   "themes": []
-  },
-  {
    "title": "Paraguayaans bankschandaal blijkt sof voor Triodos-fondsen en Oikocredit",
    "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQNm9ld0lOb1JKcGVsZEVsekt0c2JOZHE2VU4zYjlHUUtvRVFwRHNhRC1ncTlueHZpbHNoRERQcTZTTDl6YTByWWN5d2ptTlhUamZGNUQ5ckgyTjJvelkwUGRpem0tdUJVV0ZUdTJSQlFXaDdNVWUzMG1pemlkTmFOTjNZS0R2bkJKV0hQNzZuSC1ndzRld01QTjVmZEFOUV80S3h3S0RLOWFIOUxpT2xhWXIwZw?oc=5",
    "source": "Het Financieele Dagblad",
    "ts": 1794439852000,
    "banks": [
     "Triodos"
-   ],
-   "themes": []
-  },
-  {
-   "title": "ING beschuldigt stel onterecht van hypotheekfraude: bank moet ze van ’zwarte lijst’ halen",
-   "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQcHNLNVRlTlA5VUI0MkJLQTdoeG1sVXdfSmVFM2lITUpaRkxqTVlPUV9mZC04QS1CRmwyMktLelhrTGdEYkxBZGtRUkxiRWctcy13TE5ubkhBLXl1WWxPYXQ0NmxxOVh4WUFsc3VjdmJwSWM5SUxlRFFRX0QxeDZmM1BXaVBvNHRhczh5OG9jN0ZFcGZ4YXFfcWhQS2hObUwwT1J1b1NTOTRUVjZmaUlWZ2xQcHNLRXhvVkJKNkxBeFBzenFmUi1RYXl0ampsQ2tLVmUycm1MMlhyQQ?oc=5",
-   "source": "De Telegraaf",
-   "ts": 1794438420000,
-   "banks": [
-    "ING"
    ],
    "themes": []
   },
@@ -743,34 +710,32 @@
    ]
   },
   {
-   "title": "Miljoenen van Rabobank moeten boeren van pesticiden afhelpen",
-   "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxObWtBa2FMY19vbTM5NlpETUNCbnZJQmFZMmZmNGU2MXBLQmpLVVhWSmk4RVh2YUpPcDVSVHAxUTJaenhlRmNtN21xeDlfdG5PVmFQSGF5QVlSRURMZHJZeVRva3NDU2x2S0NqUDRJWWstTUl6SGtEcFFkQ1lsUThJMEl5SmRvaFliS0ZvUFN0WFFIVVVzelY2Tnl0ckVfZnQxX2J3N0E0YmVVZ2V5elJKZVU3cw?oc=5",
-   "source": "Trouw",
-   "ts": 1794430848000,
+   "title": "Wederom sterke cijfers ABN Amro, personeel wil meeprofiteren",
+   "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNUlB6aklBNXE1VmhEQkpOa1JYb1FyLVM2SF81b1J4WlBQWjlERm9fb1ZucDNqWTJfUEFEVU9NdmRBcW0yOGtuTGJqU1RyTHVsZVp4eF94cW5YUDVqbnU2eUxudmU3RUZCUzl0MEhOcVpyTlViNWxhX3FnT0hLU3lwR1AxbGJ2dnhiVnVJdU1pd29sQjRv?oc=5",
+   "source": "NOS",
+   "ts": 1794384000000,
    "banks": [
-    "Rabobank"
+    "ABN AMRO"
    ],
-   "themes": [],
-   "more": 1,
-   "also": [
-    "de Volkskrant"
+   "themes": [
+    "Resultaten"
    ]
   },
   {
-   "title": "Rabobank steunt polderprentenboek van Tafelronde 49 met 10.000 euro: schrijfwedstrijd van start",
-   "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOeEMwbkVqeFhWRjRQaE9wRnpKZ0owMlNuVWl1RVFIYXhYVVJNbWFLNDhBNXZNT0VvMUYzd0xkVVRTVzlpN2xhVk1kekg3VmJnUTJUUEpSZ2RMdEJkWlc1Z0lLOE5hUy1ubHZwT1p0VkNORXk3S2pqLS1zLUo0M0NCV015VnVEVDFEN2tBeTEyQkFWa091YXhPWkpkbmpBc1E4RmN3dnhFLWJvVm9Dd2JrUWtkZEdRVmhDQjkyb0NRMjhBMjM1aG0xU1dwaUNxQlVqLUljZXZZR3BwLUdQMm5hQVJRWHc?oc=5",
-   "source": "Flevopost",
-   "ts": 1794412500000,
+   "title": "ABN Amro op koers, alleen is niet iedereen aan boord",
+   "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQUEdnTnNpWGlqZDB5dk1oTTVWbWVyRlFUeXE2UlY5Rk5IUFFTVDJuNzk2d3ZjRjF4UkRucGVtZS03U05Va2dxcUZpSDNITGtQZnNUbERHSHJsT0RMeGxmSTFVMjByd0t0a055aW9DUVF0cVk0dWRpTmlkXzY4LXZ2REdtMVloR0tKTW9tSk9GR2tLYWFxNzR1Um84TGxiQ2c?oc=5",
+   "source": "Het Financieele Dagblad",
+   "ts": 1794384000000,
    "banks": [
-    "Rabobank"
+    "ABN AMRO"
    ],
    "themes": []
   },
   {
-   "title": "ABN Amro zet AI ‘verantwoord in’, maar wil het niet koppelen aan de lopende reorganisatie",
-   "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQUDNKOTJucHhfV2w2SC1acFEyeVk3UWRuQ0M4Q2Vrb3M4bFFweEJTMEdLb0gyMTlQUXNUYlJPU2VzS0pUeW82TUI2Z2JKb2ZpajRkekNvUHpRclUwUWdkTkNLclJpZVFRWFF5V3RhMWlaRE91RXdPMktFZHd2bV94a19xZFZyanhjLUwzMHhQaDh5VjczLWw3TmdwMEp2d3pFLVhfTFczVW9UTDAwOXNJLWlxT0xiYmkxbWhqaUc0RnY2dzh6THJPNWE3QjA?oc=5",
-   "source": "NRC - Nieuws, achtergronden en onderzoeksjournalistiek",
-   "ts": 1794399369000,
+   "title": "ABN Amro-CEO Bérard is tevreden, maar wil medewerkers vaker op kantoor zien: ‘Het heet niet voor niets hybride werken’",
+   "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNcV9JbURrUjZ4SWlJd2FvbW90WjdDYmJCS1Q1dnFsMzV3SUxmTklrbjFGRExZSW16MEFXZ1FNVjFxWWZNZ0VjR05yTG1Gc1dQMGhrZW9uXzNDS05NNjl6d3FCT1o0WlU2S3dCblBfNlUtOUJSVFQ0QnhoSDhrT2NHOG1pTjJyTnNZUmlQNkM4TndncUtsLXlZLThZcktpbTh6S0dqaExORFN2Ml8xb2R2NXpTdGQ4ZExFUXlwYlNiczM1NTZwdHJGS0RiYTBHWU9jWW4yVXB4anN3WG14NmZITDFDZlpmMFJyWlgxZUg1RVk?oc=5",
+   "source": "de Volkskrant",
+   "ts": 1794384000000,
    "banks": [
     "ABN AMRO"
    ],
@@ -779,8 +744,18 @@
    ],
    "more": 1,
    "also": [
-    "de Volkskrant"
+    "NRC - Nieuws, achtergronden en onderzoeksjournalistiek"
    ]
+  },
+  {
+   "title": "ING beschuldigt stel onterecht van hypotheekfraude: bank moet ze van ’zwarte lijst’ halen",
+   "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQcHNLNVRlTlA5VUI0MkJLQTdoeG1sVXdfSmVFM2lITUpaRkxqTVlPUV9mZC04QS1CRmwyMktLelhrTGdEYkxBZGtRUkxiRWctcy13TE5ubkhBLXl1WWxPYXQ0NmxxOVh4WUFsc3VjdmJwSWM5SUxlRFFRX0QxeDZmM1BXaVBvNHRhczh5OG9jN0ZFcGZ4YXFfcWhQS2hObUwwT1J1b1NTOTRUVjZmaUlWZ2xQcHNLRXhvVkJKNkxBeFBzenFmUi1RYXl0ampsQ2tLVmUycm1MMlhyQQ?oc=5",
+   "source": "De Telegraaf",
+   "ts": 1794384000000,
+   "banks": [
+    "ING"
+   ],
+   "themes": []
   },
   {
    "title": "Winst ABN Amro schiet met ruim 50 procent omhoog dankzij hogere rente",
@@ -793,6 +768,35 @@
    "themes": [
     "Resultaten",
     "Tarieven"
+   ],
+   "more": 4,
+   "also": [
+    "NU",
+    "De Telegraaf",
+    "Nieuws.nl",
+    "Financieel Management"
+   ]
+  },
+  {
+   "title": "ABN AMRO stelt Eric Jones aan als hoofd Marketing & Digital",
+   "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNVXJzLVBRT2paRTBCX3FfdE1lTXJrQjVyLTRiN1JGcjZyaEZrQ094WFlvaFBhdlB2MjlpOTE4WnZHNG9XSnFQVDFsUDEyWHBHWnR1aXhBelVDa3EwdUxKYmNBUkFMQi0tMDJrdVZDMFdaTWNDRU45dW9UaWZCMVU1clFwcGs4OC1mQUZuVXZ6cVFyQjFHNExZ0gGcAUFVX3lxTE5OalA2dXh1ZlNnYjNlQ3FhX1lwdzJNeUVEczFGZmhZMmVDemdRLWM1S2wyUk1YUlpRd08wZnpzS0JiN0kyTXpOSUNZZFZEd0RxbUFFRDlZbVBXMElrVU1kRkEza0g1Y0lOQmVqdjBqWjJCQlozaWtxbzJRMXV2S0FjTzBkUW91TV8wZ2NCTTdXaEl4ZUlucVBqVUFPWg?oc=5",
+   "source": "Banken.nl",
+   "ts": 1794380567000,
+   "banks": [
+    "ABN AMRO"
+   ],
+   "themes": []
+  },
+  {
+   "title": "ABN Amro verhoogt outlook na meevallend derde kwartaal",
+   "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQMm4yaGVTSmZTWXFybkFfY3FfY3NlVnFGMTFrSDNsQ0lMMm5ET2FnZDFLWmkzWjN1YVRKT1F6V19SQ3BTd0VENUgwMVA0M25jcHl3bDNWdm5OUXVWaGR4MHg5WHBLckE1U1FabHdqdzFndm5ORXplbGVNdGI0OWdRNkZWVGpHR2c5SGlha0dQRWFaT1JFcjNUTWFaeFhQQQ?oc=5",
+   "source": "Beleggen.nl",
+   "ts": 1794379132000,
+   "banks": [
+    "ABN AMRO"
+   ],
+   "themes": [
+    "Resultaten"
    ]
   },
   {
@@ -825,7 +829,32 @@
    ],
    "themes": [
     "Resultaten"
+   ],
+   "more": 2,
+   "also": [
+    "IEX.nl",
+    "Banken.nl"
    ]
+  },
+  {
+   "title": "Onder de vleugels van ABN Amro moet Buut uitgroeien tot dé jongerenbank",
+   "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPUGYtd0Q3UC02VGFaWW1QNXNOdU1UUzV0Y0Z1QU45TXRvbFFJWnRaczlhMm1ySlRVdzJjb0Z2TVhjZ2ZkbVlSbktzUm16X2VSQkpEalFnWnBGU2NCMTdERGRSTnFza01aSC1vM0hoQ19KWXlQc0pDdnBLd09JVkIxWDduUHdRVm9JQkd3dWFqYXN1WF83dHNZWFRDS0FzbTl1bENGOFU5N2RsSVBwVTBaY3dXM2NfMk81?oc=5",
+   "source": "NRC - Nieuws, achtergronden en onderzoeksjournalistiek",
+   "ts": 1794297600000,
+   "banks": [
+    "ABN AMRO"
+   ],
+   "themes": []
+  },
+  {
+   "title": "Vrouw (66) stuurt pinpas op naar ‘ABN Amro-medewerker’ en is ineens 6000 euro kwijt",
+   "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOc0ZGZ2FSM2ZKZVczNnk1bzdhQUZuT0xMeFFmOVhMYTl6NkNxZXZtbFFQRDB1V0VzS0kxYUU0QlJlb2pua0dWUEctRnBxVFNoSWFMaUc1Z3dUdTRsWno0TVZuTFJOQkxRTFFwbkdTT1lqTHJUQ09ha1Z6eEpaLTIwX25qN29GQ1BONFdlNzRZaGVJVHFsWXVZX2FNRjRLaEF6QTFRd0hJM2Y1Nkt4UnJDY1lzaw?oc=5",
+   "source": "AD.nl",
+   "ts": 1794297600000,
+   "banks": [
+    "ABN AMRO"
+   ],
+   "themes": []
   },
   {
    "title": "Triodos voert voor de tiende keer ranglijst schone-energiedeals aan",
@@ -850,6 +879,30 @@
    ]
   },
   {
+   "title": "ABN AMRO wint internationale innovatieprijs met AI-coach voor klantadviseurs",
+   "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNUUxla2J3VWpUX05XR1I1LVY4MHRJNzVxemVuQ3lMOUFQMjE5bWFBaFo1UUZsNUlCU0s0OTg2RE03WTRjcEx2OWYtUFZYOWpUQTIzSmpxM0NiV2tfZGZ1UlliVDh1SUE0ZDY3ZXRjZmhmWUIxM1BFVHBxOHU2X2E3OEJ1eGNaR0tJY0xkWW12NU9MazFBRTNVMnY1OUZaT0VaeVNjalVLYUppODg5N1FfedIBtgFBVV95cUxQRWh3T2Y1WWxONzE0OW9ZVmV5ZTlTS2dLMUtpZ2xDTnB5X3l4bjNTWlpQWk9mcWtCanM3NGg0RVdzUnpNOGhZMk81VGQ2VjA3Rzd1WURUeWNmdkhYWXpIakVnY084dDNsQkJiZHEtWmVYVmVOdnhCRzlKZUJvUWNhQzhXWnQtVkdZTXh1SHppVUtaaW4yTmJYYkowajE0MXMtYnQ5T3l6VWhBMm54N0NBZHNJNERaUQ?oc=5",
+   "source": "Banken.nl",
+   "ts": 1794211200000,
+   "banks": [
+    "ABN AMRO"
+   ],
+   "themes": [],
+   "more": 1,
+   "also": [
+    "InFinance"
+   ]
+  },
+  {
+   "title": "Als de bouw vertraagt, beweegt ABN AMRO mee",
+   "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1KUVdDTi04WjFqMmZoeVJCREV0T2ROWlpiMXg3VkFFT2p6cExScFFJYlNIQl96YUczQzRjSFd0alZfTXdITTJDZ1k3UzJJTlM5bVRpQW9peEs5TUJnN2x0bk9OTmhwLW9EWThJUjNYd29JRWk0Z0wtUXEzeG0?oc=5",
+   "source": "InFinance",
+   "ts": 1794211200000,
+   "banks": [
+    "ABN AMRO"
+   ],
+   "themes": []
+  },
+  {
    "title": "Oproep Triodos IM aan spaarders: ga vooral beleggen",
    "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOcjUwRWg3UU1LUkExSndSeVQtci0tVE1OVXNjc2RxZzFreFNPbmRIT2ZobDFBZHVMSGJ1NzFkdG9VTzd0YUxMYmQ4RXRUdDkxenBZMklJSWxjajNZSkFtMWk5dnRZQWhuejhvb0FfVTJNYVFYR19VUE1JdzR2cHNjSkVtbGN4ZldPeldWbGh2a2pVeE1QY25IQ2NRbXdVdlJFUTRmVkpIQTE?oc=5",
    "source": "IEX Impact",
@@ -860,61 +913,6 @@
    "themes": [
     "Private banking"
    ]
-  },
-  {
-   "title": "ING stelt 128,5 miljoen euro beschikbaar voor innovatieve mkb-bedrijven",
-   "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNZVFTaFZzbDhWTVlfZlFfVnNGYjFMRVZvRmpVM1pQTkNaOW1LMENVT29ZYkdyQ21HNEJNWTZKOTVRM2tqUzlUSm1YWS1aSUh0U0JsQXRyRW85SDk0MlVLLXpuVUxiWWRiWHNvRE9KSk0tbWs1Z0JNcWVvZUJFOENrc21TVUxaRDhuR1N6WWtiMXhTakpuUF81RTJ3YzdYVGdEVEdGOU5aNUFYRTJja05qb1JqX1MtZw?oc=5",
-   "source": "bnr.nl",
-   "ts": 1794124800000,
-   "banks": [
-    "ING"
-   ],
-   "themes": []
-  },
-  {
-   "title": "Rabobank kondigt bod van EUR 1 miljard aan op Rabobank Certificaten",
-   "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNQUM2Uk1lQXExRU5OTzhMY2pKc0pLODVoVDJRVTBqMTlvdE1FWFV3aE1TWFpOSWJDWHJzdnZjY1BRSHJLQkxGa0p2XzBheGlQdG01NGpHN0ZfdzFPeVFWN2hXWmNLQXRNS25td0RvNFI3Y1pId2RMeEEySjZMUDVZQ0FNaDZuMTN6eC1DNHhvcEJNZkFEU0VlMUU1dnk5d2ExRDExdUZCeVpSaW1f?oc=5",
-   "source": "Rabobank",
-   "ts": 1794124800000,
-   "banks": [
-    "Rabobank"
-   ],
-   "themes": [],
-   "more": 1,
-   "also": [
-    "IEX.nl"
-   ]
-  },
-  {
-   "title": "De berichten 'Rabobank en Obvion passen hypotheeknormen aan per maart 2027' en 'Rabobank schrijft gescheiden vrouwen die in de bloei van hun leven staan vanaf hun 52ste al af'",
-   "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPRUFUc1pBOUdOS3FucnlEcjY3MmJzRW5uMVJuVGJTWkZDbHQ0bWFnNjZCbjNEVXVoVTR1M3ZEaDFWejlJek53eWdnYk5ST0hyaElVNG15d1lDQ0h4clJxUlhmRmE3RXlXTWdXZHFRdE5PYjNaUVdOSmE1SzQ5dEVKSzJlaHZiOHhmZUZXSjlNVEo?oc=5",
-   "source": "Tweede Kamer",
-   "ts": 1793967624000,
-   "banks": [
-    "Rabobank"
-   ],
-   "themes": []
-  },
-  {
-   "title": "Mobiele apps van Rabobank en ING in top tien beste bankapps ter wereld",
-   "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNcVBEQW55cnNnYW5wU0NkZUtCUVFiampES0h4dExwU1UtcF85c2VDTXhPRkNYTkxIckYyMWIzVDc4MkhaQWZXRVlWNVR6aFZXZFhrQ3RZN002a1BwaG00c2JXZEFIcFpTWVhoUm1JRkFfV1M5Y0NlQUREcmt5TXpMV0pmRHVraFBXTl9GRzl2d1ZwYkJYZlV1dEFHQk9jZ3ZjNEg1Si1jc19XM3RtdE5j0gG0AUFVX3lxTE1PREZmNm81RDY0UUpnU0ctVzJhT0FwbmVyMHhwcDZqYWJ0cGNMMHZNUTdIeTBmS1pYc3FpWGJfUGJfenFHTkRDWnd6Qndubi00OEpuYXF2N19SX3pRdld4SEs0V3lpWUhZUFZPekJyUDhIYzBqMnlsWEpQWFhjSXpRd1VxX016YnRFMGFORFFCV2lJd01TZzM2eUx1d2JjNjJBNC1sTWVGWWJxMmxNOFNHcVZYVA?oc=5",
-   "source": "Consultancy.nl",
-   "ts": 1793955598000,
-   "banks": [
-    "ING",
-    "Rabobank"
-   ],
-   "themes": []
-  },
-  {
-   "title": "Rabobank: loonbod omhoog, investeren in mensen noodzakelijk",
-   "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNYVQ2OC1XNXRVY25wRlllWG1aLXFsamtVc2hJLTlTOWhUR1NtcHQ1X00zN1QxN1BhN05HRTZobTN6VS1KUFB0azhKZ3NxVzR1c2psc1pRRXFtUzdXOHRuVGg5NkY0ZjhyN3NmOGY4SXRvY3I4b1E3eXZkZHdTWklpT2lQWXFqSmZObVhucmtjUGVUcjZjd0lsOW5hMHRCd2txNmtBSTZ5VUtQb3NzcVdNZVdoZHhNbDJKeWtoVFdTZTMycDFNLUtKOE1YSQ?oc=5",
-   "source": "CNV Vakmensen",
-   "ts": 1793952000000,
-   "banks": [
-    "Rabobank"
-   ],
-   "themes": []
   }
  ]
 }
